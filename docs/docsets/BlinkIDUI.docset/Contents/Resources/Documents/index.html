@@ -172,9 +172,19 @@
         <section class="section">
           <div class="section-content">
             
-            <h1 id='blinkid-ui-for-ios' class='heading'>BlinkID UI for iOS</h1>
+            <p align="center" >
+  <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/logo-microblink.png" alt="MicroBlink" title="MicroBlink">
+</p>
+<h1 id='blinkid-ui-for-ios' class='heading'>BlinkID UI for iOS</h1>
 
 <p>BlinkID UI is a framework that lets you scan any BlinkID supported document without even knowing what a <code>Recognizer</code> is.</p>
+
+<p>It includes a customizable scan view controller and country table view controller.</p>
+
+<p>See our <a href="https://itunes.apple.com/us/app/blinkid/id1258136557?mt=8">demo app</a>.</p>
+
+<p>New to <em>BlinkID</em>? Check out <a href="https://github.com/BlinkID/blinkid-ios">BlinkID SDK</a> first.</p>
+<h2 id='table-of-contents' class='heading'>Table of Contents</h2>
 
 <ul>
 <li><a href="#dependencies">Dependencies</a></li>
@@ -182,6 +192,9 @@
 <li><a href="#quick-start">Quick Start</a>
 
 <ul>
+<li><a href="#integration-with-cocoapods">Integration with Cocoapods</a></li>
+<li><a href="#integration-without-cocoapods">Integration without Cocoapods</a></li>
+<li><a href="#implementation">Implementation</a></li>
 <li><a href="#reading-results">Reading results</a></li>
 <li><a href="#minimal-swift-example">Swift example</a></li>
 <li><a href="#minimal-objective-c-example">Objective-C example</a></li>
@@ -190,13 +203,8 @@
 <li><a href="#feature-requests">Feature requests</a></li>
 <li><a href="#faq">FAQ</a></li>
 <li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="https://blinkid.github.io/blinkid-ui-ios/">Documentation</a></li>
 </ul>
-
-<p>It includes a customizable scan view controller and country table view controller.</p>
-
-<p>See our <a href="https://itunes.apple.com/us/app/blinkid/id1258136557?mt=8">demo app</a>.</p>
-
-<p>New to <em>BlinkID</em>? Check out <a href="https://github.com/BlinkID/blinkid-ios">BlinkID SDK</a> first.</p>
 <h1 id='dependencies' class='heading'>Dependencies</h1>
 
 <p>BlinkID UI depends on <em>BlinkID</em> SDK. Since <em>BlinkID</em> uses <code>git-lfs</code> you will need to install it to clone/install BlinkID UI through <strong>Cocoapods</strong>.
@@ -205,33 +213,43 @@ Easiest way to install <a href="https://git-lfs.github.com">git-lfs</a> is using
 git lfs install
 </code></pre>
 <h1 id='getting-blinkid-ui' class='heading'>Getting BlinkID UI</h1>
+
+<ol>
 <li><strong>Install git-lfs</strong></li>
-<li>Clone this repo: <code>https://github.com/BlinkID/blinkid-ui-ios.git</code></li>
-<div class="aside aside-since">
-    <p class="aside-title">Since</p>
-     Since <em>BlinkID</em> is included as a submodule you&rsquo;ll need to run:
+<li>Clone this repo: <code>https://github.com/BlinkID/blinkid-ui-ios.git</code> or add <code>pod &#39;MBBlinkIDUI&#39;</code> to your podfile</li>
+<li>(Integration without Cocoapods) Since <em>BlinkID</em> is included as a submodule you&rsquo;ll need to run:
 <code>
 git submodule init
 git submodule update
-</code>
-
-</div>
-<li>Checkout the samples or follow the <strong>Quick Start</strong> guide to start using it in your project.</li>
+</code></li>
+<li>Check out the samples or follow the <strong>Quick Start</strong> guide to start using it in your project.</li>
+</ol>
 <h1 id='quick-start' class='heading'>Quick Start</h1>
 
-<p><em>BlinkID UI</em> is a <strong>Swift</strong> framework but we are also supporting <strong>Objective-C</strong>.</p>
+<p><em>BlinkID UI</em> is a <strong>Swift</strong> framework, but we are also supporting <strong>Objective-C</strong>.</p>
+<h2 id='integration-with-cocoapods' class='heading'>Integration with Cocoapods</h2>
 
-<p>This framework depends on <em>BlinkID SDK</em> so you&rsquo;ll need to add <em>BlinkID</em> framework to your embeded frameworks of your Xcode project.
+<p>Add <code><a href="Classes/MBBlinkIDUI.html">MBBlinkIDUI</a></code> to your target inside your <code>Podfile</code>:</p>
+<pre class="highlight plaintext"><code>pod 'MBBlinkIDUI'
+</code></pre>
+
+<p>Run:</p>
+<pre class="highlight plaintext"><code>pod install
+</code></pre>
+<h2 id='integration-without-cocoapods' class='heading'>Integration without Cocoapods</h2>
+
+<p>This framework depends on <em>BlinkID SDK</em> so you&rsquo;ll need to add the <em>BlinkID</em> framework to your embedded frameworks of your Xcode project.
 You can do this by dragging <strong>Microblink.framework</strong> and <strong>Microblink.bundle</strong> from <strong>blinkid-ios</strong> submodule into your project included in this repository. </p>
 
 <p>Make sure <strong>Microblink.framework</strong> is added to the embedded frameworks in your target and <strong>Microblink.bundle</strong> is included in your <strong>Copy bundle resources</strong> build phase.</p>
 
 <p>Now drag <strong>BlinkIDUI.xcodeproj</strong> to your project explorer. In the project navigator find <strong>Products</strong> in <strong>BlinkIDUI</strong> project and drag the <strong>BlinkIDUI.framework</strong> to your embedded frameworks in your target.</p>
+<h2 id='implementation' class='heading'>Implementation</h2>
 
-<p>After adding the framework to your project you will need to do the following:</p>
+<p>After adding the framework to your project, you will need to do the following:</p>
 
 <ul>
-<li>First make sure that your Microblink license is correctly configured, check <a href="https://github.com/BlinkID/blinkid-ios/blob/master/README.md">BlinkID documentation</a> for more info.</li>
+<li>First make sure that you correctly configured Microblink license. Check <a href="https://github.com/BlinkID/blinkid-ios/blob/master/README.md">BlinkID documentation</a> for more info.</li>
 <li>Implement the <code><a href="Protocols/MBBlinkDelegate.html">MBBlinkDelegate</a></code> protocol.</li>
 <li><em>Optional</em> setup properties you want using <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> singleton.</li>
 <li><em>Optional</em> setup <code>UIColor</code> and <code>UIFont</code> properties using extensions in <code>MBTheme</code>.</li>
@@ -248,14 +266,14 @@ You can do this by dragging <strong>Microblink.framework</strong> and <strong>Mi
 We tried to make this framework easily customizable, but still simple enough to be used out of the box.</p>
 <h2 id='reading-results' class='heading'>Reading results</h2>
 
-<p>Results of scanning are contained inside a <code><a href="Classes/MBRecognitionResult.html">MBRecognitionResult</a></code> class.
-The class containts the <code>resultTitle</code> which is usually a combination of first name and last name read from the document.</p>
+<p>The <code><a href="Classes/MBRecognitionResult.html">MBRecognitionResult</a></code> class contains scanning results.
+The class contains the <code>resultTitle</code> which is usually a combination of the first name, and the last name read from the document.</p>
 
-<p>Property <code>resultEntries</code> contains an array of <code><a href="Classes/MBField.html">MBField</a></code>s, these are the results read from the document. Inside <code><a href="Classes/MBField.html">MBField</a></code> you will find the result value and a <code><a href="Enums/MBFieldKey.html">MBFieldKey</a></code> that describes it.</p>
+<p>Property <code>resultEntries</code> contains an array of <code><a href="Classes/MBField.html">MBField</a></code>s, these are the results read from the document. Inside <code><a href="Classes/MBField.html">MBField</a></code> you will find the result value and an <code><a href="Enums/MBFieldKey.html">MBFieldKey</a></code> that describes it.</p>
 
-<p>Images that can be returned are <code>frontSideDocumentImage</code> if a two sided or a one sided document is scanned and <code>backSideDocumentImage</code> if a two sided document is scanned.</p>
+<p>Images that can be returned are <code>frontSideDocumentImage</code> if a two-sided or a one-sided document is scanned; and <code>backSideDocumentImage</code> if a two-sided document is scanned.</p>
 
-<p>A <code>faceImage</code> will be returned if the recognizer used is supports face image extractions and the document contains a face image, same goes for the <code>signatureImage</code></p>
+<p>A <code>faceImage</code> will be returned if the used recognizer supports face image extractions and if the document contains a face image. The same principle applies to the <code>signatureImage</code>.</p>
 <h2 id='minimal-swift-example' class='heading'>Minimal Swift Example</h2>
 <pre class="highlight plaintext"><code>import UIKit
 import BlinkIDUI
@@ -284,7 +302,7 @@ class ViewConroller: UIViewController {
 extension ViewController: MBBlinkDelegate {
 
     func didStartScanning() {
-        // When scanning starts you will be notified once the scanning starts thorugu this method
+        // When scanning starts you will be notified through this method
     }
 
     func didScanEntireDocument(recognitionResult: MBRecognitionResult, successFrame: UIImage?) {
@@ -300,12 +318,12 @@ extension ViewController: MBBlinkDelegate {
     }
 
     func didScanFirstSide(recognitionResult: MBRecognitionResult, successFrame: UIImage?) {
-        // If a document has 2 sides and 2 separate recognizers are used 
+        // If a document has two sides and if two separate recognizers are used 
         // this method will be called when the first side is scanned
     }
 
     func didChangeDocument(newDocument: MBDocumentProvider) {
-        // When user changes the document you will be notified through this method
+        // When a user changes the document you will be notified through this method
     }
 
     func didTapCancelButton() {
@@ -352,7 +370,7 @@ extension ViewController: MBBlinkDelegate {
 }
 
 - (void)didChangeDocumentWithNewDocument:(MBDocumentProvider * _Nonnull)newDocument {
-    // When user changes the document you will be notified through this method
+    // When a user changes the document you will be notified through this method
 }
 
 - (void)didScanEntireDocumentWithRecognitionResult:(MBRecognitionResult * _Nonnull)recognitionResult successFrame:(UIImage * _Nullable)successFrame {
@@ -368,12 +386,12 @@ extension ViewController: MBBlinkDelegate {
 }
 
 - (void)didScanFirstSideWithRecognitionResult:(MBRecognitionResult * _Nonnull)recognitionResult successFrame:(UIImage * _Nullable)successFrame {
-    // If a document has 2 sides and 2 separate recognizers are used
+    // If a document has two sides and two separate recognizers are used
     // this method will be called when the first side is scanned
 }
 
 - (void)didStartScanning {
-    // You will be notified once the scanning starts throughu this method
+    // You will be notified once the scanning starts through this method
 }
 
 - (void)didTapCancelButton {
@@ -384,7 +402,7 @@ extension ViewController: MBBlinkDelegate {
 </code></pre>
 <h1 id='reporting-issues' class='heading'>Reporting Issues</h1>
 
-<p>If you find any issues just open a issue here on github, but please specify as much information as you can.
+<p>If you find any issues open an issue here on GitHub, but please specify as much information as you can.
 Please specify:</p>
 
 <ul>
@@ -397,25 +415,25 @@ You can also contact us at <a href="https://help.microblink.com/hc/en-us">help.m
 </ul>
 <h1 id='feature-requests' class='heading'>Feature requests</h1>
 
-<p>If you have any feature requests you can open an issue or you can implement it and make a pull request.
-Please note that we try to keep the API similar to Android version of framework.</p>
+<p>If you have any feature requests, you can open an issue, or you can implement it and make a pull request.
+Please note that we try to keep the API similar to the the <a href="https://github.com/BlinkID/blinkid-ui-android">Android version</a> of the framework.</p>
 <h2 id='pull-requests' class='heading'>Pull requests</h2>
 
 <p>When making pull requests specify the issue/feature your pull request solves/adds.
-If it&rsquo;s a feature add an example why you need this feature, otherwise we might reject your pull request</p>
+If it&rsquo;s a feature, add an example of why you need this feature. Otherwise, we might reject your pull request.</p>
 <h1 id='faq' class='heading'>FAQ</h1>
-<h2 id='how-do-i-customise-colors-and-fonts' class='heading'>How do I customise colors and fonts?</h2>
+<h2 id='how-do-i-customize-colors-and-fonts' class='heading'>How do I customize colors and fonts?</h2>
 
-<p>Check out <code>MBTheme</code> file, it contains extensions of <code>UIColor</code> and <code>UIFont</code>.
-Color pallete is split in 3 colors, primary, secondary, tertiary and there&rsquo;s also a shadow color which is separate from the pallete.
-Every text shown on the UI has it&rsquo;s font defined here, you can set the font properties and change the font on the UI.</p>
+<p>Check out <code>MBTheme</code> file; it contains extensions of <code>UIColor</code> and <code>UIFont</code>.
+The color palette is split in 3 colors, primary, secondary, tertiary and there&rsquo;s also a shadow color which is separate from the palette.
+Every text shown on the UI has its font defined here, you can set the font properties and change the font on the UI.</p>
 <h2 id='how-do-i-disable-scan-sound' class='heading'>How do I disable scan sound?</h2>
 
-<p>Using <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instace you can set various scanning properties.
-To turn off sound after successful scan, set <code>shouldPlayScanSound</code> to <strong>false</strong></p>
+<p>Using <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instance you can set various scanning properties.
+To turn off sound after a successful scan, set <code>shouldPlayScanSound</code> to <strong>false</strong></p>
 <h2 id='how-do-i-limit-selection-to-specific-countries-and-document-types' class='heading'>How do I limit selection to specific countries and document types?</h2>
 
-<p>Use <code><a href="Protocols/MBDocumentChooserSettings.html">MBDocumentChooserSettings</a></code>, you can use it for the following:</p>
+<p>Use <code><a href="Protocols/MBDocumentChooserSettings.html">MBDocumentChooserSettings</a></code> for the following:</p>
 
 <ul>
 <li>Use <code>countryFilter</code> to filter countries you want/don&rsquo;t want users to pick in country table view controller.</li>
@@ -428,40 +446,40 @@ To turn off sound after successful scan, set <code>shouldPlayScanSound</code> to
 </ul>
 <h2 id='how-can-i-get-scan-only-one-side-of-the-document' class='heading'>How can I get scan only one side of the document?</h2>
 
-<p>In <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instace set the <code>shouldScanBothDocumentSides</code> to <strong>false</strong>, this way scanning any side of the two-sided document will return a result.</p>
+<p>In <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instance set the <code>shouldScanBothDocumentSides</code> to <strong>false</strong>, this way scanning any side of the two-sided document will return a result.</p>
 <h2 id='how-can-i-hide-torch-button' class='heading'>How can I hide torch button?</h2>
 
-<p>In <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instace set the <code>shouldShowTorchButton</code> to <strong>false</strong>.</p>
+<p>In <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instance set the <code>shouldShowTorchButton</code> to <strong>false</strong>.</p>
 <h2 id='how-can-i-hide-code-x-code-button' class='heading'>How can I hide <code>X</code> button?</h2>
 
-<p>In <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instace set the <code>shouldShowCancelButton</code> to <strong>false</strong>.</p>
+<p>In <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instance set the <code>shouldShowCancelButton</code> to <strong>false</strong>.</p>
 <h2 id='how-can-i-change-remove-code-having-trouble-scanning-code-alert' class='heading'>How can I change/remove <code>Having trouble scanning</code> Alert?</h2>
 
-<p>Implement your own <code><a href="Protocols/MBTimeoutHandler.html">MBTimeoutHandler</a></code> and set the property <code>timeoutHandler</code> in <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instace.</p>
+<p>Implement your own <code><a href="Protocols/MBTimeoutHandler.html">MBTimeoutHandler</a></code> and set the property <code>timeoutHandler</code> in <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instance.</p>
 <h2 id='how-can-i-change-document-validation' class='heading'>How can I change document validation?</h2>
 
-<p>You can turn document validation by setting <code>shouldValidateDocuments</code> in <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> to <strong>false</strong>
+<p>You can turn off document validation by setting <code>shouldValidateDocuments</code> in <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> to <strong>false</strong>
 If the <code>shouldValidateDocuments</code> is set to <strong>true</strong>, you can change the default behaviour when document is not validated by
-implementing <code><a href="Protocols/MBInvalidDocumentHandler.html">MBInvalidDocumentHandler</a></code> and setting the <code>invalidDocumentHandler</code> in <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instace.
-Implement your own <code><a href="Protocols/MBTimeoutHandler.html">MBTimeoutHandler</a></code> and set the property <code>timeoutHandler</code> in <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instace.</p>
+implementing <code><a href="Protocols/MBInvalidDocumentHandler.html">MBInvalidDocumentHandler</a></code> and setting the <code>invalidDocumentHandler</code> in <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instance.
+Implement your own <code><a href="Protocols/MBTimeoutHandler.html">MBTimeoutHandler</a></code> and set the property <code>timeoutHandler</code> in <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instance.</p>
 <h2 id='how-can-i-get-success-frames' class='heading'>How can I get success frames?</h2>
 
-<p>In <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> set the <code>frameGrabberMode</code> to <em>success</em> or <em>allFrames</em>, if you want to recieve all frames you will need to provide <code>MBFrameGrabberDelegate</code> by setting <code>frameGrabberDelegate</code> property in <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instace.</p>
+<p>In <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> set the <code>frameGrabberMode</code> to <em>success</em> or <em>allFrames</em>, if you want to receive all frames you will need to provide <code>MBFrameGrabberDelegate</code> by setting <code>frameGrabberDelegate</code> property in <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instance.</p>
 <h2 id='how-can-i-set-my-own-text-for-labels-and-buttons' class='heading'>How can I set my own text for labels and buttons?</h2>
 
-<p>In <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instace you can find <code><a href="Classes/MBBlinkLanguageSettings.html">MBBlinkLanguageSettings</a></code> property. You can set various text properties, by default text is used from <code>.strings</code> file provided through framework.</p>
+<p>In <code><a href="Classes/MBBlinkSettings.html">MBBlinkSettings</a></code> shared instance, you can find <code><a href="Classes/MBBlinkLanguageSettings.html">MBBlinkLanguageSettings</a></code> property. You can set various text properties, by default text is used from <code>.strings</code> file provided through the framework.</p>
 <h2 id='where-do-i-get-the-license-for-my-project' class='heading'>Where do I get the license for my project?</h2>
 
-<p><a href="https://microblink.com">Register</a> at our site and you can get a <em>BlinkID</em> demo license from the developer dashboard. </p>
+<p><a href="https://microblink.com">Register</a> at our site and you can get a <em>BlinkID</em> demo license key from the developer dashboard. </p>
 <h1 id='troubleshooting' class='heading'>Troubleshooting</h1>
 <h2 id='getting-the-following-error' class='heading'>Getting the following error:</h2>
 <pre class="highlight plaintext"><code>ignoring file .../PPBlinkID/MicroBlink.framework/MicroBlink, file was built for unsupported file format ( 0x76 0x65 0x72 0x73 0x69 0x6F 0x6E 0x20 0x68 0x74 0x74 0x70 0x73 0x3A 0x2F 0x2F ) which is not the architecture being linked (x86_64)MicroBlink.framework/MicroBlink
 </code></pre>
 
-<p>Most probable cause of this issue is not installing <strong>git-lfs</strong>, or installing it after cloning.
+<p>Most probable cause of this issue is missing <strong>git-lfs</strong>, or installing it after cloning the repository.
 Simply install git-lfs, follow the <a href="#dependencies">instructions</a> and run <code>git-lfs pull</code> . </p>
 
-<p>If you installed the framework using <strong>Cocoapods</strong> run:</p>
+<p>If you&rsquo;ve installed the framework using <strong>Cocoapods</strong> run:</p>
 <pre class="highlight plaintext"><code>pod cache clean
 pod install
 </code></pre>
