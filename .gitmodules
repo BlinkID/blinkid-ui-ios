@@ -1,0 +1,3 @@
+[submodule "blinkid-ios"]
+	path = blinkid-ios
+	url = https://github.com/BlinkID/blinkid-ios.git
