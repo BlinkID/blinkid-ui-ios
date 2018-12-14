@@ -42,20 +42,20 @@ git lfs install
 git submodule init
 git submodule update
 ```
-4. Checkout the samples or follow the **Quick Start** guide to start using it in your project.
+4. Check out the samples or follow the **Quick Start** guide to start using it in your project.
 
 # Quick Start
-_BlinkID UI_ is a **Swift** framework but we are also supporting **Objective-C**.
+_BlinkID UI_ is a **Swift** framework, but we are also supporting **Objective-C**.
 
-This framework depends on _BlinkID SDK_ so you'll need to add _BlinkID_ framework to your embeded frameworks of your Xcode project.
+This framework depends on _BlinkID SDK_ so you'll need to add the _BlinkID_ framework to your embedded frameworks of your Xcode project.
 You can do this by dragging **Microblink.framework** and **Microblink.bundle** from **blinkid-ios** submodule into your project included in this repository. 
 
 Make sure **Microblink.framework** is added to the embedded frameworks in your target and **Microblink.bundle** is included in your **Copy bundle resources** build phase.
 
 Now drag **BlinkIDUI.xcodeproj** to your project explorer. In the project navigator find **Products** in **BlinkIDUI** project and drag the **BlinkIDUI.framework** to your embedded frameworks in your target.
 
-After adding the framework to your project you will need to do the following:
-* First make sure that your Microblink license is correctly configured, check [BlinkID documentation](https://github.com/BlinkID/blinkid-ios/blob/master/README.md) for more info.
+After adding the framework to your project, you will need to do the following:
+* First make sure that you correctly configured Microblink license. Check [BlinkID documentation](https://github.com/BlinkID/blinkid-ios/blob/master/README.md) for more info.
 * Implement the `MBBlinkDelegate` protocol.
 * *Optional* setup properties you want using `MBBlinkSettings` singleton.
 * *Optional* setup `UIColor` and `UIFont` properties using extensions in `MBTheme`.
@@ -68,15 +68,15 @@ If you want to customise scanning behavior and UI take a look at [FAQ](#faq).
 We tried to make this framework easily customizable, but still simple enough to be used out of the box.
 
 ## Reading results
-Results of scanning are contained inside a `MBRecognitionResult` class.
-The class containts the `resultTitle` which is usually a combination of first name and last name read from the document.
+The `MBRecognitionResult` class contains scanning results.
+The class contains the `resultTitle` which is usually a combination of the first name, and the last name read from the document.
 
-Property `resultEntries` contains an array of `MBField`s, these are the results read from the document. Inside `MBField` you will find the result value and a `MBFieldKey` that describes it.
+Property `resultEntries` contains an array of `MBField`s, these are the results read from the document. Inside `MBField` you will find the result value and an `MBFieldKey` that describes it.
 
-Images that can be returned are `frontSideDocumentImage` if a two sided or a one sided document is scanned and `backSideDocumentImage` if a two sided document is scanned.
+Images that can be returned are `frontSideDocumentImage` if a two-sided or a one-sided document is scanned; and `backSideDocumentImage` if a two-sided document is scanned.
 
 
-A `faceImage` will be returned if the recognizer used is supports face image extractions and the document contains a face image, same goes for the `signatureImage`
+A `faceImage` will be returned if the used recognizer supports face image extractions and if the document contains a face image. The same principle applies to the `signatureImage`.
 
 ## Minimal Swift Example
 ```Swift
@@ -107,7 +107,7 @@ class ViewConroller: UIViewController {
 extension ViewController: MBBlinkDelegate {
     
     func didStartScanning() {
-        // When scanning starts you will be notified once the scanning starts thorugu this method
+        // When scanning starts you will be notified through this method
     }
     
     func didScanEntireDocument(recognitionResult: MBRecognitionResult, successFrame: UIImage?) {
@@ -123,12 +123,12 @@ extension ViewController: MBBlinkDelegate {
     }
     
     func didScanFirstSide(recognitionResult: MBRecognitionResult, successFrame: UIImage?) {
-        // If a document has 2 sides and 2 separate recognizers are used 
+        // If a document has two sides and if two separate recognizers are used 
         // this method will be called when the first side is scanned
     }
     
     func didChangeDocument(newDocument: MBDocumentProvider) {
-        // When user changes the document you will be notified through this method
+        // When a user changes the document you will be notified through this method
     }
     
     func didTapCancelButton() {
@@ -179,7 +179,7 @@ extension ViewController: MBBlinkDelegate {
 }
 
 - (void)didChangeDocumentWithNewDocument:(MBDocumentProvider * _Nonnull)newDocument {
-    // When user changes the document you will be notified through this method
+    // When a user changes the document you will be notified through this method
 }
 
 - (void)didScanEntireDocumentWithRecognitionResult:(MBRecognitionResult * _Nonnull)recognitionResult successFrame:(UIImage * _Nullable)successFrame {
@@ -195,12 +195,12 @@ extension ViewController: MBBlinkDelegate {
 }
 
 - (void)didScanFirstSideWithRecognitionResult:(MBRecognitionResult * _Nonnull)recognitionResult successFrame:(UIImage * _Nullable)successFrame {
-    // If a document has 2 sides and 2 separate recognizers are used
+    // If a document has two sides and two separate recognizers are used
     // this method will be called when the first side is scanned
 }
 
 - (void)didStartScanning {
-    // You will be notified once the scanning starts throughu this method
+    // You will be notified once the scanning starts through this method
 }
 
 - (void)didTapCancelButton {
@@ -211,7 +211,7 @@ extension ViewController: MBBlinkDelegate {
 ```
 
 # Reporting Issues
-If you find any issues just open a issue here on github, but please specify as much information as you can.
+If you find any issues open an issue here on GitHub, but please specify as much information as you can.
 Please specify:
  * How did you add the framework to your project, Cocoapods/Manual.
  * Xcode version.
@@ -221,25 +221,25 @@ Please specify:
 You can also contact us at [help.microblink.com](https://help.microblink.com/hc/en-us).
 
 # Feature requests
-If you have any feature requests you can open an issue or you can implement it and make a pull request.
-Please note that we try to keep the API similar to Android version of framework.
+If you have any feature requests, you can open an issue, or you can implement it and make a pull request.
+Please note that we try to keep the API similar to the the [Android version](https://github.com/BlinkID/blinkid-ui-android) of the framework.
 
 ## Pull requests
 When making pull requests specify the issue/feature your pull request solves/adds.
-If it's a feature add an example why you need this feature, otherwise we might reject your pull request
+If it's a feature, add an example of why you need this feature. Otherwise, we might reject your pull request.
 
 # FAQ
-## How do I customise colors and fonts?
-Check out `MBTheme` file, it contains extensions of `UIColor` and `UIFont`.
-Color pallete is split in 3 colors, primary, secondary, tertiary and there's also a shadow color which is separate from the pallete.
-Every text shown on the UI has it's font defined here, you can set the font properties and change the font on the UI.
+## How do I customize colors and fonts?
+Check out `MBTheme` file; it contains extensions of `UIColor` and `UIFont`.
+The color palette is split in 3 colors, primary, secondary, tertiary and there's also a shadow color which is separate from the palette.
+Every text shown on the UI has its font defined here, you can set the font properties and change the font on the UI.
 
 ## How do I disable scan sound?
-Using `MBBlinkSettings` shared instace you can set various scanning properties.
-To turn off sound after successful scan, set `shouldPlayScanSound` to **false**
+Using `MBBlinkSettings` shared instance you can set various scanning properties.
+To turn off sound after a successful scan, set `shouldPlayScanSound` to **false**
 
 ## How do I limit selection to specific countries and document types?
-Use `MBDocumentChooserSettings`, you can use it for the following:
+Use `MBDocumentChooserSettings` for the following:
 * Use `countryFilter` to filter countries you want/don't want users to pick in country table view controller.
 * Use `shouldShowDocumentTypeTabs` to show/hide the controller for choosing documents.
 * Use `shouldShowCountryChooser` to show/hide the button that opens country table view controller.
@@ -249,41 +249,41 @@ Use `MBDocumentChooserSettings`, you can use it for the following:
 * Use `didTapChooseCountry(documentChooserViewController: MBDocumentChooserViewController)` to set what happens when user taps choose country button.
 
 ## How can I get scan only one side of the document?
-In `MBBlinkSettings` shared instace set the `shouldScanBothDocumentSides` to **false**, this way scanning any side of the two-sided document will return a result.
+In `MBBlinkSettings` shared instance set the `shouldScanBothDocumentSides` to **false**, this way scanning any side of the two-sided document will return a result.
 
 ## How can I hide torch button?
-In `MBBlinkSettings` shared instace set the `shouldShowTorchButton` to **false**.
+In `MBBlinkSettings` shared instance set the `shouldShowTorchButton` to **false**.
 
 ## How can I hide `X` button?
-In `MBBlinkSettings` shared instace set the `shouldShowCancelButton` to **false**.
+In `MBBlinkSettings` shared instance set the `shouldShowCancelButton` to **false**.
 
 ## How can I change/remove `Having trouble scanning` Alert?
-Implement your own `MBTimeoutHandler` and set the property `timeoutHandler` in `MBBlinkSettings` shared instace.
+Implement your own `MBTimeoutHandler` and set the property `timeoutHandler` in `MBBlinkSettings` shared instance.
 
 ## How can I change document validation?
-You can turn document validation by setting `shouldValidateDocuments` in `MBBlinkSettings` to **false**
+You can turn off document validation by setting `shouldValidateDocuments` in `MBBlinkSettings` to **false**
 If the `shouldValidateDocuments` is set to **true**, you can change the default behaviour when document is not validated by
-implementing `MBInvalidDocumentHandler` and setting the `invalidDocumentHandler` in `MBBlinkSettings` shared instace.
-Implement your own `MBTimeoutHandler` and set the property `timeoutHandler` in `MBBlinkSettings` shared instace.
+implementing `MBInvalidDocumentHandler` and setting the `invalidDocumentHandler` in `MBBlinkSettings` shared instance.
+Implement your own `MBTimeoutHandler` and set the property `timeoutHandler` in `MBBlinkSettings` shared instance.
 
 ## How can I get success frames?
-In `MBBlinkSettings` set the `frameGrabberMode` to _success_ or _allFrames_, if you want to recieve all frames you will need to provide `MBFrameGrabberDelegate` by setting `frameGrabberDelegate` property in `MBBlinkSettings` shared instace.
+In `MBBlinkSettings` set the `frameGrabberMode` to _success_ or _allFrames_, if you want to receive all frames you will need to provide `MBFrameGrabberDelegate` by setting `frameGrabberDelegate` property in `MBBlinkSettings` shared instance.
 
 ## How can I set my own text for labels and buttons?
-In `MBBlinkSettings` shared instace you can find `MBBlinkLanguageSettings` property. You can set various text properties, by default text is used from `.strings` file provided through framework.
+In `MBBlinkSettings` shared instance, you can find `MBBlinkLanguageSettings` property. You can set various text properties, by default text is used from `.strings` file provided through the framework.
 
 ## Where do I get the license for my project?
-[Register](https://microblink.com) at our site and you can get a _BlinkID_ demo license from the developer dashboard. 
+[Register](https://microblink.com) at our site and you can get a _BlinkID_ demo license key from the developer dashboard. 
 
 # Troubleshooting
 ## Getting the following error:
 ```
 ignoring file .../PPBlinkID/MicroBlink.framework/MicroBlink, file was built for unsupported file format ( 0x76 0x65 0x72 0x73 0x69 0x6F 0x6E 0x20 0x68 0x74 0x74 0x70 0x73 0x3A 0x2F 0x2F ) which is not the architecture being linked (x86_64)MicroBlink.framework/MicroBlink
 ```
-Most probable cause of this issue is not installing **git-lfs**, or installing it after cloning.
+Most probable cause of this issue is missing **git-lfs**, or installing it after cloning the repository.
 Simply install git-lfs, follow the [instructions](#dependencies) and run `git-lfs pull` . 
 
-If you installed the framework using **Cocoapods** run:
+If you've installed the framework using **Cocoapods** run:
 ```
 pod cache clean
 pod install
