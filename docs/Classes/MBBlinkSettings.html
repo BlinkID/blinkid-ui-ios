@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MBBlinkSettings Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/MBBlinkSettings" class="dashAnchor"></a>
+
+    <a title="MBBlinkSettings Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          BlinkIDUI Docs
+        </a>
+         (40% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/BlinkID/blinkid-ui-ios">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2FBlinkID%2Egithub%2Eio%2Fblinkid%2Dui%2Dios%2Fdocsets%2FBlinkIDUI%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">BlinkIDUI Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      MBBlinkSettings Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBAllowAllCountryFilter.html">MBAllowAllCountryFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBBlacklistCountryFilter.html">MBBlacklistCountryFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBBlinkIDUI.html">MBBlinkIDUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBBlinkIdOverlayViewController.html">MBBlinkIdOverlayViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBBlinkLanguageSettings.html">MBBlinkLanguageSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBBlinkSettings.html">MBBlinkSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBCountry.html">MBCountry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:@M@BlinkIDUI@objc(cs)MBCountryProvider">MBCountryProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBCountryTableViewController.html">MBCountryTableViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBDefaultDocumentChooserSettings.html">MBDefaultDocumentChooserSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBDefaultInvalidDocumentHandler.html">MBDefaultInvalidDocumentHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBDefaultTimeoutHandler.html">MBDefaultTimeoutHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBDocumentChooserViewController.html">MBDocumentChooserViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:@M@BlinkIDUI@objc(cs)MBDocumentProvider">MBDocumentProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBField.html">MBField</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBRecognitionResult.html">MBRecognitionResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBWhitelistCountryFilter.html">MBWhitelistCountryFilter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBDocumentType.html">MBDocumentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBFieldKey.html">MBFieldKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBFrameGrabberMode.html">MBFrameGrabberMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBSupportedCountry.html">MBSupportedCountry</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIFont.html">UIFont</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MBBlinkDelegate.html">MBBlinkDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MBCountryFilter.html">MBCountryFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MBCountryTableViewControllerDelegate.html">MBCountryTableViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MBDocumentChooserSettings.html">MBDocumentChooserSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MBInvalidDocumentHandler.html">MBInvalidDocumentHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MBLocalizable.html">MBLocalizable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MBTimeoutHandler.html">MBTimeoutHandler</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>MBBlinkSettings</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">MBBlinkSettings</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p><code>MBBlinkSettings</code> is a singleton containing general setting of <code><a href="../Classes/MBBlinkIDUI.html">MBBlinkIDUI</a></code>
+Contains almost all the customization options available without changing the framework
+If you want to change the color or fonts see <code>MBTheme.swift</code> file.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Make sure to setup your settings before creating an instance of <code><a href="../Classes/MBBlinkIDUI.html">MBBlinkIDUI</a></code>.
+
+</div>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(cpy)sharedInstance"></a>
+                    <a name="//apple_ref/swift/Variable/sharedInstance" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(cpy)sharedInstance">sharedInstance</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Shared instance</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">sharedInstance</span><span class="p">:</span> <span class="kt">MBBlinkSettings</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Scanning%20settings"></a>
+                <a name="//apple_ref/swift/Section/Scanning settings" class="dashAnchor"></a>
+                <a href="#/Scanning%20settings">
+                  <h3 class="section-name">Scanning settings</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)initialCountry"></a>
+                    <a name="//apple_ref/swift/Property/initialCountry" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)initialCountry">initialCountry</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initial country that will be selected for scanning once the scanning is started.</p>
+
+<ul>
+<li>Default: Country of the phone.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">initialCountry</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBCountry.html">MBCountry</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)initialDocument"></a>
+                    <a name="//apple_ref/swift/Property/initialDocument" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)initialDocument">initialDocument</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initial document that will be selected for scanning once the scanning is started.</p>
+<li>Default: ID document.</li>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Be careful to set the document that is supported by the initial country.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">initialDocument</span><span class="p">:</span> <span class="kt"><a href="../Enums/MBDocumentType.html">MBDocumentType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)frameGrabberMode"></a>
+                    <a name="//apple_ref/swift/Property/frameGrabberMode" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)frameGrabberMode">frameGrabberMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Frame grabber mode:</p>
+<li>nothing: no frames will be returned.</li>
+<li>successFrames: success frames will be returned through delegate methods set on MBBlinkIDUI class.</li>
+<li>allFrames: success frames will be returned like when <code>success</code> is set, and the frames used for scanning through MBFrameGrabberDelegate.</li>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    for allFrames you must implement and set frameGrabberdelegate
+
+</div>
+<li>Default: .nothing</li>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">frameGrabberMode</span><span class="p">:</span> <span class="kt"><a href="../Enums/MBFrameGrabberMode.html">MBFrameGrabberMode</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)frameGrabberDelegate"></a>
+                    <a name="//apple_ref/swift/Property/frameGrabberDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)frameGrabberDelegate">frameGrabberDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If frameGrabberMode is set to allFrames, graber delegate must be provided othervise it mode will rever back to .successFrames</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">frameGrabberDelegate</span><span class="p">:</span> <span class="kt">MBFrameGrabberRecognizerDelegate</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)shouldScanBothDocumentSides"></a>
+                    <a name="//apple_ref/swift/Property/shouldScanBothDocumentSides" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)shouldScanBothDocumentSides">shouldScanBothDocumentSides</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If documents have two sides, both sides will be scanned, otherwise any of the scanning of any of the sides will return results.</p>
+
+<ul>
+<li>Default: true.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">shouldScanBothDocumentSides</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)shouldValidateDocuments"></a>
+                    <a name="//apple_ref/swift/Property/shouldValidateDocuments" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)shouldValidateDocuments">shouldValidateDocuments</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If documents have two sides, some of them can be validated by checking the values are matching on both sides.</p>
+
+<ul>
+<li>Default: true.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">shouldValidateDocuments</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/UX%20settings"></a>
+                <a name="//apple_ref/swift/Section/UX settings" class="dashAnchor"></a>
+                <a href="#/UX%20settings">
+                  <h3 class="section-name">UX settings</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)shouldDisplayTorchButton"></a>
+                    <a name="//apple_ref/swift/Property/shouldDisplayTorchButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)shouldDisplayTorchButton">shouldDisplayTorchButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If UI should display button to turn on/off the torch.</p>
+
+<ul>
+<li>Default: true.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">shouldDisplayTorchButton</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)shouldPlayScanSound"></a>
+                    <a name="//apple_ref/swift/Property/shouldPlayScanSound" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)shouldPlayScanSound">shouldPlayScanSound</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If scan sound should be played when document is scanned.</p>
+
+<ul>
+<li>Default: true.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">shouldPlayScanSound</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)shouldShowTorchButton"></a>
+                    <a name="//apple_ref/swift/Property/shouldShowTorchButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)shouldShowTorchButton">shouldShowTorchButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If scan torch button should be displayed.</p>
+
+<ul>
+<li>Default: true.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">shouldShowTorchButton</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)shouldShowCancelButton"></a>
+                    <a name="//apple_ref/swift/Property/shouldShowCancelButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)shouldShowCancelButton">shouldShowCancelButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If cancel button should be displayed.</p>
+
+<ul>
+<li>Default: true.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">shouldShowCancelButton</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)documentChooserSettings"></a>
+                    <a name="//apple_ref/swift/Property/documentChooserSettings" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)documentChooserSettings">documentChooserSettings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Settings related to document and country selection process.</p>
+
+<ul>
+<li>Default: MBDefaultDocumentChooserSettings.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">documentChooserSettings</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MBDocumentChooserSettings.html">MBDocumentChooserSettings</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)timeoutHandler"></a>
+                    <a name="//apple_ref/swift/Property/timeoutHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)timeoutHandler">timeoutHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Settings related to scanning timeout events.</p>
+
+<ul>
+<li>Default: MBDefaultTimeoutHandler.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">timeoutHandler</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MBTimeoutHandler.html">MBTimeoutHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)invalidDocumentHandler"></a>
+                    <a name="//apple_ref/swift/Property/invalidDocumentHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)invalidDocumentHandler">invalidDocumentHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Settings related to scanning invalid two sided documents.
+Will be used if shouldValidateDocuments property is set to true.</p>
+
+<ul>
+<li>Default: MBDefaultInvalidDocumentHandler.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">invalidDocumentHandler</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MBInvalidDocumentHandler.html">MBInvalidDocumentHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)languageSettings"></a>
+                    <a name="//apple_ref/swift/Property/languageSettings" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@objc(cs)MBBlinkSettings(py)languageSettings">languageSettings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Settings related to UI texts.</p>
+
+<ul>
+<li>Default: Localization from BlinkIDUI.strings in Resources folder.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">languageSettings</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBBlinkLanguageSettings.html">MBBlinkLanguageSettings</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2013-2019 MicroBlink Ltd. All rights reserved.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
