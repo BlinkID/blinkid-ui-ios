@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE25D43121C3DF9F001EA09A /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE25D42F21C3DF9E001EA09A /* MicroBlink.bundle */; };
+		BE25D43221C3DFA2001EA09A /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE25D42E21C3DF9E001EA09A /* MicroBlink.framework */; };
+		BE25D43321C3DFA2001EA09A /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE25D42E21C3DF9E001EA09A /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE25D43421C3DFA7001EA09A /* BlinkIDUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE25D42D21C3DF90001EA09A /* BlinkIDUI.framework */; };
+		BE25D43521C3DFA7001EA09A /* BlinkIDUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE25D42D21C3DF90001EA09A /* BlinkIDUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BEC8402621C13E5300AB272D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8402521C13E5300AB272D /* AppDelegate.m */; };
+		BEC8402921C13E5300AB272D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8402821C13E5300AB272D /* ViewController.m */; };
+		BEC8402C21C13E5300AB272D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC8402A21C13E5300AB272D /* Main.storyboard */; };
+		BEC8402E21C13E5400AB272D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC8402D21C13E5400AB272D /* Assets.xcassets */; };
+		BEC8403121C13E5400AB272D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC8402F21C13E5400AB272D /* LaunchScreen.storyboard */; };
+		BEC8403421C13E5400AB272D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8403321C13E5400AB272D /* main.m */; };
+		BEC8403C21C13E6300AB272D /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = BEC8403B21C13E6300AB272D /* blinkid-license.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE25D42C21C3DF90001EA09A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE25D42821C3DF90001EA09A /* BlinkIDUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEE34650218A5F4C004C0397;
+			remoteInfo = BlinkIDUI;
+		};
+		BE25D43621C3DFA7001EA09A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE25D42821C3DF90001EA09A /* BlinkIDUI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEE3464F218A5F4C004C0397;
+			remoteInfo = BlinkIDUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BEC8404A21C13EA100AB272D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BE25D43521C3DFA7001EA09A /* BlinkIDUI.framework in Embed Frameworks */,
+				BE25D43321C3DFA2001EA09A /* MicroBlink.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BE25D42821C3DF90001EA09A /* BlinkIDUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlinkIDUI.xcodeproj; path = ../../BlinkIDUI/BlinkIDUI.xcodeproj; sourceTree = "<group>"; };
+		BE25D42E21C3DF9E001EA09A /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = "../../blinkid-ios/MicroBlink.framework"; sourceTree = "<group>"; };
+		BE25D42F21C3DF9E001EA09A /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = "../../blinkid-ios/MicroBlink.bundle"; sourceTree = "<group>"; };
+		BEC8402121C13E5300AB272D /* BlinkID-UI-Sample-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlinkID-UI-Sample-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC8402421C13E5300AB272D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BEC8402521C13E5300AB272D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BEC8402721C13E5300AB272D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BEC8402821C13E5300AB272D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BEC8402B21C13E5300AB272D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BEC8402D21C13E5400AB272D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEC8403021C13E5400AB272D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BEC8403221C13E5400AB272D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEC8403321C13E5400AB272D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BEC8403B21C13E6300AB272D /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEC8401E21C13E5300AB272D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE25D43421C3DFA7001EA09A /* BlinkIDUI.framework in Frameworks */,
+				BE25D43221C3DFA2001EA09A /* MicroBlink.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE25D42721C3DF84001EA09A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE25D42F21C3DF9E001EA09A /* MicroBlink.bundle */,
+				BE25D42E21C3DF9E001EA09A /* MicroBlink.framework */,
+				BE25D42821C3DF90001EA09A /* BlinkIDUI.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE25D42921C3DF90001EA09A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE25D42D21C3DF90001EA09A /* BlinkIDUI.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEC8401821C13E5300AB272D = {
+			isa = PBXGroup;
+			children = (
+				BEC8402321C13E5300AB272D /* BlinkID-UI-Sample-ObjC */,
+				BEC8402221C13E5300AB272D /* Products */,
+				BE25D42721C3DF84001EA09A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BEC8402221C13E5300AB272D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEC8402121C13E5300AB272D /* BlinkID-UI-Sample-ObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEC8402321C13E5300AB272D /* BlinkID-UI-Sample-ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				BEC8403A21C13E6300AB272D /* License */,
+				BEC8402421C13E5300AB272D /* AppDelegate.h */,
+				BEC8402521C13E5300AB272D /* AppDelegate.m */,
+				BEC8402721C13E5300AB272D /* ViewController.h */,
+				BEC8402821C13E5300AB272D /* ViewController.m */,
+				BEC8402A21C13E5300AB272D /* Main.storyboard */,
+				BEC8402D21C13E5400AB272D /* Assets.xcassets */,
+				BEC8402F21C13E5400AB272D /* LaunchScreen.storyboard */,
+				BEC8403221C13E5400AB272D /* Info.plist */,
+				BEC8403321C13E5400AB272D /* main.m */,
+			);
+			path = "BlinkID-UI-Sample-ObjC";
+			sourceTree = "<group>";
+		};
+		BEC8403A21C13E6300AB272D /* License */ = {
+			isa = PBXGroup;
+			children = (
+				BEC8403B21C13E6300AB272D /* blinkid-license.txt */,
+			);
+			path = License;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BEC8402021C13E5300AB272D /* BlinkID-UI-Sample-ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEC8403721C13E5400AB272D /* Build configuration list for PBXNativeTarget "BlinkID-UI-Sample-ObjC" */;
+			buildPhases = (
+				BEC8401D21C13E5300AB272D /* Sources */,
+				BEC8401E21C13E5300AB272D /* Frameworks */,
+				BEC8401F21C13E5300AB272D /* Resources */,
+				BEC8404A21C13EA100AB272D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE25D43721C3DFA7001EA09A /* PBXTargetDependency */,
+			);
+			name = "BlinkID-UI-Sample-ObjC";
+			productName = "BlinkID-UI-Sample-ObjC";
+			productReference = BEC8402121C13E5300AB272D /* BlinkID-UI-Sample-ObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEC8401921C13E5300AB272D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Microblink;
+				TargetAttributes = {
+					BEC8402021C13E5300AB272D = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = BEC8401C21C13E5300AB272D /* Build configuration list for PBXProject "BlinkID-UI-Sample-ObjC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BEC8401821C13E5300AB272D;
+			productRefGroup = BEC8402221C13E5300AB272D /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BE25D42921C3DF90001EA09A /* Products */;
+					ProjectRef = BE25D42821C3DF90001EA09A /* BlinkIDUI.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				BEC8402021C13E5300AB272D /* BlinkID-UI-Sample-ObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BE25D42D21C3DF90001EA09A /* BlinkIDUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BlinkIDUI.framework;
+			remoteRef = BE25D42C21C3DF90001EA09A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEC8401F21C13E5300AB272D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE25D43121C3DF9F001EA09A /* MicroBlink.bundle in Resources */,
+				BEC8403121C13E5400AB272D /* LaunchScreen.storyboard in Resources */,
+				BEC8403C21C13E6300AB272D /* blinkid-license.txt in Resources */,
+				BEC8402E21C13E5400AB272D /* Assets.xcassets in Resources */,
+				BEC8402C21C13E5300AB272D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEC8401D21C13E5300AB272D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC8402921C13E5300AB272D /* ViewController.m in Sources */,
+				BEC8403421C13E5400AB272D /* main.m in Sources */,
+				BEC8402621C13E5300AB272D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE25D43721C3DFA7001EA09A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BlinkIDUI;
+			targetProxy = BE25D43621C3DFA7001EA09A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BEC8402A21C13E5300AB272D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEC8402B21C13E5300AB272D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BEC8402F21C13E5400AB272D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEC8403021C13E5400AB272D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BEC8403521C13E5400AB272D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BEC8403621C13E5400AB272D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEC8403821C13E5400AB272D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../blinkid-ios";
+				INFOPLIST_FILE = "BlinkID-UI-Sample-ObjC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.blinkid-sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BEC8403921C13E5400AB272D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../blinkid-ios";
+				INFOPLIST_FILE = "BlinkID-UI-Sample-ObjC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.blinkid-sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEC8401C21C13E5300AB272D /* Build configuration list for PBXProject "BlinkID-UI-Sample-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC8403521C13E5400AB272D /* Debug */,
+				BEC8403621C13E5400AB272D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEC8403721C13E5400AB272D /* Build configuration list for PBXNativeTarget "BlinkID-UI-Sample-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC8403821C13E5400AB272D /* Debug */,
+				BEC8403921C13E5400AB272D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BEC8401921C13E5300AB272D /* Project object */;
+}

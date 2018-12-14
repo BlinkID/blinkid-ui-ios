@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MBDocumentTabsView" customModule="BlinkIDUI" customModuleProvider="target">
+            <connections>
+                <outlet property="_scrollView" destination="c7Z-aU-4ug" id="Ngr-Y7-9BU"/>
+                <outlet property="_stackView" destination="CrM-dE-Sdz" id="Mh0-wf-cOb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7Z-aU-4ug">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="center" ambiguous="YES" distribution="equalSpacing" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="CrM-dE-Sdz">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="CrM-dE-Sdz" firstAttribute="height" secondItem="c7Z-aU-4ug" secondAttribute="height" id="3ag-ph-3LJ"/>
+                        <constraint firstAttribute="bottom" secondItem="CrM-dE-Sdz" secondAttribute="bottom" id="H1K-TM-aFc"/>
+                        <constraint firstAttribute="trailing" secondItem="CrM-dE-Sdz" secondAttribute="trailing" id="NOw-ff-7JA"/>
+                        <constraint firstItem="CrM-dE-Sdz" firstAttribute="leading" secondItem="c7Z-aU-4ug" secondAttribute="leading" id="bhf-Ac-hzT"/>
+                        <constraint firstItem="CrM-dE-Sdz" firstAttribute="top" secondItem="c7Z-aU-4ug" secondAttribute="top" id="nC4-Vz-6CH"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="c7Z-aU-4ug" secondAttribute="trailing" id="Aks-MM-2oI"/>
+                <constraint firstItem="c7Z-aU-4ug" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="BzE-ic-8Ov"/>
+                <constraint firstItem="c7Z-aU-4ug" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FuN-tV-1MP"/>
+                <constraint firstItem="CrM-dE-Sdz" firstAttribute="width" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="width" id="nxg-9z-RKr"/>
+                <constraint firstItem="c7Z-aU-4ug" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="oUd-cv-BPp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="132" y="411.544227886057"/>
+        </view>
+    </objects>
+</document>

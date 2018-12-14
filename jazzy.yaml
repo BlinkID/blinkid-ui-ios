@@ -1,0 +1,12 @@
+source_directory: BlinkIDUI
+author: Microblink
+author_url: https://microblink.com
+github_url: https://github.com/BlinkID/blinkid-ui-ios
+root_url: https://BlinkID.github.io/blinkid-ui-ios/
+module: BlinkIDUI
+xcodebuild_arguments: [-scheme, 'BlinkIDUI']
+output: docs
+copyright: © 2013-2019 MicroBlink Ltd. All rights reserved.
+theme: fullwidth
+undocumented_text: ""
+readme: README.md

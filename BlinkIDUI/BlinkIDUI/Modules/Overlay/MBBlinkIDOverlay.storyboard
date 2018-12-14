@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Blink Id Overlay View Controller-->
+        <scene sceneID="aUG-c9-J22">
+            <objects>
+                <viewController storyboardIdentifier="MBBlinkIdOverlayViewController" id="629-5Q-TaY" customClass="MBBlinkIdOverlayViewController" customModule="BlinkIDUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JBq-GZ-ro4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zqg-0A-a5Z" customClass="MBShadowView" customModule="BlinkIDUI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5zX-Kd-sGK" customClass="MBViewfinderView" customModule="BlinkIDUI" customModuleProvider="target">
+                                <rect key="frame" x="19" y="277.5" width="337.5" height="112.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5zX-Kd-sGK" secondAttribute="height" multiplier="3:1" id="Rqw-0m-v5l"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan the front side of the selected document or choose another." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb2-Tg-K3I">
+                                <rect key="frame" x="0.0" y="221.5" width="375" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsp-c3-qSW">
+                                <rect key="frame" x="147" y="321" width="80" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cgT-ca-yxu"/>
+                                </constraints>
+                                <state key="normal" image="icClose"/>
+                                <connections>
+                                    <action selector="_didTapCancelButton:" destination="629-5Q-TaY" eventType="touchUpInside" id="jE1-w0-dZy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cym-tc-Nt5" customClass="I">
+                                <rect key="frame" x="311" y="40" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="Ac3-hx-FaQ"/>
+                                    <constraint firstAttribute="height" constant="44" id="vV2-qO-w9T"/>
+                                </constraints>
+                                <state key="normal" image="icFlashOn"/>
+                                <state key="selected" image="icFlashOff"/>
+                                <connections>
+                                    <action selector="_didTapTorchButton:" destination="629-5Q-TaY" eventType="touchUpInside" id="V36-Sm-u3p"/>
+                                </connections>
+                            </button>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sao-0b-jsk">
+                                <rect key="frame" x="0.0" y="533.5" width="375" height="133.5"/>
+                                <connections>
+                                    <segue destination="3j9-2W-rLp" kind="embed" id="bVk-Up-cyk"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mb2-Tg-K3I" firstAttribute="width" secondItem="5zX-Kd-sGK" secondAttribute="width" id="3Lo-5g-dDs"/>
+                            <constraint firstItem="Qsp-c3-qSW" firstAttribute="centerY" secondItem="cym-tc-Nt5" secondAttribute="centerY" id="3Qp-vn-tlZ"/>
+                            <constraint firstItem="Zqg-0A-a5Z" firstAttribute="height" secondItem="Sao-0b-jsk" secondAttribute="height" multiplier="5:1" priority="999" id="Ggz-BQ-RFf"/>
+                            <constraint firstAttribute="bottom" secondItem="Zqg-0A-a5Z" secondAttribute="bottom" id="MhW-fJ-zLO"/>
+                            <constraint firstItem="mb2-Tg-K3I" firstAttribute="centerX" secondItem="Zqg-0A-a5Z" secondAttribute="centerX" id="Nt6-8j-Tuj"/>
+                            <constraint firstItem="cym-tc-Nt5" firstAttribute="top" secondItem="OOT-Zx-S3K" secondAttribute="top" constant="20" id="TT8-oq-F6e"/>
+                            <constraint firstItem="5zX-Kd-sGK" firstAttribute="centerY" secondItem="Zqg-0A-a5Z" secondAttribute="centerY" id="Tbq-7Z-C6C"/>
+                            <constraint firstItem="5zX-Kd-sGK" firstAttribute="top" secondItem="mb2-Tg-K3I" secondAttribute="bottom" constant="15" id="U3D-Uj-znE"/>
+                            <constraint firstItem="OOT-Zx-S3K" firstAttribute="trailing" secondItem="cym-tc-Nt5" secondAttribute="trailing" constant="20" id="UAg-QT-vs9"/>
+                            <constraint firstItem="OOT-Zx-S3K" firstAttribute="trailing" secondItem="Sao-0b-jsk" secondAttribute="trailing" id="V9k-DM-KWg"/>
+                            <constraint firstItem="Zqg-0A-a5Z" firstAttribute="leading" secondItem="OOT-Zx-S3K" secondAttribute="leading" id="Xma-9m-E4n"/>
+                            <constraint firstItem="5zX-Kd-sGK" firstAttribute="width" secondItem="Zqg-0A-a5Z" secondAttribute="width" multiplier="0.9" id="Y4n-eV-TcB"/>
+                            <constraint firstItem="Zqg-0A-a5Z" firstAttribute="top" secondItem="JBq-GZ-ro4" secondAttribute="top" id="eRF-kg-d4T"/>
+                            <constraint firstItem="5zX-Kd-sGK" firstAttribute="centerX" secondItem="Zqg-0A-a5Z" secondAttribute="centerX" id="gk0-Xn-PDD"/>
+                            <constraint firstItem="Sao-0b-jsk" firstAttribute="leading" secondItem="OOT-Zx-S3K" secondAttribute="leading" id="mSh-b0-rLg"/>
+                            <constraint firstItem="Qsp-c3-qSW" firstAttribute="leading" secondItem="OOT-Zx-S3K" secondAttribute="leading" constant="20" id="qaV-46-tea"/>
+                            <constraint firstAttribute="bottom" secondItem="Sao-0b-jsk" secondAttribute="bottom" id="u2k-RF-oLL"/>
+                            <constraint firstItem="Zqg-0A-a5Z" firstAttribute="trailing" secondItem="OOT-Zx-S3K" secondAttribute="trailing" id="u32-9b-FLW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OOT-Zx-S3K"/>
+                    </view>
+                    <connections>
+                        <outlet property="_cancelButton" destination="Qsp-c3-qSW" id="lqg-Lb-koP"/>
+                        <outlet property="_documentSelectionBottom" destination="u2k-RF-oLL" id="FKF-0d-67S"/>
+                        <outlet property="_documentSelectionContainer" destination="Sao-0b-jsk" id="2T5-nm-gik"/>
+                        <outlet property="_messageLabel" destination="mb2-Tg-K3I" id="AJD-46-daR"/>
+                        <outlet property="_shadowView" destination="Zqg-0A-a5Z" id="4RX-om-xY0"/>
+                        <outlet property="_torchButton" destination="cym-tc-Nt5" id="7FF-KE-ezq"/>
+                        <outlet property="_viewfinderAspectRatio" destination="Rqw-0m-v5l" id="LjC-sb-efU"/>
+                        <outlet property="_viewfinderView" destination="5zX-Kd-sGK" id="I0S-jI-9Q6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FD3-3f-ZiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344.80000000000001" y="70.614692653673174"/>
+        </scene>
+        <!--MBDocumentSelection-->
+        <scene sceneID="o5u-mK-fEX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MBDocumentSelection" id="3j9-2W-rLp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pRr-KF-ObC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="345" y="529"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icClose" width="34" height="34"/>
+        <image name="icFlashOff" width="30" height="30"/>
+        <image name="icFlashOn" width="25" height="25"/>
+    </resources>
+</document>

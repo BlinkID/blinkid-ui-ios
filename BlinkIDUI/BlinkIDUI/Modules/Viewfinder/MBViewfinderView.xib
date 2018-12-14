@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MBViewfinderView" customModule="BlinkIDUI" customModuleProvider="target">
+            <connections>
+                <outlet property="_bottomToScanLineConstraint" destination="Bsu-bm-wc9" id="lfG-fH-7lZ"/>
+                <outlet property="_flipImage" destination="biY-cQ-Szo" id="Ktn-xq-A3d"/>
+                <outlet property="_flipView" destination="9Lh-Nl-xbA" id="ck3-W9-wW8"/>
+                <outlet property="_scanLine" destination="Uqy-ET-b1G" id="fWt-wf-Uhw"/>
+                <outlet property="_topToScanLineConstraint" destination="vhS-ka-WGf" id="Vxw-jn-4Ue"/>
+                <outletCollection property="_corners" destination="2Q8-KL-hqc" collectionClass="NSMutableArray" id="KEB-bF-f6z"/>
+                <outletCollection property="_corners" destination="kUX-cc-oF5" collectionClass="NSMutableArray" id="sCU-qk-P0t"/>
+                <outletCollection property="_corners" destination="Vog-1q-m87" collectionClass="NSMutableArray" id="sca-du-Q9p"/>
+                <outletCollection property="_corners" destination="6Pr-0u-5sT" collectionClass="NSMutableArray" id="o6B-5E-5pg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="433" height="327"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cornerTopRight" translatesAutoresizingMaskIntoConstraints="NO" id="2Q8-KL-hqc">
+                    <rect key="frame" x="409" y="0.0" width="24" height="16"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cornerTopLeft" translatesAutoresizingMaskIntoConstraints="NO" id="kUX-cc-oF5">
+                    <rect key="frame" x="0.0" y="0.0" width="24" height="16"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cornerBottomRight" translatesAutoresizingMaskIntoConstraints="NO" id="Vog-1q-m87">
+                    <rect key="frame" x="409" y="311" width="24" height="16"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cornerBottomLeft" translatesAutoresizingMaskIntoConstraints="NO" id="6Pr-0u-5sT">
+                    <rect key="frame" x="0.0" y="311" width="24" height="16"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanLine" translatesAutoresizingMaskIntoConstraints="NO" id="Uqy-ET-b1G">
+                    <rect key="frame" x="0.0" y="0.0" width="433" height="327"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Lh-Nl-xbA">
+                    <rect key="frame" x="10" y="15" width="413" height="297"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icFlip" translatesAutoresizingMaskIntoConstraints="NO" id="biY-cQ-Szo">
+                            <rect key="frame" x="143.5" y="117" width="126" height="63"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="biY-cQ-Szo" firstAttribute="centerX" secondItem="9Lh-Nl-xbA" secondAttribute="centerX" id="GcH-ST-CEV"/>
+                        <constraint firstItem="biY-cQ-Szo" firstAttribute="centerY" secondItem="9Lh-Nl-xbA" secondAttribute="centerY" id="j5S-rn-tRW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="9Lh-Nl-xbA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="0x4-2R-I3M"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vog-1q-m87" secondAttribute="trailing" id="6Js-8T-VCe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Uqy-ET-b1G" secondAttribute="bottom" id="Bsu-bm-wc9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9Lh-Nl-xbA" secondAttribute="bottom" constant="15" id="DA7-nS-aaB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9Lh-Nl-xbA" secondAttribute="trailing" constant="10" id="DDO-SC-gfm"/>
+                <constraint firstItem="kUX-cc-oF5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KKj-u1-v3m"/>
+                <constraint firstItem="2Q8-KL-hqc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="MUP-Xe-F7f"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2Q8-KL-hqc" secondAttribute="trailing" id="U9z-NY-P3p"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6Pr-0u-5sT" secondAttribute="bottom" id="Was-n3-3Pe"/>
+                <constraint firstItem="9Lh-Nl-xbA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="Wwr-t3-R9q"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Vog-1q-m87" secondAttribute="bottom" id="abB-WE-7a0"/>
+                <constraint firstItem="6Pr-0u-5sT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="iJA-yH-3Qi"/>
+                <constraint firstItem="kUX-cc-oF5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="pHe-zl-XP7"/>
+                <constraint firstItem="Uqy-ET-b1G" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qI4-g3-YwG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Uqy-ET-b1G" secondAttribute="trailing" id="s6S-Kq-QUC"/>
+                <constraint firstItem="Uqy-ET-b1G" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vhS-ka-WGf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-159.19999999999999" y="80.50974512743629"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cornerBottomLeft" width="24.5" height="16.5"/>
+        <image name="cornerBottomRight" width="24.5" height="16.5"/>
+        <image name="cornerTopLeft" width="24.5" height="16.5"/>
+        <image name="cornerTopRight" width="24.5" height="16.5"/>
+        <image name="icFlip" width="126" height="63"/>
+        <image name="scanLine" width="360" height="40"/>
+    </resources>
+</document>
