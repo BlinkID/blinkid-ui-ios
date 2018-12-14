@@ -11,6 +11,7 @@ BlinkID UI is a framework that lets you scan any BlinkID supported document with
 - [Feature requests](#feature-requests)
 - [FAQ](#faq)
 - [Troubleshooting](#troubleshooting)
+- [Documentation](https://blinkid.github.io/blinkid-ui-ios/)
 
 It includes a customizable scan view controller and country table view controller.
 
