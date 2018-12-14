@@ -1,5 +1,17 @@
+<p align="center" >
+  <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/logo-microblink.png" alt="MicroBlink" title="MicroBlink">
+</p>
+
 # BlinkID UI for iOS
 BlinkID UI is a framework that lets you scan any BlinkID supported document without even knowing what a `Recognizer` is.
+
+It includes a customizable scan view controller and country table view controller.
+
+See our [demo app](https://itunes.apple.com/us/app/blinkid/id1258136557?mt=8).
+
+New to _BlinkID_? Check out [BlinkID SDK](https://github.com/BlinkID/blinkid-ios) first.
+
+## Table of Contents
 
 - [Dependencies](#dependencies)
 - [Getting BlinkID UI](#getting-blinkid-ui)
@@ -12,12 +24,6 @@ BlinkID UI is a framework that lets you scan any BlinkID supported document with
 - [FAQ](#faq)
 - [Troubleshooting](#troubleshooting)
 - [Documentation](https://blinkid.github.io/blinkid-ui-ios/)
-
-It includes a customizable scan view controller and country table view controller.
-
-See our [demo app](https://itunes.apple.com/us/app/blinkid/id1258136557?mt=8).
-
-New to _BlinkID_? Check out [BlinkID SDK](https://github.com/BlinkID/blinkid-ios) first.
 
 # Dependencies
 
