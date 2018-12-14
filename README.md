@@ -16,6 +16,9 @@ New to _BlinkID_? Check out [BlinkID SDK](https://github.com/BlinkID/blinkid-ios
 - [Dependencies](#dependencies)
 - [Getting BlinkID UI](#getting-blinkid-ui)
 - [Quick Start](#quick-start)
+    - [Integration with Cocoapods](#integration-with-cocoapods)
+    - [Integration without Cocoapods](#integration-without-cocoapods)
+    - [Implementation](#implementation)
     - [Reading results](#reading-results)
     - [Swift example](#minimal-swift-example)
     - [Objective-C example](#minimal-objective-c-example)
@@ -36,8 +39,8 @@ git lfs install
 
 # Getting BlinkID UI
 1. **Install git-lfs**
-2.  Clone this repo: `https://github.com/BlinkID/blinkid-ui-ios.git`
-3.  Since _BlinkID_ is included as a submodule you'll need to run:
+2.  Clone this repo: `https://github.com/BlinkID/blinkid-ui-ios.git` or add `pod 'MBBlinkIDUI'` to your podfile
+3.  (Integration without Cocoapods) Since _BlinkID_ is included as a submodule you'll need to run:
 ```
 git submodule init
 git submodule update
@@ -47,12 +50,25 @@ git submodule update
 # Quick Start
 _BlinkID UI_ is a **Swift** framework, but we are also supporting **Objective-C**.
 
+## Integration with Cocoapods
+Add `MBBlinkIDUI` to your target inside your `Podfile`:
+```
+pod 'MBBlinkIDUI'
+``` 
+Run:
+```
+pod install
+```
+## Integration without Cocoapods
+
 This framework depends on _BlinkID SDK_ so you'll need to add the _BlinkID_ framework to your embedded frameworks of your Xcode project.
 You can do this by dragging **Microblink.framework** and **Microblink.bundle** from **blinkid-ios** submodule into your project included in this repository. 
 
 Make sure **Microblink.framework** is added to the embedded frameworks in your target and **Microblink.bundle** is included in your **Copy bundle resources** build phase.
 
 Now drag **BlinkIDUI.xcodeproj** to your project explorer. In the project navigator find **Products** in **BlinkIDUI** project and drag the **BlinkIDUI.framework** to your embedded frameworks in your target.
+
+## Implementation
 
 After adding the framework to your project, you will need to do the following:
 * First make sure that you correctly configured Microblink license. Check [BlinkID documentation](https://github.com/BlinkID/blinkid-ios/blob/master/README.md) for more info.
