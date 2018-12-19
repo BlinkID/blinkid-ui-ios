@@ -95,6 +95,12 @@ class MBAustriaCountryProvider: MBCountryProvider {
     }
 }
 
+class MBBruneiCountryProvider: MBCountryProvider {
+    override var identityCardProvider: MBDocumentProvider? {
+        return MBBruneiIDDocumentProvider()
+    }
+}
+
 class MBCanadaCountryProvider: MBCountryProvider {
     override var driversLicenseProvider: MBDocumentProvider? {
         return MBCanadaDLDocumentProvider()
