@@ -32,11 +32,11 @@ class MBMalayasiaDLDocumentProvider: MBDocumentProvider {
 class MBMalaysiaIDDocumentProvider: MBDocumentProvider {
 
     override var frontRecognizerProvider: MBRecognizerWrapper? {
-        return MBRecognizerWrapper(withRecognizer: MBMyKadFrontRecognizer())
+        return MBRecognizerWrapper(withRecognizer: MBMalaysiaMyKadFrontRecognizer())
     }
 
     override var backRecognizerProvider: MBRecognizerWrapper? {
-        return MBRecognizerWrapper(withRecognizer: MBMyKadBackRecognizer())
+        return MBRecognizerWrapper(withRecognizer: MBMalaysiaMyKadBackRecognizer())
     }
 
     override var type: MBDocumentType {

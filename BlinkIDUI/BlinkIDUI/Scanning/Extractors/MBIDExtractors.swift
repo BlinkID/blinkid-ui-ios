@@ -436,6 +436,59 @@ extension MBMalaysiaIkadFrontRecognizer {
     }
 }
 
+extension MBMalaysiaMyKadBackRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray()
+        
+        fields.add(MBField(key: MBFieldKey.extendedNricNumber, value: result.extendedNric))
+        fields.add(MBField(key: MBFieldKey.nricNumber, value: result.nric))
+        fields.add(MBField(key: MBFieldKey.oldNric, value: result.oldNric))
+        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
+        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
+        
+        return fields
+    }
+}
+
+extension MBMalaysiaMyKadFrontRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray()
+        
+        fields.add(MBField(key: MBFieldKey.nricNumber, value: result.nric))
+        fields.add(MBField(key: MBFieldKey.fullAddress, value: result.fullAddress))
+        fields.add(MBField(key: MBFieldKey.city, value: result.city))
+        fields.add(MBField(key: MBFieldKey.street, value: result.street))
+        fields.add(MBField(key: MBFieldKey.zipCode, value: result.zipcode))
+        fields.add(MBField(key: MBFieldKey.state, value: result.ownerState))
+        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.birthDate))
+        fields.add(MBField(key: MBFieldKey.fullName, value: result.fullName))
+        fields.add(MBField(key: MBFieldKey.religion, value: result.religion))
+        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
+        
+        return fields
+    }
+}
+
+extension MBMalaysiaMyTenteraFrontRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray()
+        
+        fields.add(MBField(key: MBFieldKey.nricNumber, value: result.nric))
+        fields.add(MBField(key: MBFieldKey.armyNumber, value: result.armyNumber))
+        fields.add(MBField(key: MBFieldKey.address, value: result.fullAddress))
+        fields.add(MBField(key: MBFieldKey.city, value: result.city))
+        fields.add(MBField(key: MBFieldKey.addressState, value: result.ownerState))
+        fields.add(MBField(key: MBFieldKey.addressZipCode, value: result.zipcode))
+        fields.add(MBField(key: MBFieldKey.addressStreet, value: result.street))
+        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.birthDate))
+        fields.add(MBField(key: MBFieldKey.fullName, value: result.fullName))
+        fields.add(MBField(key: MBFieldKey.religion, value: result.religion))
+        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
+        
+        return fields
+    }
+}
+
 extension MBMoroccoIdFrontRecognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray()
@@ -503,60 +556,6 @@ extension MBMexicoVoterIdFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.electorKey, value: result.electorKey))
         fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
         
-        return fields
-    }
-}
-
-extension MBMyKadFrontRecognizer {
-    override func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray()
-
-        fields.add(MBField(key: MBFieldKey.nricNumber, value: result.nricNumber))
-        fields.add(MBField(key: MBFieldKey.address, value: result.ownerAddress))
-        fields.add(MBField(key: MBFieldKey.addressCity, value: result.ownerAddressCity))
-        fields.add(MBField(key: MBFieldKey.addressState, value: result.ownerAddressState))
-        fields.add(MBField(key: MBFieldKey.addressZipCode, value: result.ownerAddressZipCode))
-        fields.add(MBField(key: MBFieldKey.addressStreet, value: result.ownerAddressStreet))
-        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.ownerBirthDate))
-        fields.add(MBField(key: MBFieldKey.fullName, value: result.ownerFullName))
-        fields.add(MBField(key: MBFieldKey.religion, value: result.ownerReligion))
-        fields.add(MBField(key: MBFieldKey.sex, value: result.ownerSex))
-        fields.add(MBField(key: MBFieldKey.armyNumber, value: result.armyNumber))
-
-        return fields
-    }
-}
-
-extension MBMyKadBackRecognizer {
-    override func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray()
-
-        fields.add(MBField(key: MBFieldKey.extendedNricNumber, value: result.extendedNric))
-        fields.add(MBField(key: MBFieldKey.nricNumber, value: result.nric))
-        fields.add(MBField(key: MBFieldKey.oldNric, value: result.oldNric))
-        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
-        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
-
-        return fields
-    }
-}
-
-extension MBMalaysiaMyTenteraFrontRecognizer {
-    override func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray()
-
-        fields.add(MBField(key: MBFieldKey.nricNumber, value: result.nric))
-        fields.add(MBField(key: MBFieldKey.armyNumber, value: result.armyNumber))
-        fields.add(MBField(key: MBFieldKey.address, value: result.fullAddress))
-        fields.add(MBField(key: MBFieldKey.city, value: result.city))
-        fields.add(MBField(key: MBFieldKey.addressState, value: result.ownerState))
-        fields.add(MBField(key: MBFieldKey.addressZipCode, value: result.zipcode))
-        fields.add(MBField(key: MBFieldKey.addressStreet, value: result.street))
-        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.birthDate))
-        fields.add(MBField(key: MBFieldKey.fullName, value: result.fullName))
-        fields.add(MBField(key: MBFieldKey.religion, value: result.religion))
-        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
-
         return fields
     }
 }
