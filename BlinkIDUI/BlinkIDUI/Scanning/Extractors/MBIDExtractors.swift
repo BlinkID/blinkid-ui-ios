@@ -139,11 +139,8 @@ extension MBCroatiaIdFrontRecognizer {
 
 extension MBCyprusIdBackRecognizer {
     override func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray()
-
-        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
-        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
-
+        let fields = result.mrzResult.extractFieldResults()
+        
         return fields
     }
 }
@@ -152,11 +149,32 @@ extension MBCyprusIdFrontRecognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray()
 
+        fields.add(MBField(key: MBFieldKey.documentNumber, value: result.idNumber))
+
+        return fields
+    }
+}
+
+extension MBCyprusOldIdBackRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray()
+        
+        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
+        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
+        
+        return fields
+    }
+}
+
+extension MBCyprusOldIdFrontRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray()
+        
         fields.add(MBField(key: MBFieldKey.documentNumber, value: result.documentNumber))
         fields.add(MBField(key: MBFieldKey.identityCardNumber, value: result.idNumber))
         fields.add(MBField(key: MBFieldKey.firstName, value: result.name))
         fields.add(MBField(key: MBFieldKey.lastName, value: result.surname))
-
+        
         return fields
     }
 }

@@ -125,6 +125,12 @@ class MBCyprusCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
         return MBCyprusIDDocumentProvider()
     }
+    
+    override var documentProviders: [MBDocumentType: MBDocumentProvider] {
+        var providers = super.documentProviders
+        providers[MBDocumentType.oldID] = MBCyprusIDOldDocumentProvider()
+        return providers
+    }
 }
 
 class MBCzechCountryProvider: MBCountryProvider {
