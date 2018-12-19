@@ -327,25 +327,6 @@ extension MBHongKongIdFrontRecognizer {
     }
 }
 
-extension MBIkadRecognizer {
-    override func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray()
-
-        fields.add(MBField(key: MBFieldKey.fullName, value: result.name))
-        fields.add(MBField(key: MBFieldKey.passportNumber, value: result.passportNumber))
-        fields.add(MBField(key: MBFieldKey.nationality, value: result.nationality))
-        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
-        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
-        fields.add(MBField(key: MBFieldKey.sector, value: result.sector))
-        fields.add(MBField(key: MBFieldKey.employer, value: result.employer))
-        fields.add(MBField(key: MBFieldKey.address, value: result.address))
-        fields.add(MBField(key: MBFieldKey.facultyAddress, value: result.facultyAddress))
-        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.expiryDate))
-
-        return fields
-    }
-}
-
 extension MBIndonesiaIdFrontRecognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray()
@@ -432,6 +413,25 @@ extension MBKuwaitIdFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.civilIdNumber, value: result.civilIdNumber))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.birthDate))
 
+        return fields
+    }
+}
+
+extension MBMalaysiaIkadFrontRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray()
+        
+        fields.add(MBField(key: MBFieldKey.fullName, value: result.name))
+        fields.add(MBField(key: MBFieldKey.passportNumber, value: result.passportNumber))
+        fields.add(MBField(key: MBFieldKey.nationality, value: result.nationality))
+        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
+        fields.add(MBField(key: MBFieldKey.sex, value: result.gender))
+        fields.add(MBField(key: MBFieldKey.sector, value: result.sector))
+        fields.add(MBField(key: MBFieldKey.employer, value: result.employer))
+        fields.add(MBField(key: MBFieldKey.address, value: result.address))
+        fields.add(MBField(key: MBFieldKey.facultyAddress, value: result.facultyAddress))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
+        
         return fields
     }
 }

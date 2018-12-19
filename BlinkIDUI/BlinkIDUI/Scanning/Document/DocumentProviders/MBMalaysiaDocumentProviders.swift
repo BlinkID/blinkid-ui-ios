@@ -56,7 +56,7 @@ class MBMalaysiaIDDocumentProvider: MBDocumentProvider {
 class MBMalayasiaiKadDocumentProvider: MBDocumentProvider {
 
     override var frontRecognizerProvider: MBRecognizerWrapper? {
-        return MBRecognizerWrapper(withRecognizer: MBIkadRecognizer())
+        return MBRecognizerWrapper(withRecognizer: MBMalaysiaIkadFrontRecognizer())
     }
 
     override var type: MBDocumentType {
