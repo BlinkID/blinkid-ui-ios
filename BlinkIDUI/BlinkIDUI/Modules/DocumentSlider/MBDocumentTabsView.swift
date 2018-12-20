@@ -76,6 +76,9 @@ class MBDocumentTabsView: UIView, MBNibLoadable {
         for (i, documentTab) in documentTabs.enumerated() {
             if let document = documents?[i] {
                 documentTab.isSelected = document == documentType
+                if document == documentType {
+                    scroll(tabFrame: documentTab.frame)
+                }
             } else {
                 documentTab.isSelected = false
             }
