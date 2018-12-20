@@ -66,18 +66,22 @@ import MicroBlink
 }
 
 class MBDefaultCountryProvider: MBCountryProvider {
-    override var documentProviders: [MBDocumentType: MBDocumentProvider] {
-        return [MBDocumentType.passport: MBPassportDocumentProvider(),
-                MBDocumentType.visa: MBVisaDocumentProvider(),
-                MBDocumentType.identityCard: MBIDDocumentProvider(),
-                MBDocumentType.driverLicense: MBDLDocumentProvider(),
-                MBDocumentType.residencePermit: MBResidencePermitDocumentProvider()]
+    override var driversLicenseProvider: MBDocumentProvider? {
+        return MBDLDocumentProvider(isFullySupported: false)
+    }
+    
+    override  var identityCardProvider: MBDocumentProvider? {
+        return MBIDDocumentProvider(isFullySupported: false)
     }
 }
 
 class MBAustraliaCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
         return nil
+    }
+    
+    override var driversLicenseProvider: MBDocumentProvider? {
+        return MBDLDocumentProvider(isFullySupported: false)
     }
 }
 
@@ -165,11 +169,19 @@ class MBEgyptCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
         return MBEgyptIDDocumentProvider()
     }
+    
+    override var driversLicenseProvider: MBDocumentProvider? {
+        return MBDLDocumentProvider(isFullySupported: false)
+    }
 }
 
 class MBFranceCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
-        return MBIDWithMrtdDetectorD1DocumentProvider()
+        return MBIDWithMrtdDetectorD1DocumentProvider(isFullySupported: false)
+    }
+    
+    override var driversLicenseProvider: MBDocumentProvider? {
+        return MBDLDocumentProvider(isFullySupported: false)
     }
 }
 
@@ -193,6 +205,10 @@ class MBHongKongCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
         return MBHongKongIDDocumentProvider()
     }
+    
+    override var driversLicenseProvider: MBDocumentProvider? {
+        return MBDLDocumentProvider(isFullySupported: false)
+    }
 }
 
 class MBIndonesiaCountryProvider: MBCountryProvider {
@@ -213,13 +229,17 @@ class MBItalyCountryProvider: MBCountryProvider {
     }
     
     override var identityCardProvider: MBDocumentProvider? {
-        return MBIDWithMrtdDetectorD1DocumentProvider()
+        return MBIDWithMrtdDetectorD1DocumentProvider(isFullySupported: false)
     }
 }
 
 class MBJordanCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
         return MBJordanIDOldDocumentProvider()
+    }
+    
+    override var driversLicenseProvider: MBDocumentProvider? {
+        return MBDLDocumentProvider(isFullySupported: false)
     }
     
     override var documentProviders: [MBDocumentType: MBDocumentProvider] {
@@ -278,7 +298,7 @@ class MBNigeriaCountryProvider: MBCountryProvider {
 
 class MBNewZealandCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
-        return MBIDWithMrtdDetectorD1DocumentProvider()
+        return MBIDDocumentProvider(isFullySupported: false)
     }
     
     override var driversLicenseProvider: MBDocumentProvider? {
@@ -294,11 +314,11 @@ class MBPolandCountryProvider: MBCountryProvider {
 
 class MBQatarCountryProvider: MBCountryProvider {
     override var driversLicenseProvider: MBDocumentProvider? {
-        return MBIDWithDetectorD1DocumentProvider()
+        return MBDLDocumentProvider(isFullySupported: false)
     }
     
     override var identityCardProvider: MBDocumentProvider? {
-        return MBIDWithDetectorD1DocumentProvider()
+        return MBIDWithDetectorD1DocumentProvider(isFullySupported: false)
     }
 }
 
@@ -306,11 +326,19 @@ class MBRomaniaCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
         return MBRomaniaIDDocumentProvider()
     }
+    
+    override var driversLicenseProvider: MBDocumentProvider? {
+        return MBDLDocumentProvider(isFullySupported: false)
+    }
 }
 
 class MBSerbiaCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
         return MBSerbiaIDDocumentProvider()
+    }
+    
+    override var driversLicenseProvider: MBDocumentProvider? {
+        return MBDLDocumentProvider(isFullySupported: false)
     }
 }
 
@@ -338,7 +366,7 @@ class MBSloveniaCountryProvider: MBCountryProvider {
 
 class MBSouthAfricaCountryProvider: MBCountryProvider {
     override var driversLicenseProvider: MBDocumentProvider? {
-        return MBSouthAfricaDLDocumentProvider()
+        return MBSouthAfricaDLDocumentProvider(isFullySupported: false)
     }
     
     override var identityCardProvider: MBDocumentProvider? {
@@ -346,7 +374,7 @@ class MBSouthAfricaCountryProvider: MBCountryProvider {
     }
     
     override var visaProvider: MBDocumentProvider? {
-        return MBSouthAfricaVisaDocumentProvider()
+        return MBSouthAfricaVisaDocumentProvider(isFullySupported: false)
     }
 }
 
@@ -354,11 +382,27 @@ class MBSpainCountryProvider: MBCountryProvider {
     override var driversLicenseProvider: MBDocumentProvider? {
         return MBSpainDLDocumentProvider()
     }
+    
+    override var identityCardProvider: MBDocumentProvider? {
+        return MBIDDocumentProvider(isFullySupported: false)
+    }
+    
+    override var residencePermitProvider: MBDocumentProvider? {
+        return MBResidencePermitDocumentProvider(isFullySupported: false)
+    }
 }
 
 class MBSwedenCountryProvider: MBCountryProvider {
     override var driversLicenseProvider: MBDocumentProvider? {
         return MBSwedenDLDocumentProvider()
+    }
+    
+    override var identityCardProvider: MBDocumentProvider? {
+        return MBIDDocumentProvider(isFullySupported: false)
+    }
+    
+    override var residencePermitProvider: MBDocumentProvider? {
+        return MBResidencePermitDocumentProvider(isFullySupported: false)
     }
 }
 
@@ -386,11 +430,11 @@ class MBUAECountryProvider: MBCountryProvider {
     }
     
     override var residencePermitProvider: MBDocumentProvider? {
-        return MBUAEResidencePermitDocumentProvider()
+        return MBUAEResidencePermitDocumentProvider(isFullySupported: false)
     }
     
     override var visaProvider: MBDocumentProvider? {
-        return MBUAEVisaDocumentProvider()
+        return MBUAEVisaDocumentProvider(isFullySupported: false)
     }
 }
 

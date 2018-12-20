@@ -34,6 +34,9 @@ enum DocumentAspectRatio: Int {
 /// what `MBRecognizer`s, what type of document this...
 public class MBDocumentProvider: NSObject {
     
+    /// Property that is used to tell if the document is fully supported, ie. is in beta
+    public final let isFullySupported: Bool
+    
     /// Property that is used to tell if front and back side of the document can be scanned or just one side.
     /// Value will return true, if either front and back recognizer providers are specified or a combined recognizer provider is specified
     final var isTwoSided: Bool { return (frontRecognizerProvider != nil && backRecognizerProvider != nil) || (combinedRecognizerProvider != nil) }
@@ -50,7 +53,7 @@ public class MBDocumentProvider: NSObject {
     var combinedRecognizerProvider: MBRecognizerWrapper? { return nil }
     
     /// Type of document provided by this class
-    var type: MBDocumentType { return MBDocumentType.unknown }
+    public var type: MBDocumentType { return MBDocumentType.unknown }
     
     /// Aspect ratio of the document
     var aspectRatio: DocumentAspectRatio { return DocumentAspectRatio.unknown }
@@ -62,6 +65,10 @@ public class MBDocumentProvider: NSObject {
     ///         will be used to match the results must be provided through
     ///         MBResultValidator initializer in concrete MBDocumentProvider classes.
     var resultValidator: MBResultValidator { return MBResultValidator() }
+    
+    init(isFullySupported: Bool = true) {
+        self.isFullySupported = isFullySupported
+    }
 }
 
 // MARK: Generic documents
