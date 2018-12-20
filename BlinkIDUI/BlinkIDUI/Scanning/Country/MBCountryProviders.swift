@@ -256,12 +256,16 @@ class MBKuwaitCountryProvider: MBCountryProvider {
 }
 
 class MBMalaysiaCountryProvider: MBCountryProvider {
-    override var driversLicenseProvider: MBDocumentProvider? {
-        return MBMalayasiaDLDocumentProvider()
+    override var identityCardProvider: MBDocumentProvider? {
+        return nil
     }
     
-    override var identityCardProvider: MBDocumentProvider? {
-        return MBMalaysiaIDDocumentProvider()
+    override var residencePermitProvider: MBDocumentProvider? {
+        return nil
+    }
+    
+    override var driversLicenseProvider: MBDocumentProvider? {
+        return MBMalayasiaDLDocumentProvider()
     }
     
     override var passportProvider: MBDocumentProvider? {
@@ -270,6 +274,7 @@ class MBMalaysiaCountryProvider: MBCountryProvider {
     
     override var documentProviders: [MBDocumentType: MBDocumentProvider] {
         var providers = super.documentProviders
+        providers[MBDocumentType.malaysianID] = MBMalaysiaIDDocumentProvider()
         providers[MBDocumentType.immigratorID] = MBMalayasiaiKadDocumentProvider()
         providers[MBDocumentType.militaryID] = MBMalayasiaMyTenteraDocumentProvider()
         providers[MBDocumentType.permanentResidentID] = MBMalaysiaMyPrDocumentProvider()
