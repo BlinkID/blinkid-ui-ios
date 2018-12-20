@@ -69,6 +69,46 @@ class MBMalayasiaiKadDocumentProvider: MBDocumentProvider {
 
 }
 
+class MBMalaysiaMyKasDocumentProvider: MBDocumentProvider {
+    
+    override var frontRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBMalaysiaMyKasFrontRecognizer())
+    }
+    
+    override var backRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBMalaysiaMyKadBackRecognizer())
+    }
+    
+    override var type: MBDocumentType {
+        return MBDocumentType.temporaryResidentID
+    }
+    
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.id1
+    }
+
+}
+
+class MBMalaysiaMyPrDocumentProvider: MBDocumentProvider {
+    
+    override var frontRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBMalaysiaMyPrFrontRecognizer())
+    }
+    
+    override var backRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withDocumentDetector: MBDocumentDetectorD1Recognizer())
+    }
+    
+    override var type: MBDocumentType {
+        return MBDocumentType.permanentResidentID
+    }
+    
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.id1
+    }
+
+}
+
 class MBMalayasiaMyTenteraDocumentProvider: MBDocumentProvider {
 
     override var frontRecognizerProvider: MBRecognizerWrapper? {

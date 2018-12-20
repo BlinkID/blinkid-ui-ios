@@ -483,6 +483,46 @@ extension MBMalaysiaMyKadFrontRecognizer {
     }
 }
 
+extension MBMalaysiaMyKasFrontRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray()
+        
+        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.birthDate))
+        fields.add(MBField(key: MBFieldKey.city, value: result.city))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
+        fields.add(MBField(key: MBFieldKey.fullAddress, value: result.fullAddress))
+        fields.add(MBField(key: MBFieldKey.fullName, value: result.fullName))
+        fields.add(MBField(key: MBFieldKey.nricNumber, value: result.nric))
+        fields.add(MBField(key: MBFieldKey.state, value: result.ownerState))
+        fields.add(MBField(key: MBFieldKey.religion, value: result.religion))
+        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
+        fields.add(MBField(key: MBFieldKey.street, value: result.street))
+        fields.add(MBField(key: MBFieldKey.zipCode, value: result.zipcode))
+
+        return fields
+    }
+}
+
+extension MBMalaysiaMyPrFrontRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray()
+        
+        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.birthDate))
+        fields.add(MBField(key: MBFieldKey.city, value: result.city))
+        fields.add(MBField(key: MBFieldKey.country, value: result.countryCode))
+        fields.add(MBField(key: MBFieldKey.fullAddress, value: result.fullAddress))
+        fields.add(MBField(key: MBFieldKey.fullName, value: result.fullName))
+        fields.add(MBField(key: MBFieldKey.nricNumber, value: result.nric))
+        fields.add(MBField(key: MBFieldKey.state, value: result.ownerState))
+        fields.add(MBField(key: MBFieldKey.religion, value: result.religion))
+        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
+        fields.add(MBField(key: MBFieldKey.street, value: result.street))
+        fields.add(MBField(key: MBFieldKey.zipCode, value: result.zipcode))
+        
+        return fields
+    }
+}
+
 extension MBMalaysiaMyTenteraFrontRecognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray()
