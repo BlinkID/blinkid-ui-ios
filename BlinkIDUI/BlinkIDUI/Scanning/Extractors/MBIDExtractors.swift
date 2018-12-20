@@ -876,14 +876,14 @@ extension MBSwitzerlandIdFrontRecognizer {
 
 extension MBSwitzerlandIdBackRecognizer {
     override func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray()
+        let fields = NSMutableArray(array: result.mrzResult.extractFieldResults())
 
         fields.add(MBField(key: MBFieldKey.placeOfOrigin, value: result.placeOfOrigin))
         fields.add(MBField(key: MBFieldKey.height, value: result.height))
-        fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.issuer))
+        fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.authority))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
-        fields.add(MBField(key: MBFieldKey.nonMrzDateOfExpiry, value: result.nonMrzDateOfExpiry))
-        fields.add(MBField(key: MBFieldKey.nonMrzSex, value: result.nonMrzSex))
+        fields.add(MBField(key: MBFieldKey.nonMrzDateOfExpiry, value: result.dateOfExpiry))
+        fields.add(MBField(key: MBFieldKey.nonMrzSex, value: result.sex))
 
         return fields
     }
