@@ -14,6 +14,7 @@ import Foundation
 @objc public enum MBSupportedCountry: Int, CaseIterable {
     case australia
     case austria
+    case brunei
     case canada
     case colombia
     case croatia
@@ -29,6 +30,7 @@ import Foundation
     case italy
     case jordan
     case kuwait
+    case nigeria
     case malaysia
     case mexico
     case morocco
@@ -60,6 +62,8 @@ import Foundation
             return "AU"
         case .austria:
             return "AT"
+        case .brunei:
+            return "BN"
         case .canada:
             return "CA"
         case .colombia:
@@ -96,6 +100,8 @@ import Foundation
             return "MX"
         case .morocco:
             return "MA"
+        case .nigeria:
+            return "NG"
         case .newZealand:
             return "NZ"
         case .poland:
@@ -133,6 +139,8 @@ import Foundation
             return MBAustraliaCountryProvider()
         case .austria:
             return MBAustriaCountryProvider()
+        case .brunei:
+            return MBBruneiCountryProvider()
         case .canada:
             return MBCanadaCountryProvider()
         case .colombia:
@@ -169,6 +177,8 @@ import Foundation
             return MBMexicoCountryProvider()
         case .morocco:
             return MBMoroccoCountryProvider()
+        case .nigeria:
+            return MBNigeriaCountryProvider()
         case .newZealand:
             return MBNewZealandCountryProvider()
         case .poland:

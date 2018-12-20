@@ -28,3 +28,23 @@ class MBCyprusIDDocumentProvider: MBDocumentProvider {
     }
 
 }
+
+class MBCyprusIDOldDocumentProvider: MBDocumentProvider {
+    
+    override var frontRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBCyprusOldIdFrontRecognizer())
+    }
+    
+    override var backRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBCyprusOldIdBackRecognizer())
+    }
+    
+    override var type: MBDocumentType {
+        return MBDocumentType.oldID
+    }
+    
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.id1
+    }
+    
+}

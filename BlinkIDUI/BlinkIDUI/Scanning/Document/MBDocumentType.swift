@@ -18,8 +18,12 @@ import UIKit
     /// Some countries have two versions of Identitiy Cards
     /// This is used to distinct them
     case newID
-    /// Military Identity Card
+    /// Military Identity Card(MyTentera)
     case militaryID
+    /// Permanent Resident Identity Card(MyPr)
+    case permanentResidentID
+    /// Temporary Resident Identity Card(MyKas)
+    case temporaryResidentID
     /// Immigrator Identity Card
     case immigratorID
     /// Driver's License
@@ -44,6 +48,10 @@ import UIKit
             return settings.newIDCardText
         case .militaryID:
             return settings.militaryIDCardText
+        case .permanentResidentID:
+            return settings.permanentResidentIDCardText
+        case .temporaryResidentID:
+            return settings.temporaryResidentIDCardText
         case .immigratorID:
             return settings.immigratorIDCardText
         case .driverLicense:

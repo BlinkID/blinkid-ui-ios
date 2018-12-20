@@ -95,6 +95,12 @@ class MBAustriaCountryProvider: MBCountryProvider {
     }
 }
 
+class MBBruneiCountryProvider: MBCountryProvider {
+    override var identityCardProvider: MBDocumentProvider? {
+        return MBBruneiIDDocumentProvider()
+    }
+}
+
 class MBCanadaCountryProvider: MBCountryProvider {
     override var driversLicenseProvider: MBDocumentProvider? {
         return MBCanadaDLDocumentProvider()
@@ -124,6 +130,12 @@ class MBCroatiaCountryProvider: MBCountryProvider {
 class MBCyprusCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
         return MBCyprusIDDocumentProvider()
+    }
+    
+    override var documentProviders: [MBDocumentType: MBDocumentProvider] {
+        var providers = super.documentProviders
+        providers[MBDocumentType.oldID] = MBCyprusIDOldDocumentProvider()
+        return providers
     }
 }
 
@@ -240,6 +252,8 @@ class MBMalaysiaCountryProvider: MBCountryProvider {
         var providers = super.documentProviders
         providers[MBDocumentType.immigratorID] = MBMalayasiaiKadDocumentProvider()
         providers[MBDocumentType.militaryID] = MBMalayasiaMyTenteraDocumentProvider()
+        providers[MBDocumentType.permanentResidentID] = MBMalaysiaMyPrDocumentProvider()
+        providers[MBDocumentType.temporaryResidentID] = MBMalaysiaMyKasDocumentProvider()
         return providers
     }
 }
@@ -253,6 +267,12 @@ class MBMexicoCountryProvider: MBCountryProvider {
 class MBMoroccoCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
         return MBMexicoIDDocumentProvider()
+    }
+}
+
+class MBNigeriaCountryProvider: MBCountryProvider {
+    override var driversLicenseProvider: MBDocumentProvider? {
+        return MBNigeriaDLDocumentProvider()
     }
 }
 

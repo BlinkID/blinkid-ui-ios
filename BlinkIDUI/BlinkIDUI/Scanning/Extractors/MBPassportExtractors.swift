@@ -45,18 +45,17 @@ extension MBGermanyPassportRecognizer {
 
 extension MBSwitzerlandPassportRecognizer {
     override func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray(array: result.extractFieldResults())
+        let fields = NSMutableArray(array: result.mrzResult.extractFieldResults())
 
         fields.add(MBField(key: MBFieldKey.lastName, value: result.surname))
         fields.add(MBField(key: MBFieldKey.givenName, value: result.givenName))
-        fields.add(MBField(key: MBFieldKey.nationality, value: result.nationality))
-        fields.add(MBField(key: MBFieldKey.placeOfBirth, value: result.placeOfBirth))
+        fields.add(MBField(key: MBFieldKey.placeOfOrigin, value: result.placeOfOrigin))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
-        fields.add(MBField(key: MBFieldKey.nonMrzDateOfBirth, value: result.nonMrzDateOfBirth))
-        fields.add(MBField(key: MBFieldKey.nonMrzDateOfExpiry, value: result.nonMrzDateOfExpiry))
+        fields.add(MBField(key: MBFieldKey.nonMrzDateOfBirth, value: result.dateOfBirth))
+        fields.add(MBField(key: MBFieldKey.nonMrzDateOfExpiry, value: result.dateOfExpiry))
         fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.authority))
         fields.add(MBField(key: MBFieldKey.passportNumber, value: result.passportNumber))
-        fields.add(MBField(key: MBFieldKey.nonMrzSex, value: result.nonMrzSex))
+        fields.add(MBField(key: MBFieldKey.nonMrzSex, value: result.sex))
         fields.add(MBField(key: MBFieldKey.height, value: result.height))
 
         return fields

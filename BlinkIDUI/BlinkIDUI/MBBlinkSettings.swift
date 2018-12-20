@@ -184,6 +184,16 @@ import MicroBlink
     /// - Default: "MyTentera"
     @objc public var militaryIDCardText = Bundle.frameworkBundle.localizedString("militaryIDCard", Bundle.uiStringTable)
     
+    /// Text for permanent resident identity cards in document tabs view.
+    /// This is specific to Malaysia
+    /// - Default: "MyPr"
+    @objc public var permanentResidentIDCardText = Bundle.frameworkBundle.localizedString("permanentResidenceIDCard", Bundle.uiStringTable)
+    
+    /// Text for  temporary resident identity cards in document tabs view.
+    /// This is specific to Malaysia
+    /// - Default: "MyKas"
+    @objc public var temporaryResidentIDCardText = Bundle.frameworkBundle.localizedString("temporaryResidenceIDCard", Bundle.uiStringTable)
+    
     /// Text for immigrator identity cards in document tabs view.
     /// This is specific to Malaysia
     /// - Default: "iKad"

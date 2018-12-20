@@ -32,11 +32,11 @@ class MBMalayasiaDLDocumentProvider: MBDocumentProvider {
 class MBMalaysiaIDDocumentProvider: MBDocumentProvider {
 
     override var frontRecognizerProvider: MBRecognizerWrapper? {
-        return MBRecognizerWrapper(withRecognizer: MBMyKadFrontRecognizer())
+        return MBRecognizerWrapper(withRecognizer: MBMalaysiaMyKadFrontRecognizer())
     }
 
     override var backRecognizerProvider: MBRecognizerWrapper? {
-        return MBRecognizerWrapper(withRecognizer: MBMyKadBackRecognizer())
+        return MBRecognizerWrapper(withRecognizer: MBMalaysiaMyKadBackRecognizer())
     }
 
     override var type: MBDocumentType {
@@ -56,13 +56,53 @@ class MBMalaysiaIDDocumentProvider: MBDocumentProvider {
 class MBMalayasiaiKadDocumentProvider: MBDocumentProvider {
 
     override var frontRecognizerProvider: MBRecognizerWrapper? {
-        return MBRecognizerWrapper(withRecognizer: MBIkadRecognizer())
+        return MBRecognizerWrapper(withRecognizer: MBMalaysiaIkadFrontRecognizer())
     }
 
     override var type: MBDocumentType {
         return MBDocumentType.immigratorID
     }
 
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.id1
+    }
+
+}
+
+class MBMalaysiaMyKasDocumentProvider: MBDocumentProvider {
+    
+    override var frontRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBMalaysiaMyKasFrontRecognizer())
+    }
+    
+    override var backRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBMalaysiaMyKadBackRecognizer())
+    }
+    
+    override var type: MBDocumentType {
+        return MBDocumentType.temporaryResidentID
+    }
+    
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.id1
+    }
+
+}
+
+class MBMalaysiaMyPrDocumentProvider: MBDocumentProvider {
+    
+    override var frontRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBMalaysiaMyPrFrontRecognizer())
+    }
+    
+    override var backRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withDocumentDetector: MBDocumentDetectorD1Recognizer())
+    }
+    
+    override var type: MBDocumentType {
+        return MBDocumentType.permanentResidentID
+    }
+    
     override var aspectRatio: DocumentAspectRatio {
         return DocumentAspectRatio.id1
     }

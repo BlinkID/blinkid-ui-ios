@@ -34,6 +34,10 @@
 
 "militaryIDCard" = "MyTentera";
 
+"permanentResidenceIDCard" = "MyPr";
+
+"temporaryResidenceIDCard" = "MyKas";
+
 "immigratorIDCard" = "iKad";
 
 "passport" = "Passport";
