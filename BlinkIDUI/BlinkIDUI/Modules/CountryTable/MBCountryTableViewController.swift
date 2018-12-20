@@ -55,6 +55,8 @@ import MicroBlink
     private var _lastSelectedCountry: MBCountry! {
         return delegate?.lastSelectedCountry() ?? MBCountry()
     }
+    
+    private var _searchController: UISearchController?
 
     // MARK: - Initializer -
     
@@ -96,11 +98,14 @@ import MicroBlink
             
             searchController.searchResultsUpdater = self
             searchController.obscuresBackgroundDuringPresentation = false
+            searchController.dimsBackgroundDuringPresentation = false
             
             navigationItem.searchController = searchController
             navigationItem.hidesSearchBarWhenScrolling = false
             definesPresentationContext = true
             
+            _searchController = searchController
+            searchController.searchBar.delegate = self
             _setup(searchBar: searchController.searchBar)
         } else {
             // Setup a search bar in the navigation bar
@@ -199,6 +204,18 @@ extension MBCountryTableViewController: UITableViewDataSource {
 
 extension MBCountryTableViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let searchController = _searchController,
+            searchController.isActive {
+            searchController.searchBar.endEditing(true)
+            searchController.dismiss(animated: false, completion: {
+                self._didSelectRow(atIndexPath: indexPath)
+            })
+        } else {
+           _didSelectRow(atIndexPath: indexPath)
+        }
+    }
+        
+    private func _didSelectRow(atIndexPath indexPath: IndexPath) {
         let country = _countryListManager.countryFor(indexPath: indexPath)
         _countryListManager.resetFilter()
         delegate?.didSelectCountry(country: country)
