@@ -178,7 +178,12 @@ import MicroBlink
     /// This is specific to some countries, i.e. United Arab Emirates
     /// - Default: "New ID card"
     @objc public var newIDCardText = Bundle.frameworkBundle.localizedString("newIDCard", Bundle.uiStringTable)
-
+    
+    /// Text for malaysian identity cards in document tabs view.
+    /// This is specific to Malaysia
+    /// - Default: "MyKad"
+    @objc public var malaysianIDCardText = Bundle.frameworkBundle.localizedString("malaysianIDCard", Bundle.uiStringTable)
+    
     /// Text for military identity cards in document tabs view.
     /// This is specific to Malaysia
     /// - Default: "MyTentera"

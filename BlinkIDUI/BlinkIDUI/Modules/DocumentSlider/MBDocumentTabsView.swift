@@ -76,6 +76,9 @@ class MBDocumentTabsView: UIView, MBNibLoadable {
         for (i, documentTab) in documentTabs.enumerated() {
             if let document = documents?[i] {
                 documentTab.isSelected = document == documentType
+                if document == documentType {
+                    scroll(tabFrame: documentTab.frame)
+                }
             } else {
                 documentTab.isSelected = false
             }
@@ -84,16 +87,14 @@ class MBDocumentTabsView: UIView, MBNibLoadable {
 
     func scroll(tabFrame: CGRect) {
         if _scrollView.contentSize.width > _scrollView.frame.size.width {
-            let midX = frame.width / 2
-            let tabMinX = tabFrame.minX
-            let tabMidX = tabMinX + tabFrame.width / 2
+            let offset = _scrollView.contentSize.width > frame.width ?  min(_scrollView.contentSize.width - frame.width, max(0, tabFrame.origin.x - (frame.width - tabFrame.width) / 2.0)) : 0
 
-            let offset = min(max(0, tabMidX - midX), _scrollView.contentSize.width - tabMinX)
             UIView.animate(withDuration: MBConstants.Animation.DocumentTabsView.scrollToTabAnimationTime) {
                 self._scrollView.contentOffset = CGPoint(x: offset, y: 0)
             }
         }
     }
+
 }
 
 // MARK: - MBDocumentTabDelegate -

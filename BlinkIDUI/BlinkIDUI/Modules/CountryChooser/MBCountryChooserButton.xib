@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icArrow" translatesAutoresizingMaskIntoConstraints="NO" id="hud-lw-Frh" customClass="ic">
-                    <rect key="frame" x="338" y="57.5" width="14" height="8"/>
+                    <rect key="frame" x="338" y="52" width="14" height="8"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmi-92-L7C">
                     <rect key="frame" x="15" y="45.5" width="303" height="20.5"/>
@@ -50,7 +50,7 @@
                 <constraint firstItem="fmi-92-L7C" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="WQd-ql-3aR"/>
                 <constraint firstItem="fmi-92-L7C" firstAttribute="top" secondItem="xhE-M8-9we" secondAttribute="bottom" constant="10" id="bgI-3S-3PW"/>
                 <constraint firstItem="xhE-M8-9we" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="e7H-vp-l8o"/>
-                <constraint firstItem="hud-lw-Frh" firstAttribute="centerY" secondItem="fmi-92-L7C" secondAttribute="baseline" id="mIJ-yh-laD"/>
+                <constraint firstItem="hud-lw-Frh" firstAttribute="centerY" secondItem="fmi-92-L7C" secondAttribute="centerY" id="mIJ-yh-laD"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fmi-92-L7C" secondAttribute="bottom" priority="999" constant="17" id="z99-um-K5z"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

@@ -14,6 +14,10 @@ class MBHongKongIDDocumentProvider: MBDocumentProvider {
     override var frontRecognizerProvider: MBRecognizerWrapper? {
         return MBRecognizerWrapper(withRecognizer: MBHongKongIdFrontRecognizer())
     }
+    
+    override var backRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withDocumentDetector: MBDocumentDetectorD1Recognizer())
+    }
 
     override var type: MBDocumentType {
         return MBDocumentType.identityCard

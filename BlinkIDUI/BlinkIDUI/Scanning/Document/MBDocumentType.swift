@@ -18,6 +18,8 @@ import UIKit
     /// Some countries have two versions of Identitiy Cards
     /// This is used to distinct them
     case newID
+    /// Malaysian identity Card (MyKad)
+    case malaysianID
     /// Military Identity Card(MyTentera)
     case militaryID
     /// Permanent Resident Identity Card(MyPr)
@@ -46,6 +48,8 @@ import UIKit
             return settings.oldIDCardText
         case .newID:
             return settings.newIDCardText
+        case .malaysianID:
+            return settings.malaysianIDCardText
         case .militaryID:
             return settings.militaryIDCardText
         case .permanentResidentID:
