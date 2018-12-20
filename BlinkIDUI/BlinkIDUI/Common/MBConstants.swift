@@ -39,7 +39,7 @@ struct MBConstants {
             static var flipViewAlphaBegin: CGFloat = 0.0
             static var flipViewAlphaEnd: CGFloat = 0.8
             static let showFlipViewAnimationTime: Double = 0.3
-            static let flipViewAnimationTime: Double = 0.8
+            static let flipViewAnimationTime: Double = 1.0
         }
 
         struct DocumentTabsView {
