@@ -30,6 +30,7 @@ import Foundation
     case italy
     case jordan
     case kuwait
+    case nigeria
     case malaysia
     case mexico
     case morocco
@@ -99,6 +100,8 @@ import Foundation
             return "MX"
         case .morocco:
             return "MA"
+        case .nigeria:
+            return "NG"
         case .newZealand:
             return "NZ"
         case .poland:
@@ -174,6 +177,8 @@ import Foundation
             return MBMexicoCountryProvider()
         case .morocco:
             return MBMoroccoCountryProvider()
+        case .nigeria:
+            return MBNigeriaCountryProvider()
         case .newZealand:
             return MBNewZealandCountryProvider()
         case .poland:

@@ -270,6 +270,12 @@ class MBMoroccoCountryProvider: MBCountryProvider {
     }
 }
 
+class MBNigeriaCountryProvider: MBCountryProvider {
+    override var driversLicenseProvider: MBDocumentProvider? {
+        return MBNigeriaDLDocumentProvider()
+    }
+}
+
 class MBNewZealandCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
         return MBIDWithMrtdDetectorD1DocumentProvider()

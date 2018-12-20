@@ -83,6 +83,7 @@
 		BED6AC9421AEA0A000AEC812 /* MBTimeoutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6AC9321AEA0A000AEC812 /* MBTimeoutHandler.swift */; };
 		BED6AC9621AEECAD00AEC812 /* MBInvalidDocumentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6AC9521AEECAD00AEC812 /* MBInvalidDocumentHandler.swift */; };
 		BEDCA24321CA8E11003EDAD9 /* MBBruneiDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDCA24221CA8E11003EDAD9 /* MBBruneiDocumentProviders.swift */; };
+		BEDCA24521CB86F8003EDAD9 /* MBNigeriaDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDCA24421CB86F8003EDAD9 /* MBNigeriaDocumentProviders.swift */; };
 		BEE34655218A5F4C004C0397 /* BlinkIDUI.h in Headers */ = {isa = PBXBuildFile; fileRef = BEE34653218A5F4C004C0397 /* BlinkIDUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEE34662218A6006004C0397 /* MBIDExtractors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3465E218A6006004C0397 /* MBIDExtractors.swift */; };
 		BEE34663218A6006004C0397 /* MBPassportExtractors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3465F218A6006004C0397 /* MBPassportExtractors.swift */; };
@@ -169,6 +170,7 @@
 		BED6AC9321AEA0A000AEC812 /* MBTimeoutHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTimeoutHandler.swift; sourceTree = "<group>"; };
 		BED6AC9521AEECAD00AEC812 /* MBInvalidDocumentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBInvalidDocumentHandler.swift; sourceTree = "<group>"; };
 		BEDCA24221CA8E11003EDAD9 /* MBBruneiDocumentProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBBruneiDocumentProviders.swift; sourceTree = "<group>"; };
+		BEDCA24421CB86F8003EDAD9 /* MBNigeriaDocumentProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBNigeriaDocumentProviders.swift; sourceTree = "<group>"; };
 		BEE34650218A5F4C004C0397 /* BlinkIDUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlinkIDUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE34653218A5F4C004C0397 /* BlinkIDUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlinkIDUI.h; sourceTree = "<group>"; };
 		BEE34654218A5F4C004C0397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				BE6480BA218C83C600D0C24F /* MBUAEDocumentProviders.swift */,
 				BE6480B4218C83C500D0C24F /* MBUKDocumentProviders.swift */,
 				BE6480B3218C83C500D0C24F /* MBUSADocumentProviders.swift */,
+				BEDCA24421CB86F8003EDAD9 /* MBNigeriaDocumentProviders.swift */,
 			);
 			path = DocumentProviders;
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 				BE6480E0218C83C600D0C24F /* MBIndonesiaDocumentProviders.swift in Sources */,
 				BED6AC9221AEA06500AEC812 /* MBDocumentChooserSettings.swift in Sources */,
 				BEE34669218A6090004C0397 /* MBScanningProvider.swift in Sources */,
+				BEDCA24521CB86F8003EDAD9 /* MBNigeriaDocumentProviders.swift in Sources */,
 				BE2164722190849B00E21734 /* MBBlinkIdViewController.swift in Sources */,
 				BE6480CB218C83C600D0C24F /* MBDocumentType.swift in Sources */,
 				BEE34664218A6006004C0397 /* MBDLExtractors.swift in Sources */,
