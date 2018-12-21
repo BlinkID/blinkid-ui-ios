@@ -36,10 +36,12 @@ import MicroBlink
     ///   - successFrame: if success or all frame retrieval was turned on success frame image is returned(camera frame containing the document)
     @objc func didScanFirstSide(recognitionResult: MBRecognitionResult, successFrame: UIImage?)
 
-    /// Event that reports that new document was selected for scanning
+    /// Event that reports that new document was selected for scanning and for what country is this document
     ///
-    /// - Parameter newDocument: document provider
-    @objc func didChangeDocument(newDocument: MBDocumentProvider)
+    /// - Parameters:
+    ///     - newDocument: document provider
+    ///     - forCountry: country
+    @objc func didChangeDocument(newDocument: MBDocumentProvider, forCountry country: MBCountry)
     
     /// Event called when user presses the X to close scaning button if it's available.
     @objc func didTapCancelButton()
@@ -162,9 +164,9 @@ extension MBBlinkIDUI: MBScanningProviderDelegate {
 // MARK: - MBBlinkIdOverlayViewControllerDelegate -
 
 extension MBBlinkIDUI: MBBlinkIdOverlayViewControllerDelegate {
-    func didChangeDocument(newDocument: MBDocumentProvider) {
+    func didChangeDocument(newDocument: MBDocumentProvider, forCountry country: MBCountry) {
         _scanningProvider.updated(scanningProviderFor: newDocument)
-        delegate?.didChangeDocument(newDocument: newDocument)
+        delegate?.didChangeDocument(newDocument: newDocument, forCountry: country)
     }
     
     func didTapCancelButton() {

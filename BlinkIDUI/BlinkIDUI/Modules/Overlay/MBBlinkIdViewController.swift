@@ -26,8 +26,10 @@ private enum MBGlareState {
 protocol MBBlinkIdOverlayViewControllerDelegate: AnyObject {
     /// Event sent when the user selects a document, this document may be already selected but the event is send non the less.
     ///
-    /// - Parameter newDocument: `MBDocumentProvider` instance that describes the recognizers used by the selected document
-    func didChangeDocument(newDocument: MBDocumentProvider)
+    /// - Parameters
+    ///     - newDocument: `MBDocumentProvider` instance that describes the recognizers used by the selected document
+    ///     - forCountry: the country this document is being scanned for
+    func didChangeDocument(newDocument: MBDocumentProvider, forCountry country: MBCountry)
     
     /// Event sent once the user taps Cancel(`X`) button.
     func didTapCancelButton()
@@ -280,7 +282,7 @@ extension MBBlinkIdOverlayViewController: MBDocumentChooserViewControllerDelegat
     func didSelect(document: MBDocumentType, fromCountry country: MBCountry) {
         guard let documentProvider = country.countryProvider.documentProviders[document] else { return }
         _animateAspectRatioChange(aspectRatio: documentProvider.aspectRatio.ratio)
-        delegate?.didChangeDocument(newDocument: documentProvider)
+        delegate?.didChangeDocument(newDocument: documentProvider, forCountry: country)
     }
 
     private func _animateAspectRatioChange(aspectRatio: CGFloat) {
