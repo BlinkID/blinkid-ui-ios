@@ -11,7 +11,7 @@ import MicroBlink
 
 /// `MBFieldKey` enum represents one field or one result of scanning.
 /// Here are defined all the "properties" that can be extracted from all our recognizers used in
-/// BlinkIDUI. For a specific country you can see the results by checkoing out the '*Extractor.swift' files.
+/// BlinkIDUI. For a specific country you can see the results by checking out the '*Extractor.swift' files.
 /// In them are defined extractors that extract the result into an array of `MBField`s
 @objc public enum MBFieldKey: Int, MBLocalizable, Comparable {
     case address
