@@ -30,10 +30,10 @@ extension MBAustriaPassportRecognizer {
 
 extension MBGermanyPassportRecognizer {
     override func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray(array: result.extractFieldResults())
+        let fields = NSMutableArray(array: result.mrzResult.extractFieldResults())
 
         fields.add(MBField(key: MBFieldKey.lastName, value: result.surname))
-        fields.add(MBField(key: MBFieldKey.firstName, value: result.name))
+        fields.add(MBField(key: MBFieldKey.givenName, value: result.givenName))
         fields.add(MBField(key: MBFieldKey.placeOfBirth, value: result.placeOfBirth))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
         fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.authority))

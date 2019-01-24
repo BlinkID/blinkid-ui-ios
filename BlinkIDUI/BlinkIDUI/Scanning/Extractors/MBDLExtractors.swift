@@ -13,12 +13,12 @@ extension MBAustraliaDlFrontRecognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray()
 
-        fields.add(MBField(key: MBFieldKey.firstName, value: result.name))
+        fields.add(MBField(key: MBFieldKey.fullName, value: result.fullName))
         fields.add(MBField(key: MBFieldKey.licenseType, value: result.licenceType))
         fields.add(MBField(key: MBFieldKey.licenseNumber, value: result.licenceNumber))
         fields.add(MBField(key: MBFieldKey.address, value: result.address))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
-        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.licenceExpiry))
 
         return fields
     }
@@ -31,7 +31,7 @@ extension MBAustraliaDlBackRecognizer {
         fields.add(MBField(key: MBFieldKey.lastName, value: result.lastName))
         fields.add(MBField(key: MBFieldKey.licenseNumber, value: result.licenceNumber))
         fields.add(MBField(key: MBFieldKey.address, value: result.address))
-        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.licenceExpiry))
 
         return fields
     }
