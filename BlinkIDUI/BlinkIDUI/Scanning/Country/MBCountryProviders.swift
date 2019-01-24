@@ -60,7 +60,7 @@ import MicroBlink
     }
     
     /// Array of supported document providers by this country
-    var supportedDocuments: [MBDocumentType] {
+    public var supportedDocuments: [MBDocumentType] {
         return Array(documentProviders.keys).sorted()
     }
 }
