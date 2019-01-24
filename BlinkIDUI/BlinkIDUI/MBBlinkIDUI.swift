@@ -17,7 +17,7 @@ import MicroBlink
     ///     - front side scanning started.
     ///     - back side scanning started.
     ///     - any side scanning started.
-    @objc func didStartScanning()
+    @objc optional func didStartScanning(withState state: MBScanState)
 
     /// Event that reports that the scanning of the whole document:
     ///     - both front and back side
@@ -140,7 +140,7 @@ extension MBBlinkIDUI: MBScanningProviderDelegate {
         case .notStarted:
             fatalError("Scanning started with state: notStarted, this shouldn't happen")
         }
-        delegate?.didStartScanning()
+        delegate?.didStartScanning?(withState: state)
     }
 
     func didFinishScanningFrontSideOfDocument(result: MBRecognitionResult, successFrame: UIImage?) {
