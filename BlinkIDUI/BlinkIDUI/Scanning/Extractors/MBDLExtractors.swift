@@ -99,6 +99,24 @@ extension MBGermanyDlBackRecognizer {
     }
 }
 
+extension MBGermanyDlFrontRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray()
+        
+        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
+        fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
+        fields.add(MBField(key: MBFieldKey.firstName, value: result.firstName))
+        fields.add(MBField(key: MBFieldKey.authority, value: result.issuingAuthority))
+        fields.add(MBField(key: MBFieldKey.lastName, value: result.lastName))
+        fields.add(MBField(key: MBFieldKey.licenseCategories, value: result.licenceCategories))
+        fields.add(MBField(key: MBFieldKey.licenseNumber, value: result.licenceNumber))
+        fields.add(MBField(key: MBFieldKey.placeOfBirth, value: result.placeOfBirth))
+
+        return fields
+    }
+}
+
 extension MBItalyDlFrontRecognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray()
