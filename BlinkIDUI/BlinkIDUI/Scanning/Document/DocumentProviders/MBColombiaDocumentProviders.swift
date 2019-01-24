@@ -48,6 +48,6 @@ class MBColombiaIDDocumentProvider: MBDocumentProvider {
     }
     
     override var resultValidator: MBResultValidator {
-        return MBResultValidator(withMatchingKeys: [(MBFieldKey.documentNumber, MBFieldKey.documentNumber)])
+        return MBResultValidator(withMatchingKeys: [(MBFieldKey.documentNumber, MBFieldKey.documentNumber)], charactersToSkip: ["."])
     }
 }
