@@ -103,6 +103,10 @@ class MBBruneiCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
         return MBBruneiIDDocumentProvider()
     }
+    
+    override var residencePermitProvider: MBDocumentProvider? {
+        return MBBruneiResidencePermitDocumentProvider()
+    }
 }
 
 class MBCanadaCountryProvider: MBCountryProvider {

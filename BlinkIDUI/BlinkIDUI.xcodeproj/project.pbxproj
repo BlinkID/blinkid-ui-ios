@@ -90,6 +90,7 @@
 		BEE34665218A6006004C0397 /* MBRecognizerExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE34661218A6006004C0397 /* MBRecognizerExtractor.swift */; };
 		BEE34667218A6051004C0397 /* MBRecognizerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE34666218A6051004C0397 /* MBRecognizerManager.swift */; };
 		BEE34669218A6090004C0397 /* MBScanningProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE34668218A6090004C0397 /* MBScanningProvider.swift */; };
+		BEFD074B21FA028B007B67BA /* MBResidencePermitExtractors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFD074A21FA028B007B67BA /* MBResidencePermitExtractors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +179,7 @@
 		BEE34661218A6006004C0397 /* MBRecognizerExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBRecognizerExtractor.swift; sourceTree = "<group>"; };
 		BEE34666218A6051004C0397 /* MBRecognizerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBRecognizerManager.swift; sourceTree = "<group>"; };
 		BEE34668218A6090004C0397 /* MBScanningProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBScanningProvider.swift; sourceTree = "<group>"; };
+		BEFD074A21FA028B007B67BA /* MBResidencePermitExtractors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBResidencePermitExtractors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,6 +441,7 @@
 				BEE3465F218A6006004C0397 /* MBPassportExtractors.swift */,
 				BEE34660218A6006004C0397 /* MBDLExtractors.swift */,
 				BEE34661218A6006004C0397 /* MBRecognizerExtractor.swift */,
+				BEFD074A21FA028B007B67BA /* MBResidencePermitExtractors.swift */,
 			);
 			path = Extractors;
 			sourceTree = "<group>";
@@ -624,6 +627,7 @@
 				BE2164722190849B00E21734 /* MBBlinkIdViewController.swift in Sources */,
 				BE6480CB218C83C600D0C24F /* MBDocumentType.swift in Sources */,
 				BEE34664218A6006004C0397 /* MBDLExtractors.swift in Sources */,
+				BEFD074B21FA028B007B67BA /* MBResidencePermitExtractors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
