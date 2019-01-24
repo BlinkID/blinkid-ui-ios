@@ -17,6 +17,8 @@ import MicroBlink
     ///     - front side scanning started.
     ///     - back side scanning started.
     ///     - any side scanning started.
+    /// - Parameters:
+    ///   - state: current state that the scanning started
     @objc optional func didStartScanning(withState state: MBScanState)
 
     /// Event that reports that the scanning of the whole document:
