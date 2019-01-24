@@ -337,16 +337,6 @@ class MBRomaniaCountryProvider: MBCountryProvider {
     }
 }
 
-class MBSerbiaCountryProvider: MBCountryProvider {
-    override var identityCardProvider: MBDocumentProvider? {
-        return MBSerbiaIDDocumentProvider()
-    }
-    
-    override var driversLicenseProvider: MBDocumentProvider? {
-        return MBDLDocumentProvider(isFullySupported: false)
-    }
-}
-
 class MBSingaporeCountryProvider: MBCountryProvider {
     override var driversLicenseProvider: MBDocumentProvider? {
         return MBSingaporeDLDocumentProvider()

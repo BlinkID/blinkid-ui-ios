@@ -37,7 +37,6 @@ import Foundation
     case newZealand
     case poland
     case qatar
-    case serbia
     case singapore
     case slovakia
     case slovenia
@@ -108,8 +107,6 @@ import Foundation
             return "PL"
         case .qatar:
             return "QA"
-        case .serbia:
-            return "RS"
         case .singapore:
             return "SG"
         case .slovakia:
@@ -185,8 +182,6 @@ import Foundation
             return MBPolandCountryProvider()
         case .qatar:
             return MBQatarCountryProvider()
-        case .serbia:
-            return MBSerbiaCountryProvider()
         case .singapore:
             return MBSingaporeCountryProvider()
         case .slovakia:

@@ -39,7 +39,6 @@
 		BE6480CA218C83C600D0C24F /* MBColombiaDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6480A9218C83C500D0C24F /* MBColombiaDocumentProviders.swift */; };
 		BE6480CB218C83C600D0C24F /* MBDocumentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6480AA218C83C500D0C24F /* MBDocumentType.swift */; };
 		BE6480CC218C83C600D0C24F /* MBHongKongDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6480AB218C83C500D0C24F /* MBHongKongDocumentProviders.swift */; };
-		BE6480CD218C83C600D0C24F /* MBSerbiaDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6480AC218C83C500D0C24F /* MBSerbiaDocumentProviders.swift */; };
 		BE6480CF218C83C600D0C24F /* MBEgyptDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6480AE218C83C500D0C24F /* MBEgyptDocumentProviders.swift */; };
 		BE6480D0218C83C600D0C24F /* MBSwedenDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6480AF218C83C500D0C24F /* MBSwedenDocumentProviders.swift */; };
 		BE6480D1218C83C600D0C24F /* MBDocumentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6480B0218C83C500D0C24F /* MBDocumentProvider.swift */; };
@@ -126,7 +125,6 @@
 		BE6480A9218C83C500D0C24F /* MBColombiaDocumentProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBColombiaDocumentProviders.swift; sourceTree = "<group>"; };
 		BE6480AA218C83C500D0C24F /* MBDocumentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBDocumentType.swift; sourceTree = "<group>"; };
 		BE6480AB218C83C500D0C24F /* MBHongKongDocumentProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBHongKongDocumentProviders.swift; sourceTree = "<group>"; };
-		BE6480AC218C83C500D0C24F /* MBSerbiaDocumentProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBSerbiaDocumentProviders.swift; sourceTree = "<group>"; };
 		BE6480AE218C83C500D0C24F /* MBEgyptDocumentProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBEgyptDocumentProviders.swift; sourceTree = "<group>"; };
 		BE6480AF218C83C500D0C24F /* MBSwedenDocumentProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBSwedenDocumentProviders.swift; sourceTree = "<group>"; };
 		BE6480B0218C83C500D0C24F /* MBDocumentProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBDocumentProvider.swift; sourceTree = "<group>"; };
@@ -364,7 +362,6 @@
 				BE6480B8218C83C500D0C24F /* MBNewZealandDocumentProviders.swift */,
 				BE6480C0218C83C600D0C24F /* MBPolandDocumentProviders.swift */,
 				BE495B7421AC2CBF007B16D1 /* MBRomaniaDocumentProviders.swift */,
-				BE6480AC218C83C500D0C24F /* MBSerbiaDocumentProviders.swift */,
 				BE6480C1218C83C600D0C24F /* MBSingaporeDocumentProviders.swift */,
 				BE6480BC218C83C600D0C24F /* MBSlovakiaDocumentProviders.swift */,
 				BE6480BE218C83C600D0C24F /* MBSloveniaDocumentProviders.swift */,
@@ -608,7 +605,6 @@
 				BEE34662218A6006004C0397 /* MBIDExtractors.swift in Sources */,
 				BE6480E5218C83C600D0C24F /* MBMalaysiaDocumentProviders.swift in Sources */,
 				BE0F362521A7E553005F0BEE /* MBDocumentImageRecognizer.swift in Sources */,
-				BE6480CD218C83C600D0C24F /* MBSerbiaDocumentProviders.swift in Sources */,
 				BE6480E3218C83C600D0C24F /* MBKuwaitDocumentProviders.swift in Sources */,
 				BED6AC9421AEA0A000AEC812 /* MBTimeoutHandler.swift in Sources */,
 				BE6480C9218C83C600D0C24F /* MBSpainDocumentProviders.swift in Sources */,
