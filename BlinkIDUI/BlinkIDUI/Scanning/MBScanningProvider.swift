@@ -9,7 +9,7 @@
 import Foundation
 import MicroBlink
 
-enum MBScanState {
+@objc public enum MBScanState: Int {
     case notStarted
     case frontSide
     case backSide
