@@ -16,7 +16,7 @@ class MBBruneiIDDocumentProvider: MBDocumentProvider {
     }
     
     override var backRecognizerProvider: MBRecognizerWrapper? {
-        return MBRecognizerWrapper(withRecognizer: MBMrtdRecognizer())
+        return MBRecognizerWrapper(withRecognizer: MBBruneiIdBackRecognizer())
     }
     
     override var type: MBDocumentType {

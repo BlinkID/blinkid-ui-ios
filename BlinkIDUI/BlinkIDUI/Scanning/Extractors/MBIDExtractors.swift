@@ -57,6 +57,18 @@ extension MBAustriaIdFrontRecognizer {
     }
 }
 
+extension MBBruneiIdBackRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray(array: result.mrzResult.extractFieldResults())
+        
+        fields.add(MBField(key: MBFieldKey.address, value: result.address))
+        fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
+        fields.add(MBField(key: MBFieldKey.race, value: result.race))
+        
+        return fields
+    }
+}
+
 extension MBBruneiIdFrontRecognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray()
