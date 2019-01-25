@@ -13,12 +13,12 @@ extension MBAustraliaDlFrontRecognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray()
 
-        fields.add(MBField(key: MBFieldKey.firstName, value: result.name))
+        fields.add(MBField(key: MBFieldKey.fullName, value: result.fullName))
         fields.add(MBField(key: MBFieldKey.licenseType, value: result.licenceType))
         fields.add(MBField(key: MBFieldKey.licenseNumber, value: result.licenceNumber))
         fields.add(MBField(key: MBFieldKey.address, value: result.address))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
-        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.licenceExpiry))
 
         return fields
     }
@@ -31,7 +31,7 @@ extension MBAustraliaDlBackRecognizer {
         fields.add(MBField(key: MBFieldKey.lastName, value: result.lastName))
         fields.add(MBField(key: MBFieldKey.licenseNumber, value: result.licenceNumber))
         fields.add(MBField(key: MBFieldKey.address, value: result.address))
-        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.licenceExpiry))
 
         return fields
     }
@@ -99,6 +99,24 @@ extension MBGermanyDlBackRecognizer {
     }
 }
 
+extension MBGermanyDlFrontRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray()
+        
+        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
+        fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
+        fields.add(MBField(key: MBFieldKey.firstName, value: result.firstName))
+        fields.add(MBField(key: MBFieldKey.authority, value: result.issuingAuthority))
+        fields.add(MBField(key: MBFieldKey.lastName, value: result.lastName))
+        fields.add(MBField(key: MBFieldKey.licenseCategories, value: result.licenceCategories))
+        fields.add(MBField(key: MBFieldKey.licenseNumber, value: result.licenceNumber))
+        fields.add(MBField(key: MBFieldKey.placeOfBirth, value: result.placeOfBirth))
+
+        return fields
+    }
+}
+
 extension MBItalyDlFrontRecognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray()
@@ -126,7 +144,6 @@ extension MBIrelandDlFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
-        fields.add(MBField(key: MBFieldKey.driverNumber, value: result.driverNumber))
         fields.add(MBField(key: MBFieldKey.firstName, value: result.firstName))
         fields.add(MBField(key: MBFieldKey.issuer, value: result.issuedBy))
         fields.add(MBField(key: MBFieldKey.licenseCategories, value: result.licenceCategories))
@@ -167,10 +184,8 @@ extension MBNewZealandDlFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
         fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
-        fields.add(MBField(key: MBFieldKey.donorIndicator, value: result.donorIndicator))
         fields.add(MBField(key: MBFieldKey.address, value: result.address))
         fields.add(MBField(key: MBFieldKey.licenseNumber, value: result.licenseNumber))
-        fields.add(MBField(key: MBFieldKey.cardVersion, value: result.cardVersion))
 
         return fields
     }
@@ -218,7 +233,6 @@ extension MBSwedenDlFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
         fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
         fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.issuingAgency))
-        fields.add(MBField(key: MBFieldKey.referenceNumber, value: result.referenceNumber))
         fields.add(MBField(key: MBFieldKey.licenseCategories, value: result.licenceCategories))
         fields.add(MBField(key: MBFieldKey.licenseNumber, value: result.licenceNumber))
 

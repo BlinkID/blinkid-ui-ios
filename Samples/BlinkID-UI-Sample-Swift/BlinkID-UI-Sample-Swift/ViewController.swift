@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         MBBlinkSettings.sharedInstance.initialDocument = .driverLicense
         
         MBBlinkSettings.sharedInstance.shouldShowCancelButton = false
-        
+        MBBlinkSettings.sharedInstance.shouldValidateDocuments = true
         // Change the colors
         // UIColor.mb_primaryColor = .red
         // UIColor.mb_secondaryColor = .black
@@ -43,9 +43,6 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: MBBlinkDelegate {
-    func didStartScanning() {
-    }
-    
     func didScanEntireDocument(recognitionResult: MBRecognitionResult, successFrame: UIImage?) {
         blinkIdUI.pauseScanning()
         let alertController = UIAlertController(title: recognitionResult.resultTitle, message: recognitionResult.resultEntries.description, preferredStyle: .alert)
@@ -58,13 +55,6 @@ extension ViewController: MBBlinkDelegate {
     }
     
     func didScanFirstSide(recognitionResult: MBRecognitionResult, successFrame: UIImage?) {
-    }
-    
-    func didChangeDocument(newDocument: MBDocumentProvider) {
-    }
-    
-    func didTapCancelButton() {
-        blinkIdUI.recognizerRunnerViewController.dismiss(animated: true, completion: nil)
     }
 }
 

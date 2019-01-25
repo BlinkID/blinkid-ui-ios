@@ -37,10 +37,7 @@ extension MBAustriaIdBackRecognizer {
         fields.add(MBField(key: MBFieldKey.documentNumber, value: result.documentNumber))
         fields.add(MBField(key: MBFieldKey.placeOfBirth, value: result.placeOfBirth))
         fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.issuingAuthority))
-        fields.add(MBField(key: MBFieldKey.principalResidence, value: result.principalResidence))
-        fields.add(MBField(key: MBFieldKey.height, value: result.height))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssuance))
-        fields.add(MBField(key: MBFieldKey.eyeColour, value: result.eyeColour))
 
         return fields
     }
@@ -56,6 +53,18 @@ extension MBAustriaIdFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
 
+        return fields
+    }
+}
+
+extension MBBruneiIdBackRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray(array: result.mrzResult.extractFieldResults())
+        
+        fields.add(MBField(key: MBFieldKey.address, value: result.address))
+        fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
+        fields.add(MBField(key: MBFieldKey.race, value: result.race))
+        
         return fields
     }
 }
@@ -79,7 +88,6 @@ extension MBColombiaIdBackRecognizer {
         let fields = NSMutableArray()
 
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.birthDate))
-        fields.add(MBField(key: MBFieldKey.bloodGroup, value: result.bloodGroup))
         fields.add(MBField(key: MBFieldKey.documentNumber, value: result.documentNumber))
         fields.add(MBField(key: MBFieldKey.firstName, value: result.firstName))
         fields.add(MBField(key: MBFieldKey.lastName, value: result.lastName))
@@ -107,15 +115,15 @@ extension MBCroatiaCombinedRecognizer {
 
         fields.add(MBField(key: MBFieldKey.lastName, value: result.lastName))
         fields.add(MBField(key: MBFieldKey.firstName, value: result.firstName))
-        fields.add(MBField(key: MBFieldKey.identityCardNumber, value: result.identityCardNumber))
+        fields.add(MBField(key: MBFieldKey.documentNumber, value: result.documentNumber))
         fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
         fields.add(MBField(key: MBFieldKey.citizenship, value: result.citizenship))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
-        fields.add(MBField(key: MBFieldKey.address, value: result.address))
-        fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.issuingAuthority))
+        fields.add(MBField(key: MBFieldKey.address, value: result.residence))
+        fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.issuedBy))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
-        fields.add(MBField(key: MBFieldKey.personalIdentificationNumber, value: result.personalIdentificationNumber))
+        fields.add(MBField(key: MBFieldKey.personalIdentificationNumber, value: result.oib))
 
         return fields
     }
@@ -230,9 +238,9 @@ extension MBCzechiaIdFrontRecognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray()
 
-        fields.add(MBField(key: MBFieldKey.identityCardNumber, value: result.identityCardNumber))
-        fields.add(MBField(key: MBFieldKey.firstName, value: result.firstName))
-        fields.add(MBField(key: MBFieldKey.lastName, value: result.lastName))
+        fields.add(MBField(key: MBFieldKey.documentNumber, value: result.documentNumber))
+        fields.add(MBField(key: MBFieldKey.firstName, value: result.givenNames))
+        fields.add(MBField(key: MBFieldKey.lastName, value: result.surname))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
         fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
@@ -279,21 +287,15 @@ extension MBGermanyCombinedRecognizer {
 
 extension MBGermanyIdBackRecognizer {
     override func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray()
+        let fields = NSMutableArray(array: result.mrzResult.extractFieldResults())
 
         fields.add(MBField(key: MBFieldKey.authority, value: result.authority))
-        fields.add(MBField(key: MBFieldKey.nationality, value: result.nationality))
         fields.add(MBField(key: MBFieldKey.addressCity, value: result.addressCity))
         fields.add(MBField(key: MBFieldKey.addressStreet, value: result.addressStreet))
         fields.add(MBField(key: MBFieldKey.addressHouseNumber, value: result.addressHouseNumber))
         fields.add(MBField(key: MBFieldKey.addressZipCode, value: result.addressZipCode))
-        fields.add(MBField(key: MBFieldKey.address, value: result.address))
-        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
-        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
+        fields.add(MBField(key: MBFieldKey.address, value: result.fullAddress))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
-        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
-        fields.add(MBField(key: MBFieldKey.height, value: result.height))
-        fields.add(MBField(key: MBFieldKey.eyeColour, value: result.eyeColour))
 
         return fields
     }
@@ -315,9 +317,9 @@ extension MBGermanyIdFrontRecognizer {
     }
 }
 
-extension MBGermanyOldIdRecognizer {
+extension MBGermanyIdOldRecognizer {
     override func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray(array: result.extractFieldResults())
+        let fields = NSMutableArray(array: result.mrzResult.extractFieldResults())
 
         fields.add(MBField(key: MBFieldKey.placeOfBirth, value: result.placeOfBirth))
 
@@ -330,7 +332,6 @@ extension MBHongKongIdFrontRecognizer {
         let fields = NSMutableArray()
 
         fields.add(MBField(key: MBFieldKey.fullName, value: result.fullName))
-        fields.add(MBField(key: MBFieldKey.commercialCode, value: result.commercialCode))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
@@ -352,12 +353,7 @@ extension MBIndonesiaIdFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.placeOfBirth, value: result.placeOfBirth))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
-        fields.add(MBField(key: MBFieldKey.bloodType, value: result.bloodType))
         fields.add(MBField(key: MBFieldKey.address, value: result.address))
-        fields.add(MBField(key: MBFieldKey.rt, value: result.rt))
-        fields.add(MBField(key: MBFieldKey.rw, value: result.rw))
-        fields.add(MBField(key: MBFieldKey.kelDesa, value: result.kelDesa))
-        fields.add(MBField(key: MBFieldKey.district, value: result.district))
         fields.add(MBField(key: MBFieldKey.religion, value: result.religion))
         fields.add(MBField(key: MBFieldKey.maritalStatus, value: result.maritalStatus))
         fields.add(MBField(key: MBFieldKey.occupation, value: result.occupation))
@@ -436,7 +432,6 @@ extension MBMalaysiaIkadFrontRecognizer {
         let fields = NSMutableArray()
         
         fields.add(MBField(key: MBFieldKey.fullName, value: result.name))
-        fields.add(MBField(key: MBFieldKey.passportNumber, value: result.passportNumber))
         fields.add(MBField(key: MBFieldKey.nationality, value: result.nationality))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.sex, value: result.gender))
@@ -454,10 +449,8 @@ extension MBMalaysiaMyKadBackRecognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray()
         
-        fields.add(MBField(key: MBFieldKey.extendedNricNumber, value: result.extendedNric))
         fields.add(MBField(key: MBFieldKey.nricNumber, value: result.nric))
         fields.add(MBField(key: MBFieldKey.oldNric, value: result.oldNric))
-        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         
         return fields
@@ -565,8 +558,6 @@ extension MBMoroccoIdBackRecognizer {
 
         fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
         fields.add(MBField(key: MBFieldKey.documentNumber, value: result.documentNumber))
-        fields.add(MBField(key: MBFieldKey.fathersName, value: result.fathersName))
-        fields.add(MBField(key: MBFieldKey.mothersName, value: result.mothersName))
         fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
         fields.add(MBField(key: MBFieldKey.address, value: result.address))
         fields.add(MBField(key: MBFieldKey.civilStatusNumber, value: result.civilStatusNumber))
@@ -577,25 +568,7 @@ extension MBMoroccoIdBackRecognizer {
 
 extension MBMrtdCombinedRecognizer {
     override func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray()
-
-        fields.add(MBField(key: MBFieldKey.issuer, value: result.issuer))
-        fields.add(MBField(key: MBFieldKey.documentNumber, value: result.documentNumber))
-        fields.add(MBField(key: MBFieldKey.documentCode, value: result.documentCode))
-        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
-        fields.add(MBField(key: MBFieldKey.primaryId, value: result.primaryId))
-        fields.add(MBField(key: MBFieldKey.secondaryId, value: result.secondaryId))
-        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
-        fields.add(MBField(key: MBFieldKey.nationality, value: result.nationality))
-        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
-        fields.add(MBField(key: MBFieldKey.optional1, value: result.opt1))
-        fields.add(MBField(key: MBFieldKey.optional2, value: result.opt2))
-        fields.add(MBField(key: MBFieldKey.alienNumber, value: result.alienNumber))
-        fields.add(MBField(key: MBFieldKey.applicationReceiptNumber, value: result.applicationReceiptNumber))
-        fields.add(MBField(key: MBFieldKey.immigrantCaseNumber, value: result.immigrantCaseNumber))
-        fields.add(MBField(key: MBFieldKey.mrzText, value: result.mrzText))
-
-        return fields
+        return result.mrzResult.extractFieldResults()
     }
 }
 
@@ -607,7 +580,6 @@ extension MBMexicoVoterIdFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.address, value: result.address))
         fields.add(MBField(key: MBFieldKey.curp, value: result.curp))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
-        fields.add(MBField(key: MBFieldKey.electorKey, value: result.electorKey))
         fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
         
         return fields
@@ -646,8 +618,6 @@ extension MBPolandIdFrontRecognizer {
 
         fields.add(MBField(key: MBFieldKey.givenName, value: result.givenNames))
         fields.add(MBField(key: MBFieldKey.lastName, value: result.surname))
-        fields.add(MBField(key: MBFieldKey.familyName, value: result.familyName))
-        fields.add(MBField(key: MBFieldKey.parentsGivenName, value: result.parentsGivenNames))
         fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
 
@@ -664,7 +634,6 @@ extension MBRomaniaIdFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.identityCardNumber, value: result.cardNumber))
         fields.add(MBField(key: MBFieldKey.idSeries, value: result.idSeries))
         fields.add(MBField(key: MBFieldKey.cnp, value: result.cnp))
-        fields.add(MBField(key: MBFieldKey.parentNames, value: result.parentNames))
         fields.add(MBField(key: MBFieldKey.nonMrzNationality, value: result.nonMRZNationality))
         fields.add(MBField(key: MBFieldKey.placeOfBirth, value: result.placeOfBirth))
         fields.add(MBField(key: MBFieldKey.address, value: result.address))
@@ -672,42 +641,6 @@ extension MBRomaniaIdFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.nonMrzSex, value: result.nonMRZSex))
         fields.add(MBField(key: MBFieldKey.validFrom, value: result.validFrom))
         fields.add(MBField(key: MBFieldKey.validUntil, value: result.validUntil))
-
-        return fields
-    }
-}
-
-extension MBSerbiaCombinedRecognizer {
-    override func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray()
-
-        fields.add(MBField(key: MBFieldKey.identityCardNumber, value: result.identityCardNumber))
-        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
-        fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
-        fields.add(MBField(key: MBFieldKey.jmbg, value: result.jmbg))
-        fields.add(MBField(key: MBFieldKey.firstName, value: result.firstName))
-        fields.add(MBField(key: MBFieldKey.lastName, value: result.lastName))
-        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
-        fields.add(MBField(key: MBFieldKey.nationality, value: result.nationality))
-        fields.add(MBField(key: MBFieldKey.issuer, value: result.issuer))
-        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
-
-        return fields
-    }
-}
-extension MBSerbiaIdBackRecognizer {
-    override func extractFieldResults() -> NSArray {
-        return result.extractFieldResults()
-    }
-}
-
-extension MBSerbiaIdFrontRecognizer {
-    override func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray()
-
-        fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.issuingDate))
-        fields.add(MBField(key: MBFieldKey.validUntil, value: result.validUntil))
-        fields.add(MBField(key: MBFieldKey.documentNumber, value: result.documentNumber))
 
         return fields
     }
@@ -737,7 +670,6 @@ extension MBSingaporeIdBackRecognizer {
 
         fields.add(MBField(key: MBFieldKey.address, value: result.address))
         fields.add(MBField(key: MBFieldKey.addressChangeDate, value: result.addressChangeDate))
-        fields.add(MBField(key: MBFieldKey.bloodGroup, value: result.bloodGroup))
         fields.add(MBField(key: MBFieldKey.cardNumber, value: result.cardNumber))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
 
@@ -785,12 +717,10 @@ extension MBSlovakiaCombinedRecognizer {
 
 extension MBSlovakiaIdBackRecognizer {
     override func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray(array: result.extractFieldResults())
+        let fields = NSMutableArray(array: result.mrzResult.extractFieldResults())
 
-        fields.add(MBField(key: MBFieldKey.surnameAtBirth, value: result.surnameAtBirth))
         fields.add(MBField(key: MBFieldKey.address, value: result.address))
         fields.add(MBField(key: MBFieldKey.placeOfBirth, value: result.placeOfBirth))
-        fields.add(MBField(key: MBFieldKey.specialRemarks, value: result.specialRemarks))
 
         return fields
     }
@@ -879,7 +809,6 @@ extension MBSwitzerlandIdBackRecognizer {
         let fields = NSMutableArray(array: result.mrzResult.extractFieldResults())
 
         fields.add(MBField(key: MBFieldKey.placeOfOrigin, value: result.placeOfOrigin))
-        fields.add(MBField(key: MBFieldKey.height, value: result.height))
         fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.authority))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
         fields.add(MBField(key: MBFieldKey.nonMrzDateOfExpiry, value: result.dateOfExpiry))

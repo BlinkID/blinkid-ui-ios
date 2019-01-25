@@ -60,7 +60,7 @@ import MicroBlink
     }
     
     /// Array of supported document providers by this country
-    var supportedDocuments: [MBDocumentType] {
+    public var supportedDocuments: [MBDocumentType] {
         return Array(documentProviders.keys).sorted()
     }
 }
@@ -102,6 +102,10 @@ class MBAustriaCountryProvider: MBCountryProvider {
 class MBBruneiCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
         return MBBruneiIDDocumentProvider()
+    }
+    
+    override var residencePermitProvider: MBDocumentProvider? {
+        return MBBruneiResidencePermitDocumentProvider()
     }
 }
 
@@ -330,16 +334,6 @@ class MBQatarCountryProvider: MBCountryProvider {
 class MBRomaniaCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
         return MBRomaniaIDDocumentProvider()
-    }
-    
-    override var driversLicenseProvider: MBDocumentProvider? {
-        return MBDLDocumentProvider(isFullySupported: false)
-    }
-}
-
-class MBSerbiaCountryProvider: MBCountryProvider {
-    override var identityCardProvider: MBDocumentProvider? {
-        return MBSerbiaIDDocumentProvider()
     }
     
     override var driversLicenseProvider: MBDocumentProvider? {

@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           BlinkIDUI Docs
         </a>
-         (41% documented)
+         (42% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -81,7 +81,7 @@
                 <a class="nav-group-task-link" href="../Classes/MBCountry.html">MBCountry</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes.html#/c:@M@BlinkIDUI@objc(cs)MBCountryProvider">MBCountryProvider</a>
+                <a class="nav-group-task-link" href="../Classes/MBCountryProvider.html">MBCountryProvider</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBCountryTableViewController.html">MBCountryTableViewController</a>
@@ -123,6 +123,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBFrameGrabberMode.html">MBFrameGrabberMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBScanState.html">MBScanState</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBSupportedCountry.html">MBSupportedCountry</a>
@@ -176,7 +179,7 @@
               <div class="declaration">
                 <div class="language">
                   <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">MBDefaultDocumentChooserSettings</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="../Protocols/MBDocumentChooserSettings.html">MBDocumentChooserSettings</a></span></code></pre>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">MBDefaultDocumentChooserSettings</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="../Protocols/MBDocumentChooserSettings.html">MBDocumentChooserSettings</a></span></code></pre>
 
                 </div>
               </div>
@@ -214,7 +217,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="k">var</span> <span class="nv">countryFilter</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MBCountryFilter.html">MBCountryFilter</a></span></code></pre>
+<span class="kd">open</span> <span class="k">var</span> <span class="nv">countryFilter</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MBCountryFilter.html">MBCountryFilter</a></span></code></pre>
 
                         </div>
                       </div>
@@ -246,7 +249,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="k">var</span> <span class="nv">shouldShowDocumentTypeTabs</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+<span class="kd">open</span> <span class="k">var</span> <span class="nv">shouldShowDocumentTypeTabs</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -278,7 +281,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="k">var</span> <span class="nv">shouldShowCountryChooser</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+<span class="kd">open</span> <span class="k">var</span> <span class="nv">shouldShowCountryChooser</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -307,7 +310,7 @@ Default: 50</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="k">var</span> <span class="nv">sectionIndexMinimumDisplayRowCount</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+<span class="kd">open</span> <span class="k">var</span> <span class="nv">sectionIndexMinimumDisplayRowCount</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -336,7 +339,7 @@ You can use this function to filter document types by countries.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">isDocument</span><span class="p">(</span><span class="nv">document</span><span class="p">:</span> <span class="kt"><a href="../Enums/MBDocumentType.html">MBDocumentType</a></span><span class="p">,</span> <span class="n">supportedForCountry</span> <span class="nv">country</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBCountry.html">MBCountry</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">isDocument</span><span class="p">(</span><span class="nv">document</span><span class="p">:</span> <span class="kt"><a href="../Enums/MBDocumentType.html">MBDocumentType</a></span><span class="p">,</span> <span class="n">supportedForCountry</span> <span class="nv">country</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBCountry.html">MBCountry</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -399,7 +402,7 @@ You can use this function to filter document types by countries.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">defaultDocumentTypeForCountry</span><span class="p">(</span><span class="nv">country</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBCountry.html">MBCountry</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/MBDocumentType.html">MBDocumentType</a></span></code></pre>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">defaultDocumentTypeForCountry</span><span class="p">(</span><span class="nv">country</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBCountry.html">MBCountry</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/MBDocumentType.html">MBDocumentType</a></span></code></pre>
 
                         </div>
                       </div>
@@ -450,7 +453,7 @@ You can use this function to filter document types by countries.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didTapChooseCountry</span><span class="p">(</span><span class="nv">documentChooserViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBDocumentChooserViewController.html">MBDocumentChooserViewController</a></span><span class="p">)</span></code></pre>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">didTapChooseCountry</span><span class="p">(</span><span class="nv">documentChooserViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBDocumentChooserViewController.html">MBDocumentChooserViewController</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>

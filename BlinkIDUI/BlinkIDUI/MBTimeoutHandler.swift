@@ -34,7 +34,7 @@ import Foundation
 /// that notifes them that they can change the Country/Document being scanned.
 /// If *timerTimeout* number of seconds pass without any successfull results this class will present
 /// a `UIAlertController` with a message to user to try changing the Country.
-@objc public class MBDefaultTimeoutHandler: NSObject, MBTimeoutHandler {
+@objc open class MBDefaultTimeoutHandler: NSObject, MBTimeoutHandler {
     
     /// Needed to present alert view controller once the timeout it out.
     @objc public weak var overlayViewController: MBBlinkIdOverlayViewController?
@@ -49,24 +49,24 @@ import Foundation
     }
     
     /// Called everytime scanning is started
-    @objc public func onScanStart() {
+    @objc open func onScanStart() {
         _currentTimerTimeout = _startTimerTimeout
         _destroyTimer()
         _createTimer()
     }
     
     /// Called once the scanning is done
-    @objc public func onScanDone() {
+    @objc open func onScanDone() {
         _destroyTimer()
     }
     
     /// Called once the scanning is paused
-    @objc public func onScanPaused() {
+    @objc open func onScanPaused() {
         _destroyTimer()
     }
     
     /// Called once the scanning is resumed
-    @objc public func onScanResumed() {
+    @objc open func onScanResumed() {
         _createTimer()
     }
     

@@ -56,23 +56,23 @@ import Foundation
 }
 
 /// Default implementation of `MBDocumentChooserSettings`.
-@objc public class MBDefaultDocumentChooserSettings: NSObject, MBDocumentChooserSettings {
+@objc open class MBDefaultDocumentChooserSettings: NSObject, MBDocumentChooserSettings {
     
     /// Filter for countries in country selection view controller.
     /// - Default: MBAllowAllCountryFilter - all countries are allowed.
-    @objc public var countryFilter: MBCountryFilter = MBAllowAllCountryFilter()
+    @objc open var countryFilter: MBCountryFilter = MBAllowAllCountryFilter()
     
     /// Show/hide document tabs view.
     /// - Default: true
-    @objc public var shouldShowDocumentTypeTabs: Bool = true
+    @objc open var shouldShowDocumentTypeTabs: Bool = true
     
     /// Show/hide country chooser button.
     /// - Default: true
-    @objc public var shouldShowCountryChooser: Bool = true
+    @objc open var shouldShowCountryChooser: Bool = true
     
     /// Minimum number of rows to show section indexer sidebar in selection view controller.
     /// Default: 50
-    @objc public var sectionIndexMinimumDisplayRowCount: Int = 50
+    @objc open var sectionIndexMinimumDisplayRowCount: Int = 50
     
     /// Checks if document is supported by the country. This is used to display proper document selection tabs for the country.
     /// You can use this function to filter document types by countries.
@@ -81,7 +81,7 @@ import Foundation
     ///   - document: document type that is being tested if it's supported.
     ///   - country: country that is selected.
     /// - Returns: if the document is supported by the country
-    @objc public func isDocument(document: MBDocumentType, supportedForCountry country: MBCountry) -> Bool {
+    @objc open func isDocument(document: MBDocumentType, supportedForCountry country: MBCountry) -> Bool {
         return country.countryProvider.supportedDocuments.contains(document)
     }
     
@@ -89,7 +89,7 @@ import Foundation
     ///
     /// - Parameter country: country that was selected
     /// - Returns: document type that will be selected
-    @objc public func defaultDocumentTypeForCountry(country: MBCountry) -> MBDocumentType {
+    @objc open func defaultDocumentTypeForCountry(country: MBCountry) -> MBDocumentType {
         guard let documentType = country.countryProvider.supportedDocuments.first else {
             fatalError("Country \(country.localized) with country code \(country.countryCode) has no DocumentProviders.")
         }
@@ -99,7 +99,7 @@ import Foundation
     /// Event called once the document choose country button was tapped
     ///
     /// - Parameter documentChooserViewController: view controller used to select documents and countries
-    @objc public func didTapChooseCountry(documentChooserViewController: MBDocumentChooserViewController) {
+    @objc open func didTapChooseCountry(documentChooserViewController: MBDocumentChooserViewController) {
         MBBlinkSettings.sharedInstance.timeoutHandler.onScanPaused()
         let countryTableViewController = MBCountryTableViewController.initFromStoryboard(delegate: documentChooserViewController)
         documentChooserViewController.present(countryTableViewController, animated: true, completion: nil)

@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           BlinkIDUI Docs
         </a>
-         (41% documented)
+         (42% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -81,7 +81,7 @@
                 <a class="nav-group-task-link" href="../Classes/MBCountry.html">MBCountry</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes.html#/c:@M@BlinkIDUI@objc(cs)MBCountryProvider">MBCountryProvider</a>
+                <a class="nav-group-task-link" href="../Classes/MBCountryProvider.html">MBCountryProvider</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBCountryTableViewController.html">MBCountryTableViewController</a>
@@ -123,6 +123,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBFrameGrabberMode.html">MBFrameGrabberMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBScanState.html">MBScanState</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBSupportedCountry.html">MBSupportedCountry</a>
@@ -193,9 +196,9 @@ Implement this protocol to be able to recieve the events from the <code><a href=
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@BlinkIDUI@objc(pl)MBBlinkDelegate(im)didStartScanning"></a>
-                    <a name="//apple_ref/swift/Method/didStartScanning()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@BlinkIDUI@objc(pl)MBBlinkDelegate(im)didStartScanning">didStartScanning()</a>
+                    <a name="/c:@M@BlinkIDUI@objc(pl)MBBlinkDelegate(im)didStartScanningWithState:"></a>
+                    <a name="//apple_ref/swift/Method/didStartScanning(withState:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@objc(pl)MBBlinkDelegate(im)didStartScanningWithState:">didStartScanning(withState:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -214,9 +217,28 @@ Implement this protocol to be able to recieve the events from the <code><a href=
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">func</span> <span class="nf">didStartScanning</span><span class="p">()</span></code></pre>
+<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">didStartScanning</span><span class="p">(</span><span class="n">withState</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Enums/MBScanState.html">MBScanState</a></span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>state</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>current state that the scanning started</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -363,7 +385,7 @@ was successfuly scanned.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">func</span> <span class="nf">didChangeDocument</span><span class="p">(</span><span class="nv">newDocument</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBDocumentProvider.html">MBDocumentProvider</a></span><span class="p">,</span> <span class="n">forCountry</span> <span class="nv">country</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBCountry.html">MBCountry</a></span><span class="p">)</span></code></pre>
+<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">didChangeDocument</span><span class="p">(</span><span class="nv">newDocument</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBDocumentProvider.html">MBDocumentProvider</a></span><span class="p">,</span> <span class="n">forCountry</span> <span class="nv">country</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBCountry.html">MBCountry</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -422,7 +444,7 @@ was successfuly scanned.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">func</span> <span class="nf">didTapCancelButton</span><span class="p">()</span></code></pre>
+<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">didTapCancelButton</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>

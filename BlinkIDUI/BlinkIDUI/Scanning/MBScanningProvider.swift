@@ -9,10 +9,15 @@
 import Foundation
 import MicroBlink
 
-enum MBScanState {
+/// Enum that describes the current scanning state
+@objc public enum MBScanState: Int {
+    /// Scanning hasn't started
     case notStarted
+    /// Scanning front side state
     case frontSide
+    /// Scanning back side state
     case backSide
+    /// Scanning any side state
     case anySide
 }
 

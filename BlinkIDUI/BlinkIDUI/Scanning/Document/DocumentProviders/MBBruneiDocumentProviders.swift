@@ -16,11 +16,31 @@ class MBBruneiIDDocumentProvider: MBDocumentProvider {
     }
     
     override var backRecognizerProvider: MBRecognizerWrapper? {
-        return MBRecognizerWrapper(withRecognizer: MBMrtdRecognizer())
+        return MBRecognizerWrapper(withRecognizer: MBBruneiIdBackRecognizer())
     }
     
     override var type: MBDocumentType {
         return MBDocumentType.identityCard
+    }
+    
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.id1
+    }
+    
+}
+
+class MBBruneiResidencePermitDocumentProvider: MBDocumentProvider {
+    
+    override var frontRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBBruneiResidencePermitFrontRecognizer())
+    }
+    
+    override var backRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBBruneiResidencePermitBackRecognizer())
+    }
+    
+    override var type: MBDocumentType {
+        return MBDocumentType.residencePermit
     }
     
     override var aspectRatio: DocumentAspectRatio {

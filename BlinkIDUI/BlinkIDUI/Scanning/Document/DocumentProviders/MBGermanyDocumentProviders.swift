@@ -12,9 +12,7 @@ import MicroBlink
 class MBGermanyDLDocumentProvider: MBDocumentProvider {
     
     override var frontRecognizerProvider: MBRecognizerWrapper? {
-        let recognizer: MBEudlRecognizer = MBEudlRecognizer()
-        recognizer.country = .germany
-        return MBRecognizerWrapper(withRecognizer: recognizer)
+        return MBRecognizerWrapper(withRecognizer: MBGermanyDlFrontRecognizer())
     }
     
     override var backRecognizerProvider: MBRecognizerWrapper? {

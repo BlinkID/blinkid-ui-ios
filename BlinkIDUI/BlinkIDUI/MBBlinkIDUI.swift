@@ -17,7 +17,9 @@ import MicroBlink
     ///     - front side scanning started.
     ///     - back side scanning started.
     ///     - any side scanning started.
-    @objc func didStartScanning()
+    /// - Parameters:
+    ///   - state: current state that the scanning started
+    @objc optional func didStartScanning(withState state: MBScanState)
 
     /// Event that reports that the scanning of the whole document:
     ///     - both front and back side
@@ -41,10 +43,10 @@ import MicroBlink
     /// - Parameters:
     ///     - newDocument: document provider
     ///     - forCountry: country
-    @objc func didChangeDocument(newDocument: MBDocumentProvider, forCountry country: MBCountry)
+    @objc optional func didChangeDocument(newDocument: MBDocumentProvider, forCountry country: MBCountry)
     
     /// Event called when user presses the X to close scaning button if it's available.
-    @objc func didTapCancelButton()
+    @objc optional func didTapCancelButton()
     
 }
 
@@ -140,7 +142,7 @@ extension MBBlinkIDUI: MBScanningProviderDelegate {
         case .notStarted:
             fatalError("Scanning started with state: notStarted, this shouldn't happen")
         }
-        delegate?.didStartScanning()
+        delegate?.didStartScanning?(withState: state)
     }
 
     func didFinishScanningFrontSideOfDocument(result: MBRecognitionResult, successFrame: UIImage?) {
@@ -166,10 +168,10 @@ extension MBBlinkIDUI: MBScanningProviderDelegate {
 extension MBBlinkIDUI: MBBlinkIdOverlayViewControllerDelegate {
     func didChangeDocument(newDocument: MBDocumentProvider, forCountry country: MBCountry) {
         _scanningProvider.updated(scanningProviderFor: newDocument)
-        delegate?.didChangeDocument(newDocument: newDocument, forCountry: country)
+        delegate?.didChangeDocument?(newDocument: newDocument, forCountry: country)
     }
     
     func didTapCancelButton() {
-        delegate?.didTapCancelButton()
+        delegate?.didTapCancelButton?()
     }
 }
