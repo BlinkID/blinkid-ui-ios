@@ -16,91 +16,91 @@
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/CountryTable/MBCountryTableViewController.swift",
-      "line": 119,
+      "line": 124,
       "symbol": "MBCountryTableViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/CountryTable/MBCountryTableViewController.swift",
-      "line": 130,
+      "line": 135,
       "symbol": "MBCountryTableViewController.viewWillAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/CountryTable/MBCountryTableViewController.swift",
-      "line": 164,
+      "line": 169,
       "symbol": "MBCountryTableViewController.numberOfSections(in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/CountryTable/MBCountryTableViewController.swift",
-      "line": 168,
+      "line": 173,
       "symbol": "MBCountryTableViewController.tableView(_:numberOfRowsInSection:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/CountryTable/MBCountryTableViewController.swift",
-      "line": 172,
+      "line": 177,
       "symbol": "MBCountryTableViewController.tableView(_:titleForHeaderInSection:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/CountryTable/MBCountryTableViewController.swift",
-      "line": 176,
+      "line": 181,
       "symbol": "MBCountryTableViewController.sectionIndexTitles(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/CountryTable/MBCountryTableViewController.swift",
-      "line": 180,
+      "line": 185,
       "symbol": "MBCountryTableViewController.tableView(_:cellForRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/CountryTable/MBCountryTableViewController.swift",
-      "line": 201,
+      "line": 206,
       "symbol": "MBCountryTableViewController.tableView(_:didSelectRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/CountryTable/MBCountryTableViewController.swift",
-      "line": 208,
+      "line": 225,
       "symbol": "MBCountryTableViewController.tableView(_:willDisplay:forRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/CountryTable/MBCountryTableViewController.swift",
-      "line": 212,
+      "line": 229,
       "symbol": "MBCountryTableViewController.tableView(_:willDisplayHeaderView:forSection:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/CountryTable/MBCountryTableViewController.swift",
-      "line": 222,
+      "line": 239,
       "symbol": "MBCountryTableViewController.updateSearchResults(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/CountryTable/MBCountryTableViewController.swift",
-      "line": 232,
+      "line": 249,
       "symbol": "MBCountryTableViewController.searchBarSearchButtonClicked(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/CountryTable/MBCountryTableViewController.swift",
-      "line": 236,
+      "line": 253,
       "symbol": "MBCountryTableViewController.searchBar(_:textDidChange:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -114,56 +114,56 @@
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/Overlay/MBBlinkIdViewController.swift",
-      "line": 120,
+      "line": 122,
       "symbol": "MBBlinkIdOverlayViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/Overlay/MBBlinkIdViewController.swift",
-      "line": 125,
+      "line": 127,
       "symbol": "MBBlinkIdOverlayViewController.viewDidAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/Overlay/MBBlinkIdViewController.swift",
-      "line": 132,
+      "line": 134,
       "symbol": "MBBlinkIdOverlayViewController.viewWillAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/Overlay/MBBlinkIdViewController.swift",
-      "line": 148,
+      "line": 150,
       "symbol": "MBBlinkIdOverlayViewController.viewWillDisappear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/Overlay/MBBlinkIdViewController.swift",
-      "line": 156,
+      "line": 158,
       "symbol": "MBBlinkIdOverlayViewController.viewDidLayoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/Overlay/MBBlinkIdViewController.swift",
-      "line": 164,
+      "line": 166,
       "symbol": "MBBlinkIdOverlayViewController.prepare(for:sender:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/Overlay/MBBlinkIdViewController.swift",
-      "line": 295,
+      "line": 297,
       "symbol": "MBBlinkIdOverlayViewController.recognizerRunnerViewController(_:didFinishGlareDetectionWithResult:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Modules/Overlay/MBBlinkIdViewController.swift",
-      "line": 318,
+      "line": 320,
       "symbol": "MBBlinkIdOverlayViewController.recognizerRunnerViewController(_:didFinishDetectionWithDisplayablePoints:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1522,230 +1522,244 @@
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 17,
-      "symbol": "MBSupportedCountry.canada",
+      "symbol": "MBSupportedCountry.brunei",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 18,
-      "symbol": "MBSupportedCountry.colombia",
+      "symbol": "MBSupportedCountry.canada",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 19,
-      "symbol": "MBSupportedCountry.croatia",
+      "symbol": "MBSupportedCountry.colombia",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 20,
-      "symbol": "MBSupportedCountry.cyprus",
+      "symbol": "MBSupportedCountry.croatia",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 21,
-      "symbol": "MBSupportedCountry.czechia",
+      "symbol": "MBSupportedCountry.cyprus",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 22,
-      "symbol": "MBSupportedCountry.denmark",
+      "symbol": "MBSupportedCountry.czechia",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 23,
-      "symbol": "MBSupportedCountry.egypt",
+      "symbol": "MBSupportedCountry.denmark",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 24,
-      "symbol": "MBSupportedCountry.france",
+      "symbol": "MBSupportedCountry.egypt",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 25,
-      "symbol": "MBSupportedCountry.germany",
+      "symbol": "MBSupportedCountry.france",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 26,
-      "symbol": "MBSupportedCountry.hongKong",
+      "symbol": "MBSupportedCountry.germany",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 27,
-      "symbol": "MBSupportedCountry.indonesia",
+      "symbol": "MBSupportedCountry.hongKong",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 28,
-      "symbol": "MBSupportedCountry.ireland",
+      "symbol": "MBSupportedCountry.indonesia",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 29,
-      "symbol": "MBSupportedCountry.italy",
+      "symbol": "MBSupportedCountry.ireland",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 30,
-      "symbol": "MBSupportedCountry.jordan",
+      "symbol": "MBSupportedCountry.italy",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 31,
-      "symbol": "MBSupportedCountry.kuwait",
+      "symbol": "MBSupportedCountry.jordan",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 32,
-      "symbol": "MBSupportedCountry.malaysia",
+      "symbol": "MBSupportedCountry.kuwait",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 33,
-      "symbol": "MBSupportedCountry.mexico",
+      "symbol": "MBSupportedCountry.nigeria",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 34,
-      "symbol": "MBSupportedCountry.morocco",
+      "symbol": "MBSupportedCountry.malaysia",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 35,
-      "symbol": "MBSupportedCountry.newZealand",
+      "symbol": "MBSupportedCountry.mexico",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 36,
-      "symbol": "MBSupportedCountry.poland",
+      "symbol": "MBSupportedCountry.morocco",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 37,
-      "symbol": "MBSupportedCountry.qatar",
+      "symbol": "MBSupportedCountry.newZealand",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 38,
-      "symbol": "MBSupportedCountry.serbia",
+      "symbol": "MBSupportedCountry.poland",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 39,
-      "symbol": "MBSupportedCountry.singapore",
+      "symbol": "MBSupportedCountry.qatar",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 40,
-      "symbol": "MBSupportedCountry.slovakia",
+      "symbol": "MBSupportedCountry.serbia",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 41,
-      "symbol": "MBSupportedCountry.slovenia",
+      "symbol": "MBSupportedCountry.singapore",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 42,
-      "symbol": "MBSupportedCountry.southAfrica",
+      "symbol": "MBSupportedCountry.slovakia",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 43,
-      "symbol": "MBSupportedCountry.spain",
+      "symbol": "MBSupportedCountry.slovenia",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 44,
-      "symbol": "MBSupportedCountry.sweden",
+      "symbol": "MBSupportedCountry.southAfrica",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 45,
-      "symbol": "MBSupportedCountry.switzerland",
+      "symbol": "MBSupportedCountry.spain",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 46,
-      "symbol": "MBSupportedCountry.unitedArabEmirates",
+      "symbol": "MBSupportedCountry.sweden",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 47,
-      "symbol": "MBSupportedCountry.unitedKingdom",
+      "symbol": "MBSupportedCountry.switzerland",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
       "line": 48,
+      "symbol": "MBSupportedCountry.unitedArabEmirates",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
+      "line": 49,
+      "symbol": "MBSupportedCountry.unitedKingdom",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
+      "line": 50,
       "symbol": "MBSupportedCountry.unitedStatesOfAmerica",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Scanning/Country/MBCountry.swift",
-      "line": 57,
+      "line": 59,
       "symbol": "MBSupportedCountry.countryCode",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"

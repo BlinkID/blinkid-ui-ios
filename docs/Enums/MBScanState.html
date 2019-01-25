@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MBWhitelistCountryFilter Class Reference</title>
+    <title>MBScanState Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/MBWhitelistCountryFilter" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Enum/MBScanState" class="dashAnchor"></a>
 
-    <a title="MBWhitelistCountryFilter Class Reference"></a>
+    <a title="MBScanState Enumeration Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -50,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">BlinkIDUI Reference</a>
       <img class="carat" src="../img/carat.png" />
-      MBWhitelistCountryFilter Class Reference
+      MBScanState Enumeration Reference
     </p>
 
     <div class="content-wrapper">
@@ -175,15 +175,15 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>MBWhitelistCountryFilter</h1>
+            <h1>MBScanState</h1>
               <div class="declaration">
                 <div class="language">
                   <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">MBWhitelistCountryFilter</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="../Protocols/MBCountryFilter.html">MBCountryFilter</a></span></code></pre>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">MBScanState</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                 </div>
               </div>
-            <p>Class will return an array of countries that match the provided set of country codes.</p>
+            <p>Enum that describes the current scanning state</p>
 
           </div>
         </section>
@@ -195,9 +195,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@BlinkIDUI@objc(cs)MBWhitelistCountryFilter(im)initWithWhitelistedCountryCodes:"></a>
-                    <a name="//apple_ref/swift/Method/init(whitelistedCountryCodes:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@BlinkIDUI@objc(cs)MBWhitelistCountryFilter(im)initWithWhitelistedCountryCodes:">init(whitelistedCountryCodes:)</a>
+                    <a name="/c:@M@BlinkIDUI@E@MBScanState@MBScanStateNotStarted"></a>
+                    <a name="//apple_ref/swift/Element/notStarted" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@E@MBScanState@MBScanStateNotStarted">notStarted</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -205,37 +205,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates an instance of <code>MBWhitelistCountryFilter</code> that will filter out the countries
-not provided through <code>MBWhitelistCountryFilter.whitelistedCountryCodes</code> parameter.</p>
+                        <p>Scanning hasn&rsquo;t started</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">whitelistedCountryCodes</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notStarted</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>whitelistedCountryCodes</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>countries that won&rsquo;t be removed.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -243,9 +222,9 @@ not provided through <code>MBWhitelistCountryFilter.whitelistedCountryCodes</cod
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@BlinkIDUI@objc(pl)MBCountryFilter(im)filterWithCountries:"></a>
-                    <a name="//apple_ref/swift/Method/filter(countries:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@BlinkIDUI@objc(pl)MBCountryFilter(im)filterWithCountries:">filter(countries:)</a>
+                    <a name="/c:@M@BlinkIDUI@E@MBScanState@MBScanStateFrontSide"></a>
+                    <a name="//apple_ref/swift/Element/frontSide" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@E@MBScanState@MBScanStateFrontSide">frontSide</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -253,14 +232,68 @@ not provided through <code>MBWhitelistCountryFilter.whitelistedCountryCodes</cod
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Scanning front side state</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span><span class="nv">countries</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/MBCountry.html">MBCountry</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/MBCountry.html">MBCountry</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">frontSide</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@E@MBScanState@MBScanStateBackSide"></a>
+                    <a name="//apple_ref/swift/Element/backSide" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@E@MBScanState@MBScanStateBackSide">backSide</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Scanning back side state</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">backSide</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@BlinkIDUI@E@MBScanState@MBScanStateAnySide"></a>
+                    <a name="//apple_ref/swift/Element/anySide" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@BlinkIDUI@E@MBScanState@MBScanStateAnySide">anySide</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Scanning any side state</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">anySide</span></code></pre>
 
                         </div>
                       </div>
