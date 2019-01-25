@@ -37,19 +37,16 @@
     MBBlinkSettings.sharedInstance.shouldShowCancelButton = NO;
     
     // Change the colors
-    // UIColor.mb_primaryColor = UIColor.redColor;
-    // UIColor.mb_secondaryColor = UIColor.blackColor;
-    // UIColor.mb_tertiaryColor = UIColor.whiteColor;
-    // UIColor.mb_shadowColor = UIColor.whiteColor;
+     UIColor.mb_primaryColor = UIColor.redColor;
+     UIColor.mb_secondaryColor = UIColor.blackColor;
+     UIColor.mb_tertiaryColor = UIColor.whiteColor;
+     UIColor.mb_shadowColor = UIColor.whiteColor;
     
     self.blinkIdUI = [[MBBlinkIDUI alloc] init];
     self.blinkIdUI.delegate = self;
 }
 
 // MARK: - MBBlinkDelegate -
-
-- (void)didChangeDocumentWithNewDocument:(MBDocumentProvider * _Nonnull)newDocument {
-}
 
 - (void)didScanEntireDocumentWithRecognitionResult:(MBRecognitionResult * _Nonnull)recognitionResult successFrame:(UIImage * _Nullable)successFrame {
     [self.blinkIdUI pauseScanning];
@@ -69,11 +66,16 @@
 - (void)didScanFirstSideWithRecognitionResult:(MBRecognitionResult * _Nonnull)recognitionResult successFrame:(UIImage * _Nullable)successFrame {
 }
 
-- (void)didStartScanning {
+- (void)didTapCancelButton {
+    
 }
 
-- (void)didTapCancelButton {
-    [self.blinkIdUI.recognizerRunnerViewController dismissViewControllerAnimated:YES completion:nil];
+- (void)didChangeDocumentWithNewDocument:(MBDocumentProvider *)newDocument forCountry:(MBCountry *)country {
+    
+}
+
+- (void)didStartScanningWithState:(enum MBScanState)state {
+    
 }
 
 @end
