@@ -122,7 +122,7 @@ class ViewConroller: UIViewController {
 
 extension ViewController: MBBlinkDelegate {
     
-    func didStartScanning() {
+    func didStartScanning(withState state: MBScanState) {
         // When scanning starts you will be notified through this method
     }
     
@@ -143,7 +143,7 @@ extension ViewController: MBBlinkDelegate {
         // this method will be called when the first side is scanned
     }
     
-    func didChangeDocument(newDocument: MBDocumentProvider) {
+    func didChangeDocument(newDocument: MBDocumentProvider, forCountry country: MBCountry) {
         // When a user changes the document you will be notified through this method
     }
     
@@ -194,7 +194,7 @@ extension ViewController: MBBlinkDelegate {
     [self presentViewController:self.blinkIDUI.recognizerRunnerViewController animated:YES completion:nil];
 }
 
-- (void)didChangeDocumentWithNewDocument:(MBDocumentProvider * _Nonnull)newDocument {
+- (void)didChangeDocumentWithNewDocument:(MBDocumentProvider *)newDocument forCountry:(MBCountry *)country {
     // When a user changes the document you will be notified through this method
 }
 
@@ -215,7 +215,7 @@ extension ViewController: MBBlinkDelegate {
     // this method will be called when the first side is scanned
 }
 
-- (void)didStartScanning {
+- (void)didStartScanningWithState:(MBScanState)state {
     // You will be notified once the scanning starts through this method
 }
 
