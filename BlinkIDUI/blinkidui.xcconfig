@@ -1,0 +1,12 @@
+//
+//  blinkidui.xcconfig
+//  BlinkIDUI
+//
+//  Created by Jura on 30/01/2019.
+//  Copyright © 2019 Microblink. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+FRAMEWORK_SEARCH_PATHS = $(inherited) $(PROJECT_DIR)/../blinkid-ios
