@@ -170,8 +170,8 @@ extension MBBlinkIDUI: MBScanningProviderDelegate {
 
 extension MBBlinkIDUI: MBBlinkIdOverlayViewControllerDelegate {
     func didChangeDocument(newDocument: MBDocumentProvider, forCountry country: MBCountry) {
-        _scanningProvider.updated(scanningProviderFor: newDocument)
         delegate?.didChangeDocument?(newDocument: newDocument, forCountry: country)
+        _scanningProvider.updated(scanningProviderFor: newDocument)
     }
     
     func didTapCancelButton() {
