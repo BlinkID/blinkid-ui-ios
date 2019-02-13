@@ -43,8 +43,8 @@ public class MBDocumentChooserViewController: UIViewController {
     private var _currentCountry: MBCountry = MBBlinkSettings.sharedInstance.initialCountry
     private var _currentDocument: MBDocumentType = MBBlinkSettings.sharedInstance.initialDocument
     
-    public override func didMove(toParent parent: UIViewController?) {
-        super.didMove(toParent: parent)
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         _countryChanged(country: _currentCountry, withDocument: _currentDocument)
     }
 
@@ -55,7 +55,7 @@ public class MBDocumentChooserViewController: UIViewController {
         _documentChooser.documents = country.countryProvider.supportedDocuments.filter({ (documentType) -> Bool in
             settings?.isDocument(document: documentType, supportedForCountry: country) ?? false
         })
-        _documentChanged(document: document)
+        _documentChanged(document: _currentDocument)
     }
 
     private func _documentChanged(document: MBDocumentType? = nil) {
@@ -89,6 +89,7 @@ public class MBDocumentChooserViewController: UIViewController {
 
 extension MBDocumentChooserViewController: MBDocumentTabViewDelegate {
     func didSelect(document: MBDocumentType) {
+        _currentDocument = document
         delegate?.didSelect(document: document, fromCountry: _currentCountry)
     }
 }

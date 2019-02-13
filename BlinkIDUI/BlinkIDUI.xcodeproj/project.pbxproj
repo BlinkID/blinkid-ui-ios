@@ -20,6 +20,7 @@
 		BE2165B22192EE1900E21734 /* MBViewfinderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE2165B12192EE1900E21734 /* MBViewfinderView.xib */; };
 		BE2165B52193078300E21734 /* MBViewfinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2165B42193078300E21734 /* MBViewfinderView.swift */; };
 		BE2165BB219322C000E21734 /* MBNibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2165BA219322C000E21734 /* MBNibLoadable.swift */; };
+		BE26BAD722141C9400469894 /* MBResultCombiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26BAD622141C9400469894 /* MBResultCombiner.swift */; };
 		BE379DE8219B26D60008535A /* MBDocumentTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE379DE7219B26D60008535A /* MBDocumentTab.xib */; };
 		BE379DEA219B2BB80008535A /* MBDocumentTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE379DE9219B2BB80008535A /* MBDocumentTab.swift */; };
 		BE379DEC219C05540008535A /* MBDocumentTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE379DEB219C05540008535A /* MBDocumentTabsView.swift */; };
@@ -107,6 +108,7 @@
 		BE2165B12192EE1900E21734 /* MBViewfinderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBViewfinderView.xib; sourceTree = "<group>"; };
 		BE2165B42193078300E21734 /* MBViewfinderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBViewfinderView.swift; sourceTree = "<group>"; };
 		BE2165BA219322C000E21734 /* MBNibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBNibLoadable.swift; sourceTree = "<group>"; };
+		BE26BAD622141C9400469894 /* MBResultCombiner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBResultCombiner.swift; sourceTree = "<group>"; };
 		BE379DE7219B26D60008535A /* MBDocumentTab.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBDocumentTab.xib; sourceTree = "<group>"; };
 		BE379DE9219B2BB80008535A /* MBDocumentTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBDocumentTab.swift; sourceTree = "<group>"; };
 		BE379DEB219C05540008535A /* MBDocumentTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBDocumentTabsView.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				BE21647C2190855A00E21734 /* MBResultManager.swift */,
+				BE26BAD622141C9400469894 /* MBResultCombiner.swift */,
 				BEE34666218A6051004C0397 /* MBRecognizerManager.swift */,
 				BEE34668218A6090004C0397 /* MBScanningProvider.swift */,
 				BE0F362221A7E4B8005F0BEE /* Country */,
@@ -591,6 +594,7 @@
 				BE6480E2218C83C600D0C24F /* MBSingaporeDocumentProviders.swift in Sources */,
 				BE64810621903C3A00D0C24F /* MBConstants.swift in Sources */,
 				BE2164732190849B00E21734 /* MBTheme.swift in Sources */,
+				BE26BAD722141C9400469894 /* MBResultCombiner.swift in Sources */,
 				BE495B6B21AC1CBD007B16D1 /* MBMexicoDocumentProviders.swift in Sources */,
 				BE6480D8218C83C600D0C24F /* MBGermanyDocumentProviders.swift in Sources */,
 				BEAE7ACA21998D8600D0E70A /* MBBlinkSettings.swift in Sources */,

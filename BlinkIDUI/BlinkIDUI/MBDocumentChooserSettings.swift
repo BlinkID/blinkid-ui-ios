@@ -17,6 +17,8 @@ import Foundation
 ///         `MBDocumentChooserSettings.isDocument(...)`
 @objc public protocol MBDocumentChooserSettings: AnyObject {
     
+    @objc weak var blinkIDUI: MBBlinkIDUI? { get set }
+    
     /// Filter for countries in country selection view controller.
     /// - Default: MBAllowAllCountryFilter - all countries are allowed.
     @objc var countryFilter: MBCountryFilter { get set }
@@ -57,6 +59,8 @@ import Foundation
 
 /// Default implementation of `MBDocumentChooserSettings`.
 @objc open class MBDefaultDocumentChooserSettings: NSObject, MBDocumentChooserSettings {
+    
+    @objc weak public var blinkIDUI: MBBlinkIDUI?
     
     /// Filter for countries in country selection view controller.
     /// - Default: MBAllowAllCountryFilter - all countries are allowed.
@@ -100,9 +104,15 @@ import Foundation
     ///
     /// - Parameter documentChooserViewController: view controller used to select documents and countries
     @objc open func didTapChooseCountry(documentChooserViewController: MBDocumentChooserViewController) {
-        MBBlinkSettings.sharedInstance.timeoutHandler.onScanPaused()
-        let countryTableViewController = MBCountryTableViewController.initFromStoryboard(delegate: documentChooserViewController)
-        documentChooserViewController.present(countryTableViewController, animated: true, completion: nil)
+        let countryTableViewController = MBCountryTableViewController.initFromStoryboard(delegate: documentChooserViewController, onDismissAction: { [weak self] in
+            self?.blinkIDUI?.resumeScanning()
+        })
+        
+        countryTableViewController.modalPresentationCapturesStatusBarAppearance = true
+        countryTableViewController.modalPresentationStyle = .overFullScreen
+        documentChooserViewController.present(countryTableViewController, animated: true, completion: {
+            self.blinkIDUI?.pauseScanning()
+        })
     }
     
 }

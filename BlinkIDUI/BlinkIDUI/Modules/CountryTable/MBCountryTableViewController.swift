@@ -58,20 +58,26 @@ import MicroBlink
     
     private var _searchController: UISearchController?
 
+    private var _onDismissAction: (() -> Void)?
+    
+    public override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+    
     // MARK: - Initializer -
     
     /// Initliazer that create the instance of `MBCountryTableViewController` from the storyboard.
     ///
     /// - Parameter delegate: `MBCountryTableViewControllerDelegate` instance
-    @objc public class func initFromStoryboard(delegate: MBCountryTableViewControllerDelegate) -> UINavigationController {
+    @objc public class func initFromStoryboard(delegate: MBCountryTableViewControllerDelegate, onDismissAction: @escaping () -> Void) -> UINavigationController {
         let storyboard = UIStoryboard(name: MBConstants.Name.CountryTableViewController.storyboard, bundle: Bundle(for: self))
         guard let viewController = storyboard.instantiateViewController(withIdentifier: MBConstants.Name.CountryTableViewController.countrySelectIdentifier) as? UINavigationController,
             let selectionViewController = viewController.viewControllers.first as? MBCountryTableViewController else {
                 fatalError("Unable to instantiate viewController \(MBConstants.Name.CountryTableViewController.countrySelectIdentifier) from storyboard \(MBConstants.Name.CountryTableViewController.storyboard)")
         }
 
+        selectionViewController._onDismissAction = onDismissAction
         selectionViewController.delegate = delegate
-
         return viewController
     }
     
@@ -142,22 +148,19 @@ import MicroBlink
     
     @IBAction private func _didTapCloseButton(_ sender: Any) {
         _countryListManager.resetFilter()
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: {
+            self._onDismissAction?()
+        })
     }
     
     // MARK: - Filtering -
     
     private func _filterCountryList(withSearchText searchText: String) {
-        DispatchQueue.global(qos: .background).async { [weak self] in
-            guard let self = self else { return }
-            self._countryListManager.filterCountries(withSearchText: searchText)
-            
-            DispatchQueue.main.async {
-                self._countryTableView.reloadData()
-                if !searchText.isEmpty, self._countryListManager.numberOfCountries > 0 {
-                    self._countryTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
-                }
-            }
+        self._countryListManager.filterCountries(withSearchText: searchText)
+        
+        self._countryTableView.reloadData()
+        if !searchText.isEmpty, self._countryListManager.numberOfCountries > 0 {
+            self._countryTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
         }
     }
 }
@@ -219,7 +222,9 @@ extension MBCountryTableViewController: UITableViewDelegate {
         let country = _countryListManager.countryFor(indexPath: indexPath)
         _countryListManager.resetFilter()
         delegate?.didSelectCountry(country: country)
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: {
+            self._onDismissAction?()
+        })
     }
 
     public func tableView(_: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

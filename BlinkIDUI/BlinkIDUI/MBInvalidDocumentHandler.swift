@@ -11,6 +11,8 @@ import Foundation
 /// Used for two sided documents that can be validated by matching front and back side data
 @objc public protocol MBInvalidDocumentHandler: AnyObject {
     
+    @objc weak var blinkIDUI: MBBlinkIDUI? { get set }
+    
     /// Needed to present alert view controller if the document isn't valid.
     @objc weak var overlayViewController: MBBlinkIdOverlayViewController? { get set }
     
@@ -22,20 +24,21 @@ import Foundation
 /// Alert contorller will be presented with a mesage that the front and back side data does not match
 /// if scanning two sided documents is enabled and the document recognizer is either a combined recognizer, or it's recognizers can be matched using MBResultValidator.
 @objc public class MBDefaultInvalidDocumentHandler: NSObject, MBInvalidDocumentHandler {
-
+    
+    @objc public weak var blinkIDUI: MBBlinkIDUI?
+    
     /// Needed to present alert view controller if the document isn't valid.
     @objc public weak var overlayViewController: MBBlinkIdOverlayViewController?
 
     /// Called once if the scanned document is invalid and shouldValidateDocuments is set to true
     @objc public func onInvalidDocumentScanned() {
         let alertController = _createAlertController()
-        overlayViewController?.present(alertController, animated: true, completion: nil)
+        overlayViewController?.present(alertController, animated: true, completion: {
+            self.blinkIDUI?.pauseScanning()
+        })
     }
 
     @objc public func _createAlertController() -> UIAlertController {
-        let recognizerRunnerViewController = self.overlayViewController?.recognizerRunnerViewController
-        recognizerRunnerViewController?.pauseScanning()
-        
         let languageSettings = MBBlinkSettings.sharedInstance.languageSettings
         
         let alertController = UIAlertController(title: languageSettings.invalidDocumentAlertTitleText, message: languageSettings.invalidDocumentAlertMessageText, preferredStyle: .alert)
@@ -43,7 +46,8 @@ import Foundation
         
         let okButton = UIAlertAction(title: languageSettings.okActionText, style: .cancel) { _ in
             alertController.dismiss(animated: true, completion: nil)
-            recognizerRunnerViewController?.resumeScanningAndResetState(false)
+            self.blinkIDUI?.restartScanning()
+            self.blinkIDUI?.resumeScanning()
         }
         
         alertController.addAction(okButton)

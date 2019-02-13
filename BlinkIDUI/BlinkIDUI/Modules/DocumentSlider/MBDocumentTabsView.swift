@@ -77,7 +77,10 @@ class MBDocumentTabsView: UIView, MBNibLoadable {
             if let document = documents?[i] {
                 documentTab.isSelected = document == documentType
                 if document == documentType {
-                    scroll(tabFrame: documentTab.frame)
+                    // Scroll delayed for 0.2 to scroll to right document after switching countries
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                        self.scroll(tabFrame: documentTab.frame)
+                    }
                 }
             } else {
                 documentTab.isSelected = false

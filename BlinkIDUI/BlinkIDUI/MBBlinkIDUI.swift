@@ -91,6 +91,9 @@ import MicroBlink
         
         _overlayViewController.delegate = self
         _scanningProvider.delegate = self
+        MBBlinkSettings.sharedInstance.timeoutHandler.blinkIDUI = self
+        MBBlinkSettings.sharedInstance.invalidDocumentHandler.blinkIDUI = self
+        MBBlinkSettings.sharedInstance.documentChooserSettings.blinkIDUI = self
         MBBlinkSettings.sharedInstance.timeoutHandler.overlayViewController = _overlayViewController
         MBBlinkSettings.sharedInstance.invalidDocumentHandler.overlayViewController = _overlayViewController
     }
@@ -167,8 +170,8 @@ extension MBBlinkIDUI: MBScanningProviderDelegate {
 
 extension MBBlinkIDUI: MBBlinkIdOverlayViewControllerDelegate {
     func didChangeDocument(newDocument: MBDocumentProvider, forCountry country: MBCountry) {
-        _scanningProvider.updated(scanningProviderFor: newDocument)
         delegate?.didChangeDocument?(newDocument: newDocument, forCountry: country)
+        _scanningProvider.updated(scanningProviderFor: newDocument)
     }
     
     func didTapCancelButton() {

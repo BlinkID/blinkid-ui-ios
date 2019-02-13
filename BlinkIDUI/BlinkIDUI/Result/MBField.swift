@@ -165,6 +165,7 @@ import MicroBlink
     case province
     case race
     case raceEthnicity
+    case rawData
     case referenceNumber
     case religion
     case residenceCity
@@ -212,7 +213,7 @@ import MicroBlink
     public static func < (lhs: MBFieldKey, rhs: MBFieldKey) -> Bool {
         return lhs.rawValue < rhs.rawValue
     }
-
+    
     private var _key: String {
         switch self {
         case .address:
@@ -517,6 +518,8 @@ import MicroBlink
             return "race"
         case .raceEthnicity:
             return "raceEthnicity"
+        case .rawData:
+            return "rawData"
         case .referenceNumber:
             return "referenceNumber"
         case .religion:
@@ -628,4 +631,5 @@ public class MBField: NSObject {
     public override var description: String {
         return "\(key.localized) = \(value)"
     }
+    
 }

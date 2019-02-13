@@ -38,8 +38,7 @@ class MBCountryListManager {
     
     init() {
         _countryFilter = MBBlinkSettings.sharedInstance.documentChooserSettings.countryFilter
-        _countries = _countryFilter.filter(countries: _countries)
-
+        _countries = _countryFilter.filter(countries: _countries).sorted(by: { return $0.localized < $1.localized })
         let firstLetters = [MBCountry](_countries)
             .map({ $0.localized.prefix(1).uppercased() })
         _sectionTitles = Set(firstLetters).sorted()
@@ -119,13 +118,18 @@ class MBCountryListManager {
 
         _filteredCountries = _countries.filter({ $0.localized.lowercased().hasPrefix(searchText.lowercased()) || $0.localized.lowercased().range(of: " \(lowercasedSearchText)") != nil })
             .sorted(by: { (country1, country2) -> Bool in
-                if country1.localized.lowercased().starts(with: lowercasedSearchText) {
+                let country1Lowercase = country1.localized.lowercased()
+                let country2Lowercase = country2.localized.lowercased()
+                if country1Lowercase.starts(with: lowercasedSearchText) && country2Lowercase.starts(with: lowercasedSearchText) {
+                    return country1Lowercase < country2Lowercase
+                }
+                if country1Lowercase.starts(with: lowercasedSearchText) {
                     return true
                 }
-                if country2.localized.lowercased().starts(with: lowercasedSearchText) {
+                if country2Lowercase.starts(with: lowercasedSearchText) {
                     return false
                 }
-                return country1.localized < country2.localized
+                return country1Lowercase < country2Lowercase
         })
     }
 
