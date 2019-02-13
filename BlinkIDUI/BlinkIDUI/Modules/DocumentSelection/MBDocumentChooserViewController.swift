@@ -43,8 +43,8 @@ public class MBDocumentChooserViewController: UIViewController {
     private var _currentCountry: MBCountry = MBBlinkSettings.sharedInstance.initialCountry
     private var _currentDocument: MBDocumentType = MBBlinkSettings.sharedInstance.initialDocument
     
-    public override func didMove(toParent parent: UIViewController?) {
-        super.didMove(toParent: parent)
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         _countryChanged(country: _currentCountry, withDocument: _currentDocument)
     }
 
