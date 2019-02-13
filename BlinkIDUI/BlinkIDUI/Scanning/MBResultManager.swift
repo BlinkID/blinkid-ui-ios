@@ -45,6 +45,8 @@ class MBResultManager {
                 combinedEntries.append(contentsOf: fields)
             }
         }
+        
+        combinedEntries = MBResultCombiner.combineFields(fields: combinedEntries)
 
         let recognitionResult = MBRecognitionResult(resultTitle: title,
                                                     resultEntries: combinedEntries,
