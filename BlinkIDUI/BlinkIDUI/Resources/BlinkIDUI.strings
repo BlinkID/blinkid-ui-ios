@@ -8,7 +8,7 @@
 
 "glareMessage" = "Glare detected. Slightly move the card.";
 
-"scanAnyMessage" = "Scan the the selected document or choose another.";
+"scanAnyMessage" = "Scan the selected document or choose another.";
 
 "scanFrontMessage" = "Scan the front side of the selected document or choose another.";
 
