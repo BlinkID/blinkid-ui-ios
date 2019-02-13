@@ -177,15 +177,13 @@ extension MBScanningProvider: MBScanningRecognizerRunnerViewControllerDelegate {
 
 extension MBScanningProvider: MBFirstSideFinishedRecognizerRunnerViewControllerDelegate {
     func recognizerRunnerViewControllerDidFinishRecognition(ofFirstSide recognizerRunnerViewController: UIViewController & MBRecognizerRunnerViewController) {
-
+        
         if MBBlinkSettings.sharedInstance.shouldPlayScanSound {
             recognizerRunnerViewController.playScanSuccessSound()
         }
 
         let successFrame = _recognizerManager.getSuccessFrame(forState: _scanState)
-        if let recognitionResult = _recognizerManager.getValidResults(forState: _scanState) {
-            delegate?.didFinishScanningFrontSideOfDocument(result: recognitionResult, successFrame: successFrame)
-        }
+        delegate?.didFinishScanningFrontSideOfDocument(result: MBRecognitionResult(resultTitle: "", resultEntries: [MBField](), frontSideDocumentImage: nil, backSideDocumentImage: nil, faceImage: nil, signatureImage: nil), successFrame: successFrame)
         _scanState = .backSide
         DispatchQueue.main.async {
             self.delegate?.didStartScanning(withState: self._scanState)
