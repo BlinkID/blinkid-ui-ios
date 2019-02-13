@@ -285,13 +285,13 @@ class MBMalaysiaCountryProvider: MBCountryProvider {
 
 class MBMexicoCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
-        return MBMoroccoIDDocumentProvider()
+        return MBMexicoIDDocumentProvider()
     }
 }
 
 class MBMoroccoCountryProvider: MBCountryProvider {
     override var identityCardProvider: MBDocumentProvider? {
-        return MBMexicoIDDocumentProvider()
+        return MBMoroccoIDDocumentProvider()
     }
 }
 
