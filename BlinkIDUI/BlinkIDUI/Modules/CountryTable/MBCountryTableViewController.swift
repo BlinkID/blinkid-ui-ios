@@ -58,6 +58,12 @@ import MicroBlink
     
     private var _searchController: UISearchController?
 
+    private var _onDismissAction: (() -> Void)?
+    
+    public override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+    
     // MARK: - Initializer -
     
     /// Initliazer that create the instance of `MBCountryTableViewController` from the storyboard.
