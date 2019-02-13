@@ -220,6 +220,14 @@ public class MBBlinkIdOverlayViewController: MBCustomOverlayViewController {
     // MARK: - Animations -
 
     private func _animateMessageLabel(text: String?, delay: TimeInterval = 0.0) {
+        switch _glareState {
+        case .noGlare:
+            break
+        default:
+            _messageLabel.layer.removeAllAnimations()
+            _glareState = .noGlare
+        }
+
         DispatchQueue.main.async {
             UIView.animate(withDuration: MBConstants.Animation.OverlayViewController.messageLabelAnimationTime, delay: delay, options: .curveEaseInOut, animations: {
                 self._messageLabel.alpha = MBConstants.Animation.OverlayViewController.messageLabelAlphaEnd
@@ -232,9 +240,10 @@ public class MBBlinkIdOverlayViewController: MBCustomOverlayViewController {
         }
     }
     
-    private func _animateGlareMessage(toText text: String?, finalGlareState state: MBGlareState) {
+    private func _animateGlareMessage(toText text: String?, finalGlareState state: MBGlareState, delay: TimeInterval = 0.0) {
+        _messageLabel.layer.removeAllAnimations()
         DispatchQueue.main.async {
-            UIView.animate(withDuration: MBConstants.Animation.OverlayViewController.messageLabelAnimationTime, animations: {
+            UIView.animate(withDuration: MBConstants.Animation.OverlayViewController.messageLabelAnimationTime, delay: delay, options: .curveEaseInOut, animations: {
                 self._messageLabel.alpha = MBConstants.Animation.OverlayViewController.messageLabelAlphaEnd
             }, completion: { _ in
                 self._messageLabel.text = text
@@ -295,22 +304,19 @@ extension MBBlinkIdOverlayViewController: MBDocumentChooserViewControllerDelegat
 
 extension MBBlinkIdOverlayViewController: MBGlareRecognizerRunnerViewControllerDelegate {
     public func recognizerRunnerViewController(_ recognizerRunnerViewController: UIViewController & MBRecognizerRunnerViewController, didFinishGlareDetectionWithResult glareFound: Bool) {
-        
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
             if glareFound,
-                case .noGlare = _glareState {
-                DispatchQueue.main.async { [weak self] in
-                    guard let self = self else { return }
-                    
+                case .noGlare = self._glareState {
                     self._glareState = .detected(messageBeforeGlare: self._messageLabel.text)
                     self._animateGlareMessage(
                         toText: MBBlinkSettings.sharedInstance.languageSettings.glareMessageText,
                         finalGlareState: .finishedAnimating(messageBeforeGlare: self._messageLabel.text))
-                }
             } else if !glareFound,
                 case .finishedAnimating(messageBeforeGlare: let message) = self._glareState {
                 self._glareState = .animatingBack
-                DispatchQueue.main.asyncAfter(deadline: .now() + MBConstants.Animation.OverlayViewController.messageLabelAnimationDelayTime) { [weak self] in
-                    self?._animateGlareMessage(toText: message, finalGlareState: .noGlare)
+                    self._animateGlareMessage(toText: message, finalGlareState: .noGlare, delay: MBConstants.Animation.OverlayViewController.messageLabelAnimationDelayTime)
             }
         }
     }
