@@ -55,7 +55,7 @@ public class MBDocumentChooserViewController: UIViewController {
         _documentChooser.documents = country.countryProvider.supportedDocuments.filter({ (documentType) -> Bool in
             settings?.isDocument(document: documentType, supportedForCountry: country) ?? false
         })
-        _documentChanged(document: document)
+        _documentChanged(document: _currentDocument)
     }
 
     private func _documentChanged(document: MBDocumentType? = nil) {
@@ -89,6 +89,7 @@ public class MBDocumentChooserViewController: UIViewController {
 
 extension MBDocumentChooserViewController: MBDocumentTabViewDelegate {
     func didSelect(document: MBDocumentType) {
+        _currentDocument = document
         delegate?.didSelect(document: document, fromCountry: _currentCountry)
     }
 }
