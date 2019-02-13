@@ -53,7 +53,7 @@ class MBCountryChooserButton: UIView, MBNibLoadable {
     }
 
     private func _setup() {
-        backgroundColor = UIColor.mb_primaryColor
+        backgroundColor = UIColor.mb_primaryColor.withAlphaComponent(0.85)
     }
 
     // MARK: - Actions -
