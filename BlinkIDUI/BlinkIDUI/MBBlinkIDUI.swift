@@ -92,6 +92,7 @@ import MicroBlink
         _overlayViewController.delegate = self
         _scanningProvider.delegate = self
         MBBlinkSettings.sharedInstance.timeoutHandler.blinkIDUI = self
+        MBBlinkSettings.sharedInstance.documentChooserSettings.blinkIDUI = self
         MBBlinkSettings.sharedInstance.timeoutHandler.overlayViewController = _overlayViewController
         MBBlinkSettings.sharedInstance.invalidDocumentHandler.overlayViewController = _overlayViewController
     }
