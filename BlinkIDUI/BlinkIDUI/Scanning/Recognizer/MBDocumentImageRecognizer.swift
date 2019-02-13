@@ -22,6 +22,8 @@ class MBDocumentImageRecognizer: NSObject, MBTemplatingClassifier {
         let specification: MBDocumentSpecification = MBDocumentSpecification.create(from: specification)
         let detector = MBDocumentDetector(documentSpecifications: [specification])
         detectorRecognizer = MBDetectorRecognizer(quadWithSizeDetector: detector)
+        
+        detector.numStableDetectionsThreshold = 12
 
         _fullDocumentImageProcessor = MBImageReturnProcessor()
         _classDocumentImageProcessor = MBImageReturnProcessor()
