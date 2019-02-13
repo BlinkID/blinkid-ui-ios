@@ -13,6 +13,8 @@ import Foundation
 /// - See: `MBDefaultTimeoutHandler` to understand how this can be used
 @objc public protocol MBTimeoutHandler: AnyObject {
     
+    @objc weak var blinkIDUI: MBBlinkIDUI? { get set }
+    
     /// Needed to present alert view controller once the timeout it out.
     @objc weak var overlayViewController: MBBlinkIdOverlayViewController? { get set }
     
@@ -36,11 +38,13 @@ import Foundation
 /// a `UIAlertController` with a message to user to try changing the Country.
 @objc open class MBDefaultTimeoutHandler: NSObject, MBTimeoutHandler {
     
+    @objc public weak var blinkIDUI: MBBlinkIDUI?
+    
     /// Needed to present alert view controller once the timeout it out.
     @objc public weak var overlayViewController: MBBlinkIdOverlayViewController?
     
     private var _timeoutTimer: Timer?
-    private let _startTimerTimeout: TimeInterval
+    private var _startTimerTimeout: TimeInterval
     private var _currentTimerTimeout: TimeInterval
     
     @objc public required init(timerTimeout: TimeInterval = 16) {
@@ -50,7 +54,6 @@ import Foundation
     
     /// Called everytime scanning is started
     @objc open func onScanStart() {
-        _currentTimerTimeout = _startTimerTimeout
         _destroyTimer()
         _createTimer()
     }
@@ -67,6 +70,7 @@ import Foundation
     
     /// Called once the scanning is resumed
     @objc open func onScanResumed() {
+        _destroyTimer()
         _createTimer()
     }
     
@@ -76,37 +80,43 @@ import Foundation
     }
     
     private func _createTimer() {
+        _currentTimerTimeout = _startTimerTimeout
+        
+        _timeoutTimer?.invalidate()
         _timeoutTimer = Timer.scheduledTimer(timeInterval: _currentTimerTimeout, target: self, selector: #selector(onTimeout), userInfo: nil, repeats: false)
     }
     
-    @objc func onTimeout() {
+    @objc open func onTimeout() {
         _destroyTimer()
-        overlayViewController?.recognizerRunnerViewController?.pauseScanning()
-        _currentTimerTimeout = 2 * _currentTimerTimeout
+        // Make sure alert controller doesn't get shown if the scanning
+        guard let recognizerRunnerViewController = overlayViewController?.recognizerRunnerViewController, !recognizerRunnerViewController.isScanningPaused() else {
+            return
+        }
+        _startTimerTimeout = 2 * _startTimerTimeout
 
         let alertController = _createAlertController()
         
-        overlayViewController?.present(alertController, animated: true, completion: nil)
+        overlayViewController?.present(alertController, animated: true, completion: {
+            self.blinkIDUI?.pauseScanning()
+        })
     }
     
     private func _createAlertController() -> UIAlertController {
         let languageSettings = MBBlinkSettings.sharedInstance.languageSettings
-        let recognizerRunnerViewController = self.overlayViewController?.recognizerRunnerViewController
         
         let alertController = UIAlertController(title: languageSettings.timeoutAlertTitleText, message: languageSettings.timeoutAlertMessageText, preferredStyle: .alert)
         alertController.view.tintColor = UIColor.mb_primaryColor
         
         let continueButton = UIAlertAction(title: languageSettings.continueActionText, style: .cancel) { _ in
             alertController.dismiss(animated: true, completion: nil)
-            self._createTimer()
-            recognizerRunnerViewController?.resumeScanningAndResetState(false)
+            self.blinkIDUI?.resumeScanning()
         }
         
         let changeCountryButton = UIAlertAction(title: languageSettings.changeCountryActionText, style: .default) { (_) in
+            self.blinkIDUI?.resumeScanning()
             if let documentChooserViewController = self.overlayViewController?.documentChooserViewController {
                 MBBlinkSettings.sharedInstance.documentChooserSettings.didTapChooseCountry(documentChooserViewController: documentChooserViewController)
             }
-            recognizerRunnerViewController?.resumeScanningAndResetState(false)
         }
         
         alertController.addAction(continueButton)
