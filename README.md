@@ -122,6 +122,7 @@ class ViewConroller: UIViewController {
 
 extension ViewController: MBBlinkDelegate {
     
+// Optional
     func didStartScanning(withState state: MBScanState) {
         // When scanning starts you will be notified through this method
     }
@@ -143,10 +144,12 @@ extension ViewController: MBBlinkDelegate {
         // this method will be called when the first side is scanned
     }
     
+// Optional
     func didChangeDocument(newDocument: MBDocumentProvider, forCountry country: MBCountry) {
         // When a user changes the document you will be notified through this method
     }
     
+// Optional
     func didTapCancelButton() {
         // You can set here what happens once the user taps the `X` button on the UI.
         blinkIdUI.recognizerRunnerViewController.dismiss(animated: true, completion: nil)
@@ -194,6 +197,7 @@ extension ViewController: MBBlinkDelegate {
     [self presentViewController:self.blinkIDUI.recognizerRunnerViewController animated:YES completion:nil];
 }
 
+// Optional
 - (void)didChangeDocumentWithNewDocument:(MBDocumentProvider *)newDocument forCountry:(MBCountry *)country {
     // When a user changes the document you will be notified through this method
 }
@@ -215,10 +219,12 @@ extension ViewController: MBBlinkDelegate {
     // this method will be called when the first side is scanned
 }
 
+// Optional
 - (void)didStartScanningWithState:(MBScanState)state {
     // You will be notified once the scanning starts through this method
 }
 
+// Optional
 - (void)didTapCancelButton {
     [self.blinkIDUI.recognizerRunnerViewController dismissViewControllerAnimated:YES completion:nil];
 }
