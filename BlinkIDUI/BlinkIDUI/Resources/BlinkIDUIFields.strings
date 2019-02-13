@@ -156,6 +156,7 @@
 "province" = "Province";
 "race" = "Race";
 "raceEthnicity" = "Race Ethnicity";
+"rawData" = "Raw Data";
 "referenceNumber" = "Reference Number";
 "religion" = "Religion";
 "residenceCity" = "Residence City";

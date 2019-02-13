@@ -586,6 +586,16 @@ extension MBMexicoVoterIdFrontRecognizer {
     }
 }
 
+extension MBPdf417Recognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray()
+        
+        fields.add(MBField(key: MBFieldKey.rawData, value: result.stringData))
+        
+        return fields
+    }
+}
+
 extension MBPolandCombinedRecognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray()
