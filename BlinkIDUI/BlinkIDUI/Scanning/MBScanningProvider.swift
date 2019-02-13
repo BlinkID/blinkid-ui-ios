@@ -56,6 +56,7 @@ class MBScanningProvider: NSObject {
     // MARK: Initalizer
 
     required override init() {
+        super.init()
         _recognizerManager = MBRecognizerManager(frameGrabberMode: MBBlinkSettings.sharedInstance.frameGrabberMode)
     }
 
@@ -82,6 +83,7 @@ class MBScanningProvider: NSObject {
 
     private func _updateRecognizers() {
         _recognizerCollection = _recognizerManager.getRecognizerCollection(forState: _scanState)
+        _recognizerCollection.partialRecognitionTimeout = 0
         delegate?.didUpdate(recognizerCollection: _recognizerCollection)
     }
 
