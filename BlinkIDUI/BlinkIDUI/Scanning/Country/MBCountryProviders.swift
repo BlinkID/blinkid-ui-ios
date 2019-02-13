@@ -36,7 +36,7 @@ import MicroBlink
     }
     /// Driver's license document provider
     var driversLicenseProvider: MBDocumentProvider? {
-        return MBDLDocumentProvider()
+        return MBDLDocumentProvider(isFullySupported: false)
     }
     
     /// Identity card document provider
@@ -68,10 +68,6 @@ import MicroBlink
 class MBDefaultCountryProvider: MBCountryProvider {
     override var driversLicenseProvider: MBDocumentProvider? {
         return MBDLDocumentProvider(isFullySupported: false)
-    }
-    
-    override  var identityCardProvider: MBDocumentProvider? {
-        return MBIDDocumentProvider(isFullySupported: false)
     }
 }
 
