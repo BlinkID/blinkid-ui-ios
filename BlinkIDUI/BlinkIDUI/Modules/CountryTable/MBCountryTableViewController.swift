@@ -148,16 +148,11 @@ import MicroBlink
     // MARK: - Filtering -
     
     private func _filterCountryList(withSearchText searchText: String) {
-        DispatchQueue.global(qos: .background).async { [weak self] in
-            guard let self = self else { return }
-            self._countryListManager.filterCountries(withSearchText: searchText)
-            
-            DispatchQueue.main.async {
-                self._countryTableView.reloadData()
-                if !searchText.isEmpty, self._countryListManager.numberOfCountries > 0 {
-                    self._countryTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
-                }
-            }
+        self._countryListManager.filterCountries(withSearchText: searchText)
+        
+        self._countryTableView.reloadData()
+        if !searchText.isEmpty, self._countryListManager.numberOfCountries > 0 {
+            self._countryTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
         }
     }
 }
