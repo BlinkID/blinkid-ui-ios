@@ -66,16 +66,4 @@
 - (void)didScanFirstSideWithRecognitionResult:(MBRecognitionResult * _Nonnull)recognitionResult successFrame:(UIImage * _Nullable)successFrame {
 }
 
-- (void)didTapCancelButton {
-    
-}
-
-- (void)didChangeDocumentWithNewDocument:(MBDocumentProvider *)newDocument forCountry:(MBCountry *)country {
-    
-}
-
-- (void)didStartScanningWithState:(enum MBScanState)state {
-    
-}
-
 @end
