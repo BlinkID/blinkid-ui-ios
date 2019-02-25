@@ -38,7 +38,7 @@ extension MBBruneiTemporaryResidencePermitBackRecognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray(array: result.mrzResult.extractFieldResults())
         
-        fields.add(MBField(key: MBFieldKey.address, value: result.address))
+        fields.add(MBField(key: MBFieldKey.employerAddress, value: result.address))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
         fields.add(MBField(key: MBFieldKey.passportNumber, value: result.passportNumber))
         

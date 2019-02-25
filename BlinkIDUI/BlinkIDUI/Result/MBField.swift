@@ -76,6 +76,7 @@ import MicroBlink
     case driverRestrictions
     case electorKey
     case employer
+    case employerAddress
     case expiryDatePermanent
     case extendedNricNumber
     case eyeColour
@@ -340,6 +341,8 @@ import MicroBlink
             return "electorKey"
         case .employer:
             return "employer"
+        case .employerAddress:
+            return "employerAddress"
         case .expiryDatePermanent:
             return "expiryDatePermanent"
         case .extendedNricNumber:

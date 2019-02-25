@@ -67,6 +67,7 @@
 "driverNumber" = "Driver Number";
 "electorKey" = "Elector Key";
 "employer" = "Employer";
+"employerAddress" = "Employer Address";
 "expiryDatePermanent" = "Expiry Date Permanent";
 "extendedNricNumber" = "Extended NRIC Number";
 "eyeColour" = "Eye Colour";
