@@ -34,6 +34,8 @@ import UIKit
     case passport
     /// Visa
     case visa
+    /// Temporary Residence Permit
+    case temporaryResidencePermit
     /// Residence Permit
     case residencePermit
     /// Undefined
@@ -64,6 +66,8 @@ import UIKit
             return settings.passportText
         case .visa:
             return settings.visaText
+        case .temporaryResidencePermit:
+            return settings.temporaryResidencePermitText
         case .residencePermit:
             return settings.residencePermitText
         case .unknown:

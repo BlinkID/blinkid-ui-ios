@@ -71,8 +71,8 @@
 		BE64810421903C3A00D0C24F /* MBRecognitionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64810121903C3900D0C24F /* MBRecognitionResult.swift */; };
 		BE64810621903C3A00D0C24F /* MBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64810321903C3A00D0C24F /* MBConstants.swift */; };
 		BE64810B219048FF00D0C24F /* MBCountryProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE648109219048FF00D0C24F /* MBCountryProviders.swift */; };
-		BE75A4C621C3DD5E00EF644C /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE75A4C421C3DD5D00EF644C /* MicroBlink.framework */; };
-		BE75A4C721C3DD5E00EF644C /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE75A4C521C3DD5E00EF644C /* MicroBlink.bundle */; };
+		BE75A4C621C3DD5E00EF644C /* Microblink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE75A4C421C3DD5D00EF644C /* Microblink.framework */; };
+		BE75A4C721C3DD5E00EF644C /* Microblink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE75A4C521C3DD5E00EF644C /* Microblink.bundle */; };
 		BEAE7AB72194844000D0E70A /* MBLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE7AB62194844000D0E70A /* MBLocalizable.swift */; };
 		BEAE7ABE2195C13600D0E70A /* MBCountryChooserButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAE7ABD2195C13600D0E70A /* MBCountryChooserButton.xib */; };
 		BEAE7AC02195C1E400D0E70A /* MBCountryChooserButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE7ABF2195C1E400D0E70A /* MBCountryChooserButton.swift */; };
@@ -159,8 +159,8 @@
 		BE64810121903C3900D0C24F /* MBRecognitionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBRecognitionResult.swift; sourceTree = "<group>"; };
 		BE64810321903C3A00D0C24F /* MBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBConstants.swift; sourceTree = "<group>"; };
 		BE648109219048FF00D0C24F /* MBCountryProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCountryProviders.swift; sourceTree = "<group>"; };
-		BE75A4C421C3DD5D00EF644C /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = "../blinkid-ios/MicroBlink.framework"; sourceTree = "<group>"; };
-		BE75A4C521C3DD5E00EF644C /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = "../blinkid-ios/MicroBlink.bundle"; sourceTree = "<group>"; };
+		BE75A4C421C3DD5D00EF644C /* Microblink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Microblink.framework; path = "../blinkid-ios/Microblink.framework"; sourceTree = "<group>"; };
+		BE75A4C521C3DD5E00EF644C /* Microblink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Microblink.bundle; path = "../blinkid-ios/Microblink.bundle"; sourceTree = "<group>"; };
 		BEAE7AB62194844000D0E70A /* MBLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBLocalizable.swift; sourceTree = "<group>"; };
 		BEAE7ABD2195C13600D0E70A /* MBCountryChooserButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBCountryChooserButton.xib; sourceTree = "<group>"; };
 		BEAE7ABF2195C1E400D0E70A /* MBCountryChooserButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCountryChooserButton.swift; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE75A4C621C3DD5E00EF644C /* MicroBlink.framework in Frameworks */,
+				BE75A4C621C3DD5E00EF644C /* Microblink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,8 +337,8 @@
 		BE647F00218C543F00D0C24F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BE75A4C521C3DD5E00EF644C /* MicroBlink.bundle */,
-				BE75A4C421C3DD5D00EF644C /* MicroBlink.framework */,
+				BE75A4C521C3DD5E00EF644C /* Microblink.bundle */,
+				BE75A4C421C3DD5D00EF644C /* Microblink.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -523,7 +523,7 @@
 				BE46140921A58ACD00D106B8 /* BlinkIDUIFields.strings in Resources */,
 				BE2165B22192EE1900E21734 /* MBViewfinderView.xib in Resources */,
 				BE2165B02192E30300E21734 /* Assets.xcassets in Resources */,
-				BE75A4C721C3DD5E00EF644C /* MicroBlink.bundle in Resources */,
+				BE75A4C721C3DD5E00EF644C /* Microblink.bundle in Resources */,
 				BEAE7ABE2195C13600D0E70A /* MBCountryChooserButton.xib in Resources */,
 				BE379DEE219C05680008535A /* MBDocumentTabsView.xib in Resources */,
 				BE2165AE2192E24300E21734 /* MBBlinkIDOverlay.storyboard in Resources */,

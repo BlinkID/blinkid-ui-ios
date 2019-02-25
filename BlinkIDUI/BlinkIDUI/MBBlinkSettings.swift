@@ -208,6 +208,10 @@ import MicroBlink
     /// - Default: "Passport"
     @objc public var passportText = Bundle.frameworkBundle.localizedString("passport", Bundle.uiStringTable)
 
+    /// Text for temporary residence permits in document tabs view.
+    /// - Default: "Temporary Residence Permit"
+    @objc public var temporaryResidencePermitText = Bundle.frameworkBundle.localizedString("temporaryResidencePermitText", Bundle.uiStringTable)
+    
     /// Text for residence permits in document tabs view.
     /// - Default: "Residence Permit"
     @objc public var residencePermitText = Bundle.frameworkBundle.localizedString("residencePermit", Bundle.uiStringTable)

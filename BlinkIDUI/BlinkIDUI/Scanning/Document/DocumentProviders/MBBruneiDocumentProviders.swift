@@ -29,6 +29,26 @@ class MBBruneiIDDocumentProvider: MBDocumentProvider {
     
 }
 
+class MBBruneiTemporaryResidencePermitDocumentProvider: MBDocumentProvider {
+    
+    override var frontRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBBruneiTemporaryResidencePermitFrontRecognizer())
+    }
+    
+    override var backRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBBruneiTemporaryResidencePermitBackRecognizer())
+    }
+    
+    override var type: MBDocumentType {
+        return MBDocumentType.temporaryResidencePermit
+    }
+    
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.id1
+    }
+    
+}
+
 class MBBruneiResidencePermitDocumentProvider: MBDocumentProvider {
     
     override var frontRecognizerProvider: MBRecognizerWrapper? {
