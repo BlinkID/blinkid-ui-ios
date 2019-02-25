@@ -618,7 +618,7 @@ extension MBPolandCombinedRecognizer {
 
 extension MBPolandIdBackRecognizer {
     override func extractFieldResults() -> NSArray {
-        return result.extractFieldResults()
+        return result.mrzResult.extractFieldResults()
     }
 }
 
