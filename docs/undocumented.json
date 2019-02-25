@@ -661,902 +661,909 @@
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 79,
-      "symbol": "MBFieldKey.expiryDatePermanent",
+      "symbol": "MBFieldKey.employerAddress",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 80,
-      "symbol": "MBFieldKey.extendedNricNumber",
+      "symbol": "MBFieldKey.expiryDatePermanent",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 81,
-      "symbol": "MBFieldKey.eyeColour",
+      "symbol": "MBFieldKey.extendedNricNumber",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 82,
-      "symbol": "MBFieldKey.facultyAddress",
+      "symbol": "MBFieldKey.eyeColour",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 83,
-      "symbol": "MBFieldKey.familyName",
+      "symbol": "MBFieldKey.facultyAddress",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 84,
-      "symbol": "MBFieldKey.familyNameTruncation",
+      "symbol": "MBFieldKey.familyName",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 85,
-      "symbol": "MBFieldKey.fathersName",
+      "symbol": "MBFieldKey.familyNameTruncation",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 86,
-      "symbol": "MBFieldKey.federalCommercialVehicleCodes",
+      "symbol": "MBFieldKey.fathersName",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 87,
-      "symbol": "MBFieldKey.fingerprint",
+      "symbol": "MBFieldKey.federalCommercialVehicleCodes",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 88,
-      "symbol": "MBFieldKey.firstName",
+      "symbol": "MBFieldKey.fingerprint",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 89,
-      "symbol": "MBFieldKey.firstNameTruncation",
+      "symbol": "MBFieldKey.firstName",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 90,
-      "symbol": "MBFieldKey.fullAddress",
+      "symbol": "MBFieldKey.firstNameTruncation",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 91,
-      "symbol": "MBFieldKey.fullName",
+      "symbol": "MBFieldKey.fullAddress",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 92,
-      "symbol": "MBFieldKey.givenName",
+      "symbol": "MBFieldKey.fullName",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 93,
-      "symbol": "MBFieldKey.hairColor",
+      "symbol": "MBFieldKey.givenName",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 94,
-      "symbol": "MBFieldKey.hazmatExpirationDate",
+      "symbol": "MBFieldKey.hairColor",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 95,
-      "symbol": "MBFieldKey.height",
+      "symbol": "MBFieldKey.hazmatExpirationDate",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 96,
-      "symbol": "MBFieldKey.heightCm",
+      "symbol": "MBFieldKey.height",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 97,
-      "symbol": "MBFieldKey.heightIn",
+      "symbol": "MBFieldKey.heightCm",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 98,
-      "symbol": "MBFieldKey.houseNumber",
+      "symbol": "MBFieldKey.heightIn",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 99,
-      "symbol": "MBFieldKey.idSeries",
+      "symbol": "MBFieldKey.houseNumber",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 100,
-      "symbol": "MBFieldKey.identityCardNumber",
+      "symbol": "MBFieldKey.idSeries",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 101,
-      "symbol": "MBFieldKey.immigrantCaseNumber",
+      "symbol": "MBFieldKey.identityCardNumber",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 102,
-      "symbol": "MBFieldKey.inventoryControlNumber",
+      "symbol": "MBFieldKey.immigrantCaseNumber",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 103,
-      "symbol": "MBFieldKey.isUncertain",
+      "symbol": "MBFieldKey.inventoryControlNumber",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 104,
-      "symbol": "MBFieldKey.issueTimestamp",
+      "symbol": "MBFieldKey.isUncertain",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 105,
-      "symbol": "MBFieldKey.issuer",
+      "symbol": "MBFieldKey.issueTimestamp",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 106,
-      "symbol": "MBFieldKey.issuerIdentificationNumber",
+      "symbol": "MBFieldKey.issuer",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 107,
-      "symbol": "MBFieldKey.issuingAgency",
+      "symbol": "MBFieldKey.issuerIdentificationNumber",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 108,
-      "symbol": "MBFieldKey.issuingAuthority",
+      "symbol": "MBFieldKey.issuingAgency",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 109,
-      "symbol": "MBFieldKey.issuingJurisdiction",
+      "symbol": "MBFieldKey.issuingAuthority",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 110,
-      "symbol": "MBFieldKey.issuingJurisdictionName",
+      "symbol": "MBFieldKey.issuingJurisdiction",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 111,
-      "symbol": "MBFieldKey.jmbg",
+      "symbol": "MBFieldKey.issuingJurisdictionName",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 112,
-      "symbol": "MBFieldKey.jurisdictionEndorsementCodes",
+      "symbol": "MBFieldKey.jmbg",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 113,
-      "symbol": "MBFieldKey.jurisdictionEndorsmentCodeDescription",
+      "symbol": "MBFieldKey.jurisdictionEndorsementCodes",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 114,
-      "symbol": "MBFieldKey.jurisdictionRestrictionCodeDescription",
+      "symbol": "MBFieldKey.jurisdictionEndorsmentCodeDescription",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 115,
-      "symbol": "MBFieldKey.jurisdictionRestrictionCodes",
+      "symbol": "MBFieldKey.jurisdictionRestrictionCodeDescription",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 116,
-      "symbol": "MBFieldKey.jurisdictionVehicleClass",
+      "symbol": "MBFieldKey.jurisdictionRestrictionCodes",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 117,
-      "symbol": "MBFieldKey.jurisdictionVehicleClassificationDescription",
+      "symbol": "MBFieldKey.jurisdictionVehicleClass",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 118,
-      "symbol": "MBFieldKey.jurisdictionVersionNumber",
+      "symbol": "MBFieldKey.jurisdictionVehicleClassificationDescription",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 119,
-      "symbol": "MBFieldKey.kelDesa",
+      "symbol": "MBFieldKey.jurisdictionVersionNumber",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 120,
-      "symbol": "MBFieldKey.lastName",
+      "symbol": "MBFieldKey.kelDesa",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 121,
-      "symbol": "MBFieldKey.licenseCategories",
+      "symbol": "MBFieldKey.lastName",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 122,
-      "symbol": "MBFieldKey.licenseClass",
+      "symbol": "MBFieldKey.licenseCategories",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 123,
-      "symbol": "MBFieldKey.licenseNumber",
+      "symbol": "MBFieldKey.licenseClass",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 124,
-      "symbol": "MBFieldKey.licenseType",
+      "symbol": "MBFieldKey.licenseNumber",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 125,
-      "symbol": "MBFieldKey.limitedDurationDocument",
+      "symbol": "MBFieldKey.licenseType",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 126,
-      "symbol": "MBFieldKey.maritalStatus",
+      "symbol": "MBFieldKey.limitedDurationDocument",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 127,
-      "symbol": "MBFieldKey.marriageStatus",
+      "symbol": "MBFieldKey.maritalStatus",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 128,
-      "symbol": "MBFieldKey.medicalIndicator",
+      "symbol": "MBFieldKey.marriageStatus",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 129,
-      "symbol": "MBFieldKey.middleName",
+      "symbol": "MBFieldKey.medicalIndicator",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 130,
-      "symbol": "MBFieldKey.middleNameTruncation",
+      "symbol": "MBFieldKey.middleName",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 131,
-      "symbol": "MBFieldKey.mothersName",
+      "symbol": "MBFieldKey.middleNameTruncation",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 132,
-      "symbol": "MBFieldKey.mrtdVerified",
+      "symbol": "MBFieldKey.mothersName",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 133,
-      "symbol": "MBFieldKey.mrzParsed",
+      "symbol": "MBFieldKey.mrtdVerified",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 134,
-      "symbol": "MBFieldKey.mrzText",
+      "symbol": "MBFieldKey.mrzParsed",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 135,
-      "symbol": "MBFieldKey.namePrefix",
+      "symbol": "MBFieldKey.mrzText",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 136,
-      "symbol": "MBFieldKey.nameSuffix",
+      "symbol": "MBFieldKey.namePrefix",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 137,
-      "symbol": "MBFieldKey.nationalNumber",
+      "symbol": "MBFieldKey.nameSuffix",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 138,
-      "symbol": "MBFieldKey.nationality",
+      "symbol": "MBFieldKey.nationalNumber",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 139,
-      "symbol": "MBFieldKey.nonMrzDateOfBirth",
+      "symbol": "MBFieldKey.nationality",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 140,
-      "symbol": "MBFieldKey.nonMrzDateOfExpiry",
+      "symbol": "MBFieldKey.nonMrzDateOfBirth",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 141,
-      "symbol": "MBFieldKey.nonMrzNationality",
+      "symbol": "MBFieldKey.nonMrzDateOfExpiry",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 142,
-      "symbol": "MBFieldKey.nonMrzSex",
+      "symbol": "MBFieldKey.nonMrzNationality",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 143,
-      "symbol": "MBFieldKey.nonResident",
+      "symbol": "MBFieldKey.nonMrzSex",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 144,
-      "symbol": "MBFieldKey.nricNumber",
+      "symbol": "MBFieldKey.nonResident",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 145,
-      "symbol": "MBFieldKey.numberOfDuplicates",
+      "symbol": "MBFieldKey.nricNumber",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 146,
-      "symbol": "MBFieldKey.occupation",
+      "symbol": "MBFieldKey.numberOfDuplicates",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 147,
-      "symbol": "MBFieldKey.oldNric",
+      "symbol": "MBFieldKey.occupation",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 148,
-      "symbol": "MBFieldKey.optional1",
+      "symbol": "MBFieldKey.oldNric",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 149,
-      "symbol": "MBFieldKey.optional2",
+      "symbol": "MBFieldKey.optional1",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 150,
-      "symbol": "MBFieldKey.organDonor",
+      "symbol": "MBFieldKey.optional2",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 151,
-      "symbol": "MBFieldKey.parentNames",
+      "symbol": "MBFieldKey.organDonor",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 152,
-      "symbol": "MBFieldKey.parentsGivenName",
+      "symbol": "MBFieldKey.parentNames",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 153,
-      "symbol": "MBFieldKey.passportNumber",
+      "symbol": "MBFieldKey.parentsGivenName",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 154,
-      "symbol": "MBFieldKey.pdf417string",
+      "symbol": "MBFieldKey.passportNumber",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 155,
-      "symbol": "MBFieldKey.permitExpirationDate",
+      "symbol": "MBFieldKey.pdf417string",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 156,
-      "symbol": "MBFieldKey.permitIdentifier",
+      "symbol": "MBFieldKey.permitExpirationDate",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 157,
-      "symbol": "MBFieldKey.permitIssueDate",
+      "symbol": "MBFieldKey.permitIdentifier",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 158,
-      "symbol": "MBFieldKey.personalIdentificationNumber",
+      "symbol": "MBFieldKey.permitIssueDate",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 159,
-      "symbol": "MBFieldKey.personalNumber",
+      "symbol": "MBFieldKey.personalIdentificationNumber",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 160,
-      "symbol": "MBFieldKey.placeOfBirth",
+      "symbol": "MBFieldKey.personalNumber",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 161,
-      "symbol": "MBFieldKey.placeOfIssue",
+      "symbol": "MBFieldKey.placeOfBirth",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 162,
-      "symbol": "MBFieldKey.placeOfOrigin",
+      "symbol": "MBFieldKey.placeOfIssue",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 163,
-      "symbol": "MBFieldKey.primaryId",
+      "symbol": "MBFieldKey.placeOfOrigin",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 164,
-      "symbol": "MBFieldKey.principalResidence",
+      "symbol": "MBFieldKey.primaryId",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 165,
-      "symbol": "MBFieldKey.province",
+      "symbol": "MBFieldKey.principalResidence",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 166,
-      "symbol": "MBFieldKey.race",
+      "symbol": "MBFieldKey.province",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 167,
-      "symbol": "MBFieldKey.raceEthnicity",
+      "symbol": "MBFieldKey.race",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 168,
-      "symbol": "MBFieldKey.rawData",
+      "symbol": "MBFieldKey.raceEthnicity",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 169,
-      "symbol": "MBFieldKey.referenceNumber",
+      "symbol": "MBFieldKey.rawData",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 170,
-      "symbol": "MBFieldKey.religion",
+      "symbol": "MBFieldKey.referenceNumber",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 171,
-      "symbol": "MBFieldKey.residenceCity",
+      "symbol": "MBFieldKey.religion",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 172,
-      "symbol": "MBFieldKey.residenceFullAddress",
+      "symbol": "MBFieldKey.residenceCity",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 173,
-      "symbol": "MBFieldKey.residenceJurisdictionCode",
+      "symbol": "MBFieldKey.residenceFullAddress",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 174,
-      "symbol": "MBFieldKey.residencePostalCode",
+      "symbol": "MBFieldKey.residenceJurisdictionCode",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 175,
-      "symbol": "MBFieldKey.residenceStreetAddress",
+      "symbol": "MBFieldKey.residencePostalCode",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 176,
-      "symbol": "MBFieldKey.residenceStreetAddress2",
+      "symbol": "MBFieldKey.residenceStreetAddress",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 177,
-      "symbol": "MBFieldKey.residentialStatus",
+      "symbol": "MBFieldKey.residenceStreetAddress2",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 178,
-      "symbol": "MBFieldKey.rt",
+      "symbol": "MBFieldKey.residentialStatus",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 179,
-      "symbol": "MBFieldKey.rw",
+      "symbol": "MBFieldKey.rt",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 180,
-      "symbol": "MBFieldKey.secondaryId",
+      "symbol": "MBFieldKey.rw",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 181,
-      "symbol": "MBFieldKey.sector",
+      "symbol": "MBFieldKey.secondaryId",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 182,
-      "symbol": "MBFieldKey.securityVersion",
+      "symbol": "MBFieldKey.sector",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 183,
-      "symbol": "MBFieldKey.serialNo",
+      "symbol": "MBFieldKey.securityVersion",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 184,
-      "symbol": "MBFieldKey.sex",
+      "symbol": "MBFieldKey.serialNo",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 185,
-      "symbol": "MBFieldKey.signature",
+      "symbol": "MBFieldKey.sex",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 186,
-      "symbol": "MBFieldKey.socialSecurityNumber",
+      "symbol": "MBFieldKey.signature",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 187,
-      "symbol": "MBFieldKey.specialRemarks",
+      "symbol": "MBFieldKey.socialSecurityNumber",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 188,
-      "symbol": "MBFieldKey.standardEndorsementCode",
+      "symbol": "MBFieldKey.specialRemarks",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 189,
-      "symbol": "MBFieldKey.standardRestrictionCode",
+      "symbol": "MBFieldKey.standardEndorsementCode",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 190,
-      "symbol": "MBFieldKey.standardVehicleClassification",
+      "symbol": "MBFieldKey.standardRestrictionCode",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 191,
-      "symbol": "MBFieldKey.standardVersionNumber",
+      "symbol": "MBFieldKey.standardVehicleClassification",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 192,
-      "symbol": "MBFieldKey.state",
+      "symbol": "MBFieldKey.standardVersionNumber",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 193,
-      "symbol": "MBFieldKey.street",
+      "symbol": "MBFieldKey.state",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 194,
-      "symbol": "MBFieldKey.surnameAtBirth",
+      "symbol": "MBFieldKey.street",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 195,
-      "symbol": "MBFieldKey.under18",
+      "symbol": "MBFieldKey.surnameAtBirth",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 196,
-      "symbol": "MBFieldKey.under19",
+      "symbol": "MBFieldKey.under18",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 197,
-      "symbol": "MBFieldKey.under21",
+      "symbol": "MBFieldKey.under19",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 198,
-      "symbol": "MBFieldKey.uniqueCustomerId",
+      "symbol": "MBFieldKey.under21",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 199,
-      "symbol": "MBFieldKey.validFrom",
+      "symbol": "MBFieldKey.uniqueCustomerId",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 200,
-      "symbol": "MBFieldKey.validUntil",
+      "symbol": "MBFieldKey.validFrom",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 201,
-      "symbol": "MBFieldKey.vehicleCategories",
+      "symbol": "MBFieldKey.validUntil",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 202,
-      "symbol": "MBFieldKey.veteran",
+      "symbol": "MBFieldKey.vehicleCategories",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 203,
-      "symbol": "MBFieldKey.weightKilograms",
+      "symbol": "MBFieldKey.veteran",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 204,
-      "symbol": "MBFieldKey.weightPounds",
+      "symbol": "MBFieldKey.weightKilograms",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 205,
-      "symbol": "MBFieldKey.weightRange",
+      "symbol": "MBFieldKey.weightPounds",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
       "line": 206,
+      "symbol": "MBFieldKey.weightRange",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
+      "line": 207,
       "symbol": "MBFieldKey.zipCode",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jcular/Documents/Work/git-work/public/blinkid-ui-ios/BlinkIDUI/BlinkIDUI/Result/MBField.swift",
-      "line": 631,
+      "line": 634,
       "symbol": "MBField.description",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
