@@ -96,6 +96,12 @@ class MBAustriaCountryProvider: MBCountryProvider {
 }
 
 class MBBruneiCountryProvider: MBCountryProvider {
+    override var documentProviders: [MBDocumentType: MBDocumentProvider] {
+        var documentProviders = super.documentProviders
+        documentProviders[.temporaryResidencePermit] = MBBruneiTemporaryResidencePermitDocumentProvider()
+        return documentProviders
+    }
+    
     override var identityCardProvider: MBDocumentProvider? {
         return MBBruneiIDDocumentProvider()
     }
