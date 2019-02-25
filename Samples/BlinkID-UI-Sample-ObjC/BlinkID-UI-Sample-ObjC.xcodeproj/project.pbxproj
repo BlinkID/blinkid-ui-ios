@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE25D43121C3DF9F001EA09A /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE25D42F21C3DF9E001EA09A /* MicroBlink.bundle */; };
-		BE25D43221C3DFA2001EA09A /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE25D42E21C3DF9E001EA09A /* MicroBlink.framework */; };
-		BE25D43321C3DFA2001EA09A /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE25D42E21C3DF9E001EA09A /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE25D43121C3DF9F001EA09A /* Microblink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE25D42F21C3DF9E001EA09A /* Microblink.bundle */; };
+		BE25D43221C3DFA2001EA09A /* Microblink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE25D42E21C3DF9E001EA09A /* Microblink.framework */; };
+		BE25D43321C3DFA2001EA09A /* Microblink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE25D42E21C3DF9E001EA09A /* Microblink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE25D43421C3DFA7001EA09A /* BlinkIDUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE25D42D21C3DF90001EA09A /* BlinkIDUI.framework */; };
 		BE25D43521C3DFA7001EA09A /* BlinkIDUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE25D42D21C3DF90001EA09A /* BlinkIDUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEC8402621C13E5300AB272D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8402521C13E5300AB272D /* AppDelegate.m */; };
@@ -46,7 +46,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				BE25D43521C3DFA7001EA09A /* BlinkIDUI.framework in Embed Frameworks */,
-				BE25D43321C3DFA2001EA09A /* MicroBlink.framework in Embed Frameworks */,
+				BE25D43321C3DFA2001EA09A /* Microblink.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,8 +55,8 @@
 
 /* Begin PBXFileReference section */
 		BE25D42821C3DF90001EA09A /* BlinkIDUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlinkIDUI.xcodeproj; path = ../../BlinkIDUI/BlinkIDUI.xcodeproj; sourceTree = "<group>"; };
-		BE25D42E21C3DF9E001EA09A /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = "../../blinkid-ios/MicroBlink.framework"; sourceTree = "<group>"; };
-		BE25D42F21C3DF9E001EA09A /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = "../../blinkid-ios/MicroBlink.bundle"; sourceTree = "<group>"; };
+		BE25D42E21C3DF9E001EA09A /* Microblink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Microblink.framework; path = "../../blinkid-ios/Microblink.framework"; sourceTree = "<group>"; };
+		BE25D42F21C3DF9E001EA09A /* Microblink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Microblink.bundle; path = "../../blinkid-ios/Microblink.bundle"; sourceTree = "<group>"; };
 		BEC8402121C13E5300AB272D /* BlinkID-UI-Sample-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlinkID-UI-Sample-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC8402421C13E5300AB272D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BEC8402521C13E5300AB272D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE25D43421C3DFA7001EA09A /* BlinkIDUI.framework in Frameworks */,
-				BE25D43221C3DFA2001EA09A /* MicroBlink.framework in Frameworks */,
+				BE25D43221C3DFA2001EA09A /* Microblink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,8 +86,8 @@
 		BE25D42721C3DF84001EA09A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BE25D42F21C3DF9E001EA09A /* MicroBlink.bundle */,
-				BE25D42E21C3DF9E001EA09A /* MicroBlink.framework */,
+				BE25D42F21C3DF9E001EA09A /* Microblink.bundle */,
+				BE25D42E21C3DF9E001EA09A /* Microblink.framework */,
 				BE25D42821C3DF90001EA09A /* BlinkIDUI.xcodeproj */,
 			);
 			name = Frameworks;
@@ -218,7 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE25D43121C3DF9F001EA09A /* MicroBlink.bundle in Resources */,
+				BE25D43121C3DF9F001EA09A /* Microblink.bundle in Resources */,
 				BEC8403121C13E5400AB272D /* LaunchScreen.storyboard in Resources */,
 				BEC8403C21C13E6300AB272D /* blinkid-license.txt in Resources */,
 				BEC8402E21C13E5400AB272D /* Assets.xcassets in Resources */,

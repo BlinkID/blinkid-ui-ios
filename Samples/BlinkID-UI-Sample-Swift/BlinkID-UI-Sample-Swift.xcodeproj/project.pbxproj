@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE389E7821C3DE6E00BF6FA2 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE75A4CD21C3DD7500EF644C /* MicroBlink.framework */; };
-		BE389E7921C3DE6E00BF6FA2 /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE75A4CD21C3DD7500EF644C /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE389E7821C3DE6E00BF6FA2 /* Microblink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE75A4CD21C3DD7500EF644C /* Microblink.framework */; };
+		BE389E7921C3DE6E00BF6FA2 /* Microblink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE75A4CD21C3DD7500EF644C /* Microblink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE389E7A21C3DE7100BF6FA2 /* BlinkIDUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE389E7721C3DE6000BF6FA2 /* BlinkIDUI.framework */; };
 		BE389E7B21C3DE7100BF6FA2 /* BlinkIDUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE389E7721C3DE6000BF6FA2 /* BlinkIDUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BE389E8021C3DE8400BF6FA2 /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE75A4CC21C3DD7000EF644C /* MicroBlink.bundle */; };
+		BE389E8021C3DE8400BF6FA2 /* Microblink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE75A4CC21C3DD7000EF644C /* Microblink.bundle */; };
 		BEBEC71421C12A8700E0944D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEC71321C12A8700E0944D /* AppDelegate.swift */; };
 		BEBEC71621C12A8700E0944D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEC71521C12A8700E0944D /* ViewController.swift */; };
 		BEBEC71921C12A8700E0944D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEBEC71721C12A8700E0944D /* Main.storyboard */; };
@@ -55,7 +55,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				BE389E7B21C3DE7100BF6FA2 /* BlinkIDUI.framework in Embed Frameworks */,
-				BE389E7921C3DE6E00BF6FA2 /* MicroBlink.framework in Embed Frameworks */,
+				BE389E7921C3DE6E00BF6FA2 /* Microblink.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,8 +64,8 @@
 
 /* Begin PBXFileReference section */
 		BE389E7221C3DE6000BF6FA2 /* BlinkIDUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlinkIDUI.xcodeproj; path = ../../../BlinkIDUI/BlinkIDUI.xcodeproj; sourceTree = "<group>"; };
-		BE75A4CC21C3DD7000EF644C /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = "../../../blinkid-ios/MicroBlink.bundle"; sourceTree = "<group>"; };
-		BE75A4CD21C3DD7500EF644C /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = "../../../blinkid-ios/MicroBlink.framework"; sourceTree = "<group>"; };
+		BE75A4CC21C3DD7000EF644C /* Microblink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Microblink.bundle; path = "../../../blinkid-ios/Microblink.bundle"; sourceTree = "<group>"; };
+		BE75A4CD21C3DD7500EF644C /* Microblink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Microblink.framework; path = "../../../blinkid-ios/Microblink.framework"; sourceTree = "<group>"; };
 		BEBEC71021C12A8700E0944D /* BlinkID-UI-Sample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlinkID-UI-Sample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBEC71321C12A8700E0944D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEBEC71521C12A8700E0944D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE389E7A21C3DE7100BF6FA2 /* BlinkIDUI.framework in Frameworks */,
-				BE389E7821C3DE6E00BF6FA2 /* MicroBlink.framework in Frameworks */,
+				BE389E7821C3DE6E00BF6FA2 /* Microblink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,8 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				BE389E7221C3DE6000BF6FA2 /* BlinkIDUI.xcodeproj */,
-				BE75A4CC21C3DD7000EF644C /* MicroBlink.bundle */,
-				BE75A4CD21C3DD7500EF644C /* MicroBlink.framework */,
+				BE75A4CC21C3DD7000EF644C /* Microblink.bundle */,
+				BE75A4CD21C3DD7500EF644C /* Microblink.framework */,
 			);
 			name = Frameworks;
 			path = "BlinkID-UI-Sample-Swift";
@@ -228,7 +228,7 @@
 				BEC8401721C13BD600AB272D /* blinkid-license.txt in Resources */,
 				BEBEC71B21C12A8900E0944D /* Assets.xcassets in Resources */,
 				BEBEC71921C12A8700E0944D /* Main.storyboard in Resources */,
-				BE389E8021C3DE8400BF6FA2 /* MicroBlink.bundle in Resources */,
+				BE389E8021C3DE8400BF6FA2 /* Microblink.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
