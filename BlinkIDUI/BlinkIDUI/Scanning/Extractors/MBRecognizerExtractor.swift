@@ -109,8 +109,6 @@ extension MBLegacyMRTDRecognizerResult {
         fields.add(MBField(key: MBFieldKey.optional1, value: opt1))
         fields.add(MBField(key: MBFieldKey.optional2, value: opt2))
         fields.add(MBField(key: MBFieldKey.mrzText, value: mrzText))
-        fields.add(MBField(key: MBFieldKey.mrzParsed, value: mrzParsed))
-        fields.add(MBField(key: MBFieldKey.mrtdVerified, value: mrzVerified))
 
         return fields
     }

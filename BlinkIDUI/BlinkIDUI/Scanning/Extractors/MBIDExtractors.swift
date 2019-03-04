@@ -228,7 +228,7 @@ extension MBCzechiaIdBackRecognizer {
 
         fields.add(MBField(key: MBFieldKey.authority, value: result.authority))
         fields.add(MBField(key: MBFieldKey.residenceFullAddress, value: result.permanentStay))
-        fields.add(MBField(key: MBFieldKey.personalNumber, value: result.personalNumber))
+        fields.add(MBField(key: MBFieldKey.personalIdentificationNumber, value: result.personalNumber))
 
         return fields
     }
@@ -292,8 +292,6 @@ extension MBGermanyIdBackRecognizer {
         fields.add(MBField(key: MBFieldKey.authority, value: result.authority))
         fields.add(MBField(key: MBFieldKey.addressCity, value: result.addressCity))
         fields.add(MBField(key: MBFieldKey.addressStreet, value: result.addressStreet))
-        fields.add(MBField(key: MBFieldKey.addressHouseNumber, value: result.addressHouseNumber))
-        fields.add(MBField(key: MBFieldKey.addressZipCode, value: result.addressZipCode))
         fields.add(MBField(key: MBFieldKey.address, value: result.fullAddress))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
 
@@ -463,9 +461,6 @@ extension MBMalaysiaMyKadFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.nricNumber, value: result.nric))
         fields.add(MBField(key: MBFieldKey.fullAddress, value: result.fullAddress))
         fields.add(MBField(key: MBFieldKey.city, value: result.city))
-        fields.add(MBField(key: MBFieldKey.street, value: result.street))
-        fields.add(MBField(key: MBFieldKey.zipCode, value: result.zipcode))
-        fields.add(MBField(key: MBFieldKey.state, value: result.ownerState))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.birthDate))
         fields.add(MBField(key: MBFieldKey.fullName, value: result.fullName))
         fields.add(MBField(key: MBFieldKey.religion, value: result.religion))
@@ -485,11 +480,8 @@ extension MBMalaysiaMyKasFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.fullAddress, value: result.fullAddress))
         fields.add(MBField(key: MBFieldKey.fullName, value: result.fullName))
         fields.add(MBField(key: MBFieldKey.nricNumber, value: result.nric))
-        fields.add(MBField(key: MBFieldKey.state, value: result.ownerState))
         fields.add(MBField(key: MBFieldKey.religion, value: result.religion))
         fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
-        fields.add(MBField(key: MBFieldKey.street, value: result.street))
-        fields.add(MBField(key: MBFieldKey.zipCode, value: result.zipcode))
 
         return fields
     }
@@ -505,11 +497,8 @@ extension MBMalaysiaMyPrFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.fullAddress, value: result.fullAddress))
         fields.add(MBField(key: MBFieldKey.fullName, value: result.fullName))
         fields.add(MBField(key: MBFieldKey.nricNumber, value: result.nric))
-        fields.add(MBField(key: MBFieldKey.state, value: result.ownerState))
         fields.add(MBField(key: MBFieldKey.religion, value: result.religion))
         fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
-        fields.add(MBField(key: MBFieldKey.street, value: result.street))
-        fields.add(MBField(key: MBFieldKey.zipCode, value: result.zipcode))
         
         return fields
     }
@@ -523,8 +512,6 @@ extension MBMalaysiaMyTenteraFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.armyNumber, value: result.armyNumber))
         fields.add(MBField(key: MBFieldKey.address, value: result.fullAddress))
         fields.add(MBField(key: MBFieldKey.city, value: result.city))
-        fields.add(MBField(key: MBFieldKey.addressState, value: result.ownerState))
-        fields.add(MBField(key: MBFieldKey.addressZipCode, value: result.zipcode))
         fields.add(MBField(key: MBFieldKey.addressStreet, value: result.street))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.birthDate))
         fields.add(MBField(key: MBFieldKey.fullName, value: result.fullName))
@@ -678,8 +665,7 @@ extension MBSingaporeIdBackRecognizer {
         let fields = NSMutableArray()
 
         fields.add(MBField(key: MBFieldKey.address, value: result.address))
-        fields.add(MBField(key: MBFieldKey.addressChangeDate, value: result.addressChangeDate))
-        fields.add(MBField(key: MBFieldKey.cardNumber, value: result.cardNumber))
+        fields.add(MBField(key: MBFieldKey.identityCardNumber, value: result.cardNumber))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
 
         return fields
@@ -744,7 +730,7 @@ extension MBSlovakiaIdFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.documentNumber, value: result.documentNumber))
         fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
         fields.add(MBField(key: MBFieldKey.nationality, value: result.nationality))
-        fields.add(MBField(key: MBFieldKey.personalNumber, value: result.personalNumber))
+        fields.add(MBField(key: MBFieldKey.personalIdentificationNumber, value: result.personalNumber))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
         fields.add(MBField(key: MBFieldKey.issuer, value: result.issuedBy))
