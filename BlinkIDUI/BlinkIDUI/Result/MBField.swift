@@ -78,7 +78,6 @@ import MicroBlink
     case firstNameTruncation
     case fullAddress
     case fullName
-    case givenName
     case hairColor
     case hazmatExpirationDate
     case height
@@ -325,8 +324,6 @@ import MicroBlink
             return "fullAddress"
         case .fullName:
             return "fullName"
-        case .givenName:
-            return "givenName"
         case .hairColor:
             return "hairColor"
         case .hazmatExpirationDate:

@@ -14,7 +14,6 @@ class MBResultCombiner {
         // FIRST NAMES
             .secondaryId,
             .firstName,
-            .givenName,
         // LAST NAMES
             .primaryId,
             .lastName,
@@ -86,8 +85,7 @@ class MBResultCombiner {
     }
     
     private static func _checkIfFirstName(key: MBFieldKey) -> Bool {
-        return key == .firstName || key == .secondaryId || key == .givenName
-    }
+        return key == .firstName || key == .secondaryId    }
     
     private static func _checkIfLastName(key: MBFieldKey) -> Bool {
         return key == .lastName || key == .primaryId
