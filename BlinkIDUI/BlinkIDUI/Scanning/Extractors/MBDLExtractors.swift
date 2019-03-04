@@ -316,6 +316,7 @@ extension MBRecognizerResult {
         fields.add(MBField(key: MBFieldKey.hairColor, value: getField(for: MBUsdlKeys.HairColor)))
         fields.add(MBField(key: MBFieldKey.nameSuffix, value: getField(for: MBUsdlKeys.NameSuffix)))
         fields.add(MBField(key: MBFieldKey.akaFullName, value: getField(for: MBUsdlKeys.AKAFullName)))
+        fields.add(MBField(key: MBFieldKey.akaFamilyName, value: getField(for: MBUsdlKeys.AKAFamilyName)))
         fields.add(MBField(key: MBFieldKey.akaGivenName, value: getField(for: MBUsdlKeys.AKAGivenName)))
         fields.add(MBField(key: MBFieldKey.akaSuffixName, value: getField(for: MBUsdlKeys.AKASuffixName)))
         fields.add(MBField(key: MBFieldKey.weightRange, value: getField(for: MBUsdlKeys.WeightRange)))

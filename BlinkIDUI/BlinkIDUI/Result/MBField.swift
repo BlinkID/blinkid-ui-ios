@@ -20,6 +20,7 @@ import MicroBlink
     case addressStreet
     case addressStreet2
     case akaDateOfBirth
+    case akaFamilyName
     case akaFullName
     case akaGivenName
     case akaMiddleName
@@ -193,6 +194,8 @@ import MicroBlink
             return "addressStreet2"
         case .akaDateOfBirth:
             return "akaDateOfBirth"
+        case .akaFamilyName:
+            return "akaFamilyName"
         case .akaFullName:
             return "akaFullName"
         case .akaGivenName:
