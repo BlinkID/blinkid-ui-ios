@@ -182,27 +182,27 @@ import MicroBlink
     /// Text for malaysian identity cards in document tabs view.
     /// This is specific to Malaysia
     /// - Default: "MyKad"
-    @objc public var malaysianIDCardText = Bundle.frameworkBundle.localizedString("malaysianIDCard", Bundle.uiStringTable)
+    @objc public var malaysianIDCardText = Bundle.frameworkBundle.localizedString("malaysianIDCard", Bundle.nonLocalizableStringTable)
     
     /// Text for military identity cards in document tabs view.
     /// This is specific to Malaysia
     /// - Default: "MyTentera"
-    @objc public var militaryIDCardText = Bundle.frameworkBundle.localizedString("militaryIDCard", Bundle.uiStringTable)
+    @objc public var militaryIDCardText = Bundle.frameworkBundle.localizedString("militaryIDCard", Bundle.nonLocalizableStringTable)
     
     /// Text for permanent resident identity cards in document tabs view.
     /// This is specific to Malaysia
     /// - Default: "MyPr"
-    @objc public var permanentResidentIDCardText = Bundle.frameworkBundle.localizedString("permanentResidenceIDCard", Bundle.uiStringTable)
+    @objc public var permanentResidentIDCardText = Bundle.frameworkBundle.localizedString("permanentResidenceIDCard", Bundle.nonLocalizableStringTable)
     
     /// Text for  temporary resident identity cards in document tabs view.
     /// This is specific to Malaysia
     /// - Default: "MyKas"
-    @objc public var temporaryResidentIDCardText = Bundle.frameworkBundle.localizedString("temporaryResidenceIDCard", Bundle.uiStringTable)
+    @objc public var temporaryResidentIDCardText = Bundle.frameworkBundle.localizedString("temporaryResidenceIDCard", Bundle.nonLocalizableStringTable)
     
     /// Text for immigrator identity cards in document tabs view.
     /// This is specific to Malaysia
     /// - Default: "iKad"
-    @objc public var immigratorIDCardText = Bundle.frameworkBundle.localizedString("immigratorIDCard", Bundle.uiStringTable)
+    @objc public var immigratorIDCardText = Bundle.frameworkBundle.localizedString("immigratorIDCard", Bundle.nonLocalizableStringTable)
 
     /// Text for passports in document tabs view.
     /// - Default: "Passport"

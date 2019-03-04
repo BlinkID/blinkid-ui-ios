@@ -396,7 +396,6 @@ extension MBJordanIdFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.nationalNumber, value: result.nationalNumber))
-        fields.add(MBField(key: MBFieldKey.nationalNumber, value: result.nationalNumber))
 
         return fields
     }

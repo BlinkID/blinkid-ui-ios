@@ -1,0 +1,25 @@
+/* 
+  NonLocalizable.strings
+  BlinkIDUI
+
+  Created by Jure Čular on 3/4/19.
+  Copyright © 2019 Microblink. All rights reserved.
+*/
+
+// Field keys
+
+"cnp" = "CNP";
+
+"curp" = "CURP";
+
+// Card Types
+
+"malaysianIDCard" = "MyKad";
+
+"militaryIDCard" = "MyTentera";
+
+"permanentResidenceIDCard" = "MyPr";
+
+"temporaryResidenceIDCard" = "MyKas";
+
+"immigratorIDCard" = "iKad";

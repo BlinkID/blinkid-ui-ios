@@ -32,24 +32,19 @@ import MicroBlink
     case akaSuffixName
     case alienNumber
     case applicationReceiptNumber
-    case armyId
     case armyNumber
     case auditInformation
     case authority
     case birthData
     case bloodGroup
-    case bloodType
     case canNumber
     case cardNumber
     case cardRevisionDate
-    case cardVersion
     case citizenship
     case city
     case civilIdNumber
     case civilStatusNumber
     case cnp
-    case commercialCode
-    case companyName
     case complianceType
     case country
     case countryIdentification
@@ -61,31 +56,24 @@ import MicroBlink
     case dateOfIssue
     case dateOfIssueB10
     case dateOfIssueB10NotSpecified
-    case district
     case dlClass
     case documentCode
-    case documentDataMatch
     case documentDiscriminator
     case documentExpirationDate
     case documentExpirationMonth
     case documentNonexpiring
     case documentNumber
     case documentType
-    case donorIndicator
     case driverNumber
     case driverRestrictions
-    case electorKey
     case employer
     case employerAddress
     case expiryDatePermanent
-    case extendedNricNumber
     case eyeColour
     case facultyAddress
     case familyName
     case familyNameTruncation
-    case fathersName
     case federalCommercialVehicleCodes
-    case fingerprint
     case firstName
     case firstNameTruncation
     case fullAddress
@@ -96,7 +84,6 @@ import MicroBlink
     case height
     case heightCm
     case heightIn
-    case houseNumber
     case idSeries
     case identityCardNumber
     case immigrantCaseNumber
@@ -109,7 +96,6 @@ import MicroBlink
     case issuingAuthority
     case issuingJurisdiction
     case issuingJurisdictionName
-    case jmbg
     case jurisdictionEndorsementCodes
     case jurisdictionEndorsmentCodeDescription
     case jurisdictionRestrictionCodeDescription
@@ -117,19 +103,15 @@ import MicroBlink
     case jurisdictionVehicleClass
     case jurisdictionVehicleClassificationDescription
     case jurisdictionVersionNumber
-    case kelDesa
     case lastName
     case licenseCategories
-    case licenseClass
     case licenseNumber
     case licenseType
     case limitedDurationDocument
     case maritalStatus
-    case marriageStatus
     case medicalIndicator
     case middleName
     case middleNameTruncation
-    case mothersName
     case mrtdVerified
     case mrzParsed
     case mrzText
@@ -149,10 +131,8 @@ import MicroBlink
     case optional1
     case optional2
     case organDonor
-    case parentNames
     case parentsGivenName
     case passportNumber
-    case pdf417string
     case permitExpirationDate
     case permitIdentifier
     case permitIssueDate
@@ -167,7 +147,6 @@ import MicroBlink
     case race
     case raceEthnicity
     case rawData
-    case referenceNumber
     case religion
     case residenceCity
     case residenceFullAddress
@@ -176,14 +155,11 @@ import MicroBlink
     case residenceStreetAddress
     case residenceStreetAddress2
     case residentialStatus
-    case rt
-    case rw
     case secondaryId
     case sector
     case securityVersion
     case serialNo
     case sex
-    case signature
     case socialSecurityNumber
     case specialRemarks
     case standardEndorsementCode
@@ -208,7 +184,11 @@ import MicroBlink
 
     /// Localized value of the key
     public var localized: String {
-        return Bundle.frameworkBundle.localizedString(_key, Bundle.fieldsStringTable)
+        if self == .cnp || self == .curp {
+            return  Bundle.frameworkBundle.localizedString(_key, Bundle.nonLocalizableStringTable)
+        } else {
+            return Bundle.frameworkBundle.localizedString(_key, Bundle.fieldsStringTable)
+        }
     }
 
     public static func < (lhs: MBFieldKey, rhs: MBFieldKey) -> Bool {
@@ -253,8 +233,6 @@ import MicroBlink
             return "alienNumber"
         case .applicationReceiptNumber:
             return "applicationReceiptNumber"
-        case .armyId:
-            return "armyId"
         case .armyNumber:
             return "armyNumber"
         case .auditInformation:
@@ -265,16 +243,12 @@ import MicroBlink
             return "birthData"
         case .bloodGroup:
             return "bloodGroup"
-        case .bloodType:
-            return "bloodType"
         case .cardNumber:
             return "cardNumber"
         case .canNumber:
             return "canNumber"
         case .cardRevisionDate:
             return "cardRevisionDate"
-        case .cardVersion:
-            return "cardVersion"
         case .citizenship:
             return "citizenship"
         case .city:
@@ -285,10 +259,6 @@ import MicroBlink
             return "civilStatusNumber"
         case .cnp:
             return "cnp"
-        case .commercialCode:
-            return "commercialCode"
-        case .companyName:
-            return "companyName"
         case .complianceType:
             return "complianceType"
         case .country:
@@ -311,14 +281,10 @@ import MicroBlink
             return "dateOfIssueB10"
         case .dateOfIssueB10NotSpecified:
             return "dateOfIssueB10NotSpecified"
-        case .district:
-            return "district"
         case .dlClass:
             return "dlClass"
         case .documentCode:
             return "documentCode"
-        case .documentDataMatch:
-            return "documentDataMatch"
         case .documentDiscriminator:
             return "documentDiscriminator"
         case .documentExpirationDate:
@@ -331,22 +297,16 @@ import MicroBlink
             return "documentNumber"
         case .documentType:
             return "documentType"
-        case .donorIndicator:
-            return "donorIndicator"
         case .driverNumber:
             return "driverNumber"
         case .driverRestrictions:
             return "driverRestrictions"
-        case .electorKey:
-            return "electorKey"
         case .employer:
             return "employer"
         case .employerAddress:
             return "employerAddress"
         case .expiryDatePermanent:
             return "expiryDatePermanent"
-        case .extendedNricNumber:
-            return "extendedNricNumber"
         case .eyeColour:
             return "eyeColour"
         case .facultyAddress:
@@ -355,12 +315,8 @@ import MicroBlink
             return "familyName"
         case .familyNameTruncation:
             return "familyNameTruncation"
-        case .fathersName:
-            return "fathersName"
         case .federalCommercialVehicleCodes:
             return "federalCommercialVehicleCodes"
-        case .fingerprint:
-            return "fingerprint"
         case .firstName:
             return "firstName"
         case .firstNameTruncation:
@@ -381,8 +337,6 @@ import MicroBlink
             return "heightCm"
         case .heightIn:
             return "heightIn"
-        case .houseNumber:
-            return "houseNumber"
         case .idSeries:
             return "idSeries"
         case .identityCardNumber:
@@ -407,8 +361,6 @@ import MicroBlink
             return "issuingJurisdiction"
         case .issuingJurisdictionName:
             return "issuingJurisdictionName"
-        case .jmbg:
-            return "jmbg"
         case .jurisdictionEndorsementCodes:
             return "jurisdictionEndorsementCodes"
         case .jurisdictionEndorsmentCodeDescription:
@@ -423,14 +375,10 @@ import MicroBlink
             return "jurisdictionVehicleClassificationDescription"
         case .jurisdictionVersionNumber:
             return "jurisdictionVersionNumber"
-        case .kelDesa:
-            return "kelDesa"
         case .lastName:
             return "lastName"
         case .licenseCategories:
             return "licenseCategories"
-        case .licenseClass:
-            return "licenseClass"
         case .licenseNumber:
             return "licenseNumber"
         case .licenseType:
@@ -439,16 +387,12 @@ import MicroBlink
             return "limitedDurationDocument"
         case .maritalStatus:
             return "maritalStatus"
-        case .marriageStatus:
-            return "marriageStatus"
         case .medicalIndicator:
             return "medicalIndicator"
         case .middleName:
             return "middleName"
         case .middleNameTruncation:
             return "middleNameTruncation"
-        case .mothersName:
-            return "mothersName"
         case .mrtdVerified:
             return "mrtdVerified"
         case .mrzParsed:
@@ -487,14 +431,10 @@ import MicroBlink
             return "optional2"
         case .organDonor:
             return "organDonor"
-        case .parentNames:
-            return "parentNames"
         case .parentsGivenName:
             return "parentsGivenName"
         case .passportNumber:
             return "passportNumber"
-        case .pdf417string:
-            return "pdf417string"
         case .permitExpirationDate:
             return "permitExpirationDate"
         case .permitIdentifier:
@@ -523,8 +463,6 @@ import MicroBlink
             return "raceEthnicity"
         case .rawData:
             return "rawData"
-        case .referenceNumber:
-            return "referenceNumber"
         case .religion:
             return "religion"
         case .residenceCity:
@@ -541,10 +479,6 @@ import MicroBlink
             return "residenceStreetAddress2"
         case .residentialStatus:
             return "residentialStatus"
-        case .rt:
-            return "rt"
-        case .rw:
-            return "rw"
         case .secondaryId:
             return "secondaryId"
         case .sector:
@@ -555,8 +489,6 @@ import MicroBlink
             return "sex"
         case .serialNo:
             return "serialNo"
-        case .signature:
-            return "signature"
         case .socialSecurityNumber:
             return "socialSecurityNumber"
         case .specialRemarks:
