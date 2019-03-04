@@ -606,10 +606,10 @@ import MicroBlink
 /// Class representing one field, or result of document being scanned.
 public class MBField: NSObject {
     /// Key describing the result
-    public let key: MBFieldKey
+    @objc public let key: MBFieldKey
     
     /// Value or the result represented as String
-    public let value: String
+    @objc public let value: String
 
     init(key: MBFieldKey, value: String?) {
         self.key = key
