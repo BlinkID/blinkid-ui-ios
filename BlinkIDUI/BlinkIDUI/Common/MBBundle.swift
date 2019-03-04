@@ -11,6 +11,8 @@ import Foundation
 extension Bundle {
     static let frameworkBundle = Bundle(for: MBBlinkSettings.self)
 
+    static let nonLocalizableStringTable = "NonLocalizable"
+    
     static let uiStringTable = "BlinkIDUI"
 
     static let fieldsStringTable = "BlinkIDUIFields"

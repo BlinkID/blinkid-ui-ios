@@ -208,7 +208,11 @@ import MicroBlink
 
     /// Localized value of the key
     public var localized: String {
-        return Bundle.frameworkBundle.localizedString(_key, Bundle.fieldsStringTable)
+        if self == .cnp || self == .curp {
+            return  Bundle.frameworkBundle.localizedString(_key, Bundle.nonLocalizableStringTable)
+        } else {
+            return Bundle.frameworkBundle.localizedString(_key, Bundle.fieldsStringTable)
+        }
     }
 
     public static func < (lhs: MBFieldKey, rhs: MBFieldKey) -> Bool {

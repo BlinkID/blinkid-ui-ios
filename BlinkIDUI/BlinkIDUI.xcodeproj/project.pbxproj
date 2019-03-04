@@ -71,6 +71,7 @@
 		BE64810421903C3A00D0C24F /* MBRecognitionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64810121903C3900D0C24F /* MBRecognitionResult.swift */; };
 		BE64810621903C3A00D0C24F /* MBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64810321903C3A00D0C24F /* MBConstants.swift */; };
 		BE64810B219048FF00D0C24F /* MBCountryProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE648109219048FF00D0C24F /* MBCountryProviders.swift */; };
+		BE6D6BB5222D324C00808E6D /* NonLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE6D6BB4222D324C00808E6D /* NonLocalizable.strings */; };
 		BE75A4C621C3DD5E00EF644C /* Microblink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE75A4C421C3DD5D00EF644C /* Microblink.framework */; };
 		BE75A4C721C3DD5E00EF644C /* Microblink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE75A4C521C3DD5E00EF644C /* Microblink.bundle */; };
 		BEAE7AB72194844000D0E70A /* MBLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE7AB62194844000D0E70A /* MBLocalizable.swift */; };
@@ -159,6 +160,7 @@
 		BE64810121903C3900D0C24F /* MBRecognitionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBRecognitionResult.swift; sourceTree = "<group>"; };
 		BE64810321903C3A00D0C24F /* MBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBConstants.swift; sourceTree = "<group>"; };
 		BE648109219048FF00D0C24F /* MBCountryProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCountryProviders.swift; sourceTree = "<group>"; };
+		BE6D6BB4222D324C00808E6D /* NonLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = NonLocalizable.strings; sourceTree = "<group>"; };
 		BE75A4C421C3DD5D00EF644C /* Microblink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Microblink.framework; path = "../blinkid-ios/Microblink.framework"; sourceTree = "<group>"; };
 		BE75A4C521C3DD5E00EF644C /* Microblink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Microblink.bundle; path = "../blinkid-ios/Microblink.bundle"; sourceTree = "<group>"; };
 		BEAE7AB62194844000D0E70A /* MBLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBLocalizable.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				BE2165AF2192E30300E21734 /* Assets.xcassets */,
+				BE6D6BB4222D324C00808E6D /* NonLocalizable.strings */,
 				BE62046A21A7031F007087E1 /* BlinkIDUI.strings */,
 				BE46140821A58ACD00D106B8 /* BlinkIDUIFields.strings */,
 				BEE34654218A5F4C004C0397 /* Info.plist */,
@@ -526,6 +529,7 @@
 				BE75A4C721C3DD5E00EF644C /* Microblink.bundle in Resources */,
 				BEAE7ABE2195C13600D0E70A /* MBCountryChooserButton.xib in Resources */,
 				BE379DEE219C05680008535A /* MBDocumentTabsView.xib in Resources */,
+				BE6D6BB5222D324C00808E6D /* NonLocalizable.strings in Resources */,
 				BE2165AE2192E24300E21734 /* MBBlinkIDOverlay.storyboard in Resources */,
 				BE379DE8219B26D60008535A /* MBDocumentTab.xib in Resources */,
 			);
