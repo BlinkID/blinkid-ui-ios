@@ -162,8 +162,8 @@ extension MBMalaysiaDlFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.identityCardNumber, value: result.identityNumber))
         fields.add(MBField(key: MBFieldKey.nationality, value: result.nationality))
         fields.add(MBField(key: MBFieldKey.dlClass, value: result.dlClass))
-        fields.add(MBField(key: MBFieldKey.validFrom, value: result.validFrom))
-        fields.add(MBField(key: MBFieldKey.validUntil, value: result.validUntil))
+        fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.validFrom))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.validUntil))
         fields.add(MBField(key: MBFieldKey.addressStreet, value: result.street))
         fields.add(MBField(key: MBFieldKey.city, value: result.city))
         fields.add(MBField(key: MBFieldKey.fullAddress, value: result.fullAddress))
@@ -196,7 +196,7 @@ extension MBSingaporeDlFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.issueDate))
         fields.add(MBField(key: MBFieldKey.licenseNumber, value: result.licenceNumber))
         fields.add(MBField(key: MBFieldKey.fullName, value: result.name))
-        fields.add(MBField(key: MBFieldKey.validUntil, value: result.validTill))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.validTill))
 
         return fields
     }
@@ -213,8 +213,8 @@ extension MBSpainDlFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.issuingAuthority))
         fields.add(MBField(key: MBFieldKey.licenseCategories, value: result.licenceCategories))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
-        fields.add(MBField(key: MBFieldKey.validFrom, value: result.validFrom))
-        fields.add(MBField(key: MBFieldKey.validUntil, value: result.validUntil))
+        fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.validFrom))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.validUntil))
 
         return fields
     }

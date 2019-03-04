@@ -635,8 +635,8 @@ extension MBRomaniaIdFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.address, value: result.address))
         fields.add(MBField(key: MBFieldKey.issuer, value: result.issuedBy))
         fields.add(MBField(key: MBFieldKey.nonMrzSex, value: result.nonMRZSex))
-        fields.add(MBField(key: MBFieldKey.validFrom, value: result.validFrom))
-        fields.add(MBField(key: MBFieldKey.validUntil, value: result.validUntil))
+        fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.validFrom))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.validUntil))
 
         return fields
     }
