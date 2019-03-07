@@ -28,13 +28,11 @@
 		BE37A02F219C72C60008535A /* MBCountryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE37A02E219C72C60008535A /* MBCountryFilter.swift */; };
 		BE37A03A219D743B0008535A /* MBDocumentSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE37A039219D743B0008535A /* MBDocumentSelection.storyboard */; };
 		BE37A03C219DA77D0008535A /* MBCountryListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE37A03B219DA77D0008535A /* MBCountryListManager.swift */; };
-		BE46140921A58ACD00D106B8 /* BlinkIDUIFields.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE46140821A58ACD00D106B8 /* BlinkIDUIFields.strings */; };
 		BE495B6B21AC1CBD007B16D1 /* MBMexicoDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE495B6A21AC1CBD007B16D1 /* MBMexicoDocumentProviders.swift */; };
 		BE495B7521AC2CBF007B16D1 /* MBRomaniaDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE495B7421AC2CBF007B16D1 /* MBRomaniaDocumentProviders.swift */; };
 		BE499DEA21BF9F6200E28301 /* MBCountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE499DE921BF9F6200E28301 /* MBCountryTableViewCell.swift */; };
 		BE499DEC21BFA01C00E28301 /* MBCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE499DEB21BFA01C00E28301 /* MBCellConfiguration.swift */; };
 		BE62046621A6FADC007087E1 /* MBBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE62046521A6FADC007087E1 /* MBBundle.swift */; };
-		BE62046B21A7031F007087E1 /* BlinkIDUI.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE62046A21A7031F007087E1 /* BlinkIDUI.strings */; };
 		BE6480C8218C83C600D0C24F /* MBCyprusDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6480A7218C83C500D0C24F /* MBCyprusDocumentProviders.swift */; };
 		BE6480C9218C83C600D0C24F /* MBSpainDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6480A8218C83C500D0C24F /* MBSpainDocumentProviders.swift */; };
 		BE6480CA218C83C600D0C24F /* MBColombiaDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6480A9218C83C500D0C24F /* MBColombiaDocumentProviders.swift */; };
@@ -74,6 +72,8 @@
 		BE6D6BB5222D324C00808E6D /* NonLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE6D6BB4222D324C00808E6D /* NonLocalizable.strings */; };
 		BE75A4C621C3DD5E00EF644C /* Microblink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE75A4C421C3DD5D00EF644C /* Microblink.framework */; };
 		BE75A4C721C3DD5E00EF644C /* Microblink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE75A4C521C3DD5E00EF644C /* Microblink.bundle */; };
+		BE8E2BF42231168800CE22CD /* BlinkIDUI.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE8E2BF62231168800CE22CD /* BlinkIDUI.strings */; };
+		BE8E2BF72231168F00CE22CD /* BlinkIDUIFields.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE8E2BF92231168F00CE22CD /* BlinkIDUIFields.strings */; };
 		BEAE7AB72194844000D0E70A /* MBLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE7AB62194844000D0E70A /* MBLocalizable.swift */; };
 		BEAE7ABE2195C13600D0E70A /* MBCountryChooserButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAE7ABD2195C13600D0E70A /* MBCountryChooserButton.xib */; };
 		BEAE7AC02195C1E400D0E70A /* MBCountryChooserButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE7ABF2195C1E400D0E70A /* MBCountryChooserButton.swift */; };
@@ -117,13 +117,11 @@
 		BE37A02E219C72C60008535A /* MBCountryFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCountryFilter.swift; sourceTree = "<group>"; };
 		BE37A039219D743B0008535A /* MBDocumentSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MBDocumentSelection.storyboard; sourceTree = "<group>"; };
 		BE37A03B219DA77D0008535A /* MBCountryListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCountryListManager.swift; sourceTree = "<group>"; };
-		BE46140821A58ACD00D106B8 /* BlinkIDUIFields.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = BlinkIDUIFields.strings; sourceTree = "<group>"; };
 		BE495B6A21AC1CBD007B16D1 /* MBMexicoDocumentProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBMexicoDocumentProviders.swift; sourceTree = "<group>"; };
 		BE495B7421AC2CBF007B16D1 /* MBRomaniaDocumentProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBRomaniaDocumentProviders.swift; sourceTree = "<group>"; };
 		BE499DE921BF9F6200E28301 /* MBCountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCountryTableViewCell.swift; sourceTree = "<group>"; };
 		BE499DEB21BFA01C00E28301 /* MBCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCellConfiguration.swift; sourceTree = "<group>"; };
 		BE62046521A6FADC007087E1 /* MBBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBBundle.swift; sourceTree = "<group>"; };
-		BE62046A21A7031F007087E1 /* BlinkIDUI.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = BlinkIDUI.strings; sourceTree = "<group>"; };
 		BE6480A7218C83C500D0C24F /* MBCyprusDocumentProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCyprusDocumentProviders.swift; sourceTree = "<group>"; };
 		BE6480A8218C83C500D0C24F /* MBSpainDocumentProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBSpainDocumentProviders.swift; sourceTree = "<group>"; };
 		BE6480A9218C83C500D0C24F /* MBColombiaDocumentProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBColombiaDocumentProviders.swift; sourceTree = "<group>"; };
@@ -163,6 +161,14 @@
 		BE6D6BB4222D324C00808E6D /* NonLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = NonLocalizable.strings; sourceTree = "<group>"; };
 		BE75A4C421C3DD5D00EF644C /* Microblink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Microblink.framework; path = "../blinkid-ios/Microblink.framework"; sourceTree = "<group>"; };
 		BE75A4C521C3DD5E00EF644C /* Microblink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Microblink.bundle; path = "../blinkid-ios/Microblink.bundle"; sourceTree = "<group>"; };
+		BE8E2BF52231168800CE22CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BlinkIDUI.strings; sourceTree = "<group>"; };
+		BE8E2BF82231168F00CE22CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BlinkIDUIFields.strings; sourceTree = "<group>"; };
+		BE8E2BFA223116B900CE22CD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/BlinkIDUI.strings; sourceTree = "<group>"; };
+		BE8E2BFB223116B900CE22CD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/BlinkIDUIFields.strings; sourceTree = "<group>"; };
+		BE8E2BFC2231182500CE22CD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/BlinkIDUI.strings; sourceTree = "<group>"; };
+		BE8E2BFD2231182500CE22CD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/BlinkIDUIFields.strings; sourceTree = "<group>"; };
+		BE8E2BFE2231184400CE22CD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/BlinkIDUI.strings; sourceTree = "<group>"; };
+		BE8E2BFF2231184400CE22CD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/BlinkIDUIFields.strings; sourceTree = "<group>"; };
 		BEAE7AB62194844000D0E70A /* MBLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBLocalizable.swift; sourceTree = "<group>"; };
 		BEAE7ABD2195C13600D0E70A /* MBCountryChooserButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBCountryChooserButton.xib; sourceTree = "<group>"; };
 		BEAE7ABF2195C1E400D0E70A /* MBCountryChooserButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCountryChooserButton.swift; sourceTree = "<group>"; };
@@ -259,8 +265,8 @@
 			children = (
 				BE2165AF2192E30300E21734 /* Assets.xcassets */,
 				BE6D6BB4222D324C00808E6D /* NonLocalizable.strings */,
-				BE62046A21A7031F007087E1 /* BlinkIDUI.strings */,
-				BE46140821A58ACD00D106B8 /* BlinkIDUIFields.strings */,
+				BE8E2BF62231168800CE22CD /* BlinkIDUI.strings */,
+				BE8E2BF92231168F00CE22CD /* BlinkIDUIFields.strings */,
 				BEE34654218A5F4C004C0397 /* Info.plist */,
 			);
 			path = Resources;
@@ -505,6 +511,9 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				de,
+				fr,
+				es,
 			);
 			mainGroup = BEE34646218A5F4C004C0397;
 			productRefGroup = BEE34651218A5F4C004C0397 /* Products */;
@@ -522,8 +531,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE37A03A219D743B0008535A /* MBDocumentSelection.storyboard in Resources */,
-				BE62046B21A7031F007087E1 /* BlinkIDUI.strings in Resources */,
-				BE46140921A58ACD00D106B8 /* BlinkIDUIFields.strings in Resources */,
+				BE8E2BF42231168800CE22CD /* BlinkIDUI.strings in Resources */,
+				BE8E2BF72231168F00CE22CD /* BlinkIDUIFields.strings in Resources */,
 				BE2165B22192EE1900E21734 /* MBViewfinderView.xib in Resources */,
 				BE2165B02192E30300E21734 /* Assets.xcassets in Resources */,
 				BE75A4C721C3DD5E00EF644C /* Microblink.bundle in Resources */,
@@ -640,6 +649,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BE8E2BF62231168800CE22CD /* BlinkIDUI.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE8E2BF52231168800CE22CD /* en */,
+				BE8E2BFA223116B900CE22CD /* de */,
+				BE8E2BFC2231182500CE22CD /* fr */,
+				BE8E2BFE2231184400CE22CD /* es */,
+			);
+			name = BlinkIDUI.strings;
+			sourceTree = "<group>";
+		};
+		BE8E2BF92231168F00CE22CD /* BlinkIDUIFields.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE8E2BF82231168F00CE22CD /* en */,
+				BE8E2BFB223116B900CE22CD /* de */,
+				BE8E2BFD2231182500CE22CD /* fr */,
+				BE8E2BFF2231184400CE22CD /* es */,
+			);
+			name = BlinkIDUIFields.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BEE34656218A5F4C004C0397 /* Debug */ = {
