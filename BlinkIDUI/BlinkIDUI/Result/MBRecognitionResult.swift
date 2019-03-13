@@ -20,6 +20,16 @@ import UIKit
     /// Contains both front and back side results if both side scanning is enabled.
     @objc public let resultEntries: [MBField]
     
+    /// All the fields scanned during the scanning process of one document. Represented as a NSDictionary<NSNumber: MBField>
+    /// Contains both front and back side results if both side scanning is enabled.
+    @objc public var resultEntriesDictionary: NSDictionary {
+        let resultDictionary = resultEntries.reduce(into: [NSNumber: MBField]()) { (result, field) in
+            let key = NSNumber(value: field.key.rawValue)
+            result[key] = field
+        }
+        return NSDictionary(dictionary: resultDictionary)
+    }
+    
     /// Image of the front side of the document.
     /// - If the document recognizer supports document image retrieval it will be returned.
     @objc public let frontSideDocumentImage: UIImage?
