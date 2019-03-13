@@ -217,7 +217,10 @@ import Foundation
 
     /// Localized country name based on the country code value
     @objc public var localized: String {
-        return NSLocale.current.localizedString(forRegionCode: countryCode) ?? "Unknow country"
+        guard let languageCode = Locale.current.languageCode else {
+            return  Locale(identifier: "en").localizedString(forRegionCode: countryCode) ?? "Unknow country"
+        }
+        return Locale(identifier: languageCode).localizedString(forRegionCode: countryCode) ?? "Unknow country"
     }
 
     /// Initializes the country using the current device region code.
