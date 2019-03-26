@@ -133,6 +133,7 @@ import MicroBlink
     case primaryId
     case principalResidence
     case province
+    case rank
     case race
     case raceEthnicity
     case rawData
@@ -420,6 +421,8 @@ import MicroBlink
             return "principalResidence"
         case .province:
             return "province"
+        case .rank:
+            return "rank"
         case .race:
             return "race"
         case .raceEthnicity:

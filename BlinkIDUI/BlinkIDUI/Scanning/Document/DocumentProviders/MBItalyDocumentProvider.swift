@@ -28,3 +28,43 @@ class MBItalyDLDocumentProvider: MBDocumentProvider {
     }
 
 }
+
+class MBItalyIdDocumentProvider: MBDocumentProvider {
+    
+    override var frontRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBDocumentFaceRecognizer())
+    }
+    
+    override var backRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBMrtdRecognizer())
+    }
+    
+    override var type: MBDocumentType {
+        return MBDocumentType.identityCard
+    }
+    
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.id1
+    }
+    
+}
+
+class MBItalyOldIdDocumentProvider: MBDocumentProvider {
+    
+    override var frontRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBMrtdRecognizer())
+    }
+    
+    override var backRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withDocumentDetector: MBDocumentDetectorD1Recognizer())
+    }
+    
+    override var type: MBDocumentType {
+        return MBDocumentType.oldID
+    }
+    
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.id1
+    }
+    
+}
