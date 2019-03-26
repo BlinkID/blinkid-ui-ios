@@ -15,15 +15,12 @@ import MicroBlink
 /// In them are defined extractors that extract the result into an array of `MBField`s
 @objc public enum MBFieldKey: Int, MBLocalizable, Comparable {
     case address
-    case addressChangeDate
     case addressCity
-    case addressHouseNumber
     case addressJurisdictionCode
-    case addressState
     case addressStreet
     case addressStreet2
-    case addressZipCode
     case akaDateOfBirth
+    case akaFamilyName
     case akaFullName
     case akaGivenName
     case akaMiddleName
@@ -38,7 +35,6 @@ import MicroBlink
     case birthData
     case bloodGroup
     case canNumber
-    case cardNumber
     case cardRevisionDate
     case citizenship
     case city
@@ -55,11 +51,9 @@ import MicroBlink
     case dateOfExpiry
     case dateOfIssue
     case dateOfIssueB10
-    case dateOfIssueB10NotSpecified
     case dlClass
     case documentCode
     case documentDiscriminator
-    case documentExpirationDate
     case documentExpirationMonth
     case documentNonexpiring
     case documentNumber
@@ -78,7 +72,6 @@ import MicroBlink
     case firstNameTruncation
     case fullAddress
     case fullName
-    case givenName
     case hairColor
     case hazmatExpirationDate
     case height
@@ -88,7 +81,6 @@ import MicroBlink
     case identityCardNumber
     case immigrantCaseNumber
     case inventoryControlNumber
-    case isUncertain
     case issueTimestamp
     case issuer
     case issuerIdentificationNumber
@@ -112,8 +104,6 @@ import MicroBlink
     case medicalIndicator
     case middleName
     case middleNameTruncation
-    case mrtdVerified
-    case mrzParsed
     case mrzText
     case namePrefix
     case nameSuffix
@@ -137,13 +127,13 @@ import MicroBlink
     case permitIdentifier
     case permitIssueDate
     case personalIdentificationNumber
-    case personalNumber
     case placeOfBirth
     case placeOfIssue
     case placeOfOrigin
     case primaryId
     case principalResidence
     case province
+    case rank
     case race
     case raceEthnicity
     case rawData
@@ -166,21 +156,16 @@ import MicroBlink
     case standardRestrictionCode
     case standardVehicleClassification
     case standardVersionNumber
-    case state
-    case street
     case surnameAtBirth
     case under18
     case under19
     case under21
     case uniqueCustomerId
-    case validFrom
-    case validUntil
     case vehicleCategories
     case veteran
     case weightKilograms
     case weightPounds
     case weightRange
-    case zipCode
 
     /// Localized value of the key
     public var localized: String {
@@ -199,24 +184,19 @@ import MicroBlink
         switch self {
         case .address:
             return "address"
-        case .addressChangeDate:
-            return "addressChangeDate"
         case .addressCity:
             return "addressCity"
-        case .addressHouseNumber:
-            return "addressHouseNumber"
+       
         case .addressJurisdictionCode:
             return "addressJurisdictionCode"
-        case .addressState:
-            return "addressState"
         case .addressStreet:
             return "addressStreet"
         case .addressStreet2:
             return "addressStreet2"
-        case .addressZipCode:
-            return "addressZipCode"
         case .akaDateOfBirth:
             return "akaDateOfBirth"
+        case .akaFamilyName:
+            return "akaFamilyName"
         case .akaFullName:
             return "akaFullName"
         case .akaGivenName:
@@ -243,8 +223,6 @@ import MicroBlink
             return "birthData"
         case .bloodGroup:
             return "bloodGroup"
-        case .cardNumber:
-            return "cardNumber"
         case .canNumber:
             return "canNumber"
         case .cardRevisionDate:
@@ -279,16 +257,12 @@ import MicroBlink
             return "dateOfIssue"
         case .dateOfIssueB10:
             return "dateOfIssueB10"
-        case .dateOfIssueB10NotSpecified:
-            return "dateOfIssueB10NotSpecified"
         case .dlClass:
             return "dlClass"
         case .documentCode:
             return "documentCode"
         case .documentDiscriminator:
             return "documentDiscriminator"
-        case .documentExpirationDate:
-            return "documentExpirationDate"
         case .documentExpirationMonth:
             return "documentExpirationMonth"
         case .documentNonexpiring:
@@ -325,8 +299,6 @@ import MicroBlink
             return "fullAddress"
         case .fullName:
             return "fullName"
-        case .givenName:
-            return "givenName"
         case .hairColor:
             return "hairColor"
         case .hazmatExpirationDate:
@@ -345,8 +317,6 @@ import MicroBlink
             return "immigrantCaseNumber"
         case .inventoryControlNumber:
             return "inventoryControlNumber"
-        case .isUncertain:
-            return "isUncertain"
         case .issueTimestamp:
             return "issueTimestamp"
         case .issuer:
@@ -393,10 +363,6 @@ import MicroBlink
             return "middleName"
         case .middleNameTruncation:
             return "middleNameTruncation"
-        case .mrtdVerified:
-            return "mrtdVerified"
-        case .mrzParsed:
-            return "mrzParsed"
         case .mrzText:
             return "mrzText"
         case .namePrefix:
@@ -443,8 +409,6 @@ import MicroBlink
             return "permitIssueDate"
         case .personalIdentificationNumber:
             return "personalIdentificationNumber"
-        case .personalNumber:
-            return "personalNumber"
         case .placeOfBirth:
             return "placeOfBirth"
         case .placeOfIssue:
@@ -457,6 +421,8 @@ import MicroBlink
             return "principalResidence"
         case .province:
             return "province"
+        case .rank:
+            return "rank"
         case .race:
             return "race"
         case .raceEthnicity:
@@ -501,10 +467,6 @@ import MicroBlink
             return "standardVehicleClassification"
         case .standardVersionNumber:
             return "standardVersionNumber"
-        case .state:
-            return "state"
-        case .street:
-            return "street"
         case .surnameAtBirth:
             return "surnameAtBirth"
         case .under18:
@@ -515,10 +477,6 @@ import MicroBlink
             return "under21"
         case .uniqueCustomerId:
             return "uniqueCustomerId"
-        case .validFrom:
-            return "validFrom"
-        case .validUntil:
-            return "validUntil"
         case .vehicleCategories:
             return "vehicleCategories"
         case .veteran:
@@ -529,8 +487,6 @@ import MicroBlink
             return "weightPounds"
         case .weightRange:
             return "weightRange"
-        case .zipCode:
-            return "zipCode"
         }
     }
 }

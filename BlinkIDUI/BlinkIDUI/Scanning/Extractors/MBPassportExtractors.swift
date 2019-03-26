@@ -14,7 +14,7 @@ extension MBAustriaPassportRecognizer {
         let fields = NSMutableArray(array: result.mrzResult.extractFieldResults())
 
         fields.add(MBField(key: MBFieldKey.lastName, value: result.surname))
-        fields.add(MBField(key: MBFieldKey.givenName, value: result.givenName))
+        fields.add(MBField(key: MBFieldKey.firstName, value: result.givenName))
         fields.add(MBField(key: MBFieldKey.nationality, value: result.nationality))
         fields.add(MBField(key: MBFieldKey.placeOfBirth, value: result.placeOfBirth))
         fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.issuingAuthority))
@@ -33,7 +33,7 @@ extension MBGermanyPassportRecognizer {
         let fields = NSMutableArray(array: result.mrzResult.extractFieldResults())
 
         fields.add(MBField(key: MBFieldKey.lastName, value: result.surname))
-        fields.add(MBField(key: MBFieldKey.givenName, value: result.givenName))
+        fields.add(MBField(key: MBFieldKey.firstName, value: result.givenName))
         fields.add(MBField(key: MBFieldKey.placeOfBirth, value: result.placeOfBirth))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
         fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.authority))
@@ -47,7 +47,7 @@ extension MBSwitzerlandPassportRecognizer {
         let fields = NSMutableArray(array: result.mrzResult.extractFieldResults())
 
         fields.add(MBField(key: MBFieldKey.lastName, value: result.surname))
-        fields.add(MBField(key: MBFieldKey.givenName, value: result.givenName))
+        fields.add(MBField(key: MBFieldKey.firstName, value: result.givenName))
         fields.add(MBField(key: MBFieldKey.placeOfOrigin, value: result.placeOfOrigin))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
         fields.add(MBField(key: MBFieldKey.nonMrzDateOfBirth, value: result.dateOfBirth))

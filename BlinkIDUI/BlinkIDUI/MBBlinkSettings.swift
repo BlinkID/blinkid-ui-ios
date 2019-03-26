@@ -189,6 +189,11 @@ import MicroBlink
     /// - Default: "MyTentera"
     @objc public var militaryIDCardText = Bundle.frameworkBundle.localizedString("militaryIDCard", Bundle.nonLocalizableStringTable)
     
+    /// Text for military identity cards in document tabs view.
+    /// This is specific to Malaysia
+    /// - Default: "MyTentera"
+    @objc public var militaryIDDefaultCardText = Bundle.frameworkBundle.localizedString("militaryIdDefault", Bundle.uiStringTable)
+    
     /// Text for permanent resident identity cards in document tabs view.
     /// This is specific to Malaysia
     /// - Default: "MyPr"

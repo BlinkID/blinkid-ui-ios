@@ -92,26 +92,3 @@ extension MBMrzResult {
         return value.replacingOccurrences(of: Constants.lessThen, with: "")
     }
 }
-
-extension MBLegacyMRTDRecognizerResult {
-    func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray()
-
-        fields.add(MBField(key: MBFieldKey.issuer, value: issuer))
-        fields.add(MBField(key: MBFieldKey.documentNumber, value: documentNumber))
-        fields.add(MBField(key: MBFieldKey.documentCode, value: documentCode))
-        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: dateOfExpiry?.stringDate(withRawDate: rawDateOfExpiry)))
-        fields.add(MBField(key: MBFieldKey.primaryId, value: primaryId))
-        fields.add(MBField(key: MBFieldKey.secondaryId, value: secondaryId))
-        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: dateOfBirth))
-        fields.add(MBField(key: MBFieldKey.nationality, value: nationality))
-        fields.add(MBField(key: MBFieldKey.sex, value: sex))
-        fields.add(MBField(key: MBFieldKey.optional1, value: opt1))
-        fields.add(MBField(key: MBFieldKey.optional2, value: opt2))
-        fields.add(MBField(key: MBFieldKey.mrzText, value: mrzText))
-        fields.add(MBField(key: MBFieldKey.mrzParsed, value: mrzParsed))
-        fields.add(MBField(key: MBFieldKey.mrtdVerified, value: mrzVerified))
-
-        return fields
-    }
-}

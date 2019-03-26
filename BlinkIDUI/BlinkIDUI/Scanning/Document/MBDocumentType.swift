@@ -22,6 +22,8 @@ import UIKit
     case malaysianID
     /// Military Identity Card(MyTentera)
     case militaryID
+    /// Military Identity Card(Military ID)
+    case militaryIDDefault
     /// Permanent Resident Identity Card(MyPr)
     case permanentResidentID
     /// Temporary Resident Identity Card(MyKas)
@@ -54,6 +56,8 @@ import UIKit
             return settings.malaysianIDCardText
         case .militaryID:
             return settings.militaryIDCardText
+        case .militaryIDDefault:
+            return settings.militaryIDDefaultCardText
         case .permanentResidentID:
             return settings.permanentResidentIDCardText
         case .temporaryResidentID:

@@ -93,7 +93,6 @@ extension MBGermanyDlBackRecognizer {
         let fields = NSMutableArray()
         
         fields.add(MBField(key: MBFieldKey.dateOfIssueB10, value: result.dateOfIssueB10))
-        fields.add(MBField(key: MBFieldKey.dateOfIssueB10NotSpecified, value: result.dateOfIssueB10NotSpecified))
         
         return fields
     }
@@ -125,7 +124,7 @@ extension MBItalyDlFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
-        fields.add(MBField(key: MBFieldKey.givenName, value: result.givenName))
+        fields.add(MBField(key: MBFieldKey.firstName, value: result.givenName))
         fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.issuingAuthority))
         fields.add(MBField(key: MBFieldKey.licenseCategories, value: result.licenceCategories))
         fields.add(MBField(key: MBFieldKey.licenseNumber, value: result.licenceNumber))
@@ -163,12 +162,10 @@ extension MBMalaysiaDlFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.identityCardNumber, value: result.identityNumber))
         fields.add(MBField(key: MBFieldKey.nationality, value: result.nationality))
         fields.add(MBField(key: MBFieldKey.dlClass, value: result.dlClass))
-        fields.add(MBField(key: MBFieldKey.validFrom, value: result.validFrom))
-        fields.add(MBField(key: MBFieldKey.validUntil, value: result.validUntil))
+        fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.validFrom))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.validUntil))
         fields.add(MBField(key: MBFieldKey.addressStreet, value: result.street))
-        fields.add(MBField(key: MBFieldKey.addressZipCode, value: result.zipcode))
         fields.add(MBField(key: MBFieldKey.city, value: result.city))
-        fields.add(MBField(key: MBFieldKey.addressState, value: result.ownerState))
         fields.add(MBField(key: MBFieldKey.fullAddress, value: result.fullAddress))
 
         return fields
@@ -199,7 +196,7 @@ extension MBSingaporeDlFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.issueDate))
         fields.add(MBField(key: MBFieldKey.licenseNumber, value: result.licenceNumber))
         fields.add(MBField(key: MBFieldKey.fullName, value: result.name))
-        fields.add(MBField(key: MBFieldKey.validUntil, value: result.validTill))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.validTill))
 
         return fields
     }
@@ -216,8 +213,8 @@ extension MBSpainDlFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.issuingAuthority))
         fields.add(MBField(key: MBFieldKey.licenseCategories, value: result.licenceCategories))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
-        fields.add(MBField(key: MBFieldKey.validFrom, value: result.validFrom))
-        fields.add(MBField(key: MBFieldKey.validUntil, value: result.validUntil))
+        fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.validFrom))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.validUntil))
 
         return fields
     }
@@ -278,21 +275,13 @@ extension MBUnitedArabEmiratesDlFrontRecognizer {
 
 extension MBUsdlRecognizer {
     override func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray(array: result.getAllUsdlValues())
-
-        fields.add(MBField(key: MBFieldKey.isUncertain, value: result.isUncertain()))
-
-        return fields
+        return result.getAllUsdlValues()
     }
 }
 
 extension MBUsdlCombinedRecognizer {
     override func extractFieldResults() -> NSArray {
-        let fields = NSMutableArray(array: result.getAllUsdlValues())
-
-        fields.add(MBField(key: MBFieldKey.isUncertain, value: result.isUncertain()))
-
-        return fields
+        return result.getAllUsdlValues()
     }
 }
 
@@ -320,7 +309,6 @@ extension MBRecognizerResult {
         fields.add(MBField(key: MBFieldKey.eyeColour, value: getField(for: MBUsdlKeys.EyeColor)))
         fields.add(MBField(key: MBFieldKey.addressCity, value: getField(for: MBUsdlKeys.AddressCity)))
         fields.add(MBField(key: MBFieldKey.addressJurisdictionCode, value: getField(for: MBUsdlKeys.AddressJurisdictionCode)))
-        fields.add(MBField(key: MBFieldKey.addressZipCode, value: getField(for: MBUsdlKeys.ResidencePostalCode)))
         fields.add(MBField(key: MBFieldKey.address, value: getField(for: MBUsdlKeys.ResidenceFullAddress)))
         fields.add(MBField(key: MBFieldKey.heightIn, value: getField(for: MBUsdlKeys.HeightIn)))
         fields.add(MBField(key: MBFieldKey.heightCm, value: getField(for: MBUsdlKeys.HeightCm)))
@@ -328,6 +316,7 @@ extension MBRecognizerResult {
         fields.add(MBField(key: MBFieldKey.hairColor, value: getField(for: MBUsdlKeys.HairColor)))
         fields.add(MBField(key: MBFieldKey.nameSuffix, value: getField(for: MBUsdlKeys.NameSuffix)))
         fields.add(MBField(key: MBFieldKey.akaFullName, value: getField(for: MBUsdlKeys.AKAFullName)))
+        fields.add(MBField(key: MBFieldKey.akaFamilyName, value: getField(for: MBUsdlKeys.AKAFamilyName)))
         fields.add(MBField(key: MBFieldKey.akaGivenName, value: getField(for: MBUsdlKeys.AKAGivenName)))
         fields.add(MBField(key: MBFieldKey.akaSuffixName, value: getField(for: MBUsdlKeys.AKASuffixName)))
         fields.add(MBField(key: MBFieldKey.weightRange, value: getField(for: MBUsdlKeys.WeightRange)))
@@ -359,7 +348,7 @@ extension MBRecognizerResult {
         fields.add(MBField(key: MBFieldKey.veteran, value: getField(for: MBUsdlKeys.Veteran)))
         fields.add(MBField(key: MBFieldKey.akaDateOfBirth, value: getField(for: MBUsdlKeys.AKADateOfBirth)))
         fields.add(MBField(key: MBFieldKey.issuerIdentificationNumber, value: getField(for: MBUsdlKeys.IssuerIdentificationNumber)))
-        fields.add(MBField(key: MBFieldKey.documentExpirationDate, value: getField(for: MBUsdlKeys.DocumentExpirationDate)))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: getField(for: MBUsdlKeys.DocumentExpirationDate)))
         fields.add(MBField(key: MBFieldKey.jurisdictionVersionNumber, value: getField(for: MBUsdlKeys.JurisdictionVersionNumber)))
         fields.add(MBField(key: MBFieldKey.jurisdictionVehicleClass, value: getField(for: MBUsdlKeys.JurisdictionVehicleClass)))
         fields.add(MBField(key: MBFieldKey.jurisdictionRestrictionCodes, value: getField(for: MBUsdlKeys.JurisdictionRestrictionCodes)))

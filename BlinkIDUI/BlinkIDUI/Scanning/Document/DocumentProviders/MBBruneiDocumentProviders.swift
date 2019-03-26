@@ -68,3 +68,23 @@ class MBBruneiResidencePermitDocumentProvider: MBDocumentProvider {
     }
     
 }
+
+class MBBruneiMilitaryIdDocumentProvider: MBDocumentProvider {
+    
+    override var frontRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBBruneiMilitaryIdFrontRecognizer())
+    }
+    
+    override var backRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBBruneiMilitaryIdBackRecognizer())
+    }
+    
+    override var type: MBDocumentType {
+        return MBDocumentType.militaryIDDefault
+    }
+    
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.id1
+    }
+    
+}

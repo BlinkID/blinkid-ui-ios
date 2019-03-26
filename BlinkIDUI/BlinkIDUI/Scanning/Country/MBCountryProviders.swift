@@ -99,6 +99,7 @@ class MBBruneiCountryProvider: MBCountryProvider {
     override var documentProviders: [MBDocumentType: MBDocumentProvider] {
         var documentProviders = super.documentProviders
         documentProviders[.temporaryResidencePermit] = MBBruneiTemporaryResidencePermitDocumentProvider()
+        documentProviders[.militaryIDDefault] = MBBruneiMilitaryIdDocumentProvider()
         return documentProviders
     }
     
@@ -235,7 +236,13 @@ class MBItalyCountryProvider: MBCountryProvider {
     }
     
     override var identityCardProvider: MBDocumentProvider? {
-        return MBIDWithMrtdDetectorD1DocumentProvider(isFullySupported: false)
+        return MBItalyIdDocumentProvider()
+    }
+    
+    override var documentProviders: [MBDocumentType: MBDocumentProvider] {
+        var documentProviders = super.documentProviders
+        documentProviders[MBDocumentType.oldID] = MBItalyOldIdDocumentProvider()
+        return documentProviders
     }
 }
 
