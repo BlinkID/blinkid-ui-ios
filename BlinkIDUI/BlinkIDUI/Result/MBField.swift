@@ -43,6 +43,7 @@ import MicroBlink
     case driverRestrictions
     case employer
     case employerAddress
+    case endorsements
     case expiryDatePermanent
     case eyeColour
     case facultyAddress
@@ -96,6 +97,7 @@ import MicroBlink
     case specialRemarks
     case surnameAtBirth
     case vehicleCategories
+    case vehicleClass
 
     /// Localized value of the key
     public var localized: String {
@@ -170,6 +172,8 @@ import MicroBlink
             return "employer"
         case .employerAddress:
             return "employerAddress"
+        case .endorsements:
+            return "endorsements"
         case .expiryDatePermanent:
             return "expiryDatePermanent"
         case .eyeColour:
@@ -276,6 +280,8 @@ import MicroBlink
             return "surnameAtBirth"
         case .vehicleCategories:
             return "vehicleCategories"
+        case .vehicleClass:
+            return "vehicleClass"
         }
     }
 }

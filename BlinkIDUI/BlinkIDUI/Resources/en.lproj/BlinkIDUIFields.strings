@@ -25,6 +25,8 @@
 "authority" = "Authority";
 "address" = "Address";
 "employerAddress" = "Employer address";
+"endorsements" = "Endorsements";
+"vehicleClass" = "Vehicle class";
 "placeOfBirth" = "Place of birth";
 "birthData" = "Birth data";
 "placeOfOrigin" = "Place of origin";
