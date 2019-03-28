@@ -21,6 +21,7 @@ import MicroBlink
     case applicationReceiptNumber
     case armyNumber
     case authority
+    case barcodeData
     case birthData
     case bloodGroup
     case canNumber
@@ -128,6 +129,8 @@ import MicroBlink
             return "armyNumber"
         case .authority:
             return "authority"
+        case .barcodeData:
+            return "barcodeData"
         case .birthData:
             return "birthData"
         case .bloodGroup:
