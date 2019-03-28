@@ -289,6 +289,10 @@ extension MBUsdlRecognizer {
         fields.add(MBField(key: MBFieldKey.driverRestrictions, value: result.restrictions))
         fields.add(MBField(key: MBFieldKey.endorsements, value: result.endorsements))
         fields.add(MBField(key: MBFieldKey.vehicleClass, value: result.vehicleClass))
+        if let data = result.data() {
+            let dataString = String(data: data, encoding: String.Encoding.utf8)
+            fields.add(MBField(key: MBFieldKey.rawData, value: dataString))
+        }
         
         return fields
     }
@@ -310,6 +314,10 @@ extension MBUsdlCombinedRecognizer {
         fields.add(MBField(key: MBFieldKey.driverRestrictions, value: result.restrictions))
         fields.add(MBField(key: MBFieldKey.endorsements, value: result.endorsements))
         fields.add(MBField(key: MBFieldKey.vehicleClass, value: result.vehicleClass))
+        if let data = result.data() {
+            let dataString = String(data: data, encoding: String.Encoding.utf8)
+            fields.add(MBField(key: MBFieldKey.rawData, value: dataString))
+        }
         
         return fields
     }

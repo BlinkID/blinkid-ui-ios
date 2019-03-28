@@ -28,6 +28,7 @@
 "endorsements" = "Endorsements";
 "vehicleClass" = "Vehicle class";
 "placeOfBirth" = "Place of birth";
+"barcodeData" = "Barcode data";
 "birthData" = "Birth data";
 "placeOfOrigin" = "Place of origin";
 "dateOfIssue" = "Date of issue";
