@@ -95,6 +95,7 @@
 		BEAE7AC52195D49C00D0E70A /* MBDocumentChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE7AC32195D49C00D0E70A /* MBDocumentChooserViewController.swift */; };
 		BEAE7AC82199762B00D0E70A /* MBBlinkIDUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE7AC72199762B00D0E70A /* MBBlinkIDUI.swift */; };
 		BEAE7ACA21998D8600D0E70A /* MBBlinkSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE7AC921998D8600D0E70A /* MBBlinkSettings.swift */; };
+		BEC837F8224B61FE001F4B16 /* MBValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC837F7224B61FE001F4B16 /* MBValue.swift */; };
 		BED6AC9221AEA06500AEC812 /* MBDocumentChooserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6AC9121AEA06500AEC812 /* MBDocumentChooserSettings.swift */; };
 		BED6AC9421AEA0A000AEC812 /* MBTimeoutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6AC9321AEA0A000AEC812 /* MBTimeoutHandler.swift */; };
 		BED6AC9621AEECAD00AEC812 /* MBInvalidDocumentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6AC9521AEECAD00AEC812 /* MBInvalidDocumentHandler.swift */; };
@@ -200,6 +201,7 @@
 		BEAE7AC32195D49C00D0E70A /* MBDocumentChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBDocumentChooserViewController.swift; sourceTree = "<group>"; };
 		BEAE7AC72199762B00D0E70A /* MBBlinkIDUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBBlinkIDUI.swift; sourceTree = "<group>"; };
 		BEAE7AC921998D8600D0E70A /* MBBlinkSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBBlinkSettings.swift; sourceTree = "<group>"; };
+		BEC837F7224B61FE001F4B16 /* MBValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBValue.swift; sourceTree = "<group>"; };
 		BED6AC9121AEA06500AEC812 /* MBDocumentChooserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBDocumentChooserSettings.swift; sourceTree = "<group>"; };
 		BED6AC9321AEA0A000AEC812 /* MBTimeoutHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTimeoutHandler.swift; sourceTree = "<group>"; };
 		BED6AC9521AEECAD00AEC812 /* MBInvalidDocumentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBInvalidDocumentHandler.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 			children = (
 				BE6480FE21903B7500D0C24F /* MBField.swift */,
 				BE64810121903C3900D0C24F /* MBRecognitionResult.swift */,
+				BEC837F7224B61FE001F4B16 /* MBValue.swift */,
 			);
 			path = Result;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				BE26BAD722141C9400469894 /* MBResultCombiner.swift in Sources */,
 				BE495B6B21AC1CBD007B16D1 /* MBMexicoDocumentProviders.swift in Sources */,
 				BE6480D8218C83C600D0C24F /* MBGermanyDocumentProviders.swift in Sources */,
+				BEC837F8224B61FE001F4B16 /* MBValue.swift in Sources */,
 				BEAE7ACA21998D8600D0E70A /* MBBlinkSettings.swift in Sources */,
 				BE21647F219094AF00E21734 /* MBCountry.swift in Sources */,
 				BE6480CA218C83C600D0C24F /* MBColombiaDocumentProviders.swift in Sources */,
