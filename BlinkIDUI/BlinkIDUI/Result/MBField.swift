@@ -295,26 +295,29 @@ public class MBField: NSObject {
     @objc public let key: MBFieldKey
     
     /// Value or the result represented as String
-    @objc public let value: String
+    @objc public let value: MBValue?
 
     init(key: MBFieldKey, value: String?) {
         self.key = key
-        self.value = value ?? ""
+        if let value = value {
+            self.value = MBStringValue(value: value)
+        } else {
+            self.value = nil
+        }
     }
 
     init(key: MBFieldKey, value: MBDateResult?) {
         self.key = key
-        self.value = value?.stringDate ?? ""
-    }
-
-    init(key: MBFieldKey, value: Date?, rawDate: String? = nil) {
-        self.key = key
-        self.value = value?.customFormatValue() ?? rawDate ?? ""
+        if let value = value {
+            self.value = MBDateValue(value: value)
+        } else {
+            self.value = nil
+        }
     }
 
     init(key: MBFieldKey, value: Bool) {
         self.key = key
-        self.value = value ? "true" : "false"
+        self.value = MBBoolValue(value: value)
     }
 
     public override var description: String {

@@ -17,9 +17,12 @@ protocol MBFieldResult {
 extension MBFieldResult {
     var resultTitle: String {
         guard let results = extractFieldResults() as? [MBField] else { return "" }
-        let firstName = results.first(where: { $0.key == .firstName })?.value ?? ""
-        let lastName = results.first(where: { $0.key == .lastName })?.value ?? ""
-        return "\(firstName) \(lastName)"
+        if let firstName = results.first(where: { $0.key == .fullName })?.value as? MBStringValue {
+            return firstName.value
+        }
+        let firstName = results.first(where: { $0.key == .firstName })?.value as? MBStringValue
+        let lastName = results.first(where: { $0.key == .lastName })?.value as? MBStringValue
+        return "\(firstName?.value ?? "") \(lastName?.value ?? "")"
     }
 }
 
