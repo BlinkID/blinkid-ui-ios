@@ -47,7 +47,9 @@ class MBColombiaIDDocumentProvider: MBDocumentProvider {
         return DocumentAspectRatio.id1
     }
     
-    override var resultValidator: MBResultValidator {
-        return MBResultValidator(withMatchingKeys: [(MBFieldKey.documentNumber, MBFieldKey.documentNumber)], charactersToSkip: ["."])
+    override var resultValidator: MBValidatorProtocol {
+        return MBSingleSideValidatorBuilder()
+            .addMatchingPair(frontSideKey: MBFieldKey.documentNumber, backSideKey: MBFieldKey.documentNumber, charactersToSkip: ["."])
+            .build()
     }
 }

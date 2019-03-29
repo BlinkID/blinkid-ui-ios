@@ -27,9 +27,12 @@ class MBMoroccoIDDocumentProvider: MBDocumentProvider {
         return DocumentAspectRatio.id1
     }
 
-    override var resultValidator: MBResultValidator {
-        return MBResultValidator(withMatchingKeys: [(MBFieldKey.documentNumber, MBFieldKey.documentNumber),
-             (MBFieldKey.dateOfExpiry, MBFieldKey.dateOfExpiry),
-             (MBFieldKey.sex, MBFieldKey.sex)])
+    override var resultValidator: MBValidatorProtocol {
+        return MBSingleSideValidatorBuilder()
+            .addMatchingPair(frontSideKey: MBFieldKey.documentNumber, backSideKey:
+                MBFieldKey.documentNumber)
+            .addMatchingPair(frontSideKey: MBFieldKey.dateOfExpiry, backSideKey: MBFieldKey.dateOfExpiry)
+            .addMatchingPair(frontSideKey: MBFieldKey.sex, backSideKey: MBFieldKey.sex)
+            .build()
     }
 }
