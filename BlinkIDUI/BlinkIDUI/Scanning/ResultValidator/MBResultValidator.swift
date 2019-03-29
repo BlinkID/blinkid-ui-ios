@@ -40,16 +40,15 @@ class MBResultValidator {
         if let frontResults = results.first?.extractFieldResults() as? [MBField],
             let backResults = results.last?.extractFieldResults() as? [MBField] {
             for (key1, key2) in _matchingKeys {
-                if let value1 = frontResults.first(where: { $0.key == key1 }),
-                    let value2 = backResults.first(where: { $0.key == key2 }) {
-                    if _calcDistance(value1.value, value2.value) > 1 {
+                if let value1 = frontResults.first(where: { $0.key == key1 })?.value,
+                    let value2 = backResults.first(where: { $0.key == key2 })?.value {
+                    if _calcDistance(value1.description, value2.description) > 1 {
                         isResultValid = false
                         return
                     }
                 }
             }
         }
-
     }
 
     func addMatchingKeys(_ key1: MBFieldKey, _ key2: MBFieldKey) {
@@ -62,7 +61,6 @@ class MBResultValidator {
         // this method uses dynamic programming approach, similar to calculating
         // the Levenshtein distance between two strings with different costs for addition/removal,
         // substitution and replacement
-
         var a = Array("*\(originalString.lowercased())")
         var b = Array("*\(decoratedString.lowercased())")
 
