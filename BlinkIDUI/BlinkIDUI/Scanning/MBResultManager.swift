@@ -16,16 +16,15 @@ class MBResultManager {
     private var _signatureImage: UIImage?
     private var _firstSideDocumentImage: UIImage?
     private var _secondSideDocumentImage: UIImage?
-    private let _resultValidator: MBResultValidator
+    private let _resultValidator: MBValidatorProtocol
 
-    init(withValidator validator: MBResultValidator) {
+    init(withValidator validator: MBValidatorProtocol) {
         _resultValidator = validator
     }
 
     public var isValid: Bool {
         guard _shouldValidate else { return true }
-        _resultValidator.match(results: _resultEntries)
-        return _resultValidator.isResultValid
+        return _resultValidator.match(results: _resultEntries)
     }
 
     public func extractResult(fromRecognizer recognizerWrapper: MBRecognizerWrapper, state: MBScanState) -> MBRecognitionResult? {

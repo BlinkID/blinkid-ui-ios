@@ -36,11 +36,7 @@ class MBScanningProvider: NSObject {
 
     private var _scanState: MBScanState = .notStarted
 
-    private var _scannedFrontSide: Bool = false
-
     private var _recognizerCollection: MBRecognizerCollection!
-
-    private var _resultValidator: MBResultValidator!
 
     private var _shouldScanBothSides: Bool {
         guard let documentProvider = self.documentProvider else {
@@ -104,7 +100,6 @@ class MBScanningProvider: NSObject {
 
     func updated(scanningProviderFor newDocumentProvider: MBDocumentProvider) {
         documentProvider = newDocumentProvider
-        _scannedFrontSide = false
         _setupScanningSettings()
     }
 }

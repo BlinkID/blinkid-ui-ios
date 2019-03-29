@@ -47,8 +47,10 @@ class MBUAEIDDocumentProvider: MBDocumentProvider {
         return DocumentAspectRatio.id1
     }
 
-    override var resultValidator: MBResultValidator {
-        return MBResultValidator(withMatchingKeys: [(MBFieldKey.identityCardNumber, MBFieldKey.optional1)], charactersToSkip: ["-"])
+    override var resultValidator: MBValidatorProtocol {
+        return MBSingleSideValidatorBuilder()
+            .addMatchingPair(frontSideKey: MBFieldKey.identityCardNumber, backSideKey: MBFieldKey.optional1, charactersToSkip: ["-"])
+            .build()
     }
 }
 
