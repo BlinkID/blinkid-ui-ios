@@ -47,8 +47,10 @@ class MBSwitzerlandIDDocumentProvider: MBDocumentProvider {
         return DocumentAspectRatio.id1
     }
 
-    override var resultValidator: MBResultValidator {
-        return MBResultValidator(withMatchingKeys: [(MBFieldKey.dateOfBirth, MBFieldKey.dateOfBirth)])
+    override var resultValidator: MBValidatorProtocol {
+        return MBSingleSideValidatorBuilder()
+            .addMatchingPair(frontSideKey: MBFieldKey.dateOfBirth, backSideKey: MBFieldKey.dateOfBirth)
+            .build()
     }
 }
 
