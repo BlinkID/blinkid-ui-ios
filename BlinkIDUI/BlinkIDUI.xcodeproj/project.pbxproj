@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE0566D721A2F279005658FF /* MBResultValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0566D621A2F279005658FF /* MBResultValidator.swift */; };
 		BE0566D721A2F279005658FF /* MBMatchingPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0566D621A2F279005658FF /* MBMatchingPair.swift */; };
 		BE0F362521A7E553005F0BEE /* MBDocumentImageRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0F362421A7E553005F0BEE /* MBDocumentImageRecognizer.swift */; };
 		BE2164722190849B00E21734 /* MBBlinkIdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2164642190849B00E21734 /* MBBlinkIdViewController.swift */; };
@@ -101,7 +100,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BE0566D621A2F279005658FF /* MBResultValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBResultValidator.swift; sourceTree = "<group>"; };
 		BE0566D621A2F279005658FF /* MBMatchingPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBMatchingPair.swift; sourceTree = "<group>"; };
 		BE0F362421A7E553005F0BEE /* MBDocumentImageRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBDocumentImageRecognizer.swift; sourceTree = "<group>"; };
 		BE2164642190849B00E21734 /* MBBlinkIdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MBBlinkIdViewController.swift; path = BlinkIDUI/Modules/Overlay/MBBlinkIdViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -217,7 +215,6 @@
 		BE0566D521A2F246005658FF /* ResultValidator */ = {
 			isa = PBXGroup;
 			children = (
-				BE0566D621A2F279005658FF /* MBResultValidator.swift */,
 				BE746BE1224E07D80098A67E /* MBValidatorProtocol.swift */,
 				BE0566D621A2F279005658FF /* MBMatchingPair.swift */,
 				BE746BE3224E07FD0098A67E /* MBCombinedValidator.swift */,
@@ -632,7 +629,6 @@
 				BE6480CA218C83C600D0C24F /* MBColombiaDocumentProviders.swift in Sources */,
 				BEE34665218A6006004C0397 /* MBRecognizerExtractor.swift in Sources */,
 				BE6480D9218C83C600D0C24F /* MBNewZealandDocumentProviders.swift in Sources */,
-				BE0566D721A2F279005658FF /* MBResultValidator.swift in Sources */,
 				BE0566D721A2F279005658FF /* MBMatchingPair.swift in Sources */,
 				BE6480C8218C83C600D0C24F /* MBCyprusDocumentProviders.swift in Sources */,
 				BE6480D6218C83C600D0C24F /* MBItalyDocumentProvider.swift in Sources */,
