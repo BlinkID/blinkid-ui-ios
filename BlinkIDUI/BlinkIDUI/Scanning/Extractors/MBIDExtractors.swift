@@ -314,7 +314,7 @@ extension MBGermanyIdBackRecognizer {
         let fields = NSMutableArray(array: result.mrzResult.extractFieldResults())
 
         fields.add(MBField(key: MBFieldKey.authority, value: result.authority))
-        fields.add(MBField(key: MBFieldKey.addressCity, value: result.addressCity))
+        fields.add(MBField(key: MBFieldKey.city, value: result.addressCity))
         fields.add(MBField(key: MBFieldKey.addressStreet, value: result.addressStreet))
         fields.add(MBField(key: MBFieldKey.fullAddress, value: result.fullAddress))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))

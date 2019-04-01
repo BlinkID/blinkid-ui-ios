@@ -14,7 +14,6 @@ import MicroBlink
 /// BlinkIDUI. For a specific country you can see the results by checking out the '*Extractor.swift' files.
 /// In them are defined extractors that extract the result into an array of `MBField`s
 @objc public enum MBFieldKey: Int, MBLocalizable, Comparable {
-    case addressCity
     case addressStreet
     case alienNumber
     case applicationReceiptNumber
@@ -113,8 +112,6 @@ import MicroBlink
     
     private var _key: String {
         switch self {
-        case .addressCity:
-            return "addressCity"
         case .addressStreet:
             return "addressStreet"
         case .alienNumber:
