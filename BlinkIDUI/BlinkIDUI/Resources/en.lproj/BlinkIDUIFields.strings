@@ -23,7 +23,6 @@
 "issuingAgency" = "Issuing agency";
 "placeOfIssue" = "Place of issue";
 "authority" = "Authority";
-"address" = "Address";
 "employerAddress" = "Employer address";
 "endorsements" = "Endorsements";
 "vehicleClass" = "Vehicle class";
