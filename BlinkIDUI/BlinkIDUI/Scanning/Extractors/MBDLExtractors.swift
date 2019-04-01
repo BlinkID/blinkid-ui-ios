@@ -16,7 +16,7 @@ extension MBAustraliaDlFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.fullName, value: result.fullName))
         fields.add(MBField(key: MBFieldKey.licenseType, value: result.licenceType))
         fields.add(MBField(key: MBFieldKey.licenseNumber, value: result.licenceNumber))
-        fields.add(MBField(key: MBFieldKey.address, value: result.address))
+        fields.add(MBField(key: MBFieldKey.fullAddress, value: result.address))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.licenceExpiry))
 
@@ -30,7 +30,7 @@ extension MBAustraliaDlBackRecognizer {
 
         fields.add(MBField(key: MBFieldKey.lastName, value: result.lastName))
         fields.add(MBField(key: MBFieldKey.licenseNumber, value: result.licenceNumber))
-        fields.add(MBField(key: MBFieldKey.address, value: result.address))
+        fields.add(MBField(key: MBFieldKey.fullAddress, value: result.address))
         fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.licenceExpiry))
 
         return fields
@@ -82,7 +82,7 @@ extension MBEudlRecognizer {
         fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.issuingAuthority))
         fields.add(MBField(key: MBFieldKey.personalIdentificationNumber, value: result.personalNumber))
         fields.add(MBField(key: MBFieldKey.driverNumber, value: result.driverNumber))
-        fields.add(MBField(key: MBFieldKey.address, value: result.address))
+        fields.add(MBField(key: MBFieldKey.fullAddress, value: result.address))
 
         return fields
     }
@@ -120,7 +120,7 @@ extension MBItalyDlFrontRecognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray()
 
-        fields.add(MBField(key: MBFieldKey.address, value: result.address))
+        fields.add(MBField(key: MBFieldKey.fullAddress, value: result.address))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
@@ -139,7 +139,7 @@ extension MBIrelandDlFrontRecognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray()
 
-        fields.add(MBField(key: MBFieldKey.address, value: result.address))
+        fields.add(MBField(key: MBFieldKey.fullAddress, value: result.address))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
@@ -181,7 +181,7 @@ extension MBNewZealandDlFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
         fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
-        fields.add(MBField(key: MBFieldKey.address, value: result.address))
+        fields.add(MBField(key: MBFieldKey.fullAddress, value: result.address))
         fields.add(MBField(key: MBFieldKey.licenseNumber, value: result.licenseNumber))
 
         return fields
@@ -280,7 +280,7 @@ extension MBUsdlRecognizer {
         fields.add(MBField(key: MBFieldKey.firstName, value: result.firstName))
         fields.add(MBField(key: MBFieldKey.lastName, value: result.lastName))
         fields.add(MBField(key: MBFieldKey.fullName, value: result.fullName))
-        fields.add(MBField(key: MBFieldKey.address, value: result.address))
+        fields.add(MBField(key: MBFieldKey.fullAddress, value: result.address))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
         fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
@@ -305,7 +305,7 @@ extension MBUsdlCombinedRecognizer {
         fields.add(MBField(key: MBFieldKey.firstName, value: result.firstName))
         fields.add(MBField(key: MBFieldKey.lastName, value: result.lastName))
         fields.add(MBField(key: MBFieldKey.fullName, value: result.fullName))
-        fields.add(MBField(key: MBFieldKey.address, value: result.address))
+        fields.add(MBField(key: MBFieldKey.fullAddress, value: result.address))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
         fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
