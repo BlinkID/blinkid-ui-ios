@@ -291,7 +291,7 @@ extension MBUsdlRecognizer {
         fields.add(MBField(key: MBFieldKey.vehicleClass, value: result.vehicleClass))
         if let data = result.data() {
             let dataString = String(data: data, encoding: String.Encoding.utf8)
-            fields.add(MBField(key: MBFieldKey.rawData, value: dataString))
+            fields.add(MBField(key: MBFieldKey.barcodeData, value: dataString))
         }
 
         return fields
@@ -316,7 +316,7 @@ extension MBUsdlCombinedRecognizer {
         fields.add(MBField(key: MBFieldKey.vehicleClass, value: result.vehicleClass))
         if let data = result.data() {
             let dataString = String(data: data, encoding: String.Encoding.utf8)
-            fields.add(MBField(key: MBFieldKey.rawData, value: dataString))
+            fields.add(MBField(key: MBFieldKey.barcodeData, value: dataString))
         }
 
         return fields
