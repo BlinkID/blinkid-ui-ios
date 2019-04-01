@@ -601,7 +601,7 @@ extension MBPdf417Recognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray()
         
-        fields.add(MBField(key: MBFieldKey.rawData, value: result.stringData))
+        fields.add(MBField(key: MBFieldKey.barcodeData, value: result.stringData))
         
         return fields
     }

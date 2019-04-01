@@ -87,7 +87,6 @@ import MicroBlink
     case province
     case rank
     case race
-    case rawData
     case religion
     case residenceFullAddress
     case residentialStatus
@@ -261,8 +260,6 @@ import MicroBlink
             return "rank"
         case .race:
             return "race"
-        case .rawData:
-            return "rawData"
         case .religion:
             return "religion"
         case .residenceFullAddress:
