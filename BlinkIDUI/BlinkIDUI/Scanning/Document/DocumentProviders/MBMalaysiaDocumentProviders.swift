@@ -47,9 +47,11 @@ class MBMalaysiaIDDocumentProvider: MBDocumentProvider {
         return DocumentAspectRatio.id1
     }
 
-    override var resultValidator: MBResultValidator {
-        return MBResultValidator(withMatchingKeys: [(MBFieldKey.dateOfBirth, MBFieldKey.dateOfBirth),
-             (MBFieldKey.nricNumber, MBFieldKey.nricNumber)])
+    override var resultValidator: MBValidatorProtocol {
+        return MBSingleSideValidatorBuilder()
+            .addMatchingPair(frontSideKey: MBFieldKey.dateOfBirth, backSideKey: MBFieldKey.dateOfBirth)
+            .addMatchingPair(frontSideKey: MBFieldKey.nricNumber, backSideKey: MBFieldKey.nricNumber)
+            .build()
     }
 }
 
