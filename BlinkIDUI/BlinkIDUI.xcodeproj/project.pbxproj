@@ -542,6 +542,7 @@
 					};
 					BEE3464F218A5F4C004C0397 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -909,8 +910,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.blinkid-ui.BlinkIDUI";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+<<<<<<< HEAD
 				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 4.2;
+=======
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+>>>>>>> Swift 5.0
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 arm64e armv7 armv7s i386 x86_64";
 			};
@@ -937,8 +943,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.blinkid-ui.BlinkIDUI";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+<<<<<<< HEAD
 				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 4.2;
+=======
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+>>>>>>> Swift 5.0
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 arm64e armv7 armv7s i386 x86_64";
 			};
