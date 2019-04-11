@@ -14,88 +14,84 @@ import MicroBlink
 /// BlinkIDUI. For a specific country you can see the results by checking out the '*Extractor.swift' files.
 /// In them are defined extractors that extract the result into an array of `MBField`s
 @objc public enum MBFieldKey: Int, MBLocalizable, Comparable {
-    case addressStreet
+    case firstName
+    case secondaryId
+    case lastName
+    case primaryId
+    case familyName
+    case fullName
+    case surnameAtBirth
+    case parentsGivenName
+    case dateOfBirth
+    case birthData
+    case countryOfBirth
+    case placeOfBirth
+    case placeOfOrigin
+    case dateOfIssue
+    case dateOfIssueB10
+    case dateOfExpiry
+    case expiryDatePermanent
     case alienNumber
     case applicationReceiptNumber
     case armyNumber
-    case authority
-    case barcodeData
-    case birthData
-    case bloodGroup
     case canNumber
-    case citizenship
-    case city
     case civilIdNumber
     case civilStatusNumber
     case cnp
-    case country
-    case countryOfBirth
     case curp
-    case dateOfBirth
-    case dateOfExpiry
-    case dateOfIssue
-    case dateOfIssueB10
-    case dlClass
-    case documentCode
     case documentNumber
     case driverNumber
-    case driverRestrictions
-    case employer
-    case employerAddress
-    case endorsements
-    case expiryDatePermanent
-    case eyeColour
-    case facultyAddress
-    case familyName
-    case firstName
-    case fullAddress
-    case fullName
-    case height
-    case idSeries
-    case identityCardNumber
     case immigrantCaseNumber
+    case identityCardNumber
+    case licenseNumber
+    case nationalNumber
+    case nricNumber
+    case oldNric
+    case personalIdentificationNumber
+    case passportNumber
+    case addressStreet
+    case city
+    case province
+    case country
+    case fullAddress
+    case principalResidence
+    case residenceFullAddress
+    case facultyAddress
+    case residentialStatus
+    case nationality
+    case citizenship
     case issuer
+    case authority
     case issuingAgency
     case issuingAuthority
-    case lastName
-    case licenseCategories
-    case licenseNumber
-    case licenseType
-    case maritalStatus
-    case mrzText
-    case nationalNumber
-    case nationality
-    case nonMrzDateOfBirth
-    case nonMrzDateOfExpiry
-    case nonMrzNationality
-    case nonMrzSex
-    case nricNumber
-    case occupation
-    case oldNric
-    case optional1
-    case optional2
-    case parentsGivenName
-    case passportNumber
-    case personalIdentificationNumber
-    case placeOfBirth
     case placeOfIssue
-    case placeOfOrigin
-    case primaryId
-    case principalResidence
-    case province
-    case rank
+    case sex
+    case bloodGroup
+    case eyeColour
+    case height
+    case maritalStatus
     case race
     case religion
-    case residenceFullAddress
-    case residentialStatus
-    case secondaryId
+    case documentCode
+    case licenseCategories
+    case idSeries
+    case dlClass
+    case vehicleClass
+    case endorsements
+    case driverRestrictions
+    case licenseType
+    case vehicleCategories
+    case employer
+    case employerAddress
+    case occupation
+    case barcodeData
+    case mrzText
+    case optional1
+    case optional2
+    case rank
     case sector
     case serialNo
-    case sex
     case specialRemarks
-    case surnameAtBirth
-    case vehicleCategories
-    case vehicleClass
 
     /// Localized value of the key
     public var localized: String {
@@ -214,14 +210,6 @@ import MicroBlink
             return "nationalNumber"
         case .nationality:
             return "nationality"
-        case .nonMrzDateOfBirth:
-            return "nonMrzDateOfBirth"
-        case .nonMrzDateOfExpiry:
-            return "nonMrzDateOfExpiry"
-        case .nonMrzNationality:
-            return "nonMrzNationality"
-        case .nonMrzSex:
-            return "nonMrzSex"
         case .nricNumber:
             return "nricNumber"
         case .occupation:
