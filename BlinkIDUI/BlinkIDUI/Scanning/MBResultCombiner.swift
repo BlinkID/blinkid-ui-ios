@@ -19,16 +19,12 @@ class MBResultCombiner {
             .lastName,
         // SEX
             .sex,
-            .nonMrzSex,
         // BIRTH DATE
             .dateOfBirth,
-            .nonMrzDateOfBirth,
         // NATIONALIRY
             .nationality,
-            .nonMrzNationality,
         // EXPIRY DATE
             .dateOfExpiry,
-            .nonMrzDateOfExpiry,
         // DOCUMENT NUMBER
             .documentNumber,
         // NRIC
@@ -92,19 +88,19 @@ class MBResultCombiner {
     }
     
     private static func _checkIfSex(key: MBFieldKey) -> Bool {
-        return key == .sex || key == .nonMrzSex
+        return key == .sex
     }
     
     private static func _checkIfDateOfBirth(key: MBFieldKey) -> Bool {
-        return key == .nonMrzDateOfBirth || key == .dateOfBirth
+        return key == .dateOfBirth
     }
     
     private static func _checkIfNationality(key: MBFieldKey) -> Bool {
-        return key == .nonMrzNationality || key == .nationality
+        return key == .nationality
     }
     
     private static func _checkIfDateOfExpiry(key: MBFieldKey) -> Bool {
-        return key == .nonMrzDateOfExpiry || key == .dateOfExpiry
+        return key == .dateOfExpiry
     }
     
     private static func _checkIfNric(key: MBFieldKey) -> Bool {
