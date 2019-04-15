@@ -139,10 +139,6 @@
 "country" = "País";
 "idSeries" = "Serie de identificación";
 "licenseType" = "Tipo de licencia";
-"nonMrzDateOfBirth" = "Fecha de nacimiento sin MRZ";
-"nonMrzDateOfExpiry" = "Fecha de vencimiento sin MRZ";
-"nonMrzNationality" = "Nacionalidad sin MRZ";
-"nonMrzSex" = "Sexo sin MRZ";
 "oldNric" = "Número del documento nacional de identidad antiguo";
 "personalIdentificationNumber" = "Número de identificación personal";
 "rawData" = "Datos de código de barras";
