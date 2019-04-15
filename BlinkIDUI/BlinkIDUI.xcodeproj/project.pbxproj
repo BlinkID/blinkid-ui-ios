@@ -22,6 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A2CB561F22647FC5000BB95B /* MBAustraliaDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CB561E22647FC5000BB95B /* MBAustraliaDocumentProviders.swift */; };
 		BE0566D721A2F279005658FF /* MBMatchingPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0566D621A2F279005658FF /* MBMatchingPair.swift */; };
 		BE0F362521A7E553005F0BEE /* MBDocumentImageRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0F362421A7E553005F0BEE /* MBDocumentImageRecognizer.swift */; };
 		BE2164722190849B00E21734 /* MBBlinkIdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2164642190849B00E21734 /* MBBlinkIdViewController.swift */; };
@@ -125,6 +126,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A2CB561E22647FC5000BB95B /* MBAustraliaDocumentProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBAustraliaDocumentProviders.swift; sourceTree = "<group>"; };
 		BE0566D621A2F279005658FF /* MBMatchingPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBMatchingPair.swift; sourceTree = "<group>"; };
 		BE0F362421A7E553005F0BEE /* MBDocumentImageRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBDocumentImageRecognizer.swift; sourceTree = "<group>"; };
 		BE2164642190849B00E21734 /* MBBlinkIdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MBBlinkIdViewController.swift; path = BlinkIDUI/Modules/Overlay/MBBlinkIdViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -392,6 +394,7 @@
 		BE647F04218C686000D0C24F /* DocumentProviders */ = {
 			isa = PBXGroup;
 			children = (
+				A2CB561E22647FC5000BB95B /* MBAustraliaDocumentProviders.swift */,
 				BE6480C7218C83C600D0C24F /* MBAustriaDocumentProviders.swift */,
 				BEDCA24221CA8E11003EDAD9 /* MBBruneiDocumentProviders.swift */,
 				BE6480C3218C83C600D0C24F /* MBCanadaDocumentProviders.swift */,
@@ -636,6 +639,7 @@
 				BE746BE4224E07FD0098A67E /* MBCombinedValidator.swift in Sources */,
 				BE2164762190849B00E21734 /* MBShadowView.swift in Sources */,
 				BE2165B52193078300E21734 /* MBViewfinderView.swift in Sources */,
+				A2CB561F22647FC5000BB95B /* MBAustraliaDocumentProviders.swift in Sources */,
 				BE2164782190849B00E21734 /* MBCountryTableViewController.swift in Sources */,
 				BE6480DE218C83C600D0C24F /* MBIrelandDocumentProviders.swift in Sources */,
 				BE21647D2190855A00E21734 /* MBResultManager.swift in Sources */,

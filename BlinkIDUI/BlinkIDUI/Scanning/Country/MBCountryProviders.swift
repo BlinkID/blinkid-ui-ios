@@ -72,6 +72,11 @@ class MBDefaultCountryProvider: MBCountryProvider {
 }
 
 class MBAustraliaCountryProvider: MBCountryProvider {
+    override var documentProviders: [MBDocumentType: MBDocumentProvider] {
+        var documentProviders = super.documentProviders
+        documentProviders[.victoriaDriverLicense] = MBAustraliaDLDocumentProvider()
+        return documentProviders
+    }
     override var identityCardProvider: MBDocumentProvider? {
         return nil
     }
