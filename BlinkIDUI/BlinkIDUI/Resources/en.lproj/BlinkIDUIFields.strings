@@ -71,10 +71,6 @@
 "country" = "Country";
 "idSeries" = "ID series";
 "licenseType" = "License type";
-"nonMrzDateOfBirth" = "Non MRZ date of birth";
-"nonMrzDateOfExpiry" = "Non MRZ date of expiry";
-"nonMrzNationality" = "Non MRZ nationality";
-"nonMrzSex" = "Non MRZ sex";
 "oldNric" = "Old NRIC";
 "personalIdentificationNumber" = "Personal identification number";
 "rank" = "Rank";
