@@ -139,10 +139,6 @@
 "country" = "Pays";
 "idSeries" = "Série ID";
 "licenseType" = "Type de licence";
-"nonMrzDateOfBirth" = "Date de naissance non MRZ";
-"nonMrzDateOfExpiry" = "Date d'expiration non MRZ";
-"nonMrzNationality" = "Nationalité non MRZ";
-"nonMrzSex" = "Sexe non MRZ";
 "oldNric" = "Ancien NRIC";
 "personalIdentificationNumber" = "Numéro d'identification personnel";
 "rawData" = "Données du code-barres";
