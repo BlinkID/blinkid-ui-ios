@@ -40,6 +40,8 @@ import UIKit
     case temporaryResidencePermit
     /// Residence Permit
     case residencePermit
+    /// Australia Victoria Driver's License
+    case victoriaDriverLicense
     /// Undefined
     case unknown
 
@@ -74,6 +76,8 @@ import UIKit
             return settings.temporaryResidencePermitText
         case .residencePermit:
             return settings.residencePermitText
+        case .victoriaDriverLicense:
+            return settings.victoriaDriversLicenseText
         case .unknown:
             return "unknown"
         }

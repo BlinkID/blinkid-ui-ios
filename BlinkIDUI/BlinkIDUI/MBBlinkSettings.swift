@@ -220,4 +220,8 @@ import MicroBlink
     /// Text for residence permits in document tabs view.
     /// - Default: "Residence Permit"
     @objc public var residencePermitText = Bundle.frameworkBundle.localizedString("residencePermit", Bundle.uiStringTable)
+    
+    /// Text for Australia Victoria driver's license cards in document tabs view.
+    /// - Default: "Victoria Driver's License"
+    @objc public var victoriaDriversLicenseText = Bundle.frameworkBundle.localizedString("victoriaDriversLicense", Bundle.uiStringTable)
 }
