@@ -59,3 +59,11 @@ extension MBSwitzerlandPassportRecognizer {
         return fields
     }
 }
+
+extension MBPassportRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray(array: result.mrzResult.extractFieldResults())
+
+        return fields
+    }
+}

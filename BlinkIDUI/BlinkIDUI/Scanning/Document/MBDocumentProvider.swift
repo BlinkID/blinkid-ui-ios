@@ -180,7 +180,7 @@ class MBResidencePermitDocumentProvider: MBDocumentProvider {
 class MBPassportDocumentProvider: MBDocumentProvider {
 
     override var frontRecognizerProvider: MBRecognizerWrapper? {
-        return MBRecognizerWrapper(withRecognizer: MBMrtdRecognizer())
+        return MBRecognizerWrapper(withRecognizer: MBPassportRecognizer())
     }
 
     override var type: MBDocumentType {
