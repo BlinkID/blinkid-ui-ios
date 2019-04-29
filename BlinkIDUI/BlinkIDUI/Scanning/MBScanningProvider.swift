@@ -79,7 +79,7 @@ class MBScanningProvider: NSObject {
 
     private func _updateRecognizers() {
         _recognizerCollection = _recognizerManager.getRecognizerCollection(forState: _scanState)
-        _recognizerCollection.partialRecognitionTimeout = 0
+        _recognizerCollection.partialRecognitionTimeout = MBBlinkSettings.sharedInstance.partialRecognitionTimeout
         delegate?.didUpdate(recognizerCollection: _recognizerCollection)
     }
 
