@@ -112,6 +112,7 @@ extension MBScanningProvider: MBScanningRecognizerRunnerViewControllerDelegate {
                 self._scanState != .notStarted,
                 state == .valid else {
                     recognizerRunnerViewController.resumeScanningAndResetState(true)
+                    self.restartScanning()
                     return
             }
 
