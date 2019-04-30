@@ -6,6 +6,21 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		BEB133BE2278290C00CC0318 /* BlinkIDUI-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BEB133C12278290C00CC0318 /* Build configuration list for PBXAggregateTarget "BlinkIDUI-Universal" */;
+			buildPhases = (
+				BEB133C22278291100CC0318 /* ShellScript */,
+			);
+			dependencies = (
+				BEB133C42278293500CC0318 /* PBXTargetDependency */,
+			);
+			name = "BlinkIDUI-Universal";
+			productName = "BlinkIDUI-Universal";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		BE0566D721A2F279005658FF /* MBResultValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0566D621A2F279005658FF /* MBResultValidator.swift */; };
 		BE0F362521A7E553005F0BEE /* MBDocumentImageRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0F362421A7E553005F0BEE /* MBDocumentImageRecognizer.swift */; };
@@ -94,6 +109,16 @@
 		BEE34669218A6090004C0397 /* MBScanningProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE34668218A6090004C0397 /* MBScanningProvider.swift */; };
 		BEFD074B21FA028B007B67BA /* MBResidencePermitExtractors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFD074A21FA028B007B67BA /* MBResidencePermitExtractors.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEB133C32278293500CC0318 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEE34647218A5F4C004C0397 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEE3464F218A5F4C004C0397;
+			remoteInfo = BlinkIDUI;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BE0566D621A2F279005658FF /* MBResultValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBResultValidator.swift; sourceTree = "<group>"; };
@@ -500,6 +525,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Microblink;
 				TargetAttributes = {
+					BEB133BE2278290C00CC0318 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 					BEE3464F218A5F4C004C0397 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -521,6 +549,7 @@
 			projectRoot = "";
 			targets = (
 				BEE3464F218A5F4C004C0397 /* BlinkIDUI */,
+				BEB133BE2278290C00CC0318 /* BlinkIDUI-Universal */,
 			);
 		};
 /* End PBXProject section */
@@ -564,6 +593,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		BEB133C22278291100CC0318 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework\"\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\"\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-universal\"\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${PROJECT_NAME}.framework\"\n\n# Build simulator framework\nxcodebuild -target ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build BITCODE_GENERATION_MODE=bitcode CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator\n# Build device framework\nxcodebuild -target ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build BITCODE_GENERATION_MODE=bitcode CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\nmkdir -p \"${FRAMEWORK}\"\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n# Combine binaries\nlipo \"${SIMULATOR_LIBRARY_PATH}/${PROJECT_NAME}\" \"${DEVICE_LIBRARY_PATH}/${PROJECT_NAME}\" -create -output \"${FRAMEWORK}/${PROJECT_NAME}\"\n\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${PROJECT_NAME}.swiftmodule/\" ]; then\n    cp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${PROJECT_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${PROJECT_NAME}.swiftmodule/\"\nfi\nif [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${PROJECT_NAME}.swiftmodule/\" ]; then\n    cp -f ${DEVICE_LIBRARY_PATH}/Modules/${PROJECT_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${PROJECT_NAME}.swiftmodule/\"\nfi\n\nOUTPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}-${CONFIGURATION}/\"\nrm -rf \"$OUTPUT_DIR\"\nmkdir -p \"$OUTPUT_DIR\"\ncp -r \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\n\nopen \"${OUTPUT_DIR}/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -650,6 +696,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BEB133C42278293500CC0318 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEE3464F218A5F4C004C0397 /* BlinkIDUI */;
+			targetProxy = BEB133C32278293500CC0318 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		BE8E2BF62231168800CE22CD /* BlinkIDUI.strings */ = {
 			isa = PBXVariantGroup;
@@ -676,6 +730,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BEB133BF2278290C00CC0318 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BEB133C02278290C00CC0318 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		BEE34656218A5F4C004C0397 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -859,6 +931,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BEB133C12278290C00CC0318 /* Build configuration list for PBXAggregateTarget "BlinkIDUI-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEB133BF2278290C00CC0318 /* Debug */,
+				BEB133C02278290C00CC0318 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BEE3464A218A5F4C004C0397 /* Build configuration list for PBXProject "BlinkIDUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
