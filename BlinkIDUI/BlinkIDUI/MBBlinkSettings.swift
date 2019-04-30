@@ -85,6 +85,12 @@ import MicroBlink
     /// Settings related to UI texts.
     /// - Default: Localization from BlinkIDUI.strings in Resources folder.
     @objc public let languageSettings = MBBlinkLanguageSettings()
+
+    /// Settings related to partial recognition timeout.
+    /// Timeout interval in which the partial scanning results will be returned to the user.
+    /// If <= 0.0, no timeout event will be reported.
+    /// - Default: 0
+    @objc public var partialRecognitionTimeout: TimeInterval = 0
 }
 
 // MARK: - Localization Properties -
@@ -220,4 +226,8 @@ import MicroBlink
     /// Text for residence permits in document tabs view.
     /// - Default: "Residence Permit"
     @objc public var residencePermitText = Bundle.frameworkBundle.localizedString("residencePermit", Bundle.uiStringTable)
+
+    /// Text for Australia Victoria driver's license cards in document tabs view.
+    /// - Default: "Victoria Driver's License"
+    @objc public var victoriaDriversLicenseText = Bundle.frameworkBundle.localizedString("victoriaDriversLicense", Bundle.uiStringTable)
 }

@@ -64,7 +64,7 @@ public class MBDocumentProvider: NSObject {
     ///         provider, but has both front and back recognizer providers, keys that
     ///         will be used to match the results must be provided through
     ///         MBResultValidator initializer in concrete MBDocumentProvider classes.
-    var resultValidator: MBResultValidator { return MBResultValidator() }
+    var resultValidator: MBValidatorProtocol { return MBCombinedValidator() }
     
     init(isFullySupported: Bool = true) {
         self.isFullySupported = isFullySupported
@@ -180,7 +180,7 @@ class MBResidencePermitDocumentProvider: MBDocumentProvider {
 class MBPassportDocumentProvider: MBDocumentProvider {
 
     override var frontRecognizerProvider: MBRecognizerWrapper? {
-        return MBRecognizerWrapper(withRecognizer: MBMrtdRecognizer())
+        return MBRecognizerWrapper(withRecognizer: MBPassportRecognizer())
     }
 
     override var type: MBDocumentType {

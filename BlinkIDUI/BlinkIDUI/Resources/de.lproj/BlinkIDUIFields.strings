@@ -139,10 +139,6 @@
 "country" = "Land";
 "idSeries" = "ID-Serie";
 "licenseType" = "Lizenzart";
-"nonMrzDateOfBirth" = "Kein MRZ-Geburtsdatum";
-"nonMrzDateOfExpiry" = "Kein MRZ-Verfallsdatum";
-"nonMrzNationality" = "Keine MRZ-Nationalität";
-"nonMrzSex" = "Kein MRZ-Geschlecht";
 "oldNric" = "Alte NRIC";
 "personalIdentificationNumber" = "Persönliche Identifikationsnummer";
 "rawData" = "Barcode-Daten";

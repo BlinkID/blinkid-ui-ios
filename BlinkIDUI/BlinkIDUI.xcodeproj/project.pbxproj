@@ -22,7 +22,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		BE0566D721A2F279005658FF /* MBResultValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0566D621A2F279005658FF /* MBResultValidator.swift */; };
+		A2CB561F22647FC5000BB95B /* MBAustraliaDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CB561E22647FC5000BB95B /* MBAustraliaDocumentProviders.swift */; };
+		BE0566D721A2F279005658FF /* MBMatchingPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0566D621A2F279005658FF /* MBMatchingPair.swift */; };
 		BE0F362521A7E553005F0BEE /* MBDocumentImageRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0F362421A7E553005F0BEE /* MBDocumentImageRecognizer.swift */; };
 		BE2164722190849B00E21734 /* MBBlinkIdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2164642190849B00E21734 /* MBBlinkIdViewController.swift */; };
 		BE2164732190849B00E21734 /* MBTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2164662190849B00E21734 /* MBTheme.swift */; };
@@ -85,6 +86,9 @@
 		BE64810621903C3A00D0C24F /* MBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE64810321903C3A00D0C24F /* MBConstants.swift */; };
 		BE64810B219048FF00D0C24F /* MBCountryProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE648109219048FF00D0C24F /* MBCountryProviders.swift */; };
 		BE6D6BB5222D324C00808E6D /* NonLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE6D6BB4222D324C00808E6D /* NonLocalizable.strings */; };
+		BE746BE2224E07D80098A67E /* MBValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE746BE1224E07D80098A67E /* MBValidatorProtocol.swift */; };
+		BE746BE4224E07FD0098A67E /* MBCombinedValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE746BE3224E07FD0098A67E /* MBCombinedValidator.swift */; };
+		BE746BE6224E083F0098A67E /* MBSingleSideValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE746BE5224E083F0098A67E /* MBSingleSideValidator.swift */; };
 		BE75A4C621C3DD5E00EF644C /* Microblink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE75A4C421C3DD5D00EF644C /* Microblink.framework */; };
 		BE75A4C721C3DD5E00EF644C /* Microblink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE75A4C521C3DD5E00EF644C /* Microblink.bundle */; };
 		BE8E2BF42231168800CE22CD /* BlinkIDUI.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE8E2BF62231168800CE22CD /* BlinkIDUI.strings */; };
@@ -95,6 +99,7 @@
 		BEAE7AC52195D49C00D0E70A /* MBDocumentChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE7AC32195D49C00D0E70A /* MBDocumentChooserViewController.swift */; };
 		BEAE7AC82199762B00D0E70A /* MBBlinkIDUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE7AC72199762B00D0E70A /* MBBlinkIDUI.swift */; };
 		BEAE7ACA21998D8600D0E70A /* MBBlinkSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE7AC921998D8600D0E70A /* MBBlinkSettings.swift */; };
+		BEC837F8224B61FE001F4B16 /* MBValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC837F7224B61FE001F4B16 /* MBValue.swift */; };
 		BED6AC9221AEA06500AEC812 /* MBDocumentChooserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6AC9121AEA06500AEC812 /* MBDocumentChooserSettings.swift */; };
 		BED6AC9421AEA0A000AEC812 /* MBTimeoutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6AC9321AEA0A000AEC812 /* MBTimeoutHandler.swift */; };
 		BED6AC9621AEECAD00AEC812 /* MBInvalidDocumentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6AC9521AEECAD00AEC812 /* MBInvalidDocumentHandler.swift */; };
@@ -121,7 +126,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BE0566D621A2F279005658FF /* MBResultValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBResultValidator.swift; sourceTree = "<group>"; };
+		A2CB561E22647FC5000BB95B /* MBAustraliaDocumentProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBAustraliaDocumentProviders.swift; sourceTree = "<group>"; };
+		BE0566D621A2F279005658FF /* MBMatchingPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBMatchingPair.swift; sourceTree = "<group>"; };
 		BE0F362421A7E553005F0BEE /* MBDocumentImageRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBDocumentImageRecognizer.swift; sourceTree = "<group>"; };
 		BE2164642190849B00E21734 /* MBBlinkIdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MBBlinkIdViewController.swift; path = BlinkIDUI/Modules/Overlay/MBBlinkIdViewController.swift; sourceTree = SOURCE_ROOT; };
 		BE2164662190849B00E21734 /* MBTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBTheme.swift; sourceTree = "<group>"; };
@@ -184,6 +190,9 @@
 		BE64810321903C3A00D0C24F /* MBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBConstants.swift; sourceTree = "<group>"; };
 		BE648109219048FF00D0C24F /* MBCountryProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCountryProviders.swift; sourceTree = "<group>"; };
 		BE6D6BB4222D324C00808E6D /* NonLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = NonLocalizable.strings; sourceTree = "<group>"; };
+		BE746BE1224E07D80098A67E /* MBValidatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBValidatorProtocol.swift; sourceTree = "<group>"; };
+		BE746BE3224E07FD0098A67E /* MBCombinedValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCombinedValidator.swift; sourceTree = "<group>"; };
+		BE746BE5224E083F0098A67E /* MBSingleSideValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBSingleSideValidator.swift; sourceTree = "<group>"; };
 		BE75A4C421C3DD5D00EF644C /* Microblink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Microblink.framework; path = "../blinkid-ios/Microblink.framework"; sourceTree = "<group>"; };
 		BE75A4C521C3DD5E00EF644C /* Microblink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Microblink.bundle; path = "../blinkid-ios/Microblink.bundle"; sourceTree = "<group>"; };
 		BE8E2BF52231168800CE22CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BlinkIDUI.strings; sourceTree = "<group>"; };
@@ -200,6 +209,7 @@
 		BEAE7AC32195D49C00D0E70A /* MBDocumentChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBDocumentChooserViewController.swift; sourceTree = "<group>"; };
 		BEAE7AC72199762B00D0E70A /* MBBlinkIDUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBBlinkIDUI.swift; sourceTree = "<group>"; };
 		BEAE7AC921998D8600D0E70A /* MBBlinkSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBBlinkSettings.swift; sourceTree = "<group>"; };
+		BEC837F7224B61FE001F4B16 /* MBValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBValue.swift; sourceTree = "<group>"; };
 		BED6AC9121AEA06500AEC812 /* MBDocumentChooserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBDocumentChooserSettings.swift; sourceTree = "<group>"; };
 		BED6AC9321AEA0A000AEC812 /* MBTimeoutHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTimeoutHandler.swift; sourceTree = "<group>"; };
 		BED6AC9521AEECAD00AEC812 /* MBInvalidDocumentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBInvalidDocumentHandler.swift; sourceTree = "<group>"; };
@@ -232,7 +242,10 @@
 		BE0566D521A2F246005658FF /* ResultValidator */ = {
 			isa = PBXGroup;
 			children = (
-				BE0566D621A2F279005658FF /* MBResultValidator.swift */,
+				BE746BE1224E07D80098A67E /* MBValidatorProtocol.swift */,
+				BE0566D621A2F279005658FF /* MBMatchingPair.swift */,
+				BE746BE3224E07FD0098A67E /* MBCombinedValidator.swift */,
+				BE746BE5224E083F0098A67E /* MBSingleSideValidator.swift */,
 			);
 			path = ResultValidator;
 			sourceTree = "<group>";
@@ -348,6 +361,7 @@
 			children = (
 				BE6480FE21903B7500D0C24F /* MBField.swift */,
 				BE64810121903C3900D0C24F /* MBRecognitionResult.swift */,
+				BEC837F7224B61FE001F4B16 /* MBValue.swift */,
 			);
 			path = Result;
 			sourceTree = "<group>";
@@ -380,6 +394,7 @@
 		BE647F04218C686000D0C24F /* DocumentProviders */ = {
 			isa = PBXGroup;
 			children = (
+				A2CB561E22647FC5000BB95B /* MBAustraliaDocumentProviders.swift */,
 				BE6480C7218C83C600D0C24F /* MBAustriaDocumentProviders.swift */,
 				BEDCA24221CA8E11003EDAD9 /* MBBruneiDocumentProviders.swift */,
 				BE6480C3218C83C600D0C24F /* MBCanadaDocumentProviders.swift */,
@@ -530,6 +545,7 @@
 					};
 					BEE3464F218A5F4C004C0397 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -620,8 +636,10 @@
 			files = (
 				BE64810B219048FF00D0C24F /* MBCountryProviders.swift in Sources */,
 				BE62046621A6FADC007087E1 /* MBBundle.swift in Sources */,
+				BE746BE4224E07FD0098A67E /* MBCombinedValidator.swift in Sources */,
 				BE2164762190849B00E21734 /* MBShadowView.swift in Sources */,
 				BE2165B52193078300E21734 /* MBViewfinderView.swift in Sources */,
+				A2CB561F22647FC5000BB95B /* MBAustraliaDocumentProviders.swift in Sources */,
 				BE2164782190849B00E21734 /* MBCountryTableViewController.swift in Sources */,
 				BE6480DE218C83C600D0C24F /* MBIrelandDocumentProviders.swift in Sources */,
 				BE21647D2190855A00E21734 /* MBResultManager.swift in Sources */,
@@ -656,17 +674,19 @@
 				BE26BAD722141C9400469894 /* MBResultCombiner.swift in Sources */,
 				BE495B6B21AC1CBD007B16D1 /* MBMexicoDocumentProviders.swift in Sources */,
 				BE6480D8218C83C600D0C24F /* MBGermanyDocumentProviders.swift in Sources */,
+				BEC837F8224B61FE001F4B16 /* MBValue.swift in Sources */,
 				BEAE7ACA21998D8600D0E70A /* MBBlinkSettings.swift in Sources */,
 				BE21647F219094AF00E21734 /* MBCountry.swift in Sources */,
 				BE6480CA218C83C600D0C24F /* MBColombiaDocumentProviders.swift in Sources */,
 				BEE34665218A6006004C0397 /* MBRecognizerExtractor.swift in Sources */,
 				BE6480D9218C83C600D0C24F /* MBNewZealandDocumentProviders.swift in Sources */,
-				BE0566D721A2F279005658FF /* MBResultValidator.swift in Sources */,
+				BE0566D721A2F279005658FF /* MBMatchingPair.swift in Sources */,
 				BE6480C8218C83C600D0C24F /* MBCyprusDocumentProviders.swift in Sources */,
 				BE6480D6218C83C600D0C24F /* MBItalyDocumentProvider.swift in Sources */,
 				BEAE7AC02195C1E400D0E70A /* MBCountryChooserButton.swift in Sources */,
 				BE499DEC21BFA01C00E28301 /* MBCellConfiguration.swift in Sources */,
 				BE6480FF21903B7500D0C24F /* MBDate.swift in Sources */,
+				BE746BE2224E07D80098A67E /* MBValidatorProtocol.swift in Sources */,
 				BE6480E6218C83C600D0C24F /* MBJordanDocumentProviders.swift in Sources */,
 				BEE34662218A6006004C0397 /* MBIDExtractors.swift in Sources */,
 				BE6480E5218C83C600D0C24F /* MBMalaysiaDocumentProviders.swift in Sources */,
@@ -685,6 +705,7 @@
 				BE6480E8218C83C600D0C24F /* MBAustriaDocumentProviders.swift in Sources */,
 				BE6480E0218C83C600D0C24F /* MBIndonesiaDocumentProviders.swift in Sources */,
 				BED6AC9221AEA06500AEC812 /* MBDocumentChooserSettings.swift in Sources */,
+				BE746BE6224E083F0098A67E /* MBSingleSideValidator.swift in Sources */,
 				BEE34669218A6090004C0397 /* MBScanningProvider.swift in Sources */,
 				BEDCA24521CB86F8003EDAD9 /* MBNigeriaDocumentProviders.swift in Sources */,
 				BE2164722190849B00E21734 /* MBBlinkIdViewController.swift in Sources */,
@@ -893,8 +914,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.blinkid-ui.BlinkIDUI";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = NO;
-				SWIFT_VERSION = 4.2;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 arm64e armv7 armv7s i386 x86_64";
 			};
@@ -921,8 +942,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.blinkid-ui.BlinkIDUI";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = NO;
-				SWIFT_VERSION = 4.2;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 arm64e armv7 armv7s i386 x86_64";
 			};

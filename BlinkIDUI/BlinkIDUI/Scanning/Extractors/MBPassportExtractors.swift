@@ -50,11 +50,19 @@ extension MBSwitzerlandPassportRecognizer {
         fields.add(MBField(key: MBFieldKey.firstName, value: result.givenName))
         fields.add(MBField(key: MBFieldKey.placeOfOrigin, value: result.placeOfOrigin))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
-        fields.add(MBField(key: MBFieldKey.nonMrzDateOfBirth, value: result.dateOfBirth))
-        fields.add(MBField(key: MBFieldKey.nonMrzDateOfExpiry, value: result.dateOfExpiry))
+        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
         fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.authority))
         fields.add(MBField(key: MBFieldKey.passportNumber, value: result.passportNumber))
-        fields.add(MBField(key: MBFieldKey.nonMrzSex, value: result.sex))
+        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
+
+        return fields
+    }
+}
+
+extension MBPassportRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray(array: result.mrzResult.extractFieldResults())
 
         return fields
     }
