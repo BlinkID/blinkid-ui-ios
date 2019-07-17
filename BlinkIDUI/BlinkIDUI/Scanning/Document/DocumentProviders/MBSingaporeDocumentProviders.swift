@@ -44,7 +44,7 @@ class MBSingaporeIDDocumentProvider: MBDocumentProvider {
     }
     
     override var type: MBDocumentType {
-        return MBDocumentType.identityCard
+        return MBDocumentType.idBluePink
     }
     
     override var aspectRatio: DocumentAspectRatio {
