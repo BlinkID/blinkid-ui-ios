@@ -46,6 +46,8 @@ import UIKit
     case workPass
     /// Singapore ID (Blue & Pink)
     case idBluePink
+    /// Voter ID
+    case voterID
     /// Undefined
     case unknown
 
@@ -86,6 +88,8 @@ import UIKit
             return settings.workPassText
         case .idBluePink:
             return settings.idBluePinkText
+        case .voterID:
+            return settings.voterIDCardText
         case .unknown:
             return "unknown"
         }

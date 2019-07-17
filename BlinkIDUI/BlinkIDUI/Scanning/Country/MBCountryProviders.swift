@@ -59,8 +59,14 @@ import MicroBlink
         return MBVisaDocumentProvider()
     }
     
+    /// Work pass provider
     var workPassProvider: MBDocumentProvider? {
-        return MBWorkPassProvider()
+        return MBWorkPassDocumentProvider()
+    }
+    
+    /// Voter ID provider
+    var voterIDProvider: MBDocumentProvider? {
+        return MBVoterIDDocumentProvider()
     }
     
     /// Array of supported document providers by this country
@@ -320,6 +326,10 @@ class MBMoroccoCountryProvider: MBCountryProvider {
 class MBNigeriaCountryProvider: MBCountryProvider {
     override var driversLicenseProvider: MBDocumentProvider? {
         return MBNigeriaDLDocumentProvider()
+    }
+    
+    override var voterIDProvider: MBDocumentProvider? {
+        return MBNigeriaVoterIdDocumentProvider()
     }
 }
 

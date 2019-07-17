@@ -237,5 +237,9 @@ import MicroBlink
     
     /// Text for Singapore ID Cards in document tabs view.
     /// - Default: "ID (blue & pink)"
-    @objc public var idBluePinkText = Bundle.frameworkBundle.localizedString("idBluePink", Bundle.uiStringTable)    
+    @objc public var idBluePinkText = Bundle.frameworkBundle.localizedString("idBluePink", Bundle.uiStringTable)
+    
+    /// Text for Voter ID Cards in document tabs view
+    /// - Default: "Voter ID"
+    @objc public var voterIDCardText = Bundle.frameworkBundle.localizedString("voterIDCard", Bundle.uiStringTable)
 }
