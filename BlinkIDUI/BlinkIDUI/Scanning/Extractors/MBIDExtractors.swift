@@ -778,6 +778,7 @@ extension MBSloveniaCombinedRecognizer {
         fields.add(MBField(key: MBFieldKey.personalIdentificationNumber, value: result.pin))
         fields.add(MBField(key: MBFieldKey.issuingAuthority, value: result.administrativeUnit))
         fields.add(MBField(key: MBFieldKey.dateOfIssue, value: result.dateOfIssue))
+        fields.add(MBField(key: MBFieldKey.expiryDatePermanent, value: result.dateOfExpiryPermanent))
 
         return fields
     }
@@ -805,6 +806,7 @@ extension MBSloveniaIdFrontRecognizer {
         fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
         fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
+        fields.add(MBField(key: MBFieldKey.expiryDatePermanent, value: result.dateOfExpiryPermanent))
 
         return fields
     }
