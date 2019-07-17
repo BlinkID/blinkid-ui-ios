@@ -42,6 +42,10 @@ import UIKit
     case residencePermit
     /// Australia Victoria Driver's License
     case victoriaDriverLicense
+    /// Work pass
+    case workPass
+    /// Singapore ID (Blue & Pink)
+    case idBluePink
     /// Undefined
     case unknown
 
@@ -78,6 +82,10 @@ import UIKit
             return settings.residencePermitText
         case .victoriaDriverLicense:
             return settings.victoriaDriversLicenseText
+        case .workPass:
+            return settings.workPassText
+        case .idBluePink:
+            return settings.idBluePinkText
         case .unknown:
             return "unknown"
         }

@@ -59,6 +59,10 @@ import MicroBlink
         return MBVisaDocumentProvider()
     }
     
+    var workPassProvider: MBDocumentProvider? {
+        return MBWorkPassProvider()
+    }
+    
     /// Array of supported document providers by this country
     public var supportedDocuments: [MBDocumentType] {
         return Array(documentProviders.keys).sorted()
@@ -362,6 +366,10 @@ class MBSingaporeCountryProvider: MBCountryProvider {
     
     override var identityCardProvider: MBDocumentProvider? {
         return MBSingaporeIDDocumentProvider()
+    }
+    
+    override var workPassProvider: MBDocumentProvider? {
+        return MBSingaporeWorkPassProvider()
     }
 }
 
