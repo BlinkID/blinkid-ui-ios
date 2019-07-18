@@ -43,4 +43,8 @@ class MBNigeriaVoterIdDocumentProvider: MBDocumentProvider {
         return MBDocumentType.voterID
     }
     
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.id1
+    }
+    
 }
