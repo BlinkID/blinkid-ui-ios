@@ -242,4 +242,8 @@ import MicroBlink
     /// Text for Voter ID Cards in document tabs view
     /// - Default: "Voter ID"
     @objc public var voterIDCardText = Bundle.frameworkBundle.localizedString("voterIDCard", Bundle.uiStringTable)
+    
+    /// Text for Under 21 ID Cards in document tabs view
+    /// - Default: "Under 21 ID"
+    @objc public var under21IDCardText = Bundle.frameworkBundle.localizedString("under21IDCard", Bundle.uiStringTable)
 }

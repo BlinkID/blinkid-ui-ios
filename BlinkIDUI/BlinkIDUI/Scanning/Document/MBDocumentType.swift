@@ -48,6 +48,8 @@ import UIKit
     case idBluePink
     /// Voter ID
     case voterID
+    /// Under 21 ID
+    case under21ID
     /// Undefined
     case unknown
 
@@ -90,6 +92,8 @@ import UIKit
             return settings.idBluePinkText
         case .voterID:
             return settings.voterIDCardText
+        case .under21ID:
+            return settings.under21IDCardText
         case .unknown:
             return "unknown"
         }

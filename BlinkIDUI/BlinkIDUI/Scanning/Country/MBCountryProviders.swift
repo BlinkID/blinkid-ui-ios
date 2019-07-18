@@ -69,6 +69,10 @@ import MicroBlink
         return MBVoterIDDocumentProvider()
     }
     
+    var under21IDProvider: MBDocumentProvider? {
+        return MBUnder21DocumentProvider()
+    }
+    
     /// Array of supported document providers by this country
     public var supportedDocuments: [MBDocumentType] {
         return Array(documentProviders.keys).sorted()
@@ -486,5 +490,9 @@ class MBUSACountryProvider: MBCountryProvider {
     
     override var identityCardProvider: MBDocumentProvider? {
         return MBUSAIDDocumentProvider()
+    }
+    
+    override var under21IDProvider: MBDocumentProvider? {
+        return MBUSAUnder21IDDocumentProvider()
     }
 }
