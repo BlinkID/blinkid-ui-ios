@@ -32,5 +32,5 @@ Pod::Spec.new do |s|
   s.module_name = "BlinkIDUI"
   s.resources = "BlinkIDUI/**/Resources/Assets*", "BlinkIDUI/**/Resources/*.strings"
   s.dependency "PPBlinkID", "~> 4.10.0"
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
 end
