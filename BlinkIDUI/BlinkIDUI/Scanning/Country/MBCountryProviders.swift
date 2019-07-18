@@ -17,23 +17,18 @@ import MicroBlink
     /// and MBDocumentProvider as values.
     var documentProviders: [MBDocumentType: MBDocumentProvider] {
         var documentProviders = [MBDocumentType: MBDocumentProvider]()
-        if let passportProvider = passportProvider {
-            documentProviders[MBDocumentType.passport] = passportProvider
+        
+        let commonProviders = [driversLicenseProvider, passportProvider, residencePermitProvider, visaProvider]
+        
+        for documentProvider in commonProviders {
+            if let documentProvider = documentProvider {
+                documentProviders[documentProvider.type] = documentProvider
+            }
         }
-        if let visaProvider = visaProvider {
-            documentProviders[MBDocumentType.visa] = visaProvider
-        }
-        if let identityCardProvider = identityCardProvider {
-            documentProviders[MBDocumentType.identityCard] = identityCardProvider
-        }
-        if let driversLicenseProvider = driversLicenseProvider {
-            documentProviders[MBDocumentType.driverLicense] = driversLicenseProvider
-        }
-        if let residencePermitProvider = residencePermitProvider {
-            documentProviders[MBDocumentType.residencePermit] = residencePermitProvider
-        }
+        
         return documentProviders
     }
+    
     /// Driver's license document provider
     var driversLicenseProvider: MBDocumentProvider? {
         return MBDLDocumentProvider(isFullySupported: false)
@@ -57,20 +52,6 @@ import MicroBlink
     /// Visa document provider
     var visaProvider: MBDocumentProvider? {
         return MBVisaDocumentProvider()
-    }
-    
-    /// Work pass provider
-    var workPassProvider: MBDocumentProvider? {
-        return MBWorkPassDocumentProvider()
-    }
-    
-    /// Voter ID provider
-    var voterIDProvider: MBDocumentProvider? {
-        return MBVoterIDDocumentProvider()
-    }
-    
-    var under21IDProvider: MBDocumentProvider? {
-        return MBUnder21DocumentProvider()
     }
     
     /// Array of supported document providers by this country
@@ -328,12 +309,15 @@ class MBMoroccoCountryProvider: MBCountryProvider {
 }
 
 class MBNigeriaCountryProvider: MBCountryProvider {
-    override var driversLicenseProvider: MBDocumentProvider? {
-        return MBNigeriaDLDocumentProvider()
+    
+    override var documentProviders: [MBDocumentType : MBDocumentProvider] {
+        var providers = super.documentProviders
+        providers[.voterID] = MBNigeriaVoterIdDocumentProvider()
+        return providers
     }
     
-    override var voterIDProvider: MBDocumentProvider? {
-        return MBNigeriaVoterIdDocumentProvider()
+    override var driversLicenseProvider: MBDocumentProvider? {
+        return MBNigeriaDLDocumentProvider()
     }
 }
 
@@ -374,17 +358,21 @@ class MBRomaniaCountryProvider: MBCountryProvider {
 }
 
 class MBSingaporeCountryProvider: MBCountryProvider {
-    override var driversLicenseProvider: MBDocumentProvider? {
-        return MBSingaporeDLDocumentProvider()
+    
+    override var documentProviders: [MBDocumentType : MBDocumentProvider] {
+        var providers = super.documentProviders
+        providers[.workPass] = MBSingaporeWorkPassProvider()
+        return providers
     }
     
     override var identityCardProvider: MBDocumentProvider? {
         return MBSingaporeIDDocumentProvider()
     }
     
-    override var workPassProvider: MBDocumentProvider? {
-        return MBSingaporeWorkPassProvider()
+    override var driversLicenseProvider: MBDocumentProvider? {
+        return MBSingaporeDLDocumentProvider()
     }
+    
 }
 
 class MBSlovakCountryProvider: MBCountryProvider {
@@ -484,6 +472,13 @@ class MBUKCountryProvider: MBCountryProvider {
 }
 
 class MBUSACountryProvider: MBCountryProvider {
+    
+    override var documentProviders: [MBDocumentType: MBDocumentProvider] {
+        var providers = super.documentProviders
+        providers[.under21ID] = MBUSAUnder21IDDocumentProvider()
+        return providers
+    }
+    
     override var driversLicenseProvider: MBDocumentProvider? {
         return MBUSADLDocumentProvider()
     }
@@ -492,7 +487,4 @@ class MBUSACountryProvider: MBCountryProvider {
         return MBUSAIDDocumentProvider()
     }
     
-    override var under21IDProvider: MBDocumentProvider? {
-        return MBUSAUnder21IDDocumentProvider()
-    }
 }
