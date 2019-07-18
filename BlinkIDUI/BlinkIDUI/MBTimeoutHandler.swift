@@ -16,7 +16,7 @@ import Foundation
     @objc weak var blinkIDUI: MBBlinkIDUI? { get set }
     
     /// Needed to present alert view controller once the timeout it out.
-    @objc weak var overlayViewController: MBBlinkIdOverlayViewController? { get set }
+    @objc weak var overlayViewController: MBBlinkIdUiOverlayViewController? { get set }
     
     /// Called everytime scanning is started
     @objc func onScanStart()
@@ -41,7 +41,7 @@ import Foundation
     @objc public weak var blinkIDUI: MBBlinkIDUI?
     
     /// Needed to present alert view controller once the timeout it out.
-    @objc public weak var overlayViewController: MBBlinkIdOverlayViewController?
+    @objc public weak var overlayViewController: MBBlinkIdUiOverlayViewController?
     
     private var _timeoutTimer: Timer?
     private var _startTimerTimeout: TimeInterval

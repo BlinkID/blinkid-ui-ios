@@ -14,7 +14,7 @@ import Foundation
     @objc weak var blinkIDUI: MBBlinkIDUI? { get set }
     
     /// Needed to present alert view controller if the document isn't valid.
-    @objc weak var overlayViewController: MBBlinkIdOverlayViewController? { get set }
+    @objc weak var overlayViewController: MBBlinkIdUiOverlayViewController? { get set }
     
     /// Called once if the scanned document is invalid and shouldValidateDocuments is set to true
     @objc func onInvalidDocumentScanned()
@@ -28,7 +28,7 @@ import Foundation
     @objc public weak var blinkIDUI: MBBlinkIDUI?
     
     /// Needed to present alert view controller if the document isn't valid.
-    @objc public weak var overlayViewController: MBBlinkIdOverlayViewController?
+    @objc public weak var overlayViewController: MBBlinkIdUiOverlayViewController?
 
     /// Called once if the scanned document is invalid and shouldValidateDocuments is set to true
     @objc public func onInvalidDocumentScanned() {
