@@ -18,7 +18,7 @@ import MicroBlink
     var documentProviders: [MBDocumentType: MBDocumentProvider] {
         var documentProviders = [MBDocumentType: MBDocumentProvider]()
         
-        let commonProviders = [driversLicenseProvider, passportProvider, residencePermitProvider, visaProvider]
+        let commonProviders = [identityCardProvider, driversLicenseProvider, passportProvider, residencePermitProvider, visaProvider]
         
         for documentProvider in commonProviders {
             if let documentProvider = documentProvider {
@@ -310,7 +310,7 @@ class MBMoroccoCountryProvider: MBCountryProvider {
 
 class MBNigeriaCountryProvider: MBCountryProvider {
     
-    override var documentProviders: [MBDocumentType : MBDocumentProvider] {
+    override var documentProviders: [MBDocumentType: MBDocumentProvider] {
         var providers = super.documentProviders
         providers[.voterID] = MBNigeriaVoterIdDocumentProvider()
         return providers
@@ -359,7 +359,7 @@ class MBRomaniaCountryProvider: MBCountryProvider {
 
 class MBSingaporeCountryProvider: MBCountryProvider {
     
-    override var documentProviders: [MBDocumentType : MBDocumentProvider] {
+    override var documentProviders: [MBDocumentType: MBDocumentProvider] {        
         var providers = super.documentProviders
         providers[.workPass] = MBSingaporeWorkPassProvider()
         return providers
