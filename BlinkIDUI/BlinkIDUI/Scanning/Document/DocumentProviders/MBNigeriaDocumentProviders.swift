@@ -28,3 +28,23 @@ class MBNigeriaDLDocumentProvider: MBDocumentProvider {
     }
     
 }
+
+class MBNigeriaVoterIdDocumentProvider: MBDocumentProvider {
+    
+    override var frontRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBDocumentFaceRecognizer())
+    }
+    
+    override var backRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBNigeriaVoterIdBackRecognizer())
+    }
+    
+    override var type: MBDocumentType {
+        return MBDocumentType.voterID
+    }
+    
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.id1
+    }
+    
+}

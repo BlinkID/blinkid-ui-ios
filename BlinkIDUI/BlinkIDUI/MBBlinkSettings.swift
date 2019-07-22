@@ -230,4 +230,20 @@ import MicroBlink
     /// Text for Australia Victoria driver's license cards in document tabs view.
     /// - Default: "Victoria Driver's License"
     @objc public var victoriaDriversLicenseText = Bundle.frameworkBundle.localizedString("victoriaDriversLicense", Bundle.uiStringTable)
+    
+    /// Text for work passes in document tabs view.
+    /// - Default: "Work pass"
+    @objc public var workPassText = Bundle.frameworkBundle.localizedString("workPass", Bundle.uiStringTable)
+    
+    /// Text for Singapore ID Cards in document tabs view.
+    /// - Default: "ID (blue & pink)"
+    @objc public var idBluePinkText = Bundle.frameworkBundle.localizedString("idBluePink", Bundle.uiStringTable)
+    
+    /// Text for Voter ID Cards in document tabs view
+    /// - Default: "Voter ID"
+    @objc public var voterIDCardText = Bundle.frameworkBundle.localizedString("voterIDCard", Bundle.uiStringTable)
+    
+    /// Text for Under 21 ID Cards in document tabs view
+    /// - Default: "Under 21 ID"
+    @objc public var under21IDCardText = Bundle.frameworkBundle.localizedString("under21IDCard", Bundle.uiStringTable)
 }

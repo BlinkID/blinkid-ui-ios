@@ -43,7 +43,7 @@ protocol MBBlinkIdOverlayViewControllerDelegate: AnyObject {
 /// - Buttons to turn on/off the torch and dismiss the `BlinkIDUI` view controller.
 ///
 /// - Note: Most of the UI aspects are customizable either by changing the properties defined through extensions of `UIFont` and `UIColor` presented in `MBTheme` file, or by changing the various properties through `MBBlinkSettings` sharedInstance.
-public class MBBlinkIdOverlayViewController: MBCustomOverlayViewController {
+public class MBBlinkIdUiOverlayViewController: MBCustomOverlayViewController {
 
     weak var delegate: MBBlinkIdOverlayViewControllerDelegate?
 
@@ -96,9 +96,9 @@ public class MBBlinkIdOverlayViewController: MBCustomOverlayViewController {
     // MARK: - Initalizer -
 
     /// Initializes the viewcontroller defined in `MBBlinkIDOverlay.storyboard`.
-    public class func initFromStoryboard() -> MBBlinkIdOverlayViewController {
+    public class func initFromStoryboard() -> MBBlinkIdUiOverlayViewController {
         let storyboard = UIStoryboard(name: MBConstants.Name.OverlayViewController.storyboard, bundle: Bundle(for: self))
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: MBConstants.Name.OverlayViewController.blinkIdIdentifier) as? MBBlinkIdOverlayViewController else {
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: MBConstants.Name.OverlayViewController.blinkIdIdentifier) as? MBBlinkIdUiOverlayViewController else {
             fatalError("Unable to instantiate viewController \(MBConstants.Name.OverlayViewController.blinkIdIdentifier) from storyboard \(MBConstants.Name.OverlayViewController.storyboard)")
         }
         return viewController
@@ -287,7 +287,7 @@ public class MBBlinkIdOverlayViewController: MBCustomOverlayViewController {
 
 // MARK: - MBDocumentPickerViewControllerDelegate -
 
-extension MBBlinkIdOverlayViewController: MBDocumentChooserViewControllerDelegate {
+extension MBBlinkIdUiOverlayViewController: MBDocumentChooserViewControllerDelegate {
     func didSelect(document: MBDocumentType, fromCountry country: MBCountry) {
         guard let documentProvider = country.countryProvider.documentProviders[document] else { return }
         _animateAspectRatioChange(aspectRatio: documentProvider.aspectRatio.ratio)
@@ -302,7 +302,7 @@ extension MBBlinkIdOverlayViewController: MBDocumentChooserViewControllerDelegat
     }
 }
 
-extension MBBlinkIdOverlayViewController: MBGlareRecognizerRunnerViewControllerDelegate {
+extension MBBlinkIdUiOverlayViewController: MBGlareRecognizerRunnerViewControllerDelegate {
     public func recognizerRunnerViewController(_ recognizerRunnerViewController: UIViewController & MBRecognizerRunnerViewController, didFinishGlareDetectionWithResult glareFound: Bool) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
@@ -322,7 +322,7 @@ extension MBBlinkIdOverlayViewController: MBGlareRecognizerRunnerViewControllerD
     }
 }
 
-extension MBBlinkIdOverlayViewController: MBDetectionRecognizerRunnerViewControllerDelegate {
+extension MBBlinkIdUiOverlayViewController: MBDetectionRecognizerRunnerViewControllerDelegate {
     public func recognizerRunnerViewController(_ recognizerRunnerViewController: UIViewController & MBRecognizerRunnerViewController, didFinishDetectionWithDisplayablePoints displayablePoints: MBDisplayablePointsDetection) {
         DispatchQueue.main.async {
             self._dotsResultSubview.detectionFinished(withDisplayablePoints: displayablePoints)

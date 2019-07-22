@@ -208,3 +208,73 @@ class MBVisaDocumentProvider: MBDocumentProvider {
     }
 
 }
+
+class MBWorkPassDocumentProvider: MBDocumentProvider {
+    
+    override var frontRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBDocumentFaceRecognizer())
+    }
+    
+    override var backRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBMrtdRecognizer())
+    }
+    
+    override var combinedRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withCombinedRecognizer: MBMrtdCombinedRecognizer())
+    }
+    
+    override var type: MBDocumentType {
+        return MBDocumentType.identityCard
+    }
+    
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.id1
+    }
+}
+
+class MBVoterIDDocumentProvider: MBDocumentProvider {
+    
+    override var frontRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBDocumentFaceRecognizer())
+    }
+    
+    override var backRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBMrtdRecognizer())
+    }
+    
+    override var combinedRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withCombinedRecognizer: MBMrtdCombinedRecognizer())
+    }
+    
+    override var type: MBDocumentType {
+        return MBDocumentType.voterID
+    }
+    
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.id1
+    }
+    
+}
+
+class MBUnder21DocumentProvider: MBDocumentProvider {
+    
+    override var frontRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBDocumentFaceRecognizer())
+    }
+    
+    override var backRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBMrtdRecognizer())
+    }
+    
+    override var combinedRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withCombinedRecognizer: MBMrtdCombinedRecognizer())
+    }
+    
+    override var type: MBDocumentType {
+        return MBDocumentType.voterID
+    }
+    
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.id1
+    }
+}

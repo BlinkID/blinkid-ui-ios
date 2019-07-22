@@ -71,7 +71,7 @@ import MicroBlink
     // MARK: - Private -
 
     private var _scanningProvider: MBScanningProvider
-    private var _overlayViewController: MBBlinkIdOverlayViewController
+    private var _overlayViewController: MBBlinkIdUiOverlayViewController
 
     // MARK: - Initializer -
 
@@ -81,7 +81,7 @@ import MicroBlink
     @objc public override init() {
         _scanningProvider = MBScanningProvider()
 
-        _overlayViewController = MBBlinkIdOverlayViewController.initFromStoryboard()
+        _overlayViewController = MBBlinkIdUiOverlayViewController.initFromStoryboard()
         _overlayViewController.scanningRecognizerRunnerViewControllerDelegate = _scanningProvider
         _overlayViewController.metadataDelegates.firstSideFinishedRecognizerRunnerViewControllerDelegate = _scanningProvider
 

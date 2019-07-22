@@ -15,6 +15,8 @@ import UIKit
     /// Some countries have two versions of Identitiy Cards
     /// This is used to distinct them
     case oldID
+    /// Singapore ID (Blue & Pink)
+    case idBluePink
     /// Some countries have two versions of Identitiy Cards
     /// This is used to distinct them
     case newID
@@ -42,6 +44,12 @@ import UIKit
     case residencePermit
     /// Australia Victoria Driver's License
     case victoriaDriverLicense
+    /// Work pass
+    case workPass
+    /// Voter ID
+    case voterID
+    /// Under 21 ID
+    case under21ID
     /// Undefined
     case unknown
 
@@ -78,6 +86,14 @@ import UIKit
             return settings.residencePermitText
         case .victoriaDriverLicense:
             return settings.victoriaDriversLicenseText
+        case .workPass:
+            return settings.workPassText
+        case .idBluePink:
+            return settings.idBluePinkText
+        case .voterID:
+            return settings.voterIDCardText
+        case .under21ID:
+            return settings.under21IDCardText
         case .unknown:
             return "unknown"
         }

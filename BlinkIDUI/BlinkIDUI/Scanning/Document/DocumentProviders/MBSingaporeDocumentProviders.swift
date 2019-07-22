@@ -44,7 +44,31 @@ class MBSingaporeIDDocumentProvider: MBDocumentProvider {
     }
     
     override var type: MBDocumentType {
-        return MBDocumentType.identityCard
+        return MBDocumentType.idBluePink
+    }
+    
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.id1
+    }
+    
+}
+
+class MBSingaporeWorkPassProvider: MBDocumentProvider {
+    
+    override var frontRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withRecognizer: MBDocumentFaceRecognizer())
+    }
+    
+    override var backRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withDocumentDetector: MBDocumentDetectorD1Recognizer())
+    }
+    
+    override var combinedRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withCombinedRecognizer: MBSingaporeCombinedRecognizer())
+    }
+    
+    override var type: MBDocumentType {
+        return MBDocumentType.workPass
     }
     
     override var aspectRatio: DocumentAspectRatio {

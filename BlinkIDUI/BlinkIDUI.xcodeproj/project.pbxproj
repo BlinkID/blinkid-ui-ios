@@ -25,7 +25,7 @@
 		A2CB561F22647FC5000BB95B /* MBAustraliaDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CB561E22647FC5000BB95B /* MBAustraliaDocumentProviders.swift */; };
 		BE0566D721A2F279005658FF /* MBMatchingPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0566D621A2F279005658FF /* MBMatchingPair.swift */; };
 		BE0F362521A7E553005F0BEE /* MBDocumentImageRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0F362421A7E553005F0BEE /* MBDocumentImageRecognizer.swift */; };
-		BE2164722190849B00E21734 /* MBBlinkIdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2164642190849B00E21734 /* MBBlinkIdViewController.swift */; };
+		BE2164722190849B00E21734 /* MBBlinkIdUiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2164642190849B00E21734 /* MBBlinkIdUiViewController.swift */; };
 		BE2164732190849B00E21734 /* MBTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2164662190849B00E21734 /* MBTheme.swift */; };
 		BE2164762190849B00E21734 /* MBShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2164692190849B00E21734 /* MBShadowView.swift */; };
 		BE2164782190849B00E21734 /* MBCountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21646B2190849B00E21734 /* MBCountryTableViewController.swift */; };
@@ -129,7 +129,7 @@
 		A2CB561E22647FC5000BB95B /* MBAustraliaDocumentProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBAustraliaDocumentProviders.swift; sourceTree = "<group>"; };
 		BE0566D621A2F279005658FF /* MBMatchingPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBMatchingPair.swift; sourceTree = "<group>"; };
 		BE0F362421A7E553005F0BEE /* MBDocumentImageRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBDocumentImageRecognizer.swift; sourceTree = "<group>"; };
-		BE2164642190849B00E21734 /* MBBlinkIdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MBBlinkIdViewController.swift; path = BlinkIDUI/Modules/Overlay/MBBlinkIdViewController.swift; sourceTree = SOURCE_ROOT; };
+		BE2164642190849B00E21734 /* MBBlinkIdUiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MBBlinkIdUiViewController.swift; path = BlinkIDUI/Modules/Overlay/MBBlinkIdUiViewController.swift; sourceTree = SOURCE_ROOT; };
 		BE2164662190849B00E21734 /* MBTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBTheme.swift; sourceTree = "<group>"; };
 		BE2164692190849B00E21734 /* MBShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBShadowView.swift; sourceTree = "<group>"; };
 		BE21646B2190849B00E21734 /* MBCountryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBCountryTableViewController.swift; sourceTree = "<group>"; };
@@ -338,7 +338,7 @@
 			children = (
 				BE2164692190849B00E21734 /* MBShadowView.swift */,
 				BE2165AD2192E24300E21734 /* MBBlinkIDOverlay.storyboard */,
-				BE2164642190849B00E21734 /* MBBlinkIdViewController.swift */,
+				BE2164642190849B00E21734 /* MBBlinkIdUiViewController.swift */,
 			);
 			path = Overlay;
 			sourceTree = "<group>";
@@ -708,7 +708,7 @@
 				BE746BE6224E083F0098A67E /* MBSingleSideValidator.swift in Sources */,
 				BEE34669218A6090004C0397 /* MBScanningProvider.swift in Sources */,
 				BEDCA24521CB86F8003EDAD9 /* MBNigeriaDocumentProviders.swift in Sources */,
-				BE2164722190849B00E21734 /* MBBlinkIdViewController.swift in Sources */,
+				BE2164722190849B00E21734 /* MBBlinkIdUiViewController.swift in Sources */,
 				BE6480CB218C83C600D0C24F /* MBDocumentType.swift in Sources */,
 				BEE34664218A6006004C0397 /* MBDLExtractors.swift in Sources */,
 				BEFD074B21FA028B007B67BA /* MBResidencePermitExtractors.swift in Sources */,

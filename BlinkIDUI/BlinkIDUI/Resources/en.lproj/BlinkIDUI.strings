@@ -23,3 +23,7 @@
 "ok" = "OK";
 "militaryIdDefault" = "Military ID";
 "victoriaDriversLicense" = "Victoria Driver's License";
+"workPass" = "Work pass";
+"idBluePink" = "ID (Blue & Pink)";
+"voterIDCard" = "Voter ID";
+"under21IDCard" = "Under 21 ID";

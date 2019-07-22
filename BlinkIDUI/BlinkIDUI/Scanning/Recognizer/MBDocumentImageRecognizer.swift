@@ -72,6 +72,13 @@ class MBDocumentDetectorD2Recognizer: MBDocumentDetectorRecognizer {
     }
 }
 
+class MBDocumentDetectorD1VerticalRecognizer: MBDocumentDetectorRecognizer {
+    override init() {
+        super.init()
+        documentImageRecognizer = MBDocumentImageRecognizer(specification: .id1VerticalCard)
+    }
+}
+
 class MBDocumentDetectorD2VerticalRecognizer: MBDocumentDetectorRecognizer {
     override init() {
         super.init()
