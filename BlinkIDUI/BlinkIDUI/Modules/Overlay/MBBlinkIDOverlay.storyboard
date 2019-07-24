@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,28 +15,28 @@
             <objects>
                 <viewController storyboardIdentifier="MBBlinkIdOverlayViewController" id="629-5Q-TaY" customClass="MBBlinkIdUiOverlayViewController" customModule="BlinkIDUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JBq-GZ-ro4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zqg-0A-a5Z" customClass="MBShadowView" customModule="BlinkIDUI" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5zX-Kd-sGK" customClass="MBViewfinderView" customModule="BlinkIDUI" customModuleProvider="target">
-                                <rect key="frame" x="30" y="210" width="540" height="180"/>
+                                <rect key="frame" x="22" y="386.5" width="370" height="123"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5zX-Kd-sGK" secondAttribute="height" multiplier="3:1" id="Rqw-0m-v5l"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan the front side of the selected document or choose another." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb2-Tg-K3I">
-                                <rect key="frame" x="30" y="174.5" width="540" height="20.5"/>
+                                <rect key="frame" x="22" y="330.5" width="370" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsp-c3-qSW">
-                                <rect key="frame" x="20" y="40" width="16" height="44"/>
+                                <rect key="frame" x="20" y="64" width="30" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="cgT-ca-yxu"/>
                                 </constraints>
@@ -42,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cym-tc-Nt5" customClass="I">
-                                <rect key="frame" x="536" y="40" width="44" height="44"/>
+                                <rect key="frame" x="350" y="64" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="Ac3-hx-FaQ"/>
                                     <constraint firstAttribute="height" constant="44" id="vV2-qO-w9T"/>
@@ -54,7 +58,7 @@
                                 </connections>
                             </button>
                             <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sao-0b-jsk">
-                                <rect key="frame" x="0.0" y="480" width="600" height="120"/>
+                                <rect key="frame" x="0.0" y="717" width="414" height="179"/>
                                 <connections>
                                     <segue destination="3j9-2W-rLp" kind="embed" id="bVk-Up-cyk"/>
                                 </connections>
@@ -62,6 +66,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="5zX-Kd-sGK" firstAttribute="height" relation="lessThanOrEqual" secondItem="Zqg-0A-a5Z" secondAttribute="height" multiplier="0.5" id="21Y-KT-XQj"/>
                             <constraint firstItem="mb2-Tg-K3I" firstAttribute="width" secondItem="5zX-Kd-sGK" secondAttribute="width" id="3Lo-5g-dDs"/>
                             <constraint firstItem="Qsp-c3-qSW" firstAttribute="centerY" secondItem="cym-tc-Nt5" secondAttribute="centerY" id="3Qp-vn-tlZ"/>
                             <constraint firstItem="Zqg-0A-a5Z" firstAttribute="height" secondItem="Sao-0b-jsk" secondAttribute="height" multiplier="5:1" priority="999" id="Ggz-BQ-RFf"/>
@@ -73,7 +78,7 @@
                             <constraint firstItem="OOT-Zx-S3K" firstAttribute="trailing" secondItem="cym-tc-Nt5" secondAttribute="trailing" constant="20" id="UAg-QT-vs9"/>
                             <constraint firstItem="OOT-Zx-S3K" firstAttribute="trailing" secondItem="Sao-0b-jsk" secondAttribute="trailing" id="V9k-DM-KWg"/>
                             <constraint firstItem="Zqg-0A-a5Z" firstAttribute="leading" secondItem="OOT-Zx-S3K" secondAttribute="leading" id="Xma-9m-E4n"/>
-                            <constraint firstItem="5zX-Kd-sGK" firstAttribute="width" secondItem="Zqg-0A-a5Z" secondAttribute="width" multiplier="0.9" id="Y4n-eV-TcB"/>
+                            <constraint firstItem="5zX-Kd-sGK" firstAttribute="width" relation="lessThanOrEqual" secondItem="Zqg-0A-a5Z" secondAttribute="width" multiplier="0.9" id="Y4n-eV-TcB"/>
                             <constraint firstItem="Zqg-0A-a5Z" firstAttribute="top" secondItem="JBq-GZ-ro4" secondAttribute="top" id="eRF-kg-d4T"/>
                             <constraint firstItem="5zX-Kd-sGK" firstAttribute="centerX" secondItem="Zqg-0A-a5Z" secondAttribute="centerX" id="gk0-Xn-PDD"/>
                             <constraint firstItem="Sao-0b-jsk" firstAttribute="leading" secondItem="OOT-Zx-S3K" secondAttribute="leading" id="mSh-b0-rLg"/>
@@ -108,8 +113,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icClose" width="34" height="34"/>
+        <image name="icClose" width="30" height="30"/>
         <image name="icFlashOff" width="30" height="30"/>
-        <image name="icFlashOn" width="25" height="25"/>
+        <image name="icFlashOn" width="30" height="30"/>
     </resources>
 </document>

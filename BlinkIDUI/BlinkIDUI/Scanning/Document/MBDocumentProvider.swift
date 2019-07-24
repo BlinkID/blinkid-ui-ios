@@ -13,6 +13,7 @@ enum DocumentAspectRatio: Int {
     case id1
     case id2
     case id3
+    case verticalId
     case unknown
 
     var ratio: CGFloat {
@@ -23,6 +24,8 @@ enum DocumentAspectRatio: Int {
             return 105.0 / 74.0
         case .id3:
             return 125.0 / 88.0
+        case .verticalId:
+            return 53.98 / 85.6
         case .unknown:
             return 0
         }
@@ -275,6 +278,7 @@ class MBUnder21DocumentProvider: MBDocumentProvider {
     }
     
     override var aspectRatio: DocumentAspectRatio {
-        return DocumentAspectRatio.id1
+        return DocumentAspectRatio.verticalId
     }
+    
 }

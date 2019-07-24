@@ -50,6 +50,7 @@ class MBUSAIDDocumentProvider: MBDocumentProvider {
 }
 
 class MBUSAUnder21IDDocumentProvider: MBDocumentProvider {
+    
     override var frontRecognizerProvider: MBRecognizerWrapper? {
         return MBRecognizerWrapper(withDocumentDetector: MBDocumentDetectorD1VerticalRecognizer())
     }
@@ -65,4 +66,9 @@ class MBUSAUnder21IDDocumentProvider: MBDocumentProvider {
     override var type: MBDocumentType {
         return MBDocumentType.under21ID
     }
+    
+    override var aspectRatio: DocumentAspectRatio {
+        return DocumentAspectRatio.verticalId
+    }
+    
 }
