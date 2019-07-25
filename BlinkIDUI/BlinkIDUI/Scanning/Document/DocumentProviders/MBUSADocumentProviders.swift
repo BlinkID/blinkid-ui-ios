@@ -71,4 +71,8 @@ class MBUSAUnder21IDDocumentProvider: MBDocumentProvider {
         return DocumentAspectRatio.verticalId
     }
     
+    override var backSideAspectRatio: DocumentAspectRatio? {
+        return DocumentAspectRatio.id1
+    }
+    
 }

@@ -61,6 +61,9 @@ public class MBDocumentProvider: NSObject {
     /// Aspect ratio of the document
     var aspectRatio: DocumentAspectRatio { return DocumentAspectRatio.unknown }
     
+    /// Aspect ratio for scanning the back side of the document. If nil is used, aspect ratio won't be changed when switching side.
+    var backSideAspectRatio: DocumentAspectRatio? { return nil }
+    
     /// Result validator that will be used to validate the results if it has both front and back side recognizer providers, or a combined recognizer.
     /// - Note: This will work with every combined recognizer if they have fields that
     ///         contain matching values. If this class doesn't have combined recognizer
