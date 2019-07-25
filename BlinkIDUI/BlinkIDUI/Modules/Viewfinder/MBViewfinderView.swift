@@ -95,7 +95,7 @@ class MBViewfinderView: UIView, MBNibLoadable {
     }
 
     private func _animateScanLineFromTopToBottom() {
-        UIView.animate(withDuration: TimeInterval(bounds.size.height / 100.0), delay: 0.0, options: .curveEaseInOut, animations: { [weak self] in
+        UIView.animate(withDuration: TimeInterval(bounds.size.height / MBConstants.Animation.ScanLine.speed), delay: 0.0, options: .curveEaseInOut, animations: { [weak self] in
             guard let self = self else { return }
             self._topToScanLineConstraint.isActive = false
             self._bottomToScanLineConstraint.isActive = true
@@ -107,7 +107,7 @@ class MBViewfinderView: UIView, MBNibLoadable {
     }
 
     private func _animateScanLineFromBottomToTop() {
-        UIView.animate(withDuration: TimeInterval(bounds.size.height / 100.0), delay: 0.0, options: .curveEaseInOut, animations: { [weak self] in
+        UIView.animate(withDuration: TimeInterval(bounds.size.height / MBConstants.Animation.ScanLine.speed), delay: 0.0, options: .curveEaseInOut, animations: { [weak self] in
             guard let self = self else { return }
             self._bottomToScanLineConstraint.isActive = false
             self._topToScanLineConstraint.isActive = true

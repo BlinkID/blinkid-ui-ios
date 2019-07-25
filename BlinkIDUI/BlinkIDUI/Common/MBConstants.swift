@@ -45,5 +45,9 @@ struct MBConstants {
         struct DocumentTabsView {
             static let scrollToTabAnimationTime: Double = 0.2
         }
+        
+        struct ScanLine {
+            static let speed: CGFloat = 175
+        }
     }
 }
