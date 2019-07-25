@@ -300,7 +300,7 @@ public class MBField: NSObject {
     }
 
     public override var description: String {
-        return "\(key.localized) = \(value)"
+        return "\(key.localized) = \(String(describing: value))"
     }
     
 }

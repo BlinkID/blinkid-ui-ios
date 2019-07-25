@@ -45,7 +45,6 @@ class MBSingleSideValidator: MBValidatorProtocol {
         guard results.count != 1,
             let frontResults = results.first?.extractFieldResults() as? [MBField],
             let backResults = results.last?.extractFieldResults() as? [MBField] else {
-                // TODO: think about this
                 return true
         }
 
@@ -108,7 +107,6 @@ class MBSingleSideValidator: MBValidatorProtocol {
         return distance[aLength][bLength]
     }
 
-    // TODO: Add possible substitutions based on the document
     private func _calcSubstitutionCost(originalChar: Character, decoratedChar: Character) -> Int {
         if originalChar == decoratedChar {
             return 0
