@@ -92,6 +92,8 @@ public class MBBlinkIdUiOverlayViewController: MBCustomOverlayViewController {
     private var _dotsResultSubview: MBDotsResultSubview!
     
     private var _shouldAnimateDocumentChooser: Bool = true
+    
+    private var _currentDocumentProvider: MBDocumentProvider?
 
     // MARK: - Initalizer -
 
@@ -210,11 +212,17 @@ public class MBBlinkIdUiOverlayViewController: MBCustomOverlayViewController {
 
     func prepareUIForFrontSideScanning() {
         _animateMessageLabel(text: MBBlinkSettings.sharedInstance.languageSettings.scanFrontSideMessageText)
+        if let aspectRatio = _currentDocumentProvider?.aspectRatio.ratio {
+            _animateAspectRatioChange(aspectRatio: aspectRatio)
+        }
     }
 
     func prepareUIForBackSideScanning() {
         _animateMessageLabel(text: MBBlinkSettings.sharedInstance.languageSettings.scanBackSideMessageText)
         _viewfinderView.startFlipAnimation()
+        if let backSideAspectRatio = _currentDocumentProvider?.backSideAspectRatio?.ratio {
+            _animateAspectRatioChange(aspectRatio: backSideAspectRatio)
+        }
     }
 
     // MARK: - Animations -
@@ -290,7 +298,7 @@ public class MBBlinkIdUiOverlayViewController: MBCustomOverlayViewController {
 extension MBBlinkIdUiOverlayViewController: MBDocumentChooserViewControllerDelegate {
     func didSelect(document: MBDocumentType, fromCountry country: MBCountry) {
         guard let documentProvider = country.countryProvider.documentProviders[document] else { return }
-        _animateAspectRatioChange(aspectRatio: documentProvider.aspectRatio.ratio)
+        _currentDocumentProvider = documentProvider
         delegate?.didChangeDocument(newDocument: documentProvider, forCountry: country)
     }
 

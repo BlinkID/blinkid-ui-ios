@@ -12,6 +12,8 @@ import UIKit
 @objc public enum MBDocumentType: Int, MBLocalizable, Comparable {
     /// Identity Card
     case identityCard
+    /// Under 21 ID
+    case under21ID
     /// Some countries have two versions of Identitiy Cards
     /// This is used to distinct them
     case oldID
@@ -48,8 +50,6 @@ import UIKit
     case workPass
     /// Voter ID
     case voterID
-    /// Under 21 ID
-    case under21ID
     /// Undefined
     case unknown
 
