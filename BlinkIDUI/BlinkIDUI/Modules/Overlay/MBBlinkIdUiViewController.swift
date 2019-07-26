@@ -23,7 +23,7 @@ private enum MBGlareState {
 }
 
 /// Protocol that is used to send events by `MBBlinkIdOverlayViewController` ot it's delegate.
-protocol MBBlinkIdOverlayViewControllerDelegate: AnyObject {
+protocol MBBlinkIdUiOverlayViewControllerDelegate: AnyObject {
     /// Event sent when the user selects a document, this document may be already selected but the event is send non the less.
     ///
     /// - Parameters
@@ -45,7 +45,7 @@ protocol MBBlinkIdOverlayViewControllerDelegate: AnyObject {
 /// - Note: Most of the UI aspects are customizable either by changing the properties defined through extensions of `UIFont` and `UIColor` presented in `MBTheme` file, or by changing the various properties through `MBBlinkSettings` sharedInstance.
 public class MBBlinkIdUiOverlayViewController: MBCustomOverlayViewController {
 
-    weak var delegate: MBBlinkIdOverlayViewControllerDelegate?
+    weak var delegate: MBBlinkIdUiOverlayViewControllerDelegate?
 
     // MARK: - Outlets -
     weak var documentChooserViewController: MBDocumentChooserViewController?
