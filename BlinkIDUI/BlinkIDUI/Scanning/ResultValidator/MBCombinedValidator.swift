@@ -12,7 +12,6 @@ class MBCombinedValidator: MBValidatorProtocol {
 
     func match(results: [MBFieldResult]) -> Bool {
         guard let combinedRecognizer = results.first as? MBCombinedRecognizer else {
-            // TODO: think about this
             return true
         }
 

@@ -17,7 +17,7 @@ protocol MBDocumentChooserViewControllerDelegate: AnyObject {
 public class MBDocumentChooserViewController: UIViewController {
 
     weak var delegate: MBDocumentChooserViewControllerDelegate?
-    weak var settings: MBDocumentChooserSettings? {
+    var settings: MBDocumentChooserSettings? {
         return MBBlinkSettings.sharedInstance.documentChooserSettings
     }
 

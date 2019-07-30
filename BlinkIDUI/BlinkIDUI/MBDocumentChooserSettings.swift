@@ -17,7 +17,7 @@ import Foundation
 ///         `MBDocumentChooserSettings.isDocument(...)`
 @objc public protocol MBDocumentChooserSettings: AnyObject {
     
-    @objc weak var blinkIDUI: MBBlinkIDUI? { get set }
+    @objc var blinkIDUI: MBBlinkIDUI? { get set }
     
     /// Filter for countries in country selection view controller.
     /// - Default: MBAllowAllCountryFilter - all countries are allowed.

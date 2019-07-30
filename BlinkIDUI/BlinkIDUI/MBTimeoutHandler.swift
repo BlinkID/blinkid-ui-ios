@@ -13,10 +13,10 @@ import Foundation
 /// - See: `MBDefaultTimeoutHandler` to understand how this can be used
 @objc public protocol MBTimeoutHandler: AnyObject {
     
-    @objc weak var blinkIDUI: MBBlinkIDUI? { get set }
+    @objc var blinkIDUI: MBBlinkIDUI? { get set }
     
     /// Needed to present alert view controller once the timeout it out.
-    @objc weak var overlayViewController: MBBlinkIdUiOverlayViewController? { get set }
+    @objc var overlayViewController: MBBlinkIdUiOverlayViewController? { get set }
     
     /// Called everytime scanning is started
     @objc func onScanStart()

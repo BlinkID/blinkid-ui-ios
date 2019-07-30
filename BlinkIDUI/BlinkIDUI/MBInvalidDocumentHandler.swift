@@ -11,10 +11,10 @@ import Foundation
 /// Used for two sided documents that can be validated by matching front and back side data
 @objc public protocol MBInvalidDocumentHandler: AnyObject {
     
-    @objc weak var blinkIDUI: MBBlinkIDUI? { get set }
+    @objc var blinkIDUI: MBBlinkIDUI? { get set }
     
     /// Needed to present alert view controller if the document isn't valid.
-    @objc weak var overlayViewController: MBBlinkIdUiOverlayViewController? { get set }
+    @objc var overlayViewController: MBBlinkIdUiOverlayViewController? { get set }
     
     /// Called once if the scanned document is invalid and shouldValidateDocuments is set to true
     @objc func onInvalidDocumentScanned()

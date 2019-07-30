@@ -168,7 +168,7 @@ extension MBBlinkIDUI: MBScanningProviderDelegate {
 
 // MARK: - MBBlinkIdOverlayViewControllerDelegate -
 
-extension MBBlinkIDUI: MBBlinkIdOverlayViewControllerDelegate {
+extension MBBlinkIDUI: MBBlinkIdUiOverlayViewControllerDelegate {
     func didChangeDocument(newDocument: MBDocumentProvider, forCountry country: MBCountry) {
         delegate?.didChangeDocument?(newDocument: newDocument, forCountry: country)
         _scanningProvider.updated(scanningProviderFor: newDocument)
