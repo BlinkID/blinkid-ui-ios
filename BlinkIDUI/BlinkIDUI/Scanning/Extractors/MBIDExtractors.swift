@@ -855,3 +855,18 @@ extension MBUnitedArabEmiratesIdBackRecognizer {
         return result.mrzResult.extractFieldResults()
     }
 }
+
+extension MBNigeriaVoterIdBackRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray()
+        
+        fields.add(MBField(key: MBFieldKey.fullAddress, value: result.address))
+        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
+        fields.add(MBField(key: MBFieldKey.firstName, value: result.firstName))
+        fields.add(MBField(key: MBFieldKey.lastName, value: result.surname))
+        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
+        fields.add(MBField(key: MBFieldKey.barcodeData, value: result.rawBarcodeData))
+        
+        return fields
+    }
+}

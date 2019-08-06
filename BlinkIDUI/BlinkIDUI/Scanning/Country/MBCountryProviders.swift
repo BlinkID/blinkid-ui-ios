@@ -480,7 +480,7 @@ class MBUSACountryProvider: MBCountryProvider {
     }
     
     override var driversLicenseProvider: MBDocumentProvider? {
-        return MBUSADLDocumentProvider()
+        return nil
     }
     
     override var identityCardProvider: MBDocumentProvider? {

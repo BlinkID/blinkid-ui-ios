@@ -63,10 +63,6 @@ class MBSingaporeWorkPassProvider: MBDocumentProvider {
         return MBRecognizerWrapper(withDocumentDetector: MBDocumentDetectorD1Recognizer())
     }
     
-    override var combinedRecognizerProvider: MBRecognizerWrapper? {
-        return MBRecognizerWrapper(withCombinedRecognizer: MBSingaporeCombinedRecognizer())
-    }
-    
     override var type: MBDocumentType {
         return MBDocumentType.workPass
     }
