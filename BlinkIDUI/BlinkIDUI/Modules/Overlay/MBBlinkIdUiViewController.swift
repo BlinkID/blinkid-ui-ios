@@ -208,6 +208,9 @@ public class MBBlinkIdUiOverlayViewController: MBCustomOverlayViewController {
 
     func prepareUIForAnySideScanning() {
         _animateMessageLabel(text: MBBlinkSettings.sharedInstance.languageSettings.scanAnySideMessageText)
+        if let aspectRatio = _currentDocumentProvider?.aspectRatio.ratio {
+            _animateAspectRatioChange(aspectRatio: aspectRatio)
+        }
     }
 
     func prepareUIForFrontSideScanning() {
