@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   s.source_files  = "BlinkIDUI/**/*.{h,swift,xib,storyboard}"
   s.exclude_files = "Samples", "Frameworks", "docs"
   s.module_name = "BlinkIDUI"
-  s.resources = "BlinkIDUI/**/Resources/Assets*", "BlinkIDUI/**/Resources/*.strings", "BlinkIDUI/**/Resources/*.lproj"
+  s.resources = "BlinkIDUI/**/Resources/Assets*", "BlinkIDUI/**/Resources/*.strings"
   s.dependency "PPBlinkID", "~> 4.10.0"
   s.swift_version = '5.0'
 end
