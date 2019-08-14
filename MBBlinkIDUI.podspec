@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MBBlinkIDUI"
-  s.version      = "4.10.0.1"
+  s.version      = "4.10.0.2"
   s.summary      = "A delightful component for document scanning with customizable UI."
   s.description  = <<-DESC
                   BlinkIDUI is a delightful component for quick and easy scanning of ID cards, passports, and driver’s licenses. The SDK is powered by [Microblink’s](http://www.microblink.com) industry-proven and world leading OCR and barcode scanning technology, and offers:
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
           "MicroBlink" => "info@microblink.com"
   }
   s.platform     = :ios, "9.0"
-  s.source       = { git: 'https://github.com/BlinkID/blinkid-ui-ios.git', :tag => 'v4.10.0.1' }
+  s.source       = { git: 'https://github.com/BlinkID/blinkid-ui-ios.git', :tag => 'v4.10.0.2' }
   s.source_files  = "BlinkIDUI/**/*.{h,swift,xib,storyboard}"
   s.exclude_files = "Samples", "Frameworks", "docs"
   s.module_name = "BlinkIDUI"
