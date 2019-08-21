@@ -52,11 +52,15 @@ class MBUSAIDDocumentProvider: MBDocumentProvider {
 class MBUSAUnder21IDDocumentProvider: MBDocumentProvider {
     
     override var frontRecognizerProvider: MBRecognizerWrapper? {
-        return MBRecognizerWrapper(withDocumentDetector: MBDocumentDetectorD1VerticalRecognizer())
+        return MBRecognizerWrapper(withRecognizer: MBDocumentFaceRecognizer())
     }
     
     override var backRecognizerProvider: MBRecognizerWrapper? {
         return MBRecognizerWrapper(withRecognizer: MBUsdlRecognizer())
+    }
+    
+    override var combinedRecognizerProvider: MBRecognizerWrapper? {
+        return MBRecognizerWrapper(withCombinedRecognizer: MBUsdlCombinedRecognizer())
     }
     
     override var type: MBDocumentType {
