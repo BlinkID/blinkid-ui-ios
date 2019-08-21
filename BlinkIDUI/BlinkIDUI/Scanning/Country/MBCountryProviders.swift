@@ -488,3 +488,9 @@ class MBUSACountryProvider: MBCountryProvider {
     }
     
 }
+
+class MBBelgiumCountryProvider: MBCountryProvider {
+    override var identityCardProvider: MBDocumentProvider? {
+        return MBBelgiumIDDocumentProvider()
+    }
+}
