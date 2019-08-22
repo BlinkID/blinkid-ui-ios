@@ -59,10 +59,6 @@ class MBUSAUnder21IDDocumentProvider: MBDocumentProvider {
         return MBRecognizerWrapper(withRecognizer: MBUsdlRecognizer())
     }
     
-    override var combinedRecognizerProvider: MBRecognizerWrapper? {
-        return MBRecognizerWrapper(withCombinedRecognizer: MBUsdlCombinedRecognizer())
-    }
-    
     override var type: MBDocumentType {
         return MBDocumentType.under21ID
     }
