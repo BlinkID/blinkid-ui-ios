@@ -202,7 +202,7 @@ class MBPassportDocumentProvider: MBDocumentProvider {
 class MBVisaDocumentProvider: MBDocumentProvider {
 
     override var frontRecognizerProvider: MBRecognizerWrapper? {
-        return MBRecognizerWrapper(withRecognizer: MBMrtdRecognizer())
+        return MBRecognizerWrapper(withRecognizer: MBVisaRecognizer())
     }
 
     override var type: MBDocumentType {

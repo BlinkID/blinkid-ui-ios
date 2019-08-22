@@ -870,3 +870,36 @@ extension MBNigeriaVoterIdBackRecognizer {
         return fields
     }
 }
+
+extension MBBelgiumIdFrontRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray()
+        
+        fields.add(MBField(key: MBFieldKey.identityCardNumber, value: result.cardNumber))
+        
+        return fields
+    }
+}
+
+extension MBBelgiumIdBackRecognizer {
+    override func extractFieldResults() -> NSArray {
+        return result.mrzResult.extractFieldResults()
+    }
+}
+
+extension MBBelgiumCombinedRecognizer {
+    override func extractFieldResults() -> NSArray {
+        let fields = NSMutableArray()
+        
+        fields.add(MBField(key: MBFieldKey.identityCardNumber, value: result.cardNumber))
+        fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
+        fields.add(MBField(key: MBFieldKey.dateOfExpiry, value: result.dateOfExpiry))
+        fields.add(MBField(key: MBFieldKey.firstName, value: result.firstName))
+        fields.add(MBField(key: MBFieldKey.lastName, value: result.lastName))
+        fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
+        fields.add(MBField(key: MBFieldKey.issuer, value: result.issuedBy))
+        fields.add(MBField(key: MBFieldKey.nationality, value: result.nationality))
+        
+        return fields
+    }
+}

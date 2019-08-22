@@ -95,3 +95,9 @@ extension MBMrzResult {
         return value.replacingOccurrences(of: Constants.lessThen, with: "")
     }
 }
+
+extension MBVisaRecognizer {
+    override func extractFieldResults() -> NSArray {
+        return result.mrzResult.extractFieldResults()
+    }
+}

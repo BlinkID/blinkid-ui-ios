@@ -103,7 +103,7 @@ class MBDocumentTabsView: UIView, MBNibLoadable {
 // MARK: - MBDocumentTabDelegate -
 
 extension MBDocumentTabsView: MBDocumentTabDelegate {
-    func didTapDocumetTab(sender: MBDocumentTab) {
+    func didTapDocumentTab(sender: MBDocumentTab) {
         guard
             let index = documentTabs.firstIndex(of: sender),
             let button = documents?[index] else { return }

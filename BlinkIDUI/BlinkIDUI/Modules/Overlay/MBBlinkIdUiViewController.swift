@@ -197,7 +197,7 @@ public class MBBlinkIdUiOverlayViewController: MBCustomOverlayViewController {
         }
     }
 
-    private func _setupViewfinderAspectRation(aspectRatio: CGFloat) {
+    private func _setupViewfinderAspectRatio(aspectRatio: CGFloat) {
         let aspectRatioConstraint = _viewfinderView.widthAnchor.constraint(equalTo: _viewfinderView.heightAnchor, multiplier: aspectRatio)
         _viewfinderView.removeConstraint(_viewfinderAspectRatio)
         _viewfinderAspectRatio = aspectRatioConstraint
@@ -306,7 +306,7 @@ extension MBBlinkIdUiOverlayViewController: MBDocumentChooserViewControllerDeleg
     }
 
     private func _animateAspectRatioChange(aspectRatio: CGFloat) {
-        _setupViewfinderAspectRation(aspectRatio: aspectRatio)
+        _setupViewfinderAspectRatio(aspectRatio: aspectRatio)
         UIView.animate(withDuration: MBConstants.Animation.OverlayViewController.viewfinderChangeAnimationTime, animations: {
             self.view.layoutIfNeeded()
         })

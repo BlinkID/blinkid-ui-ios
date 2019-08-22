@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MBDocumentTabDelegate: AnyObject {
-    func didTapDocumetTab(sender: MBDocumentTab)
+    func didTapDocumentTab(sender: MBDocumentTab)
 }
 
 class MBDocumentTab: UIView, MBNibLoadable {
@@ -59,6 +59,6 @@ class MBDocumentTab: UIView, MBNibLoadable {
 
     @objc private func _didTapDocumentTab() {
         isSelected = true
-        delegate?.didTapDocumetTab(sender: self)
+        delegate?.didTapDocumentTab(sender: self)
     }
 }

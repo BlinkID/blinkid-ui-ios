@@ -22,6 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A2876CDE230D8A7C007E3E7C /* MBBelgiumDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2876CDD230D8A7C007E3E7C /* MBBelgiumDocumentProviders.swift */; };
 		A2CB561F22647FC5000BB95B /* MBAustraliaDocumentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CB561E22647FC5000BB95B /* MBAustraliaDocumentProviders.swift */; };
 		BE0566D721A2F279005658FF /* MBMatchingPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0566D621A2F279005658FF /* MBMatchingPair.swift */; };
 		BE0F362521A7E553005F0BEE /* MBDocumentImageRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0F362421A7E553005F0BEE /* MBDocumentImageRecognizer.swift */; };
@@ -126,6 +127,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A2876CDD230D8A7C007E3E7C /* MBBelgiumDocumentProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBBelgiumDocumentProviders.swift; sourceTree = "<group>"; };
 		A2CB561E22647FC5000BB95B /* MBAustraliaDocumentProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBAustraliaDocumentProviders.swift; sourceTree = "<group>"; };
 		BE0566D621A2F279005658FF /* MBMatchingPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBMatchingPair.swift; sourceTree = "<group>"; };
 		BE0F362421A7E553005F0BEE /* MBDocumentImageRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBDocumentImageRecognizer.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 				BE6480B4218C83C500D0C24F /* MBUKDocumentProviders.swift */,
 				BE6480B3218C83C500D0C24F /* MBUSADocumentProviders.swift */,
 				BEDCA24421CB86F8003EDAD9 /* MBNigeriaDocumentProviders.swift */,
+				A2876CDD230D8A7C007E3E7C /* MBBelgiumDocumentProviders.swift */,
 			);
 			path = DocumentProviders;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 				BE6480CA218C83C600D0C24F /* MBColombiaDocumentProviders.swift in Sources */,
 				BEE34665218A6006004C0397 /* MBRecognizerExtractor.swift in Sources */,
 				BE6480D9218C83C600D0C24F /* MBNewZealandDocumentProviders.swift in Sources */,
+				A2876CDE230D8A7C007E3E7C /* MBBelgiumDocumentProviders.swift in Sources */,
 				BE0566D721A2F279005658FF /* MBMatchingPair.swift in Sources */,
 				BE6480C8218C83C600D0C24F /* MBCyprusDocumentProviders.swift in Sources */,
 				BE6480D6218C83C600D0C24F /* MBItalyDocumentProvider.swift in Sources */,
