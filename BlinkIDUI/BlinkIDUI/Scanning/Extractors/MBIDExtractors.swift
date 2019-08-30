@@ -669,7 +669,7 @@ extension MBSingaporeCombinedRecognizer {
     override func extractFieldResults() -> NSArray {
         let fields = NSMutableArray()
 
-        fields.add(MBField(key: MBFieldKey.firstName, value: result.name))
+        fields.add(MBField(key: MBFieldKey.fullName, value: result.name))
         fields.add(MBField(key: MBFieldKey.fullAddress, value: result.address))
         fields.add(MBField(key: MBFieldKey.bloodGroup, value: result.bloodGroup))
         fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
@@ -700,7 +700,7 @@ extension MBSingaporeIdFrontRecognizer {
         let fields = NSMutableArray()
 
         fields.add(MBField(key: MBFieldKey.identityCardNumber, value: result.identityCardNumber))
-        fields.add(MBField(key: MBFieldKey.firstName, value: result.name))
+        fields.add(MBField(key: MBFieldKey.fullName, value: result.name))
         fields.add(MBField(key: MBFieldKey.race, value: result.race))
         fields.add(MBField(key: MBFieldKey.sex, value: result.sex))
         fields.add(MBField(key: MBFieldKey.dateOfBirth, value: result.dateOfBirth))
