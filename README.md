@@ -295,7 +295,7 @@ In `MBBlinkSettings` set the `frameGrabberMode` to _success_ or _allFrames_, if 
 In `MBBlinkSettings` shared instance, you can find `MBBlinkLanguageSettings` property. You can set various text properties, by default text is used from `.strings` file provided through the framework.
 
 ## Where do I get the license for my project?
-[Register](https://microblink.com) at our site and you can get a _BlinkID_ demo license key from the developer dashboard. 
+[Register](https://microblink.com) at our site and you can get a _BlinkID_ free trial license key from the developer dashboard. 
 
 # Troubleshooting
 ## Getting the following error:
