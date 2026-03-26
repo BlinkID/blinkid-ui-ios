@@ -1,6 +1,12 @@
-<p align="center" >
-  <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/logo-microblink.png" alt="MicroBlink" title="MicroBlink">
-</p>
+# ⚠️ Disclaimer
+> Please note that Microblink is no longer maintaining this repository.\
+As such, there will be no additional updates or releases for this codebase. You are welcome to continue using the code, as it remains source available.\
+Furthermore, if you need to update it for a newer SDK or platform version, you can do so by forking this repository and maintaining the fork independently.\
+If you have questions regarding such, please contact our support team at support@microblink.com.
+
+---
+
+
 
 # BlinkID UI for iOS
 BlinkID UI is a framework that lets you scan any BlinkID supported document without even knowing what a `Recognizer` is.
